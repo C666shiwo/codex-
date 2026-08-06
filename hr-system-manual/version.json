@@ -1,11 +1,7 @@
-Exit code: 0
-Wall time: 0.2 seconds
-Output:
 {
-  "version": "2026.08.05-framework",
-  "updatedAt": "2026-08-05",
+  "version": "2026.08.06-template",
+  "updatedAt": "2026-08-06",
   "publicUrl": "https://c666shiwo.github.io/codex-/hr-system-manual/",
-  "status": "framework-ready-content-pending",
+  "status": "template-ready-content-pending",
   "assetCount": 0
 }
-
