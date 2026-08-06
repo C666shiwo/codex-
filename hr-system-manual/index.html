@@ -202,27 +202,22 @@
   .empty-visual-placeholder{min-height:250px;border:1px dashed #bdb2f6;border-radius:14px;display:grid;place-content:center;gap:6px;text-align:center;background:#faf9ff;color:#746d95}
   .empty-visual-placeholder strong{color:var(--brand-blue-ink);font-size:18px}.empty-visual-placeholder span{font-size:13px}
   .flow-index span{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid #dfe7ec;border-radius:10px;background:#fff;color:#526b7a}
+  .view-section[hidden],.module[hidden],tr[hidden]{display:none!important}
+  mark.search-mark{background:#fff0a8;color:inherit;padding:0 2px;border-radius:2px}
+  .module-toggle,.feature-point-toggle{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--brand-line);border-radius:5px;background:#fff;color:#706b80;padding:5px 9px;font-size:11px;white-space:nowrap}
+  .module-toggle:hover,.feature-point-toggle:hover{border-color:#b9adff;color:var(--brand-blue-deep);background:var(--brand-blue-soft)}
+  .module.is-collapsed .module-collapse-body,.feature-point.is-collapsed .feature-point-body{display:none}
+  .module.is-collapsed .toggle-mark,.feature-point.is-collapsed .toggle-mark{transform:rotate(-90deg)}
+  .feature-point{margin-top:16px;border:1px solid var(--brand-line);border-radius:8px;background:#fff;overflow:hidden}
+  .feature-point-head{display:flex;align-items:center;gap:12px;padding:13px 15px;background:#faf9ff}.feature-point-head h3{margin:0;flex:1;font-size:15px;color:var(--brand-blue-ink)}
+  .feature-point-body{padding:15px}.evidence-line{margin-top:12px;padding-top:10px;border-top:1px dashed var(--brand-line);color:#777185;font-size:11px}
+  .media-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.media-placeholder{min-height:180px;border:1px dashed #bdb2f6;border-radius:8px;background:#faf9ff;display:grid;place-content:center;text-align:center;color:#746d95;font-size:12px}
+  body.nav-collapsed .brand-lockup span{display:none}body.nav-collapsed .brand-logo{width:38px;height:38px}body.nav-collapsed .brand{padding:18px 10px}
+  @media(max-width:700px){.media-pair{grid-template-columns:1fr}}
   @media(max-width:760px){.brand{min-height:88px;padding:18px 22px}.brand-logo{width:36px;height:36px}.brand-lockup span{font-size:20px}}
 </style>
-
-<style id="release-only-styles">
-  .manual-release-bar{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding:10px 18px;background:#173b57;color:#fff;font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
-  .manual-release-bar a{color:#fff;text-decoration:underline}.manual-release-bar__status{padding:2px 8px;border-radius:999px;background:#fff3cd;color:#6b4f00}
-  .manual-release-notes{margin:32px auto;max-width:1120px;padding:24px;border:1px solid #dfe7ec;border-radius:12px;background:#fff}
-  @media print{.manual-release-bar{display:none}.manual-release-notes{break-inside:avoid}}
-</style>
 </head>
-<body>
-<div class="manual-release-bar" role="status">
-  <strong>HR 系统操作手册</strong>
-  <span>版本：2026.08.05-framework</span>
-  <span>更新时间：2026-08-05</span>
-  <span>适用系统：智能精准学 HR 系统</span>
-  <span class="manual-release-bar__status">框架已确认 · 内容校准中</span>
-  <a href="#manual-release-notes">查看更新记录</a>
-  <button type="button" onclick="window.print()" style="border:0;border-radius:6px;padding:5px 10px;cursor:pointer">打印手册</button>
-
-</div>
+<body data-manual-version="2026.08.06-template">
   <div class="progress" id="progress"></div>
   <div class="shell">
     <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -230,11 +225,11 @@
       <div class="brand"><div class="brand-lockup" aria-label="智能精准学"><svg class="brand-logo" viewBox="0 0 64 64" role="img" aria-label="智能精准学 Logo"><circle cx="28" cy="35" r="18" fill="#fff" stroke="currentColor" stroke-width="10"/><path d="M28 35 49 12" fill="none" stroke="#fff" stroke-width="10"/><path d="M28 35 49 12" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="square"/></svg><span>智能精准学</span></div><span class="brand-note">内部培训版</span><button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="收起导航" aria-expanded="true"><span aria-hidden="true">‹</span><span class="sr-only">收起导航</span></button></div>
       <div class="sidebar-tools">
         <label class="search"><input id="searchInput" type="search" placeholder="搜索功能或字段" aria-label="搜索功能或字段"><span>⌕</span></label>
-          <div class="view-switch" aria-label="手册视图"><button class="active" data-view="all">功能详解</button><button data-view="hr">HR规范</button><button data-view="business">业务规范</button></div>
+          <div class="view-switch" aria-label="手册视图"><button class="active" data-view="function">功能详解</button><button data-view="hr">HR规范</button><button data-view="business">业务规范</button></div>
       </div>
       <nav class="nav" id="nav">
         <div class="nav-group"><div class="nav-label">使用入口</div><a class="active" href="#home" data-target="home"><span class="nav-mark">●</span>手册首页</a><a href="#overview" data-target="overview"><span class="nav-mark">→</span>新版目录</a><a href="#recruitment-flow" data-target="recruitment-flow"><span class="nav-mark">◆</span>招聘流程骨架</a><a href="#principles" data-target="principles"><span class="nav-mark">!</span>编写原则</a></div>
-        <div class="nav-group"><div class="nav-label">手册视图</div><a href="#view-function" data-open-view="all"><span class="nav-mark">01</span>功能详解</a><a href="#view-hr" data-open-view="hr"><span class="nav-mark">02</span>HR规范</a><a href="#view-business" data-open-view="business"><span class="nav-mark">03</span>业务规范</a></div>
+        <div class="nav-group"><div class="nav-label">手册视图</div><a href="#view-function" data-open-view="function"><span class="nav-mark">01</span>功能详解</a><a href="#view-hr" data-open-view="hr"><span class="nav-mark">02</span>HR规范</a><a href="#view-business" data-open-view="business"><span class="nav-mark">03</span>业务规范</a></div>
       </nav>
       <div class="sidebar-foot">状态：空白框架｜待新版内容校准</div>
     </aside>
@@ -247,8 +242,9 @@
         <section class="principles" id="principles"><h2>新版手册编写原则</h2><p>每项内容必须以新系统实际页面或可验证记录为证据；未确认内容统一标记为“待确认”，不沿用旧版业务结论。</p></section>
         <div class="field-toolbar" id="fieldToolbar" hidden><strong>字段表筛选</strong><button class="active" data-field-filter="all">全部字段</button><button data-field-filter="required">必填</button><button data-field-filter="optional">可选</button><button data-field-filter="button">按钮</button><button data-field-filter="readonly">只读</button></div>
         <div class="collapse-toolbar" id="collapseToolbar" hidden><strong id="collapseToolbarLabel">按需查看内容</strong><button type="button" data-collapse-action="open">全部展开</button><button type="button" data-collapse-action="close">全部收起</button></div>
-        <div id="modules"><section class="module" id="view-function" data-audience="all" data-keywords="功能详解 页面 模块 字段"><div class="module-head"><div class="module-title"><span class="module-num">视图 / 01</span><h2>功能详解视图</h2></div><div class="module-meta"><span class="tag purple">结构保留</span><span class="tag orange">内容待核验</span></div></div><p class="module-lead">用于按系统模块说明页面入口、字段、按钮、操作结果和证据来源。</p><div class="module-grid"><div class="panel"><div class="panel-title">模块地图</div><div class="panel-body"><ul class="checklist"><li>页面入口与角色待核验。</li><li>列表、详情、抽屉和弹窗待核验。</li><li>字段、按钮和状态待核验。</li><li>截图与证据来源待采集。</li></ul></div></div><div class="panel screenshot"><div class="empty-visual-placeholder"><strong>页面截图待采集</strong><span>完成脱敏后放入对应模块</span></div><div class="shot-caption"><span>真实页面证据位</span><button class="zoom-link" type="button" disabled>点击放大</button></div></div></div></section><section class="module" id="view-hr" data-audience="hr" data-keywords="HR规范 操作 责任 完成标准"><div class="module-head"><div class="module-title"><span class="module-num">视图 / 02</span><h2>HR操作规范视图</h2></div><div class="module-meta"><span class="tag purple">HR视角</span><span class="tag orange">规则待核验</span></div></div><p class="module-lead">用于说明HR在各阶段看什么、何时操作、操作完成标准及异常处理方式。</p><div class="panel"><div class="panel-title">规范卡片结构</div><div class="panel-body"><ol class="steps"><li><div><b>操作前</b><span>确认岗位、人员、阶段和权限。</span></div></li><li><div><b>操作中</b><span>按照实际页面填写并检查必填项。</span></div></li><li><div><b>操作后</b><span>核对状态、记录、通知和下一责任人。</span></div></li></ol></div></div><div class="rule-box"><strong>说明：</strong>具体规则必须在系统巡览和业务确认后填写。</div></section><section class="module" id="view-business" data-audience="business" data-keywords="业务规范 面试 协作 反馈"><div class="module-head"><div class="module-title"><span class="module-num">视图 / 03</span><h2>业务协作规范视图</h2></div><div class="module-meta"><span class="tag purple">业务视角</span><span class="tag orange">规则待核验</span></div></div><p class="module-lead">用于说明业务负责人或面试参与者需要查看的信息、完成的动作和反馈标准。</p><div class="panel field-panel"><div class="panel-title">协作字段示例结构</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>协作环节</th><th>查看内容</th><th>需要完成</th><th>完成标准</th><th>证据来源</th></tr></thead><tbody><tr data-field-type="readonly"><td>环节待确认</td><td>内容待核验</td><td>动作待核验</td><td>标准待确认</td><td>页面待采集</td></tr></tbody></table></div></div></section></div>
+        <div id="modules"><section class="module" id="view-function" data-audience="function" data-keywords="功能详解 页面 模块 字段"><div class="module-head"><div class="module-title"><span class="module-num">视图 / 01</span><h2>功能详解视图</h2></div><div class="module-meta"><span class="tag purple">结构保留</span><span class="tag orange">内容待核验</span></div></div><p class="module-lead">用于按系统模块说明页面入口、字段、按钮、操作结果和证据来源。</p><div class="module-grid"><div class="panel"><div class="panel-title">模块地图</div><div class="panel-body"><ul class="checklist"><li>页面入口与角色待核验。</li><li>列表、详情、抽屉和弹窗待核验。</li><li>字段、按钮和状态待核验。</li><li>截图与证据来源待采集。</li></ul></div></div><div class="panel screenshot"><div class="empty-visual-placeholder"><strong>页面截图待采集</strong><span>完成脱敏后放入对应模块</span></div><div class="shot-caption"><span>真实页面证据位</span><button class="zoom-link" type="button" disabled>点击放大</button></div></div></div></section><section class="module" id="view-hr" data-audience="hr" data-keywords="HR规范 操作 责任 完成标准"><div class="module-head"><div class="module-title"><span class="module-num">视图 / 02</span><h2>HR操作规范视图</h2></div><div class="module-meta"><span class="tag purple">HR视角</span><span class="tag orange">规则待核验</span></div></div><p class="module-lead">用于说明HR在各阶段看什么、何时操作、操作完成标准及异常处理方式。</p><div class="panel"><div class="panel-title">规范卡片结构</div><div class="panel-body"><ol class="steps"><li><div><b>操作前</b><span>确认岗位、人员、阶段和权限。</span></div></li><li><div><b>操作中</b><span>按照实际页面填写并检查必填项。</span></div></li><li><div><b>操作后</b><span>核对状态、记录、通知和下一责任人。</span></div></li></ol></div></div><div class="rule-box"><strong>说明：</strong>具体规则必须在系统巡览和业务确认后填写。</div></section><section class="module" id="view-business" data-audience="business" data-keywords="业务规范 面试 协作 反馈"><div class="module-head"><div class="module-title"><span class="module-num">视图 / 03</span><h2>业务协作规范视图</h2></div><div class="module-meta"><span class="tag purple">业务视角</span><span class="tag orange">规则待核验</span></div></div><p class="module-lead">用于说明业务负责人或面试参与者需要查看的信息、完成的动作和反馈标准。</p><div class="panel field-panel"><div class="panel-title">协作字段示例结构</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>协作环节</th><th>查看内容</th><th>需要完成</th><th>完成标准</th><th>证据来源</th></tr></thead><tbody><tr data-field-type="readonly"><td>环节待确认</td><td>内容待核验</td><td>动作待核验</td><td>标准待确认</td><td>页面待采集</td></tr></tbody></table></div></div></section></div>
         <template id="moduleComponentTemplate"><section class="module" data-audience="all" data-keywords="待确认"><div class="module-head"><div class="module-title"><span class="module-num">编号待确认</span><h2>模块标题待确认</h2></div><div class="module-meta"><span class="tag purple">状态待核验</span></div></div><p class="module-lead">模块说明待核验。</p><div class="module-grid"><div class="panel screenshot"><div class="empty-visual-placeholder"><strong>页面截图待采集</strong><span>采集后需脱敏并标记证据页面</span></div><div class="shot-caption"><span>截图说明待填写</span><button class="zoom-link" type="button" disabled>点击放大</button></div></div><div class="panel"><div class="panel-title">操作步骤</div><div class="panel-body"><ol class="steps"><li><div><b>步骤待确认</b><span>操作规则与结果待核验。</span></div></li></ol></div></div></div><div class="panel field-panel"><div class="panel-title">页面字段与操作说明</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段 / 按钮</th><th>页面位置</th><th>是否必填</th><th>字段含义</th><th>谁来填写</th><th>什么时候填写</th><th>对后续流程的影响</th><th>操作规范</th></tr></thead><tbody><tr data-field-type="readonly"><td>字段待核验</td><td>位置待核验</td><td class="field-type readonly"><b>待确认</b></td><td>待核验</td><td>待确认</td><td>待确认</td><td>待核验</td><td>待核验</td></tr></tbody></table></div></div><div class="rule-box"><strong>规则：</strong>待系统证据确认后填写。</div></section></template>
+        <template id="featurePointComponentTemplate"><div class="feature-point"><div class="feature-point-head"><h3>功能点标题待确认</h3><span class="tag purple">证据待采集</span></div><div class="feature-point-body"><div class="media-pair"><div class="media-placeholder">操作前截图待采集</div><div class="media-placeholder">操作后截图或动态演示待采集</div></div><div class="evidence-line">证据来源、页面路径、角色、系统版本和核验时间待填写。</div><div data-view-section="hr"><div class="rule-box"><strong>HR 操作规范：</strong>责任人、操作时点、完成标准和异常处理待核验。</div></div><div data-view-section="business"><div class="rule-box"><strong>业务协作规范：</strong>协作角色、输入信息、反馈动作和完成标准待核验。</div></div></div></div></template>
         <div class="empty" id="emptyState" hidden><b>没有找到匹配内容</b><span>当前业务模块尚未录入。</span></div>
         <p class="footnote">说明：本文件仅为新版 HR 系统操作手册的完整空白框架，不代表任何业务功能已经上线。</p>
       
@@ -266,34 +262,127 @@
   const sidebar = document.querySelector('.sidebar');
   const backdrop = document.getElementById('navBackdrop');
   const progress = document.getElementById('progress');
-  let activeView = 'all';
+  const fieldToolbar = document.getElementById('fieldToolbar');
+  const collapseToolbar = document.getElementById('collapseToolbar');
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  let activeView = 'function';
   const modules = () => [...modulesRoot.querySelectorAll('.module')];
 
+  function clearHighlights() {
+    document.querySelectorAll('mark.search-mark').forEach(mark => mark.replaceWith(document.createTextNode(mark.textContent)));
+  }
+
+  function highlight(root, query) {
+    if (!query || !root) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        if (!node.nodeValue.trim() || node.parentElement.closest('script,style,button,mark')) return NodeFilter.FILTER_REJECT;
+        return node.nodeValue.toLowerCase().includes(query) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(node => {
+      const text = node.nodeValue;
+      const lower = text.toLowerCase();
+      const fragment = document.createDocumentFragment();
+      let cursor = 0;
+      for (let index = lower.indexOf(query); index >= 0; index = lower.indexOf(query, cursor)) {
+        fragment.append(text.slice(cursor, index));
+        const mark = document.createElement('mark');
+        mark.className = 'search-mark';
+        mark.textContent = text.slice(index, index + query.length);
+        fragment.append(mark);
+        cursor = index + query.length;
+      }
+      fragment.append(text.slice(cursor));
+      node.replaceWith(fragment);
+    });
+  }
+
+  function syncToolbars(visibleModules) {
+    const hasFields = visibleModules.some(module => module.querySelector('.standard-table'));
+    fieldToolbar.hidden = !hasFields;
+    collapseToolbar.hidden = visibleModules.length === 0;
+  }
+
+  function syncViewSections(module) {
+    module.querySelectorAll('[data-view-section]').forEach(section => {
+      section.hidden = activeView !== 'all' && section.dataset.viewSection !== activeView;
+    });
+  }
+
   function applyFilters() {
+    clearHighlights();
     const query = searchInput.value.trim().toLowerCase();
-    let visible = 0;
+    const visibleModules = [];
     modules().forEach(module => {
       const audience = module.dataset.audience || 'all';
-      const viewMatch = activeView === 'all' || audience === activeView;
+      const hasViewSections = !!module.querySelector('[data-view-section]');
+      const viewMatch = hasViewSections || activeView === 'all' || audience === activeView;
       const queryMatch = !query || module.textContent.toLowerCase().includes(query) || (module.dataset.keywords || '').toLowerCase().includes(query);
       module.hidden = !(viewMatch && queryMatch);
-      if (!module.hidden) visible += 1;
+      syncViewSections(module);
+      if (!module.hidden) {
+        visibleModules.push(module);
+        if (query) {
+          module.classList.remove('is-collapsed');
+          module.querySelectorAll('.feature-point').forEach(point => point.classList.remove('is-collapsed'));
+          highlight(module, query);
+        }
+      }
     });
     const empty = document.getElementById('emptyState');
-    empty.hidden = modules().length === 0 || visible > 0;
+    empty.hidden = modules().length === 0 || visibleModules.length > 0;
+    syncToolbars(visibleModules);
+  }
+
+  function setView(view, scrollToModules = false) {
+    activeView = view;
+    viewButtons.forEach(item => item.classList.toggle('active', item.dataset.view === activeView));
+    applyFilters();
+    if (scrollToModules) modulesRoot.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function prepareCollapsibles() {
+    modules().forEach(module => {
+      const head = module.querySelector(':scope > .module-head');
+      if (!head || head.querySelector('.module-toggle')) return;
+      const children = [...module.children].filter(child => child !== head);
+      const body = document.createElement('div');
+      body.className = 'module-collapse-body';
+      children.forEach(child => body.append(child));
+      module.append(body);
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'module-toggle';
+      button.innerHTML = '<span class="toggle-mark">▾</span><span>收起</span>';
+      button.addEventListener('click', () => {
+        const collapsed = module.classList.toggle('is-collapsed');
+        button.lastElementChild.textContent = collapsed ? '展开' : '收起';
+        button.setAttribute('aria-expanded', String(!collapsed));
+      });
+      head.append(button);
+    });
+    document.querySelectorAll('.feature-point').forEach(point => {
+      const head = point.querySelector('.feature-point-head');
+      if (!head || head.querySelector('.feature-point-toggle')) return;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'feature-point-toggle';
+      button.innerHTML = '<span class="toggle-mark">▾</span><span>收起</span>';
+      button.addEventListener('click', () => {
+        const collapsed = point.classList.toggle('is-collapsed');
+        button.lastElementChild.textContent = collapsed ? '展开' : '收起';
+      });
+      head.append(button);
+    });
   }
 
   searchInput.addEventListener('input', applyFilters);
-  viewButtons.forEach(button => button.addEventListener('click', () => {
-    activeView = button.dataset.view;
-    viewButtons.forEach(item => item.classList.toggle('active', item === button));
-    applyFilters();
-    modulesRoot.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }));
+  viewButtons.forEach(button => button.addEventListener('click', () => setView(button.dataset.view, true)));
   document.querySelectorAll('[data-open-view]').forEach(link => link.addEventListener('click', () => {
-    activeView = link.dataset.openView;
-    viewButtons.forEach(item => item.classList.toggle('active', item.dataset.view === activeView));
-    applyFilters();
+    setView(link.dataset.openView);
   }));
   fieldButtons.forEach(button => button.addEventListener('click', () => {
     const filter = button.dataset.fieldFilter;
@@ -303,26 +392,31 @@
     });
   }));
   document.querySelectorAll('[data-collapse-action]').forEach(button => button.addEventListener('click', () => {
-    modules().forEach(module => module.querySelectorAll('.panel-body').forEach(body => {
-      body.hidden = button.dataset.collapseAction === 'close';
-    }));
+    const close = button.dataset.collapseAction === 'close';
+    modules().filter(module => !module.hidden).forEach(module => {
+      module.classList.toggle('is-collapsed', close);
+      const toggle = module.querySelector('.module-toggle span:last-child');
+      if (toggle) toggle.textContent = close ? '展开' : '收起';
+      module.querySelectorAll('.feature-point').forEach(point => point.classList.toggle('is-collapsed', close));
+    });
   }));
+  sidebarToggle?.addEventListener('click', () => {
+    const collapsed = document.body.classList.toggle('nav-collapsed');
+    sidebarToggle.setAttribute('aria-expanded', String(!collapsed));
+  });
   document.getElementById('printBtn')?.addEventListener('click', () => window.print());
   document.getElementById('mobileNavToggle')?.addEventListener('click', () => {
-    sidebar?.classList.add('open');
-    backdrop?.classList.add('open');
+    document.body.classList.add('nav-open');
   });
   backdrop?.addEventListener('click', () => {
-    sidebar?.classList.remove('open');
-    backdrop.classList.remove('open');
+    document.body.classList.remove('nav-open');
   });
   document.querySelectorAll('.nav a[href^="#"]').forEach(link => link.addEventListener('click', () => {
-    sidebar?.classList.remove('open');
-    backdrop?.classList.remove('open');
+    document.body.classList.remove('nav-open');
   }));
   window.addEventListener('scroll', () => {
     const max = document.documentElement.scrollHeight - innerHeight;
-    progress.style.width = (max > 0 ? scrollY / max * 100 : 0) + '%';
+    progress.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0) + ')';
   }, { passive: true });
   document.addEventListener('click', event => {
     const trigger = event.target.closest('[data-zoom]');
@@ -332,13 +426,27 @@
     document.getElementById('lightbox').classList.add('open');
   });
   document.getElementById('closeLightbox')?.addEventListener('click', () => document.getElementById('lightbox').classList.remove('open'));
+  document.getElementById('lightbox')?.addEventListener('click', event => {
+    if (event.target.id === 'lightbox') event.currentTarget.classList.remove('open');
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      document.getElementById('lightbox')?.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    }
+  });
+  const observedSections = [...document.querySelectorAll('#home,#overview,#recruitment-flow,#principles,#modules > .module')];
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      const current = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!current) return;
+      document.querySelectorAll('.nav a[data-target]').forEach(link => link.classList.toggle('active', link.dataset.target === current.target.id));
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: [0,.1,.5] });
+    observedSections.forEach(section => observer.observe(section));
+  }
+  prepareCollapsibles();
   applyFilters();
 })();
 </script>
-<section id="manual-release-notes" class="manual-release-notes">
-  <h2>版本与更新记录</h2>
-  <p><strong>2026.08.05-framework：</strong>恢复完整手册导航、视图切换、流程骨架和通用组件结构。</p>
-  <p>新版 HR 系统页面、字段和操作流程正在逐项核验；当前流程仅表示待核验范围，不代表功能已经上线。</p>
-</section>
 </body>
 </html>
