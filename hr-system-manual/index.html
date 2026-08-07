@@ -104,145 +104,10 @@
         .feature-section-head span{color:var(--muted);font-size:11px}
         .feature-section .screenshot{box-shadow:none}
         .feature-point{margin:18px 0 26px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:7px;box-shadow:var(--shadow);scroll-margin-top:96px}
-        .feature-point-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:13px}
-        .feature-point-title{display:flex;align-items:baseline;gap:9px}
-        .feature-point-title h3{margin:0;color:var(--ink);font-size:17px}
-        .feature-point-num{color:var(--purple);font-size:11px;font-weight:800;letter-spacing:.04em}
-        .feature-point-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
-        .feature-point-info{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
-        .feature-point-info div{padding:9px 11px;background:var(--soft);border-left:3px solid var(--line)}
-        .feature-point-info b{display:block;margin-bottom:2px;color:var(--muted);font-size:10px;font-weight:700}
-        .feature-point-info span{color:#52525b;font-size:12px}
-        .feature-index{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;padding:12px 14px;background:var(--soft);border:1px solid var(--line);border-radius:6px}
-        .feature-index-label{width:100%;color:var(--muted);font-size:11px;font-weight:700}
-        .feature-index a{display:inline-flex;align-items:center;padding:5px 8px;border:1px solid #d9d2ff;border-radius:4px;background:var(--surface);color:var(--purple-dark);font-size:11px;text-decoration:none}
-        .feature-index a:hover{border-color:var(--purple);background:var(--purple-soft)}
-        .feature-point-shot{min-height:116px;margin-bottom:14px}
-        .feature-point-shot .screenshot{box-shadow:none}
-        .feature-placeholder{display:grid;place-items:center;min-height:150px;border:1px dashed #c7bfff;border-radius:6px;background:var(--purple-soft);color:var(--purple-dark);font-size:12px}
-        .feature-placeholder small{display:block;margin-top:3px;color:var(--muted);font-size:10px}
-        .feature-point .field-panel{margin-top:0;box-shadow:none}
-        .feature-point .feature-note{margin-top:14px}
-        @media(max-width:700px){.feature-point-info{grid-template-columns:1fr}.feature-point-head{display:block}.feature-point-tags{justify-content:flex-start;margin-top:8px}}
-        .feature-note{margin-top:16px;padding:13px 14px;border-left:3px solid var(--purple);background:var(--purple-soft);color:#4c3b9f;font-size:12px}
-        .sop-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-        .sop-links a{display:inline-flex;align-items:center;padding:6px 9px;border:1px solid #d9d2ff;border-radius:4px;background:var(--purple-soft);color:var(--purple-dark);font-size:11px;text-decoration:none}
-        .sop-links a:hover{border-color:var(--purple);background:#e9e5ff}
-        .sop-module .module-lead{max-width:960px}
-        @media print{.sop-links{display:none!important}}
-      </style>
-      <style>
-        .editor-toggle{border-color:#d9d2ff;background:var(--purple-soft);color:var(--purple-dark);font-weight:700}
-        .editor-toggle.is-active{background:var(--purple);border-color:var(--purple);color:#fff}
-        .editor-bar{display:none;position:sticky;top:70px;z-index:7;max-width:1380px;margin:0 auto;padding:10px 40px;border-bottom:1px solid #d9d2ff;background:rgba(249,248,255,.96);backdrop-filter:blur(10px)}
-        body.editor-mode .editor-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-        .editor-bar button{border:1px solid var(--line);background:#fff;border-radius:5px;padding:6px 10px;color:#3f3f46;font-size:11px}
-        .editor-bar button:hover{border-color:var(--purple);color:var(--purple-dark);background:var(--purple-soft)}
-        .editor-bar .editor-primary{background:var(--purple);border-color:var(--purple);color:#fff}
-        .editor-bar .editor-danger{color:var(--red)}
-        .editor-status{margin-left:auto;color:var(--muted);font-size:11px}
-        body.editor-mode [data-readonly-disabled="true"]{outline:1px dashed #b7a9ff;outline-offset:3px;background:rgba(241,239,255,.35);cursor:text}
-        body.editor-mode [data-readonly-disabled="true"]:focus{outline:2px solid var(--purple);background:#fff}
-        .editor-node-tools,.editor-cell-tools{display:none}
-        body.editor-mode .editor-node-tools{display:inline-flex;align-items:center;gap:4px;margin-left:8px;vertical-align:middle}
-        .editor-node-tools button,.editor-cell-tools button{border:1px solid #d9d2ff;background:#fff;color:var(--purple-dark);border-radius:4px;padding:3px 6px;font-size:10px;line-height:1.2}
-        .editor-node-tools button:hover,.editor-cell-tools button:hover{background:var(--purple-soft)}
-        body.editor-mode .editor-cell-tools{display:inline-flex;gap:3px;margin-left:6px;vertical-align:middle}
-        body.editor-mode [data-editor-hidden="true"]{opacity:.55;outline:1px dashed #f0a23b}
-        body.editor-mode [data-editor-hidden="true"]:after{content:"已隐藏（编辑模式仍可恢复）";display:block;color:var(--orange);font-size:11px;padding:6px 10px;background:var(--orange-soft)}
-        .editor-media-button{display:none}
-        body.editor-mode .editor-media-button{display:inline-flex;position:absolute;right:10px;top:10px;z-index:2;border:1px solid #d9d2ff;background:#fff;color:var(--purple-dark);border-radius:4px;padding:5px 8px;font-size:10px}
-        .editor-media-button:hover{background:var(--purple-soft)}
-        body.editor-mode .screenshot,.editor-mode .gif-panel,.editor-mode .feature-point-shot,.editor-mode .sop-action-preimage{position:relative}
-        .editor-hidden-preview{display:none}
-        @media(max-width:700px){.editor-bar{position:static;padding:10px 16px}.editor-status{width:100%;margin-left:0}.top-actions{gap:6px}.editor-toggle{font-size:11px;padding-inline:8px!important}}
-        @media print{.editor-bar,.editor-toggle,.editor-node-tools,.editor-cell-tools,.editor-media-button{display:none!important}}
-      </style>
-
-<style id="blank-framework-styles">
-  :root{--brand-blue:#6242f5;--brand-blue-deep:#4326c7;--brand-blue-ink:#29205f;--brand-blue-soft:#f0edff;--brand-line:#e4e0f5}
-  body{background:#f5f9ff;color:#17243a}
-  .sidebar{background:#fff;border-right:1px solid var(--brand-line);box-shadow:10px 0 34px rgba(48,38,102,.06)}
-  .brand{min-height:112px;border-bottom:1px solid var(--brand-line);padding:25px 28px;background:#fff}
-  .brand-lockup{display:flex;align-items:center;gap:12px;color:var(--brand-blue);white-space:nowrap}
-  .brand-logo{width:43px;height:43px;flex:none;color:var(--brand-blue)}
-  .brand-lockup span{font-size:23px;font-weight:800;letter-spacing:.035em;color:#19172a}
-  .brand-note{display:none}
-  .sidebar-toggle{margin-left:auto;flex:none}
-  .sidebar .search{background:#fafaff;border-color:#ddd9ee;color:#242136}
-  .sidebar .search::placeholder{color:#858197}
-  .sidebar .view-tabs{border-bottom-color:var(--brand-line)}
-  .sidebar .view-tabs button{color:#686476}
-  .sidebar .view-tabs button.active{background:var(--brand-blue-soft);color:var(--brand-blue-deep);border-color:#d5ceff;box-shadow:none}
-  .sidebar .nav-label{color:#aaa6b6}
-  .sidebar .nav a{color:#575363;border-left-color:transparent}
-  .sidebar .nav a:hover{background:#f7f5ff;color:var(--brand-blue-deep)}
-  .sidebar .nav a.active{background:var(--brand-blue-soft);color:var(--brand-blue-deep);border-left-color:var(--brand-blue);box-shadow:none}
-  .sidebar .nav-mark{color:#8b7cf1}
-  .sidebar .nav a.active .nav-mark{color:var(--brand-blue)}
-  .sidebar-foot{color:#858197;border-top-color:var(--brand-line);background:#fff}
-  .topbar{background:rgba(255,255,255,.94);border-bottom:1px solid var(--brand-line);backdrop-filter:blur(14px)}
-  .crumb strong,.hero h1,.overview h2,.module h2,.principles h2{color:#10284c}
-  .status-dot{color:var(--brand-blue-deep)}.status-dot i{background:#27a36a}
-  .print-btn{background:var(--brand-blue);border-color:var(--brand-blue);color:#fff}.print-btn:hover{background:var(--brand-blue-deep)}
-  .content{background:linear-gradient(180deg,#f7faff 0%,#fff 32%)}
-  .eyebrow{color:var(--brand-blue);letter-spacing:.16em}
-  .hero{border-bottom-color:var(--brand-line)}
-  .stat{border-color:var(--brand-line);box-shadow:0 8px 26px rgba(23,105,224,.06)}.stat b{color:var(--brand-blue-deep)}
-  .overview-card,.module,.principles{border-color:var(--brand-line);box-shadow:0 16px 38px rgba(23,83,160,.07)}
-  .flow-index a{border-color:var(--brand-line);background:#fbfaff}.flow-index a:hover{border-color:#b9adff;background:var(--brand-blue-soft);transform:translateY(-1px)}.flow-index a b{color:var(--brand-blue)}
-  .tag.purple{background:var(--brand-blue-soft);border-color:#d5ceff;color:var(--brand-blue-deep)}
-  .module-num{color:var(--brand-blue)}
-  .panel{border-color:var(--brand-line)}.panel-title{background:#f7f5ff;color:var(--brand-blue-ink);border-bottom-color:var(--brand-line)}
-  .steps li:before{color:#171421;background:#fff;border:1px solid #d9d5e8;box-shadow:0 0 0 6px var(--brand-blue-soft);font-weight:800}
-  .rule-box{background:#f4f1ff;border-color:#d7d0ff;color:#43367e}
-  .standard-table th{background:#f3f0ff;color:var(--brand-blue-ink)}
-  #progress{background:linear-gradient(90deg,#8872ff,var(--brand-blue-deep))}
-  .nav-placeholder{display:block;margin:8px 12px;color:#9db9c8;font-size:12px;line-height:1.6}
-  .empty-visual-placeholder{min-height:250px;border:1px dashed #bdb2f6;border-radius:14px;display:grid;place-content:center;gap:6px;text-align:center;background:#faf9ff;color:#746d95}
-  .empty-visual-placeholder strong{color:var(--brand-blue-ink);font-size:18px}.empty-visual-placeholder span{font-size:13px}
-  .flow-index span{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid #dfe7ec;border-radius:10px;background:#fff;color:#526b7a}
-  .view-section[hidden],.module[hidden],tr[hidden]{display:none!important}
-  mark.search-mark{background:#fff0a8;color:inherit;padding:0 2px;border-radius:2px}
-  .module-toggle,.feature-point-toggle{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--brand-line);border-radius:5px;background:#fff;color:#706b80;padding:5px 9px;font-size:11px;white-space:nowrap}
-  .module-toggle:hover,.feature-point-toggle:hover{border-color:#b9adff;color:var(--brand-blue-deep);background:var(--brand-blue-soft)}
-  .module.is-collapsed .module-collapse-body,.feature-point.is-collapsed .feature-point-body{display:none}
-  .module.is-collapsed .toggle-mark,.feature-point.is-collapsed .toggle-mark{transform:rotate(-90deg)}
-  .feature-point{margin-top:16px;border:1px solid var(--brand-line);border-radius:8px;background:#fff;overflow:hidden}
-  .feature-point-head{display:flex;align-items:center;gap:12px;padding:13px 15px;background:#faf9ff}.feature-point-head h3{margin:0;flex:1;font-size:15px;color:var(--brand-blue-ink)}
-  .feature-point-body{padding:15px}.evidence-line{margin-top:12px;padding-top:10px;border-top:1px dashed var(--brand-line);color:#777185;font-size:11px}
-  .media-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.media-placeholder{min-height:180px;border:1px dashed #bdb2f6;border-radius:8px;background:#faf9ff;display:grid;place-content:center;text-align:center;color:#746d95;font-size:12px}
-  body.nav-collapsed .brand-lockup span{display:none}body.nav-collapsed .brand-logo{width:38px;height:38px}body.nav-collapsed .brand{padding:18px 10px}
-  @media(max-width:700px){.media-pair{grid-template-columns:1fr}}
-  @media(max-width:760px){.brand{min-height:88px;padding:18px 22px}.brand-logo{width:36px;height:36px}.brand-lockup span{font-size:20px}}
-</style>
-</head>
-<body data-manual-version="2026.08.06-template">
-  <div class="progress" id="progress"></div>
-  <div class="shell">
-    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
-    <aside class="sidebar">
-      <div class="brand"><div class="brand-lockup" aria-label="智能精准学"><svg class="brand-logo" viewBox="0 0 64 64" role="img" aria-label="智能精准学 Logo"><circle cx="28" cy="35" r="18" fill="#fff" stroke="currentColor" stroke-width="10"/><path d="M28 35 49 12" fill="none" stroke="#fff" stroke-width="10"/><path d="M28 35 49 12" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="square"/></svg><span>智能精准学</span></div><span class="brand-note">内部培训版</span><button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="收起导航" aria-expanded="true"><span aria-hidden="true">‹</span><span class="sr-only">收起导航</span></button></div>
-      <div class="sidebar-tools">
-        <label class="search"><input id="searchInput" type="search" placeholder="搜索功能或字段" aria-label="搜索功能或字段"><span>⌕</span></label>
-          <div class="view-switch" aria-label="手册视图"><button class="active" data-view="function">功能详解</button><button data-view="hr">HR规范</button><button data-view="business">业务规范</button></div>
-      </div>
-      <nav class="nav" id="nav">
-        <div class="nav-group"><div class="nav-label">使用入口</div><a class="active" href="#home" data-target="home"><span class="nav-mark">●</span>手册首页</a><a href="#overview" data-target="overview"><span class="nav-mark">→</span>新版目录</a><a href="#recruitment-flow" data-target="recruitment-flow"><span class="nav-mark">◆</span>招聘流程骨架</a><a href="#principles" data-target="principles"><span class="nav-mark">!</span>编写原则</a></div>
-        <div class="nav-group"><div class="nav-label">手册视图</div><a href="#view-function" data-open-view="function"><span class="nav-mark">01</span>功能详解</a><a href="#view-hr" data-open-view="hr"><span class="nav-mark">02</span>HR规范</a><a href="#view-business" data-open-view="business"><span class="nav-mark">03</span>业务规范</a></div>
-      </nav>
-      <div class="sidebar-foot">状态：空白框架｜待新版内容校准</div>
-    </aside>
-    <main class="main">
-      <header class="topbar"><button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="打开导航">&#9776;</button><div class="crumb"><strong>操作手册</strong><span> / HR 系统</span></div><div class="top-actions"><span class="status-dot"><i></i>框架已确认 · 内容校准中</span><button class="print-btn" id="printBtn">打印 / 导出 PDF</button></div></header>
-      <div class="content">
-        <section class="hero" id="home"><div><div class="eyebrow">INTELLIGENT PRECISE LEARNING · OPERATING MANUAL</div><h1>HR 系统操作手册</h1><p>当前文件保留完整视觉框架与交互组件，旧版业务正文和业务图片已清空。新版内容将在完成系统实证巡览后逐项填写。</p></div><div class="hero-side"><div class="stat"><b>0</b><span>已确认模块</span></div><div class="stat"><b>0</b><span>已采集截图</span></div><div class="stat"><b>1</b><span>完整框架</span></div><div class="stat"><b>待</b><span>内容校准</span></div></div></section>
-        <section class="overview" id="overview"><div class="overview-card"><div class="overview-head"><div><h2>新版手册目录骨架</h2><p>以下目录来自本轮巡览计划，只表示待核验范围，不代表对应功能已经上线。</p></div><span class="tag purple">待系统核验</span></div><div class="flow-index"><a href="#flow-01"><b>01</b>系统导航、用户与权限</a><a href="#flow-02"><b>02</b>职位、招聘阶段与发布</a><a href="#flow-03"><b>03</b>公开招聘与职位映射</a><a href="#flow-04"><b>04</b>简历接收与人员建档</a><a href="#flow-05"><b>05</b>评估、AI面试与业务面试</a><a href="#flow-06"><b>06</b>Offer、入职与终止</a><a href="#flow-07"><b>07</b>通知、冲突与异常</a><a href="#flow-08"><b>08</b>外部账号与入口</a></div><p class="logic-line">目录项将在实际页面核验后改为正式模块名称，并补充证据来源。</p></div></section>
-        <section class="module" id="recruitment-flow" data-audience="all" data-keywords="招聘流程 骨架 待核验"><div class="module-head"><div class="module-title"><span class="module-num">流程 / 00</span><h2>完整招聘流程骨架</h2></div><div class="module-meta"><span class="tag orange">全部待核验</span></div></div><p class="module-lead">先保留招聘链路的阅读顺序，后续根据新系统页面、状态和记录逐节点校准。</p><div class="panel"><div class="panel-title">待核验流程</div><div class="panel-body"><ol class="steps"><li id="flow-01"><div><b>账号、导航与权限</b><span>核验入口、角色、可见菜单和权限边界。</span></div></li><li id="flow-02"><div><b>职位与招聘阶段</b><span>核验职位创建、阶段配置、发布状态和操作权限。</span></div></li><li id="flow-03"><div><b>公开招聘与映射</b><span>核验公开入口、对应关系和外部来源。</span></div></li><li id="flow-04"><div><b>简历接收与人员建档</b><span>核验手工录入、邮件接收、解析和主档形成过程。</span></div></li><li id="flow-05"><div><b>筛选、评估与面试</b><span>核验投递、评估、AI面试、业务面试和面评记录。</span></div></li><li id="flow-06"><div><b>Offer、入职、终止与沉淀</b><span>核验各状态、关键动作及历史留痕。</span></div></li><li id="flow-07"><div><b>通知、冲突与异常处理</b><span>核验触发时点、失败状态、冲突提示和处理入口。</span></div></li><li id="flow-08"><div><b>外部账号与入口</b><span>核验外部协作角色、门户和访问边界。</span></div></li></ol></div></div><div class="rule-box"><strong>当前状态：</strong>以上仅为调研与编写顺序，不作为已上线功能说明。</div></section>
-        <section class="principles" id="principles"><h2>新版手册编写原则</h2><p>每项内容必须以新系统实际页面或可验证记录为证据；未确认内容统一标记为“待确认”，不沿用旧版业务结论。</p></section>
-        <div class="field-toolbar" id="fieldToolbar" hidden><strong>字段表筛选</strong><button class="active" data-field-filter="all">全部字段</button><button data-field-filter="required">必填</button><button data-field-filter="optional">可选</button><button data-field-filter="button">按钮</button><button data-field-filter="readonly">只读</button></div>
-        <div class="collapse-toolbar" id="collapseToolbar" hidden><strong id="collapseToolbarLabel">按需查看内容</strong><button type="button" data-collapse-action="open">全部展开</button><button type="button" data-collapse-action="close">全部收起</button></div>
-        <div id="modules"><section class="module" id="view-function" data-audience="function" data-keywords="功能详解 页面 模块 字段"><div class="module-head"><div class="module-title"><span class="module-num">视图 / 01</span><h2>功能详解视图</h2></div><div class="module-meta"><span class="tag purple">结构保留</span><span class="tag orange">内容待核验</span></div></div><p class="module-lead">用于按系统模块说明页面入口、字段、按钮、操作结果和证据来源。</p><div class="module-grid"><div class="panel"><div class="panel-title">模块地图</div><div class="panel-body"><ul class="checklist"><li>页面入口与角色待核验。</li><li>列表、详情、抽屉和弹窗待核验。</li><li>字段、按钮和状态待核验。</li><li>截图与证据来源待采集。</li></ul></div></div><div class="panel screenshot"><div class="empty-visual-placeholder"><strong>页面截图待采集</strong><span>完成脱敏后放入对应模块</span></div><div class="shot-caption"><span>真实页面证据位</span><button class="zoom-link" type="button" disabled>点击放大</button></div></div></div></section><section class="module" id="view-hr" data-audience="hr" data-keywords="HR规范 操作 责任 完成标准"><div class="module-head"><div class="module-title"><span class="module-num">视图 / 02</span><h2>HR操作规范视图</h2></div><div class="module-meta"><span class="tag purple">HR视角</span><span class="tag orange">规则待核验</span></div></div><p class="module-lead">用于说明HR在各阶段看什么、何时操作、操作完成标准及异常处理方式。</p><div class="panel"><div class="panel-title">规范卡片结构</div><div class="panel-body"><ol class="steps"><li><div><b>操作前</b><span>确认岗位、人员、阶段和权限。</span></div></li><li><div><b>操作中</b><span>按照实际页面填写并检查必填项。</span></div></li><li><div><b>操作后</b><span>核对状态、记录、通知和下一责任人。</span></div></li></ol></div></div><div class="rule-box"><strong>说明：</strong>具体规则必须在系统巡览和业务确认后填写。</div></section><section class="module" id="view-business" data-audience="business" data-keywords="业务规范 面试 协作 反馈"><div class="module-head"><div class="module-title"><span class="module-num">视图 / 03</span><h2>业务协作规范视图</h2></div><div class="module-meta"><span class="tag purple">业务视角</span><span class="tag orange">规则待核验</span></div></div><p class="module-lead">用于说明业务负责人或面试参与者需要查看的信息、完成的动作和反馈标准。</p><div class="panel field-panel"><div class="panel-title">协作字段示例结构</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>协作环节</th><th>查看内容</th><th>需要完成</th><th>完成标准</th><th>证据来源</th></tr></thead><tbody><tr data-field-type="readonly"><td>环节待确认</td><td>内容待核验</td><td>动作待核验</td><td>标准待确认</td><td>页面待采集</td></tr></tbody></table></div></div></section></div>
+        .featur…6178 tokens truncated…理面试问题</b><span>从简历事实出发准备追问，不预设结论，不以与岗位无关的个人信息作为判断依据。</span></div></li></ol></div></div><div class="rule-box"><strong>职责边界：</strong>“下一阶段”“终止投递”“阶段回退”等属于 HR 流程处理动作，业务负责人不因完成查看或评价而自行操作。</div></section>
+        <section class="module" id="biz-interview" data-audience="business" data-keywords="结构化面试 候选人体验 事实追问 能力验证"><div class="module-head"><div class="module-title"><span class="module-num">业务 / 03</span><h2>结构化面试</h2></div><div class="module-meta"><span class="tag purple">核心职责</span></div></div><p class="module-lead">业务负责人围绕岗位标准开展结构化面试，用一致、清晰、尊重的方式验证候选人的真实经历与能力，同时保障良好的候选人体验。</p><div class="panel"><div class="panel-title">建议面试结构</div><div class="panel-body"><ol class="steps"><li><div><b>清晰开场</b><span>准时参会，完成自我介绍，说明本轮面试的目标和大致安排，让候选人知道接下来会发生什么。</span></div></li><li><div><b>围绕事实追问</b><span>结合岗位要求询问候选人做过什么、承担什么角色、如何行动、产生什么结果，并通过追问确认其实际贡献。</span></div></li><li><div><b>按统一标准判断</b><span>对同一岗位使用相对一致的核心问题和判断维度，区分“候选人表达”与“已经验证的事实”。</span></div></li><li><div><b>留出候选人提问时间</b><span>如实回答岗位和团队相关问题；不确定的信息不随意承诺，面试后可交由 HR 补充。</span></div></li><li><div><b>规范收尾</b><span>感谢候选人参与，不在现场随意承诺录用结果、薪资或后续时间，由 HR 统一跟进。</span></div></li></ol></div></div><div class="rule-box"><strong>业务重点：</strong>AI 面试、会议链接和日程同步等系统事务不作为业务负责人操作重点。业务负责人重点做好候选人了解、专业面试和客观评价。</div></section>
+        <section class="module" id="biz-evaluate" data-audience="business" data-keywords="提交评价 写面评 事实依据 优势 风险 结论"><div class="module-head"><div class="module-title"><span class="module-num">业务 / 04</span><h2>提交评价</h2></div><div class="module-meta"><span class="tag purple">核心职责</span><span class="tag green">界面已核验</span></div></div><p class="module-lead">面试结束后及时进入候选人页面撰写面评。评价必须能够让未参加面试的 HR 看懂判断依据，并支持后续决策与沟通。</p><div class="panel"><div class="panel-title">规范评价的四个部分</div><div class="panel-body"><ol class="steps"><li><div><b>事实记录</b><span>记录候选人的关键回答、经历和可验证结果，避免只写“感觉不错”“沟通一般”等模糊印象。</span></div></li><li><div><b>岗位匹配判断</b><span>逐项说明哪些能力符合岗位要求、证据是什么，区分已经验证与尚未验证的内容。</span></div></li><li><div><b>优势与风险</b><span>写明值得继续关注的优势、可能影响胜任的风险及建议在下一轮补充验证的问题。</span></div></li><li><div><b>明确结论</b><span>给出清晰建议，并确保结论与前述事实、能力判断和风险分析一致。</span></div></li></ol></div></div><div class="panel gif-panel"><div class="panel-title">面试评价完整操作</div><img src="business-assets/interview-evaluation.gif" alt="面试评价操作：从钉钉面试通知进入候选人页面，填写并保存面试评价" data-zoom="business-assets/interview-evaluation.gif"><div class="gif-note">钉钉面试通知点击候选人链接 → 在候选人面试阶段点击“写面评” → 选择面试结论并填写评价 → 保存成功。候选人简历统一使用中性白色占位展示。</div></div><div class="panel field-panel"><div class="panel-title">评价内容规范</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>评价部分</th><th>应该写什么</th><th>避免写什么</th><th>完成标准</th><th>系统字段</th></tr></thead><tbody><tr data-field-type="required"><td>事实依据</td><td>具体回答、行为、职责和结果</td><td>仅写主观感觉</td><td>他人能够理解判断从何而来</td><td>面试评价</td></tr><tr data-field-type="required"><td>能力判断</td><td>与岗位要求对应的匹配情况</td><td>与岗位无关的个人评价</td><td>判断与证据一一对应</td><td>面试评价</td></tr><tr data-field-type="required"><td>风险与待验证项</td><td>风险表现、影响及后续验证建议</td><td>没有事实依据的标签</td><td>HR 或下一轮面试官可直接继续验证</td><td>面试评价</td></tr><tr data-field-type="required"><td>面试结论</td><td>明确的推进建议</td><td>模糊、矛盾或无结论</td><td>结论与正文判断保持一致</td><td>面试结论</td></tr></tbody></table></div></div><div class="rule-box"><strong>已核验：</strong>“写面试评价”面板包含必填的“面试结论”和“面试评价”；结论选项为“面试通过”“面试不通过”，操作按钮为“取消”“保存”。</div><div class="evidence-line">证据来源：用户提供的钉钉面试通知，以及新 HR 系统面试阶段、写面试评价面板、填写状态和保存成功截图。</div></section>
+        <section class="module" id="biz-handoff" data-audience="business" data-keywords="反馈与交接 HR协作 异常 候选人体验"><div class="module-head"><div class="module-title"><span class="module-num">业务 / 05</span><h2>反馈与交接</h2></div><div class="module-meta"><span class="tag purple">协作闭环</span></div></div><p class="module-lead">业务负责人完成评价后，将判断和必要信息完整交给 HR；HR 负责招聘阶段和候选人后续沟通，双方共同保障流程顺畅与候选人体验。</p><div class="module-grid"><div class="panel"><div class="panel-title">业务负责人需要完成</div><div class="panel-body"><ul class="checklist"><li>在约定时间内完成作品评价或面试评价，不让后续流程因反馈缺失而停滞。</li><li>评价内容有事实、有岗位判断、有风险说明、有明确结论。</li><li>出现迟到、缺席、时间冲突、沟通异常或需要补充验证的情况，及时同步 HR。</li><li>对候选人提出但现场无法确认的问题，记录并交由 HR 后续回复。</li></ul></div></div><div class="panel"><div class="panel-title">HR 接续处理</div><div class="panel-body"><ul class="checklist"><li>结合评价决定后续招聘流程并完成系统操作。</li><li>负责候选人阶段推进、回退、终止及后续通知。</li><li>协调下一轮面试或补充沟通，并向相关人员同步必要信息。</li><li>具体时效与异常升级规则待内部规范确认。</li></ul></div></div></div><div class="rule-box"><strong>候选人体验底线：</strong>业务人员不向候选人随意承诺结果或时间；对外口径由 HR 统一协调，但业务人员应及时、完整地提供判断依据。</div><div class="evidence-line">证据来源：已核验候选人投递详情页中的评价入口和 HR 阶段操作入口；协作时效、异常升级和对外口径仍需业务制度确认。</div></section></div>
         <template id="moduleComponentTemplate"><section class="module" data-audience="all" data-keywords="待确认"><div class="module-head"><div class="module-title"><span class="module-num">编号待确认</span><h2>模块标题待确认</h2></div><div class="module-meta"><span class="tag purple">状态待核验</span></div></div><p class="module-lead">模块说明待核验。</p><div class="module-grid"><div class="panel screenshot"><div class="empty-visual-placeholder"><strong>页面截图待采集</strong><span>采集后需脱敏并标记证据页面</span></div><div class="shot-caption"><span>截图说明待填写</span><button class="zoom-link" type="button" disabled>点击放大</button></div></div><div class="panel"><div class="panel-title">操作步骤</div><div class="panel-body"><ol class="steps"><li><div><b>步骤待确认</b><span>操作规则与结果待核验。</span></div></li></ol></div></div></div><div class="panel field-panel"><div class="panel-title">页面字段与操作说明</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段 / 按钮</th><th>页面位置</th><th>是否必填</th><th>字段含义</th><th>谁来填写</th><th>什么时候填写</th><th>对后续流程的影响</th><th>操作规范</th></tr></thead><tbody><tr data-field-type="readonly"><td>字段待核验</td><td>位置待核验</td><td class="field-type readonly"><b>待确认</b></td><td>待核验</td><td>待确认</td><td>待确认</td><td>待核验</td><td>待核验</td></tr></tbody></table></div></div><div class="rule-box"><strong>规则：</strong>待系统证据确认后填写。</div></section></template>
         <template id="featurePointComponentTemplate"><div class="feature-point"><div class="feature-point-head"><h3>功能点标题待确认</h3><span class="tag purple">证据待采集</span></div><div class="feature-point-body"><div class="media-pair"><div class="media-placeholder">操作前截图待采集</div><div class="media-placeholder">操作后截图或动态演示待采集</div></div><div class="evidence-line">证据来源、页面路径、角色、系统版本和核验时间待填写。</div><div data-view-section="hr"><div class="rule-box"><strong>HR 操作规范：</strong>责任人、操作时点、完成标准和异常处理待核验。</div></div><div data-view-section="business"><div class="rule-box"><strong>业务协作规范：</strong>协作角色、输入信息、反馈动作和完成标准待核验。</div></div></div></div></template>
         <div class="empty" id="emptyState" hidden><b>没有找到匹配内容</b><span>当前业务模块尚未录入。</span></div>
@@ -450,3 +315,4 @@
 </script>
 </body>
 </html>
+
