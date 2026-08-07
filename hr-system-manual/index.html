@@ -202,6 +202,10 @@
   .empty-visual-placeholder strong{color:var(--brand-blue-ink);font-size:18px}.empty-visual-placeholder span{font-size:13px}
   .flow-index span{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid #dfe7ec;border-radius:10px;background:#fff;color:#526b7a}
   .view-section[hidden],.module[hidden],tr[hidden]{display:none!important}
+  #modules > .module[data-audience]{display:none!important}
+  body[data-manual-view="function"] #modules > .module[data-audience="function"],
+  body[data-manual-view="hr"] #modules > .module[data-audience="hr"],
+  body[data-manual-view="business"] #modules > .module[data-audience="business"]{display:block!important}
   mark.search-mark{background:#fff0a8;color:inherit;padding:0 2px;border-radius:2px}
   .module-toggle,.feature-point-toggle{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--brand-line);border-radius:5px;background:#fff;color:#706b80;padding:5px 9px;font-size:11px;white-space:nowrap}
   .module-toggle:hover,.feature-point-toggle:hover{border-color:#b9adff;color:var(--brand-blue-deep);background:var(--brand-blue-soft)}
@@ -220,7 +224,7 @@
   .business-real-gif-slot strong{font-size:17px;color:var(--brand-blue-ink)}
 </style>
 </head>
-<body data-manual-version="2026.08.07-business-view">
+<body data-manual-view="function" data-manual-version="2026.08.07-business-view">
   <div class="progress" id="progress"></div>
   <div class="shell">
     <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -360,6 +364,7 @@
 
   function setView(view, scrollToModules = false) {
     activeView = view;
+    document.body.dataset.manualView = activeView;
     viewButtons.forEach(item => item.classList.toggle('active', item.dataset.view === activeView));
     applyFilters();
     if (scrollToModules) modulesRoot.scrollIntoView({ behavior: 'smooth', block: 'start' });
