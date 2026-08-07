@@ -340,8 +340,7 @@
     const visibleModules = [];
     modules().forEach(module => {
       const audience = module.dataset.audience || 'all';
-      const hasViewSections = !!module.querySelector('[data-view-section]');
-      const viewMatch = hasViewSections || activeView === 'all' || audience === activeView;
+      const viewMatch = audience === activeView;
       const queryMatch = !query || module.textContent.toLowerCase().includes(query) || (module.dataset.keywords || '').toLowerCase().includes(query);
       module.hidden = !(viewMatch && queryMatch);
       syncViewSections(module);
