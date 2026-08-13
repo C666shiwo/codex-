@@ -8,7 +8,7 @@
   <title>HR 系统操作手册｜空白完整框架</title>
   <style>
     :root{--purple:#6146ff;--purple-dark:#39279f;--purple-soft:#f1efff;--ink:#18181b;--muted:#71717a;--line:#e4e4e7;--surface:#fff;--canvas:#f7f7f8;--soft:#fafafa;--green:#18864b;--green-soft:#ecfdf3;--orange:#b45309;--orange-soft:#fff7ed;--red:#be123c;--red-soft:#fff1f2;--shadow:0 10px 30px rgba(24,24,27,.07)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--canvas);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;line-height:1.65}button,input{font:inherit}button{cursor:pointer}.progress{position:fixed;z-index:20;inset:0 0 auto;height:4px;background:var(--purple);transform-origin:left;transform:scaleX(0)}.shell{min-height:100vh;display:flex}.sidebar{position:fixed;inset:0 auto 0 0;z-index:10;width:276px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:12px;padding:22px 22px 18px;border-bottom:1px solid var(--line)}.brand img{width:152px;height:auto;display:block}.brand-note{margin-left:auto;color:var(--muted);font-size:11px;writing-mode:vertical-rl}.sidebar-tools{padding:16px 16px 6px}.search{position:relative}.search input{width:100%;height:38px;padding:0 36px 0 12px;border:1px solid var(--line);border-radius:6px;color:var(--ink);outline:none;background:var(--soft)}.search input:focus{border-color:var(--purple);background:var(--surface);box-shadow:0 0 0 3px var(--purple-soft)}.search span{position:absolute;right:12px;top:5px;color:var(--muted);font-size:19px}.view-switch{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding-top:10px}.view-switch button{border:1px solid transparent;background:transparent;color:var(--muted);padding:6px 3px;border-radius:5px;font-size:12px}.view-switch button.active{background:var(--purple-soft);color:var(--purple-dark);border-color:#d9d2ff;font-weight:700}.nav{padding:10px 12px 22px;overflow:auto}.nav-group{margin-top:14px}.nav-label{padding:4px 10px;color:#a1a1aa;font-size:11px;letter-spacing:.08em}.nav a{display:flex;gap:9px;align-items:center;color:#3f3f46;text-decoration:none;padding:9px 10px;margin:2px 0;border-left:3px solid transparent;border-radius:0 5px 5px 0;font-size:13px}.nav a:hover{background:var(--soft);color:var(--purple-dark)}.nav a.active{color:var(--purple-dark);background:var(--purple-soft);border-left-color:var(--purple);font-weight:700}.nav-mark{width:17px;color:var(--purple);text-align:center;font-size:12px}.sidebar-foot{margin-top:auto;padding:13px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.main{margin-left:276px;width:calc(100% - 276px)}.topbar{position:sticky;top:4px;z-index:8;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:66px;padding:12px 40px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.crumb{color:var(--muted);font-size:12px}.crumb strong{color:var(--ink);font-size:13px}.top-actions{display:flex;align-items:center;gap:10px}.status-dot{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:12px}.status-dot i{width:7px;height:7px;background:var(--green);border-radius:50%}.print-btn{border:1px solid var(--line);background:var(--surface);color:#3f3f46;border-radius:5px;padding:7px 11px;font-size:12px}.print-btn:hover{border-color:var(--purple);color:var(--purple-dark)}.content{max-width:1380px;margin:0 auto;padding:36px 40px 80px}.hero{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(320px,.9fr);gap:24px;align-items:end;padding:4px 0 28px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--purple);font-size:12px;letter-spacing:.14em;font-weight:700}h1{margin:6px 0 8px;font-size:clamp(29px,3.2vw,46px);letter-spacing:-.02em;line-height:1.18}.hero p{max-width:790px;margin:0;color:#52525b;font-size:14px}.hero-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stat{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr;column-gap:10px;align-content:start;min-height:108px;border:1px solid var(--line);background:var(--surface);padding:13px;border-radius:6px}.stat b{grid-row:1 / span 2;color:var(--purple-dark);font-size:18px;line-height:1.25}.stat strong{display:block;color:var(--ink);font-size:12px;line-height:1.4}.stat span{display:block;margin-top:4px;color:var(--muted);font-size:10px;line-height:1.5}.overview{margin:26px 0 28px}.overview-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}.overview-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:18px 20px 12px}.overview-head h2{font-size:22px}.overview-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.overview-image{display:block;width:100%;max-height:720px;object-fit:contain;background:#fff;border-top:1px solid var(--line);cursor:zoom-in}.flow-index{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:14px 20px 20px}.flow-index a{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:5px;color:#3f3f46;text-decoration:none;font-size:12px;background:var(--soft)}.flow-index a:hover{border-color:var(--purple);color:var(--purple-dark);background:var(--purple-soft)}.flow-index b{color:var(--purple)}.logic-line{margin:0;padding:13px 20px 18px;color:var(--purple-dark);font-size:13px;border-top:1px solid var(--line);background:var(--purple-soft)}.principles{margin:26px 0 22px;padding:18px 20px;border-left:4px solid var(--purple);background:var(--purple-soft);display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center}.principles h2{margin:0;font-size:16px;color:var(--purple-dark)}.principles p{margin:0;color:#4c3b9f;font-size:13px}.field-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 14px;margin:0 0 28px;background:var(--surface);border:1px solid var(--line);border-radius:7px}.field-toolbar strong{font-size:12px;margin-right:4px}.field-toolbar button{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:5px 9px;color:var(--muted);font-size:11px}.field-toolbar button.active{color:var(--purple-dark);border-color:#c7bfff;background:var(--purple-soft);font-weight:700}.module{margin:30px 0 44px;scroll-margin-top:96px}.module[hidden]{display:none}.module-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:14px}.module-title{display:flex;align-items:baseline;gap:10px}.module-num{color:var(--purple);font-size:13px;font-weight:800}h2{margin:0;font-size:25px;letter-spacing:-.015em}.module-meta{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.tag{display:inline-flex;align-items:center;min-height:24px;padding:2px 8px;border-radius:4px;background:var(--soft);border:1px solid var(--line);color:var(--muted);font-size:11px}.tag.purple{color:var(--purple-dark);background:var(--purple-soft);border-color:#d9d2ff}.tag.green{color:var(--green);background:var(--green-soft);border-color:#b7e4c8}.tag.orange{color:var(--orange);background:var(--orange-soft);border-color:#fed7aa}.module-lead{margin:0 0 16px;color:#52525b;font-size:14px}.module-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:16px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:7px;box-shadow:var(--shadow)}.panel-title{padding:14px 16px 10px;font-size:13px;font-weight:700;border-bottom:1px solid var(--line)}.panel-body{padding:14px 16px}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.info-block{padding:11px 12px;background:var(--soft);border-left:3px solid var(--line)}.info-block b{display:block;margin-bottom:3px;font-size:12px}.info-block span{color:var(--muted);font-size:12px}.rule-box{margin-top:14px;padding:13px 14px;border:1px solid #fed7aa;background:var(--orange-soft);color:#854d0e;font-size:12px}.rule-box strong{color:var(--orange)}.screenshot{overflow:hidden;position:relative}.screenshot img{display:block;width:100%;max-height:430px;object-fit:contain;object-position:top center;background:#f4f4f5;cursor:zoom-in}.shot-caption{display:flex;justify-content:space-between;gap:8px;padding:8px 12px;color:var(--muted);font-size:11px;border-top:1px solid var(--line)}.zoom-link{border:0;padding:0;color:var(--purple);background:none;font-size:11px}.steps{margin:0;padding:0;list-style:none;counter-reset:step}.steps li{position:relative;display:grid;grid-template-columns:28px 1fr;gap:10px;padding:0 0 13px;margin-bottom:13px;border-bottom:1px dashed var(--line)}.steps li:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0}.steps li:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;color:var(--purple-dark);background:var(--purple-soft);font-size:11px;font-weight:700}.steps b{display:block;font-size:13px}.steps span{color:var(--muted);font-size:12px}.steps em{display:inline-block;margin-top:4px;color:var(--green);font-style:normal;font-size:11px}.gif-panel img{display:block;width:100%;max-height:420px;object-fit:contain;background:#f4f4f5;cursor:zoom-in}.gif-note{padding:8px 12px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.field-panel{margin-top:16px}.table-scroll{overflow-x:auto}.standard-table{width:100%;border-collapse:collapse;font-size:12px;min-width:930px}.standard-table th{text-align:left;color:#52525b;background:var(--soft);font-weight:700}.standard-table th,.standard-table td{padding:9px 10px;border:1px solid var(--line);vertical-align:top}.standard-table td{color:#52525b}.standard-table td:first-child{color:var(--ink);font-weight:700}.field-badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;margin-right:5px;border-radius:50%;background:var(--purple);color:white;font-size:11px;cursor:zoom-in}.field-type{white-space:nowrap}.field-type b{display:inline-block;padding:2px 5px;border-radius:3px;font-size:10px;color:var(--muted);background:#f4f4f5}.field-type.required b{color:var(--red);background:var(--red-soft)}.field-type.button b{color:var(--purple-dark);background:var(--purple-soft)}.field-type.readonly b{color:var(--green);background:var(--green-soft)}.standard-table tr[hidden]{display:none}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;margin:0;padding:0;list-style:none}.checklist li{position:relative;padding-left:19px;color:#52525b;font-size:12px}.checklist li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}.checklist li.warn:before{content:"!";color:var(--orange)}.empty{padding:60px 20px;text-align:center;color:var(--muted)}.empty b{display:block;color:var(--ink);margin-bottom:5px}.lightbox{position:fixed;z-index:30;inset:0;display:none;place-items:center;padding:28px;background:rgba(24,24,27,.78)}.lightbox.open{display:grid}.lightbox img{max-width:min(1200px,96vw);max-height:88vh;background:white;box-shadow:0 20px 80px rgba(0,0,0,.35)}.lightbox button{position:fixed;top:18px;right:22px;width:38px;height:38px;border:1px solid rgba(255,255,255,.45);background:transparent;color:white;border-radius:50%;font-size:22px}.footnote{margin:40px 0 0;padding:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--canvas);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;line-height:1.65}button,input{font:inherit}button{cursor:pointer}.progress{position:fixed;z-index:20;inset:0 0 auto;height:4px;background:var(--purple);transform-origin:left;transform:scaleX(0)}.shell{min-height:100vh;display:flex}.sidebar{position:fixed;inset:0 auto 0 0;z-index:10;width:276px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:12px;padding:22px 22px 18px;border-bottom:1px solid var(--line)}.brand img{width:152px;height:auto;display:block}.brand-note{margin-left:auto;color:var(--muted);font-size:11px;writing-mode:vertical-rl}.sidebar-tools{padding:16px 16px 6px}.search{position:relative}.search input{width:100%;height:38px;padding:0 36px 0 12px;border:1px solid var(--line);border-radius:6px;color:var(--ink);outline:none;background:var(--soft)}.search input:focus{border-color:var(--purple);background:var(--surface);box-shadow:0 0 0 3px var(--purple-soft)}.search span{position:absolute;right:12px;top:5px;color:var(--muted);font-size:19px}.view-switch{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding-top:10px}.view-switch button{border:1px solid transparent;background:transparent;color:var(--muted);padding:6px 3px;border-radius:5px;font-size:12px}.view-switch button.active{background:var(--purple-soft);color:var(--purple-dark);border-color:#d9d2ff;font-weight:700}.nav{padding:10px 12px 22px;overflow:auto}.nav-group{margin-top:14px}.nav-label{padding:4px 10px;color:#a1a1aa;font-size:11px;letter-spacing:.08em}.nav a{display:flex;gap:9px;align-items:center;color:#3f3f46;text-decoration:none;padding:9px 10px;margin:2px 0;border-left:3px solid transparent;border-radius:0 5px 5px 0;font-size:13px}.nav a:hover{background:var(--soft);color:var(--purple-dark)}.nav a.active{color:var(--purple-dark);background:var(--purple-soft);border-left-color:var(--purple);font-weight:700}.nav-mark{width:17px;color:var(--purple);text-align:center;font-size:12px}.sidebar-foot{margin-top:auto;padding:13px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.main{margin-left:276px;width:calc(100% - 276px)}.topbar{position:sticky;top:4px;z-index:8;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:66px;padding:12px 40px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.crumb{color:var(--muted);font-size:12px}.crumb strong{color:var(--ink);font-size:13px}.top-actions{display:flex;align-items:center;gap:10px}.status-dot{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:12px}.status-dot i{width:7px;height:7px;background:var(--green);border-radius:50%}.print-btn{border:1px solid var(--line);background:var(--surface);color:#3f3f46;border-radius:5px;padding:7px 11px;font-size:12px}.print-btn:hover{border-color:var(--purple);color:var(--purple-dark)}.content{max-width:1380px;margin:0 auto;padding:36px 40px 80px}.hero{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(320px,.9fr);gap:24px;align-items:end;padding:4px 0 28px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--purple);font-size:12px;letter-spacing:.14em;font-weight:700}h1{margin:6px 0 8px;font-size:clamp(29px,3.2vw,46px);letter-spacing:-.02em;line-height:1.18}.hero p{max-width:790px;margin:0;color:#52525b;font-size:14px}.hero-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stat{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr;column-gap:10px;align-content:start;min-height:108px;border:1px solid var(--line);background:var(--surface);padding:13px;border-radius:6px}.stat b{grid-row:1 / span 2;color:var(--purple-dark);font-size:18px;line-height:1.25}.stat strong{display:block;color:var(--ink);font-size:12px;line-height:1.4}.stat span{display:block;margin-top:4px;color:var(--muted);font-size:10px;line-height:1.5}.overview{margin:26px 0 28px}.overview-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}.overview-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:18px 20px 12px}.overview-head h2{font-size:22px}.overview-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.overview-image{display:block;width:100%;max-height:720px;object-fit:contain;background:#fff;border-top:1px solid var(--line);cursor:zoom-in}.flow-index{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:14px 20px 20px}.flow-index a{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:5px;color:#3f3f46;text-decoration:none;font-size:12px;background:var(--soft)}.flow-index a:hover{border-color:var(--purple);color:var(--purple-dark);background:var(--purple-soft)}.flow-index b{color:var(--purple)}.logic-line{margin:0;padding:13px 20px 18px;color:var(--purple-dark);font-size:13px;border-top:1px solid var(--line);background:var(--purple-soft)}.principles{margin:26px 0 22px;padding:18px 20px;border-left:4px solid var(--purple);background:var(--purple-soft);display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center}.principles h2{margin:0;font-size:16px;color:var(--purple-dark)}.principles p{margin:0;color:#4c3b9f;font-size:13px}.field-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 14px;margin:0 0 28px;background:var(--surface);border:1px solid var(--line);border-radius:7px}.field-toolbar strong{font-size:12px;margin-right:4px}.field-toolbar button{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:5px 9px;color:var(--muted);font-size:11px}.field-toolbar button.active{color:var(--purple-dark);border-color:#c7bfff;background:var(--purple-soft);font-weight:700}.module{margin:30px 0 44px;scroll-margin-top:96px}.module[hidden]{display:none}.module-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:14px}.module-title{display:flex;align-items:baseline;gap:10px}.module-num{color:var(--purple);font-size:13px;font-weight:800}h2{margin:0;font-size:25px;letter-spacing:-.015em}.module-meta{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.tag{display:inline-flex;align-items:center;min-height:24px;padding:2px 8px;border-radius:4px;background:var(--soft);border:1px solid var(--line);color:var(--muted);font-size:11px}.tag.purple{color:var(--purple-dark);background:var(--purple-soft);border-color:#d9d2ff}.tag.green{color:var(--green);background:var(--green-soft);border-color:#b7e4c8}.tag.orange{color:var(--orange);background:var(--orange-soft);border-color:#fed7aa}.module-lead{margin:0 0 16px;color:#52525b;font-size:14px}.module-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:16px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:7px;box-shadow:var(--shadow)}.panel-title{padding:14px 16px 10px;font-size:13px;font-weight:700;border-bottom:1px solid var(--line)}.panel-body{padding:14px 16px}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.info-block{padding:11px 12px;background:var(--soft);border-left:3px solid var(--line)}.info-block b{display:block;margin-bottom:3px;font-size:12px}.info-block span{color:var(--muted);font-size:12px}.rule-box{margin-top:14px;padding:13px 14px;border:1px solid #fed7aa;background:var(--orange-soft);color:#854d0e;font-size:12px}.rule-box strong{color:var(--orange)}.screenshot{overflow:hidden;position:relative}.screenshot img{display:block;width:100%;max-height:430px;object-fit:contain;object-position:top center;background:#f4f4f5;cursor:zoom-in}.shot-caption{display:flex;justify-content:space-between;gap:8px;padding:8px 12px;color:var(--muted);font-size:11px;border-top:1px solid var(--line)}.zoom-link{border:0;padding:0;color:var(--purple);background:none;font-size:11px}.steps{margin:0;padding:0;list-style:none;counter-reset:step}.steps li{position:relative;display:grid;grid-template-columns:28px 1fr;gap:10px;padding:0 0 13px;margin-bottom:13px;border-bottom:1px dashed var(--line)}.steps li:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0}.steps li:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;color:var(--purple-dark);background:var(--purple-soft);font-size:11px;font-weight:700}.steps b{display:block;font-size:13px}.steps span{color:var(--muted);font-size:12px}.steps em{display:inline-block;margin-top:4px;color:var(--green);font-style:normal;font-size:11px}.gif-panel img{display:block;width:100%;max-height:420px;object-fit:contain;background:#f4f4f5;cursor:zoom-in}.gif-note{padding:8px 12px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.field-panel{margin-top:16px}.table-scroll{overflow-x:auto}.standard-table{width:100%;border-collapse:collapse;font-size:12px;min-width:930px}.standard-table th{text-align:left;color:#52525b;background:var(--soft);font-weight:700}.standard-table th,.standard-table td{padding:9px 10px;border:1px solid var(--line);vertical-align:top}.standard-table td{color:#52525b}.standard-table td:first-child{color:var(--ink);font-weight:700}.field-badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;margin-right:5px;border-radius:50%;background:var(--purple);color:white;font-size:11px;cursor:zoom-in}.field-type{white-space:nowrap}.field-type b{display:inline-block;padding:2px 5px;border-radius:3px;font-size:10px;color:var(--muted);background:#f4f4f5}.field-type.required b{color:var(--red);background:var(--red-soft)}.field-type.button b{color:var(--purple-dark);background:var(--purple-soft)}.field-type.readonly b{color:var(--green);background:var(--green-soft)}.standard-table tr[hidden]{display:none}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;margin:0;padding:0;list-style:none}.checklist li{position:relative;padding-left:19px;color:#52525b;font-size:12px}.checklist li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}.checklist li.warn:before{content:"!";color:var(--orange)}.empty{padding:60px 20px;text-align:center;color:var(--muted)}.empty b{display:block;color:var(--ink);margin-bottom:5px}.lightbox{position:fixed;z-index:30;inset:0;display:none;place-items:center;padding:28px;background:rgba(24,24,27,.78)}.lightbox.open{display:grid}.lightbox img{max-width:min(1200px,96vw);max-height:88vh;background:white;box-shadow:0 20px 80px rgba(0,0,0,.35)}.lightbox>button{position:fixed;z-index:2;top:18px;right:22px;width:38px;height:38px;border:1px solid rgba(255,255,255,.45);background:transparent;color:white;border-radius:50%;font-size:22px}.footnote{margin:40px 0 0;padding:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
     @media(max-width:980px){.sidebar{width:226px}.main{margin-left:226px;width:calc(100% - 226px)}.topbar{padding:12px 24px}.content{padding:28px 24px 64px}.hero{grid-template-columns:1fr;align-items:start}.module-grid{grid-template-columns:1fr}.flow-index{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.sidebar{position:static;width:100%;height:auto;border-right:0;border-bottom:1px solid var(--line)}.shell{display:block}.brand-note,.sidebar-foot{display:none}.nav{max-height:260px}.main{margin-left:0;width:100%}.topbar{position:static;padding:12px 16px}.top-actions .status-dot{display:none}.content{padding:22px 16px 48px}.principles{grid-template-columns:1fr;gap:5px}.module-head{display:block}.module-meta{justify-content:flex-start;margin-top:9px}.info-grid,.checklist{grid-template-columns:1fr}.flow-index{grid-template-columns:1fr}.standard-table{min-width:930px}}@media(max-width:430px){.hero-side{grid-template-columns:1fr}.stat{min-height:0}}@media print{.sidebar,.topbar,.progress,.lightbox,.print-btn,.gif-panel{display:none!important}.main{margin:0;width:100%}.content{padding:0;max-width:none}.module{break-inside:avoid}.panel{box-shadow:none}}
     </style>
     <style id="operation-teaching-styles">
@@ -18,6 +18,30 @@
       .template-accordion .screenshot{border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none}.template-accordion .screenshot img{max-height:none}
       .operation-fields{margin-top:10px}.operation-fields .panel-title{color:var(--purple-dark);background:var(--purple-soft)}
       @media print{.template-accordion{break-inside:avoid}.template-accordion:not([open])>*:not(summary){display:block}}
+    </style>
+    <style id="gif-player-styles">
+      .gif-player{background:#f4f4f5;outline:none}.gif-player:focus-visible{box-shadow:inset 0 0 0 3px rgba(97,70,255,.35)}
+      .gif-player-stage{position:relative;display:grid;place-items:center;min-height:220px;background:#f4f4f5;overflow:hidden}
+      .gif-player-stage img{display:block;width:100%;max-height:420px;object-fit:contain;background:#f4f4f5;cursor:zoom-in}
+      .gif-player-controls{padding:11px 12px 12px;border-top:1px solid var(--line);background:#fff}
+      .gif-player-status{display:flex;align-items:center;gap:8px;margin-bottom:9px;color:var(--ink);font-size:12px;font-weight:700;min-width:0}
+      .gif-player-step-count{flex:0 0 auto;color:var(--purple-dark);background:var(--purple-soft);padding:2px 7px;border-radius:4px}
+      .gif-player-step-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+      .gif-player-timeline{display:flex;align-items:center;gap:9px}.gif-player-range{flex:1;min-width:80px;accent-color:var(--purple);cursor:pointer}
+      .gif-player-time{flex:0 0 auto;min-width:78px;color:var(--muted);font-size:10px;text-align:right;font-variant-numeric:tabular-nums}
+      .gif-player-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:9px}
+      .gif-player-button{border:1px solid var(--line);background:#fff;color:#52525b;border-radius:5px;padding:5px 9px;font-size:11px;line-height:1.4}
+      .gif-player-button:hover,.gif-player-button:focus-visible{border-color:#b9adff;background:var(--purple-soft);color:var(--purple-dark)}
+      .gif-player-button.primary{min-width:58px;color:#fff;background:var(--purple);border-color:var(--purple)}
+      .gif-player-button:disabled{cursor:not-allowed;opacity:.4}
+      .gif-player-dots{display:flex;align-items:center;gap:5px;flex:1;min-width:120px;overflow-x:auto;padding:2px 0;scrollbar-width:thin}
+      .gif-player-dot{flex:0 0 auto;display:grid;place-items:center;width:25px;height:25px;border:1px solid #d9d2ff;border-radius:50%;background:#fff;color:var(--purple-dark);font-size:10px;font-weight:700;padding:0}
+      .gif-player-dot.active{background:var(--purple);border-color:var(--purple);color:#fff}.gif-player-fallback .gif-player-controls{display:none}
+      .lightbox.gif-mode{grid-template-rows:minmax(0,1fr);padding:24px 24px 18px}.lightbox.gif-mode>img{display:none}
+      .lightbox-player{display:none;width:min(1200px,96vw);max-height:94vh;overflow:auto;background:#fff;border-radius:8px;box-shadow:0 20px 80px rgba(0,0,0,.35)}
+      .lightbox.gif-mode .lightbox-player{display:block}.lightbox-player .gif-player-stage img{max-height:74vh}.lightbox-player .gif-player-controls{position:sticky;bottom:0}
+      @media(max-width:700px){.gif-player-stage{min-height:150px}.gif-player-status{align-items:flex-start}.gif-player-timeline{flex-wrap:wrap}.gif-player-range{flex-basis:calc(100% - 90px)}.gif-player-actions{gap:5px}.gif-player-button{padding:6px 8px}.gif-player-dots{order:3;flex-basis:100%}.lightbox.gif-mode{padding:52px 8px 8px}.lightbox-player{width:100%;max-height:92vh}}
+      @media print{.gif-player-controls{display:none}.gif-player-stage img{max-height:420px}}
     </style>
     <style>
       .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -874,7 +898,7 @@ flowchart TB
       </div>
     </main>
   </div>
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="放大查看截图"><button id="closeLightbox" aria-label="关闭">×</button><img id="lightboxImg" src="" alt="放大图片"></div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="放大查看截图"><button id="closeLightbox" aria-label="关闭">×</button><img id="lightboxImg" src="" alt="放大图片"><div class="lightbox-player" id="lightboxPlayer"></div></div>
   <div class="flow-toast" id="flowToast" role="status" aria-live="polite"></div>
 
 <script type="application/json" id="flowMappingManifest">
@@ -891,6 +915,7 @@ flowchart TB
   }
 }
 </script>
+<script src="gif-player/manifest.js"></script>
 <script src="assets/mermaid.min.js"></script>
 <script>
 (() => {
@@ -908,6 +933,10 @@ flowchart TB
   let activeView = 'function';
   let navObserver = null;
   let flowToastTimer = null;
+  const gifManifest = window.HR_GIF_PLAYER_MANIFEST || { sources: {}, assets: {} };
+  const gifPlayers = new Set();
+  let activeGifPlayer = null;
+  let lightboxGifSource = null;
   const modules = () => [...document.querySelectorAll('.module[data-audience]:not([data-audience="all"])')];
   const operationFieldGuides = [
     [['手动录入候选人与投递'], [['简历文件','required','上传需要建档的候选人简历，等待系统自动识别。'],['姓名／手机号／邮箱','required','核对自动识别结果；联系方式必须与简历一致。'],['应聘职位／简历来源','required','手动选择本次实际应聘岗位和真实来源渠道。'],['创建候选人与投递','button','确认信息后创建本次投递。']]],
@@ -925,6 +954,214 @@ flowchart TB
     [['发起人才回捞邀约'], [['邀约岗位','required','选择希望候选人重新投递的指定岗位。'],['发起邀约／发送邀约','button','确认后系统自动发送指定岗位投递邀约，无单独发送前复查环节。'],['邀约状态','readonly','候选人接受并投递后进入候选人与投递；未接受则继续停留在人才库。']]]
   ];
   const fieldTypeLabels = { required: '必须填写', optional: '可以填写', readonly: '系统展示项', button: '操作按钮' };
+
+  function formatGifTime(ms) {
+    const seconds = Math.max(0, ms) / 1000;
+    return `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`;
+  }
+  function pauseOtherGifPlayers(current) {
+    gifPlayers.forEach(player => { if (player !== current) player.pause(); });
+  }
+  function createGifPlayer(original, source, options = {}) {
+    const assetId = gifManifest.sources[source];
+    const asset = assetId && gifManifest.assets[assetId];
+    if (!asset) {
+      original.dataset.zoom = source;
+      return null;
+    }
+    const playable = asset.playableFrames || asset.frames.map((_, index) => index);
+    const playablePosition = new Map(playable.map((frameIndex, position) => [frameIndex, position]));
+    const totalDuration = playable.reduce((sum, frameIndex) => sum + asset.durations[frameIndex], 0);
+    const stepForFrame = new Map();
+    asset.steps.forEach((step, stepIndex) => step.frames.forEach(frame => stepForFrame.set(frame, stepIndex)));
+    const root = document.createElement('div');
+    root.className = 'gif-player';
+    root.tabIndex = 0;
+    root.dataset.gifSource = source;
+    root.setAttribute('role', 'group');
+    root.setAttribute('aria-label', `${original.alt || '操作演示'}，可定位步骤播放器`);
+    const stage = document.createElement('div');
+    stage.className = 'gif-player-stage';
+    const image = document.createElement('img');
+    image.alt = original.alt || '操作演示';
+    image.loading = options.lightbox ? 'eager' : 'lazy';
+    image.decoding = 'async';
+    stage.append(image);
+    const controls = document.createElement('div');
+    controls.className = 'gif-player-controls';
+    controls.innerHTML = `<div class="gif-player-status"><span class="gif-player-step-count"></span><span class="gif-player-step-title"></span></div><div class="gif-player-timeline"><input class="gif-player-range" type="range" min="0" max="${Math.max(0, totalDuration - 1)}" value="0" step="1" aria-label="动图播放进度"><span class="gif-player-time"></span></div><div class="gif-player-actions"><button class="gif-player-button primary" type="button" data-gif-action="play">播放</button><button class="gif-player-button" type="button" data-gif-action="previous">上一步</button><button class="gif-player-button" type="button" data-gif-action="next">下一步</button><button class="gif-player-button" type="button" data-gif-action="restart">重新播放</button><div class="gif-player-dots" aria-label="操作步骤"></div></div>`;
+    root.append(stage, controls);
+    const range = controls.querySelector('.gif-player-range');
+    const playButton = controls.querySelector('[data-gif-action="play"]');
+    const previousButton = controls.querySelector('[data-gif-action="previous"]');
+    const nextButton = controls.querySelector('[data-gif-action="next"]');
+    const statusCount = controls.querySelector('.gif-player-step-count');
+    const statusTitle = controls.querySelector('.gif-player-step-title');
+    const time = controls.querySelector('.gif-player-time');
+    const dots = controls.querySelector('.gif-player-dots');
+    let framePosition = 0;
+    let elapsedInFrame = 0;
+    let elapsedTotal = 0;
+    let playing = false;
+    let timer = null;
+    let animationFrame = null;
+    let startedAt = 0;
+    let currentFrameDuration = 0;
+    const framePath = position => asset.frames[playable[position]];
+    const currentStep = () => stepForFrame.get(playable[framePosition]) ?? 0;
+    function clearTimer() { if (timer) clearTimeout(timer); timer = null; if (animationFrame) cancelAnimationFrame(animationFrame); animationFrame = null; }
+    function updateProgress() {
+      const liveElapsed = Math.min(totalDuration - 1, elapsedTotal + (playing && startedAt ? performance.now() - startedAt : 0));
+      range.value = String(liveElapsed);
+      time.textContent = `${formatGifTime(liveElapsed)} / ${formatGifTime(totalDuration)}`;
+      if (playing) animationFrame = requestAnimationFrame(updateProgress);
+    }
+    function update() {
+      const stepIndex = currentStep();
+      image.src = framePath(framePosition);
+      range.value = String(Math.min(totalDuration - 1, elapsedTotal));
+      statusCount.textContent = `步骤 ${stepIndex + 1}/${asset.steps.length}`;
+      statusTitle.textContent = asset.steps[stepIndex].title;
+      time.textContent = `${formatGifTime(elapsedTotal)} / ${formatGifTime(totalDuration)}`;
+      playButton.textContent = playing ? '暂停' : '播放';
+      previousButton.disabled = stepIndex === 0;
+      nextButton.disabled = stepIndex === asset.steps.length - 1;
+      dots.querySelectorAll('.gif-player-dot').forEach((dot, index) => dot.classList.toggle('active', index === stepIndex));
+      root.dataset.currentStep = String(stepIndex);
+      if (!playing) updateProgress();
+    }
+    function pause() {
+      if (playing && startedAt) {
+        const progressed = Math.min(currentFrameDuration, performance.now() - startedAt);
+        elapsedInFrame += progressed;
+        elapsedTotal += progressed;
+      }
+      playing = false; startedAt = 0; clearTimer(); update();
+      if (activeGifPlayer === api) activeGifPlayer = null;
+      options.onStateChange?.(api);
+    }
+    function schedule() {
+      clearTimer();
+      const frameIndex = playable[framePosition];
+      const remainingDuration = asset.durations[frameIndex] - elapsedInFrame;
+      if (remainingDuration <= 0) {
+        elapsedInFrame = 0;
+        if (framePosition >= playable.length - 1) {
+          playing = false; framePosition = 0; elapsedTotal = 0; update();
+          if (activeGifPlayer === api) activeGifPlayer = null;
+          options.onStateChange?.(api);
+          return;
+        }
+        framePosition += 1; update(); schedule(); return;
+      }
+      currentFrameDuration = Math.max(16, remainingDuration);
+      startedAt = performance.now();
+      animationFrame = requestAnimationFrame(updateProgress);
+      timer = setTimeout(() => {
+        elapsedTotal += currentFrameDuration;
+        elapsedInFrame = 0; startedAt = 0;
+        if (framePosition >= playable.length - 1) {
+          playing = false; framePosition = 0; elapsedTotal = 0; update();
+          if (activeGifPlayer === api) activeGifPlayer = null;
+          options.onStateChange?.(api);
+          return;
+        }
+        framePosition += 1; update(); schedule(); options.onStateChange?.(api);
+      }, currentFrameDuration);
+    }
+    function play() {
+      if (playing) return pause();
+      pauseOtherGifPlayers(api);
+      playing = true; activeGifPlayer = api; update(); schedule(); options.onStateChange?.(api);
+    }
+    function seekFrame(targetPosition, offset = 0) {
+      pause();
+      framePosition = Math.max(0, Math.min(playable.length - 1, targetPosition));
+      elapsedInFrame = Math.max(0, Math.min(asset.durations[playable[framePosition]] - 1, offset));
+      elapsedTotal = playable.slice(0, framePosition).reduce((sum, index) => sum + asset.durations[index], 0) + elapsedInFrame;
+      update(); options.onStateChange?.(api);
+    }
+    function seekTime(target) {
+      const clamped = Math.max(0, Math.min(totalDuration - 1, Number(target) || 0));
+      let remaining = clamped;
+      let targetPosition = 0;
+      for (let position = 0; position < playable.length; position += 1) {
+        const duration = asset.durations[playable[position]];
+        if (remaining < duration) { targetPosition = position; break; }
+        remaining -= duration; targetPosition = Math.min(position + 1, playable.length - 1);
+      }
+      seekFrame(targetPosition, remaining);
+    }
+    function seekStep(stepIndex) {
+      const frameIndex = asset.steps[Math.max(0, Math.min(asset.steps.length - 1, stepIndex))].frames[0];
+      seekFrame(playablePosition.get(frameIndex) ?? 0);
+    }
+    asset.steps.forEach((step, stepIndex) => {
+      const dot = document.createElement('button');
+      dot.type = 'button'; dot.className = 'gif-player-dot'; dot.textContent = String(stepIndex + 1);
+      dot.dataset.gifStep = String(stepIndex);
+      dot.title = step.title; dot.setAttribute('aria-label', `跳到步骤${stepIndex + 1}：${step.title}`);
+      dots.append(dot);
+    });
+    controls.addEventListener('click', event => {
+      const stepTarget = event.target.closest('[data-gif-step]');
+      if (stepTarget) { seekStep(Number(stepTarget.dataset.gifStep)); return; }
+      const action = event.target.closest('[data-gif-action]')?.dataset.gifAction;
+      if (action === 'play') play();
+      if (action === 'previous') seekStep(currentStep() - 1);
+      if (action === 'next') seekStep(currentStep() + 1);
+      if (action === 'restart') { seekFrame(0); play(); }
+    });
+    range.addEventListener('input', () => seekTime(range.value));
+    root.addEventListener('keydown', event => {
+      if (['INPUT', 'BUTTON'].includes(event.target.tagName)) return;
+      if (event.key === ' ') { event.preventDefault(); play(); }
+      if (event.key === 'ArrowLeft') { event.preventDefault(); seekStep(currentStep() - 1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); seekStep(currentStep() + 1); }
+      if (event.key === 'Home') { event.preventDefault(); seekStep(0); }
+      if (event.key === 'End') { event.preventDefault(); seekStep(asset.steps.length - 1); }
+    });
+    image.addEventListener('click', () => options.onZoom?.(api));
+    image.addEventListener('error', () => {
+      pause(); root.classList.add('gif-player-fallback'); image.src = source; image.dataset.zoom = source;
+    }, { once: true });
+    const api = { root, source, asset, image, play, pause, seekTime, seekStep, isPlaying: () => playing, getTime: () => elapsedTotal, getStep: currentStep };
+    gifPlayers.add(api); update();
+    return api;
+  }
+  function initializeGifPlayers() {
+    document.querySelectorAll('.gif-panel img[src$=".gif"]').forEach(original => {
+      const source = original.getAttribute('src');
+      const player = createGifPlayer(original, source, { onZoom: openGifLightbox });
+      if (!player) return;
+      original.replaceWith(player.root);
+    });
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) [...gifPlayers].find(player => player.root === entry.target)?.pause();
+    }), { threshold: 0.08 });
+    gifPlayers.forEach(player => observer.observe(player.root));
+  }
+  function openGifLightbox(sourcePlayer) {
+    const lightbox = document.getElementById('lightbox');
+    const host = document.getElementById('lightboxPlayer');
+    closeGifLightbox();
+    sourcePlayer.pause();
+    const player = createGifPlayer(sourcePlayer.image, sourcePlayer.source, { lightbox: true });
+    if (!player) return;
+    player.seekTime(sourcePlayer.getTime());
+    host.replaceChildren(player.root);
+    lightboxGifSource = { sourcePlayer, player };
+    lightbox.classList.add('open', 'gif-mode');
+  }
+  function closeGifLightbox() {
+    if (!lightboxGifSource) return;
+    const { sourcePlayer, player } = lightboxGifSource;
+    player.pause(); sourcePlayer.seekTime(player.getTime());
+    gifPlayers.delete(player);
+    document.getElementById('lightboxPlayer')?.replaceChildren();
+    document.getElementById('lightbox')?.classList.remove('gif-mode');
+    lightboxGifSource = null;
+  }
   const detailedGuideOperationTitles = [
     ['创建、发布、同步与绑定完整操作', '三个百炼应用ID对应关系'],
     ['绑定并启用招聘邮箱', '绑定邮箱必须填写的关键内容'],
@@ -1255,6 +1492,7 @@ flowchart TB
   }
 
   function setView(view, scrollToModules = false) {
+    gifPlayers.forEach(player => player.pause());
     activeView = view;
     document.body.dataset.manualView = activeView;
     viewButtons.forEach(item => item.classList.toggle('active', item.dataset.view === activeView));
@@ -1281,6 +1519,7 @@ flowchart TB
       button.setAttribute('aria-expanded', String(!initiallyCollapsed));
       button.addEventListener('click', () => {
         const collapsed = module.classList.toggle('is-collapsed');
+        if (collapsed) module.querySelectorAll('.gif-player').forEach(root => [...gifPlayers].find(player => player.root === root)?.pause());
         button.lastElementChild.textContent = collapsed ? (module.id === 'recruitment-flow' ? '展开流程' : '展开') : '收起';
         button.setAttribute('aria-expanded', String(!collapsed));
       });
@@ -1366,6 +1605,7 @@ flowchart TB
     const close = button.dataset.collapseAction === 'close';
     modules().filter(module => !module.hidden).forEach(module => {
       module.classList.toggle('is-collapsed', close);
+      if (close) module.querySelectorAll('.gif-player').forEach(root => [...gifPlayers].find(player => player.root === root)?.pause());
       const toggle = module.querySelector('.module-toggle span:last-child');
       if (toggle) toggle.textContent = close ? '展开' : '收起';
       module.querySelectorAll('.feature-point').forEach(point => point.classList.toggle('is-collapsed', close));
@@ -1389,22 +1629,25 @@ flowchart TB
   document.addEventListener('click', event => {
     const trigger = event.target.closest('[data-zoom]');
     if (!trigger) return;
+    closeGifLightbox();
     const image = document.getElementById('lightboxImg');
     image.src = trigger.dataset.zoom || trigger.src || '';
     document.getElementById('lightbox').classList.add('open');
   });
-  document.getElementById('closeLightbox')?.addEventListener('click', () => document.getElementById('lightbox').classList.remove('open'));
+  document.getElementById('closeLightbox')?.addEventListener('click', () => { closeGifLightbox(); document.getElementById('lightbox').classList.remove('open'); });
   document.getElementById('lightbox')?.addEventListener('click', event => {
-    if (event.target.id === 'lightbox') event.currentTarget.classList.remove('open');
+    if (event.target.id === 'lightbox') { closeGifLightbox(); event.currentTarget.classList.remove('open'); }
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
+      closeGifLightbox();
       document.getElementById('lightbox')?.classList.remove('open');
       document.body.classList.remove('nav-open');
     }
   });
   syncModuleMapStatus();
   addOperationFieldGuides();
+  initializeGifPlayers();
   prepareCollapsibles();
   setView(activeView);
   renderRecruitmentFlow();
