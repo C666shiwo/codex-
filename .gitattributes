@@ -1,0 +1,6 @@
+hr-system-manual/** -text whitespace=cr-at-eol
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.gif -text
+*.webp -text

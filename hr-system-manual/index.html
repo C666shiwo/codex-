@@ -16,8 +16,12 @@
       .template-accordion summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;color:var(--ink);font-size:13px;font-weight:700;cursor:pointer;list-style:none}
       .template-accordion summary::-webkit-details-marker{display:none}.template-accordion summary:after{content:"展开预览 ＋";color:var(--purple);font-size:11px;font-weight:500}.template-accordion[open] summary:after{content:"收起预览 －"}
       .template-accordion .screenshot{border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none}.template-accordion .screenshot img{max-height:none}
+      .req-accordion{margin:16px 0;border:1px solid var(--line);border-radius:7px;background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
+      .req-accordion summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;color:var(--ink);font-size:13px;font-weight:700;cursor:pointer;list-style:none;scroll-margin-top:96px}
+      .req-accordion summary::-webkit-details-marker{display:none}.req-accordion summary:after{content:"展开内容 ＋";color:var(--purple);font-size:11px;font-weight:500}.req-accordion[open] summary:after{content:"收起内容 －"}
+      .req-accordion-body{padding:16px;border-top:1px solid var(--line)}.req-accordion-body>.panel:first-child{margin-top:0}.req-accordion-body .panel{box-shadow:none}
       .operation-fields{margin-top:10px}.operation-fields .panel-title{color:var(--purple-dark);background:var(--purple-soft)}
-      @media print{.template-accordion{break-inside:avoid}.template-accordion:not([open])>*:not(summary){display:block}}
+      @media print{.template-accordion,.req-accordion{break-inside:avoid}.template-accordion:not([open])>*:not(summary),.req-accordion:not([open])>*:not(summary){display:block}}
     </style>
     <style id="gif-player-styles">
       .gif-player{background:#f4f4f5;outline:none}.gif-player:focus-visible{box-shadow:inset 0 0 0 3px rgba(97,70,255,.35)}
@@ -78,6 +82,14 @@
         .flow-support-list button.flow-node-enabled{cursor:pointer;border-style:solid;border-color:#8b7cff;background:#f7f5ff}
         .flow-support-list button.flow-node-pending{cursor:help;opacity:.78}
         .flow-support-list button.flow-node-disabled{cursor:not-allowed;color:#71717a;border-color:#d4d4d8;background:#fafafa;opacity:.66}
+      .function-relations{display:flex;flex-wrap:wrap;align-items:center;gap:7px 10px;margin:12px 0 16px;padding:11px 13px;border:1px solid #d8d2ff;border-left:4px solid var(--purple);border-radius:7px;background:linear-gradient(90deg,#f8f6ff 0%,#fff 72%);color:#575260;font-size:11px;line-height:1.55}
+      .function-relations .relation-title{color:var(--purple-dark);font-weight:800;white-space:nowrap}
+      .function-relations .relation-item{display:inline-flex;align-items:center;gap:4px;padding-right:10px;border-right:1px solid #e4e0f7}
+      .function-relations .relation-item:last-child{padding-right:0;border-right:0}
+      .function-relations b{color:#35303f}
+      .function-relations a{color:#4f46e5;font-weight:700;text-decoration:none}
+      .function-relations a:hover{text-decoration:underline}
+      .nav-section-label{margin:13px 14px 5px;padding-top:9px;border-top:1px dashed #d9d5eb;color:#8a8498;font-size:10px;font-weight:800;letter-spacing:.06em}
         .flow-state-note{display:flex;flex-wrap:wrap;gap:8px 14px;margin:10px 0 0;color:#62626d;font-size:11px}
         .flow-state-note span::before{content:"";display:inline-block;width:18px;margin-right:6px;vertical-align:middle;border-top:2px solid #7664ee}
         .flow-state-note .pending::before{border-top-style:dashed}.flow-state-note .disabled::before{border-color:#a1a1aa;opacity:.55}
@@ -95,6 +107,7 @@
       body.nav-collapsed .brand{padding:18px 10px}
       body.nav-collapsed .brand img{width:42px;height:30px;object-fit:cover;object-position:left center}
       body.nav-collapsed .brand-note,body.nav-collapsed .sidebar-tools .search,body.nav-collapsed .view-switch,body.nav-collapsed .nav-label,body.nav-collapsed .sidebar-foot{display:none}
+      body.nav-collapsed .nav-section-label{display:none}
       body.nav-collapsed .nav a{justify-content:center;padding-inline:7px;font-size:0}
       body.nav-collapsed .nav-mark{margin:0;font-size:11px}
       body.nav-collapsed .sidebar-toggle span{transform:rotate(180deg);display:inline-block}
@@ -177,7 +190,7 @@
         .module-head .module-toggle{margin-top:8px}
         .module-head{display:flex;flex-wrap:wrap}
         .sop-action-layout{grid-template-columns:1fr}
-        .module-title{min-width:0;flex:1}
+        .module-title{min-width:0;width:100%;flex:0 0 100%}
         .feature-point-head{display:flex;flex-wrap:wrap}
         .feature-point-title{min-width:0;flex:1}
         .feature-point-tags{margin-top:8px;justify-content:flex-start;width:100%}
@@ -306,7 +319,7 @@
   .media-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.media-placeholder{min-height:180px;border:1px dashed #bdb2f6;border-radius:8px;background:#faf9ff;display:grid;place-content:center;text-align:center;color:#746d95;font-size:12px}
   body.nav-collapsed .brand-lockup span{display:none}body.nav-collapsed .brand-logo{width:38px;height:38px}body.nav-collapsed .brand{padding:18px 10px}
   @media(max-width:700px){.media-pair{grid-template-columns:1fr}}
-  @media(max-width:760px){.brand{min-height:88px;padding:18px 22px}.brand-logo{width:36px;height:36px}.brand-lockup span{font-size:20px}}
+        @media(max-width:760px){.brand{min-height:88px;padding:18px 22px}.brand-logo{width:36px;height:36px}.brand-lockup span{font-size:20px}.function-relations{align-items:flex-start}.function-relations .relation-item{width:100%;padding-right:0;border-right:0}}
   .business-demo-gif{display:block;width:100%;height:auto;max-height:430px;object-fit:contain;background:#f4f4f5;cursor:zoom-in}
   .business-single-column{grid-template-columns:1fr}
   .business-real-gif-slot{min-height:240px;margin-top:16px;border:1px dashed #bdb2f6;border-radius:8px;background:#faf9ff;display:grid;place-content:center;gap:5px;text-align:center;color:#746d95}
@@ -387,17 +400,160 @@ flowchart TB
     class M success;
     class T talent;
     class X terminate;
-          </pre></div><div class="flow-fallback" id="flowFallback"><strong>文字版招聘流程</strong><ol><li>HR与业务确认招聘需求、岗位标准和评估方式，HR完成职位创建与发布。</li><li>接收简历并建立投递，由HR完成初筛。</li><li>按照岗位规则完成作品评估和AI面试；HR负责发起、跟进、查看结果和接续处理。</li><li>HR安排面试，对应面试官查看候选人、开展结构化面试并提交规范化面评。</li><li>HR与业务完成反馈交接，HR综合判断是否继续推进。</li><li>继续推进的候选人进入Offer、待入职并最终完成入职；未继续时由HR判断人才沉淀或终止投递。</li></ol></div><div class="flow-support"><div class="flow-support-title">贯穿流程的支持能力</div><div class="flow-support-list"><button type="button" data-flow-node="notify">系统通知与钉钉提醒</button><button type="button" data-flow-node="headhunter">猎头账号及其他外部入口</button></div></div></div><div class="rule-box"><strong>阅读提示：</strong>流程图展示完整协作关系；当前视图没有对应教学的节点不会跨视图跳转。</div></section>
+          </pre></div><div class="flow-fallback" id="flowFallback"><strong>文字版招聘流程</strong><ol><li>HR与业务确认招聘需求、岗位标准和评估方式，HR完成职位创建与发布。</li><li>接收简历并建立投递，由HR完成初筛。</li><li>按照岗位规则完成作品评估和AI面试；HR负责发起、跟进、查看结果和接续处理。</li><li>HR安排面试，对应面试官查看候选人、开展结构化面试并提交规范化面评。</li><li>HR与业务完成反馈交接，HR综合判断是否继续推进。</li><li>继续推进的候选人进入Offer、待入职并最终完成入职；未继续时由HR判断人才沉淀或终止投递。</li></ol></div><div class="flow-support"><div class="flow-support-title">贯穿流程的关联能力（点击查看当前视图对应内容）</div><div class="flow-support-list"><button type="button" data-flow-node="ai-setup">AI面试能力配置</button><button type="button" data-flow-node="mail-intake">招聘邮箱与简历自动导入</button><button type="button" data-flow-node="templates">邮件模板自动调用</button><button type="button" data-flow-node="notify">通知记录与钉钉提醒</button><button type="button" data-flow-node="headhunter">猎头账号及其他外部入口</button></div></div></div><div class="rule-box"><strong>阅读提示：</strong>流程图展示完整协作关系；当前视图没有对应教学的节点不会跨视图跳转。</div></section>
         <div class="view-tools-row"><div class="field-toolbar" id="fieldToolbar" hidden><strong>字段与操作筛选</strong><button class="active" data-field-filter="all">全部内容</button><button data-field-filter="required">必须填写</button><button data-field-filter="optional">可以填写</button><button data-field-filter="button">操作按钮</button><button data-field-filter="readonly">系统展示项</button></div><div class="collapse-toolbar" id="collapseToolbar" hidden><strong id="collapseToolbarLabel">当前视图</strong><button type="button" data-collapse-action="open">全部展开</button><button type="button" data-collapse-action="close">全部收起</button></div></div>
         <div id="modules">
 
-<section class="module" id="function-home" data-audience="function" data-keywords="首页"><div class="module-head"><div class="module-title"><span class="module-num">功能 / 01</span><h2>首页</h2></div></div></section>
-<section class="module" id="hr-recruitment-start" data-audience="hr" data-keywords="招聘启动 招聘需求 岗位标准 负责人 招聘阶段">
-<div class="module-head"><div class="module-title"><span class="module-num">HR / 01</span><h2>招聘启动</h2></div><div class="module-meta"><span class="tag purple">招聘准备</span></div></div>
-<p class="module-lead">招聘开始前，HR与业务共同确认招聘目标、岗位标准、评价方式和责任人，为后续候选人处理建立统一依据。</p>
-<div class="hr-standard-strip"><span class="collab">协作｜HR与业务共同确认</span><span class="state">完成｜岗位、阶段和责任人清晰</span></div>
-<div class="panel"><div class="panel-title">启动招聘项目</div><div class="panel-body"><ol class="steps"><li><div><b>确认招聘需求</b><span>明确招聘人数、岗位目标、优先级和停止招聘的判断条件。</span></div></li><li><div><b>统一岗位标准</b><span>与业务确认核心能力、评价维度和不能接受的风险。</span></div></li><li><div><b>明确评估流程</b><span>确认是否需要作品评估、AI面试和业务面试，并明确对应评估人。</span></div></li><li><div><b>确认责任人</b><span>明确HR负责人、业务负责人、作品评估人和面试官。</span></div></li></ol></div></div>
-<div class="rule-box"><strong>完成标准：</strong>招聘目标、岗位标准、评估环节、阶段顺序和责任人均已明确，HR与业务对招聘方式理解一致。</div>
+<section class="module" id="function-recruitment-requirements" data-audience="function" data-map-entry="招聘需求池" data-map-status="静态教学已完成" data-map-note="需求创建、HC进度、状态联动、暂停恢复及完成归档规则已整理。" data-keywords="招聘需求池 招聘需求 HC 联合创建 职位草稿 待启动 招聘中 暂停 恢复 待完成确认 完成 归档 招聘漏斗">
+<div class="module-head">
+<div class="module-title"><span class="module-num">功能 / 01</span><h2>招聘需求池</h2></div>
+<div class="module-meta"><span class="tag purple">招聘项目入口</span><span class="tag orange">HC与状态联动</span></div>
+</div>
+<p class="module-lead">招聘需求池用于管理“为什么招、招多少、何时完成”这一层招聘目标，并与职位、招聘阶段及候选人进度联动。它不是候选人处理页面，而是HR启动招聘、判断HC余量、控制项目状态和完成收尾的项目入口。</p>
+<div class="rule-box"><strong>学习目标：</strong>完成本节后，可以判断招聘需求、职位与候选人的分工，创建招聘需求与职位草稿，理解HC和状态变化，并完成暂停、恢复、完成与归档。</div>
+<div class="function-relations" aria-label="招聘需求池功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>前置：</b>业务确认招聘目标</span><span class="relation-item"><b>产出：</b>待启动需求＋职位草稿</span><span class="relation-item"><b>下一步：</b><a href="#function-position-stages" data-function-link>职位与阶段</a></span><span class="relation-item"><b>收尾关联：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>角色：</b>职位负责人／HRBP</span></div>
+
+<div class="module-grid">
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="认识招聘需求">三层对象分别解决什么问题</div><div class="panel-body"><ol class="steps"><li><div><b>招聘需求：招多少、何时完成</b><span>记录部门、需求HC、目标完成日期和项目状态，观察招聘是否按目标推进。</span></div></li><li><div><b>职位与阶段：用什么流程招聘</b><span>配置职位信息、招聘阶段及各阶段使用的评估方式，并决定职位是否对外接收投递。</span></div></li><li><div><b>候选人与投递：每个人走到哪里</b><span>记录候选人在某个职位中的实际阶段、评价、Offer和最终结果。</span></div></li></ol></div></div>
+<div class="panel"><div class="panel-title">使用前先确认</div><div class="panel-body"><ul class="checklist"><li>已与业务确认招聘部门、职位名称、需求HC和目标完成日期。</li><li>已明确职位负责人以及后续阶段配置责任人。</li><li>职位负责人和HRBP可以创建、编辑、暂停、恢复、完成及归档招聘需求。</li><li class="warn">HR和HR实习生不能操作招聘需求；有候选人协作权限也不等于拥有需求管理权限。</li></ul></div></div>
+</div>
+
+<div class="panel screenshot">
+<div class="panel-title" data-nav-item data-nav-label="页面与HC进度">页面与HC进度</div>
+<img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirements-overview.png" data-zoom="recruitment-requirements-assets/recruitment-requirements-overview.png" alt="招聘需求池列表页全貌：汇总卡、查询条件、快捷筛选、需求列表与操作入口">
+<div class="shot-caption"><span>页面全貌：先看HC汇总和风险，再通过筛选定位需求；进入“查看详情”后处理单个招聘项目。</span><button class="zoom-link" type="button">点击放大</button></div>
+</div>
+<div class="panel field-panel"><div class="panel-title">列表页需要理解的关键字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与判断规范</th></tr></thead><tbody>
+<tr data-field-type="readonly"><td>招聘中需求／总需求HC</td><td class="field-type readonly"><b>系统展示项</b></td><td>观察当前仍在推进的招聘项目数量和全部需求人数，不代表已经完成招聘。</td></tr>
+<tr data-field-type="readonly"><td>已完成HC／已锁定HC</td><td class="field-type readonly"><b>系统展示项</b></td><td>已完成HC表示已实际到岗；已锁定HC表示已经占用招聘名额。两者共同影响仍需招聘HC。</td></tr>
+<tr data-field-type="readonly"><td>待接受Offer</td><td class="field-type readonly"><b>系统展示项</b></td><td>候选人尚未确认接受的Offer数量，不计入已锁定HC，但会影响继续发Offer时的容量判断。</td></tr>
+<tr data-field-type="readonly"><td>仍需招聘HC</td><td class="field-type readonly"><b>系统展示项</b></td><td>按“总需求HC－已完成HC－已锁定HC”计算，用于判断当前还需要补充多少实际招聘结果。</td></tr>
+<tr data-field-type="readonly"><td>即将到期／已延期</td><td class="field-type readonly"><b>系统展示项</b></td><td>结合目标完成日期提示进度风险；风险出现后需要判断是加速推进、调整目标，还是暂停或结束需求。</td></tr>
+<tr data-field-type="optional"><td>部门、职位、状态、负责人和日期筛选</td><td class="field-type optional"><b>可以填写</b></td><td>只用于缩小列表范围，不改变需求数据。可配合快捷筛选查看招聘中、待启动、暂停、待完成确认和已完成需求。</td></tr>
+<tr data-field-type="button"><td>新建招聘需求</td><td class="field-type button"><b>操作按钮</b></td><td>在招聘目标已确认后创建新的招聘需求，并同时生成一个职位草稿。</td></tr>
+<tr data-field-type="button"><td>归档记录／查看详情</td><td class="field-type button"><b>操作按钮</b></td><td>归档记录用于查看已经归档的项目；查看详情用于进入当前需求的HC、里程碑、漏斗和变更信息。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>HC示例：</strong>某需求总需求为3HC，已完成1HC、已锁定1HC，则仍需招聘1HC。若同时还有1个待接受Offer，仍需招聘不会因此变为0，但继续发Offer前必须判断是否会造成HC超额。</div>
+
+<div class="panel"><div class="panel-title">需求与职位状态如何流转</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>需求状态</th><th>如何进入</th><th>对应职位状态／动作</th><th>HR下一动作</th><th>关键限制</th></tr></thead><tbody>
+<tr><td>待启动</td><td>创建需求与职位后自动进入</td><td>职位为草稿</td><td>进入“职位与阶段”配置招聘流程并准备发布。</td><td>尚未开始接收正式投递。</td></tr>
+<tr><td>招聘中</td><td>完成职位配置并发布后进入</td><td>职位已发布并接收投递</td><td>跟进HC、时间风险和候选人推进。</td><td>发Offer前同时检查已锁定HC和待接受Offer。</td></tr>
+<tr><td>暂停</td><td>职位负责人或HRBP确认暂停后进入</td><td>职位停止接收新投递</td><td>继续处理已有候选人，条件恢复后再恢复招聘。</td><td>禁止新投递和新Offer；风险与持续时间仍继续计算。职位页面出现“下架”提示时，以系统当前页面为准。</td></tr>
+<tr><td>待完成确认</td><td>已完成HC达到需求HC后由系统显示</td><td>职位停止接收新投递</td><td>核对实际到岗、Offer占用和遗留候选人。</td><td>确认完成后不可恢复。</td></tr>
+<tr><td>已完成</td><td>HR核对数据并确认完成后进入</td><td>职位下架</td><td>处理Offer、锁定HC和全部进行中候选人。</td><td>未完成收尾前不能最终归档。</td></tr>
+<tr><td>已归档</td><td>全部阻断项处理完并确认归档后进入</td><td>需求与职位永久只读</td><td>仅用于历史查询和经验回看。</td><td>归档后不可恢复编辑。</td></tr>
+</tbody></table></div></div>
+
+<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="创建需求并进入职位配置">关键操作：创建招聘需求并进入职位配置</div><img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-create-and-handoff.gif" data-zoom="recruitment-requirements-assets/recruitment-requirement-create-and-handoff.gif" alt="创建招聘需求与职位草稿，并进入职位与阶段继续配置"><div class="gif-note">新建招聘需求 → 填写职位与需求信息 → 创建需求与职位 → 核对待启动需求并查看职位与阶段。职位发布前尚未正式接收投递。</div></div>
+<div class="panel field-panel"><div class="panel-title">创建时必须确认的内容</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>填写与操作规范</th><th>创建后的影响</th></tr></thead><tbody>
+<tr data-field-type="required"><td>部门</td><td class="field-type required"><b>必须填写</b></td><td>选择本次招聘需求实际归属的部门。</td><td>决定需求归属，并影响后续职位和权限范围。</td></tr>
+<tr data-field-type="required"><td>职位名称</td><td class="field-type required"><b>必须填写</b></td><td>填写与业务确认后的正式职位名称，避免同一目标重复创建。</td><td>同步生成对应职位草稿。</td></tr>
+<tr data-field-type="required"><td>工作地点</td><td class="field-type required"><b>必须填写</b></td><td>选择候选人实际工作的地点。</td><td>成为职位基础信息的一部分。</td></tr>
+<tr data-field-type="required"><td>职位负责人</td><td class="field-type required"><b>必须填写</b></td><td>选择实际负责该职位招聘推进与结果跟进的人员。</td><td>用于明确后续推进责任；实际可见范围以职位协作配置为准。</td></tr>
+<tr data-field-type="required"><td>需求HC</td><td class="field-type required"><b>必须填写</b></td><td>填写本次计划实际到岗的人数，不使用候选人数或面试人数替代。</td><td>成为HC进度和完成判断的基准。</td></tr>
+<tr data-field-type="required"><td>目标完成日期</td><td class="field-type required"><b>必须填写</b></td><td>填写与业务约定的招聘目标日期。</td><td>用于计算即将到期和已延期风险。</td></tr>
+<tr data-field-type="optional"><td>需求说明</td><td class="field-type optional"><b>可以填写</b></td><td>补充招聘原因、业务背景或交付要求，帮助后续人员理解项目。</td><td>作为需求详情和后续协作依据。</td></tr>
+<tr data-field-type="button"><td>创建需求与职位</td><td class="field-type button"><b>操作按钮</b></td><td>提交前再次核对部门、职位、HC、目标日期和负责人。</td><td>需求进入“待启动”，并生成“草稿”职位；尚未对外接收投递。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>本操作完成标准：</strong>招聘需求显示“待启动”，对应职位显示“草稿”；进入“职位与阶段”继续配置并发布后，招聘才正式启动。</div>
+
+<details class="req-accordion">
+<summary data-nav-item data-nav-label="查看与编辑需求">查看与编辑需求</summary>
+<div class="req-accordion-body">
+<div class="panel screenshot">
+<div class="panel-title">需求详情：判断项目进度和下一动作</div>
+<img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-detail.png" data-zoom="recruitment-requirements-assets/recruitment-requirement-detail.png" alt="招聘需求详情抽屉：HC进度、基础信息、里程碑、招聘漏斗与变更记录">
+<div class="shot-caption"><span>详情抽屉：先核对HC和基础信息，再查看里程碑、招聘进展漏斗与变更记录。</span><button class="zoom-link" type="button">点击放大</button></div>
+</div>
+<div class="panel field-panel"><div class="panel-title">详情页关键模块与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>模块／按钮</th><th>分类</th><th>用途与判断规范</th></tr></thead><tbody>
+<tr data-field-type="button"><td>查看职位与阶段</td><td class="field-type button"><b>操作按钮</b></td><td>进入对应职位，继续配置阶段、发布职位或检查职位当前状态。</td></tr>
+<tr data-field-type="readonly"><td>HC进度与基础信息</td><td class="field-type readonly"><b>系统展示项</b></td><td>核对HC、部门、负责人、目标日期和需求说明是否仍与实际招聘目标一致。</td></tr>
+<tr data-field-type="readonly"><td>里程碑与招聘进展漏斗</td><td class="field-type readonly"><b>系统展示项</b></td><td>回看项目节奏并识别候选人主要停留环节；漏斗数量不等同于最终HC。</td></tr>
+<tr data-field-type="readonly"><td>变更记录</td><td class="field-type readonly"><b>系统展示项</b></td><td>查看操作人、动作和字段变化，追溯需求调整原因。</td></tr>
+</tbody></table></div></div>
+<div class="panel field-panel"><div class="panel-title">编辑需求时只修改真实变化</div><div class="panel-body"><p class="module-lead">招聘目标变化时再编辑需求，不使用编辑需求代替候选人阶段处理。</p><div class="table-scroll"><table class="standard-table"><thead><tr><th>字段</th><th>分类</th><th>修改规范</th></tr></thead><tbody>
+<tr data-field-type="required"><td>需求HC</td><td class="field-type required"><b>必须填写</b></td><td>按最新确认的实际到岗目标调整，不得低于“已完成HC＋已锁定HC”。</td></tr>
+<tr data-field-type="required"><td>目标完成日期</td><td class="field-type required"><b>必须填写</b></td><td>只有业务目标或交付时间变化时调整，并同步相关责任人。</td></tr>
+<tr data-field-type="optional"><td>需求说明</td><td class="field-type optional"><b>可以填写</b></td><td>补充新的业务背景或交付要求，不删除仍有追溯价值的信息。</td></tr>
+<tr data-field-type="required"><td>变更原因</td><td class="field-type required"><b>必须填写</b></td><td>说明为什么调整以及由谁确认，供变更记录追溯。</td></tr>
+</tbody></table></div></div></div>
+</div>
+</details>
+
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="暂停与恢复">暂停与恢复</div><div class="panel-body"><ol class="steps"><li><div><b>确认暂停原因</b><span>业务暂缓、招聘条件未确定或阶段性停止时再暂停；不要用暂停代替项目完成。</span></div></li><li><div><b>检查进行中候选人</b><span>暂停会禁止新投递和新Offer，但已有候选人可以继续处理，已发Offer的结果仍需登记。</span></div></li><li><div><b>暂停后持续跟进</b><span>暂停期间目标日期风险和持续耗时仍会继续计算，不能暂停后无人负责。</span></div></li><li><div><b>条件恢复后再恢复招聘</b><span>确认HC、目标日期、负责人和职位配置仍然有效，再恢复对外接收投递。</span></div></li></ol></div></div>
+<div class="panel gif-panel"><div class="panel-title">关键操作：暂停并恢复招聘需求</div><img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-pause-and-resume.gif" data-zoom="recruitment-requirements-assets/recruitment-requirement-pause-and-resume.gif" alt="从需求详情暂停招聘，填写原因并在条件恢复后恢复招聘"><div class="gif-note">查看详情 → 暂停招聘 → 填写操作原因 → 确认暂停 → 恢复招聘 → 核对需求重新进入招聘中。</div></div>
+<div class="panel field-panel"><div class="panel-title">暂停与恢复需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody><tr data-field-type="required"><td>操作原因</td><td class="field-type required"><b>必须填写</b></td><td>说明暂停的真实业务背景，帮助后续人员判断何时可以恢复并追溯状态变化。</td></tr><tr data-field-type="button"><td>确认暂停</td><td class="field-type button"><b>操作按钮</b></td><td>确认后需求进入暂停；不再接收新投递或发起新Offer，但已有候选人仍可继续处理。</td></tr><tr data-field-type="readonly"><td>暂停状态</td><td class="field-type readonly"><b>系统展示项</b></td><td>操作后核对详情状态和操作按钮已经变化，暂停期间目标日期风险和持续时间仍继续计算。</td></tr><tr data-field-type="button"><td>恢复招聘／确认恢复</td><td class="field-type button"><b>操作按钮</b></td><td>确认HC、负责人、目标日期和职位配置仍有效后恢复，使需求重新进入正常招聘流程。</td></tr></tbody></table></div></div>
+<div class="rule-box"><strong>本操作完成标准：</strong>暂停后需求显示“暂停”；恢复后重新显示“招聘中”。暂停期间已有候选人和已发Offer仍需持续跟进。</div>
+<div class="rule-box"><strong>状态边界：</strong>列表页使用“暂停招聘”；如果页面提示“请先下架”，应先按系统当前提示处理职位状态。</div>
+
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="完成与归档">完成与归档</div><div class="panel-body"><ol class="steps"><li><div><b>确认招聘任务已经完成</b><span>已完成HC达到需求HC后进入待完成确认；核对实际到岗数据无误再点击确认完成，完成后需求不可恢复。</span></div></li><li><div><b>按系统顺序清理归档阻断项</b><span>先释放或处理待接受Offer与锁定HC，再处理全部进行中候选人，最后才能确认归档。</span></div></li><li><div><b>每位候选人只选择一种收尾方式</b><span>无继续计划则终止投递；优秀且值得保留则进入人才库；适合其他岗位则转移需求（即转岗）。</span></div></li><li><div><b>确认归档</b><span>全部阻断项清理完成后继续归档；归档后的需求与职位永久只读。</span></div></li></ol></div></div>
+<div class="panel gif-panel"><div class="panel-title">关键操作：确认完成并进入归档收尾</div><img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif" data-zoom="recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif" alt="确认招聘需求完成并在归档前处理所有进行中候选人"><div class="gif-note">待完成确认 → 核对HC并确认完成 → 点击归档并查看收尾顺序 → 对每位进行中候选人三选一处理。三个候选人按钮是不同处理分支，不是连续操作。</div></div>
+<div class="panel field-panel"><div class="panel-title">完成与归档需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
+<tr data-field-type="readonly"><td>已完成HC／仍需招聘HC</td><td class="field-type readonly"><b>系统展示项</b></td><td>确认完成前核对实际到岗达到需求HC，且仍需招聘为0。</td></tr>
+<tr data-field-type="button"><td>确认完成</td><td class="field-type button"><b>操作按钮</b></td><td>只在招聘任务确已结束时使用；页面明确提示完成后需求不可恢复。</td></tr>
+<tr data-field-type="button"><td>归档</td><td class="field-type button"><b>操作按钮</b></td><td>进入三步收尾流程：释放Offer与锁定HC、处理进行中候选人、确认归档。</td></tr>
+<tr data-field-type="readonly"><td>待接受Offer／已锁定HC</td><td class="field-type readonly"><b>系统展示项</b></td><td>归档前必须按页面提示处理完毕，不得只处理候选人列表。</td></tr>
+<tr data-field-type="button"><td>终止投递／进入人才库／转移需求</td><td class="field-type button"><b>操作按钮</b></td><td>对每位候选人三选一：无继续计划则终止，优秀且值得保留则入库，适合其他岗位则转移需求（即转岗）。转移后候选人在新需求继续推进。</td></tr>
+<tr data-field-type="readonly"><td>已归档</td><td class="field-type readonly"><b>系统展示项</b></td><td>全部阻断项处理完成并确认归档后，需求与职位永久只读。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>分支边界：</strong>终止投递、进入人才库和转移需求是每位候选人的三种可选结果，不需要也不能依次执行。</div>
+<div class="rule-box"><strong>本操作完成标准：</strong>页面不再存在待处理Offer、锁定HC或进行中候选人；完成最终归档后，需求显示“已归档”并进入只读状态。</div>
+<details class="req-accordion">
+<summary data-nav-item data-nav-label="异常与完成标准">异常处理与完成标准</summary>
+<div class="req-accordion-body"><div class="panel"><div class="panel-title">遇到以下情况先停止提交</div><div class="panel-body"><ul class="checklist"><li class="warn">同一部门、同一职位已经存在有效需求：先核对是否重复创建。</li><li class="warn">HC调低被阻止：检查新HC是否低于已完成HC与已锁定HC之和。</li><li class="warn">归档被阻止：按“Offer与锁定HC—进行中候选人—确认归档”的顺序检查。</li><li class="warn">只能查看不能编辑：说明当前账号没有需求管理权限，联系管理员确认权限，不要绕过系统处理。</li></ul></div></div></div>
+</details>
+<div class="rule-box"><strong>完成标准：</strong>需求与职位已经正确建立；HC、负责人和目标日期准确；需求状态与职位状态一致；所有高影响操作都有明确原因；完成或归档前没有遗留的候选人和Offer占用。</div>
+<div class="rule-box"><strong>内容依据：</strong>本节根据招聘需求池列表、新建招聘需求页、需求详情抽屉及已确认的实际系统规则整理。职位阶段配置、职位发布及“暂停／下架”的具体联动将在“职位与阶段”模块单独说明。</div>
+</section>
+<section class="module" id="hr-recruitment-start" data-audience="hr" data-keywords="招聘启动 招聘需求 职位草稿 岗位标准 负责人 HRBP 招聘阶段 协作人 BOSS映射 发布职位 暂停恢复">
+<div class="module-head"><div class="module-title"><span class="module-num">HR / 01</span><h2>招聘启动</h2></div><div class="module-meta"><span class="tag purple">HR必做</span><span class="tag orange">负责人／HRBP操作需求</span></div></div>
+<p class="module-lead">招聘启动不是单纯创建一条职位记录。负责人或HRBP需要先取得业务确认，再建立招聘需求和职位草稿，配置实际招聘流程、简历来源映射及协作权限，最后发布职位并核对需求状态。职位与招聘需求均显示“招聘中”后，项目才算正式启动。</p>
+<div class="hr-standard-strip"><span class="collab">确认｜发布前必须取得业务确认</span><span class="state">权限｜负责人和HRBP管理招聘需求</span><span class="state">完成｜职位与需求均为招聘中</span></div>
+
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="启动前确认">启动前必须形成一致结论</div><div class="panel-body"><ol class="steps">
+<li><div><b>确认招聘目标</b><span>与业务确认招聘部门、职位名称、需求HC、目标完成日期和岗位优先级。</span></div></li>
+<li><div><b>确认岗位与评价标准</b><span>明确核心能力、不能接受的风险，以及简历筛选、作品评估、AI面试和人工面试的使用范围。</span></div></li>
+<li><div><b>确认流程与责任人</b><span>确定招聘阶段顺序、职位负责人、对应评估人和面试官；有一名或多名HR参与均可启动。</span></div></li>
+<li><div><b>确认协作范围</b><span>需要其他HR共同处理该职位时，将实际参与人员加入协作权限；不为无关人员扩大职位和候选人可见范围。</span></div></li>
+</ol></div></div>
+<div class="rule-box"><strong>权限边界：</strong>职位负责人和HRBP可以创建、编辑、暂停、恢复、完成及归档招聘需求。HR和HR实习生不能操作招聘需求；被加入职位协作范围后，只处理其有权查看的职位及候选人工作。</div>
+
+<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="创建需求与职位草稿">操作演示：创建招聘需求与职位草稿</div><img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-create-and-handoff.gif" data-zoom="recruitment-requirements-assets/recruitment-requirement-create-and-handoff.gif" alt="负责人或HRBP创建招聘需求和职位草稿，并进入职位与阶段继续配置"><div class="gif-note">新建招聘需求 → 填写已确认的招聘目标 → 创建需求与职位 → 核对需求为“待启动”、职位为“草稿” → 进入职位与阶段继续配置。创建完成不代表招聘已经启动。</div></div>
+<div class="panel field-panel"><div class="panel-title">创建需求时必须确认的关键内容</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>HR操作规范</th><th>完成后的影响</th></tr></thead><tbody>
+<tr data-field-type="required"><td>部门、职位名称、需求HC、目标完成日期、职位负责人</td><td class="field-type required"><b>必须填写</b></td><td>使用已经与业务确认的真实目标；HC填写计划实际到岗人数，负责人填写实际承担招聘结果的人。</td><td>成为项目归属、HC进度、时间风险和责任划分的基础。</td></tr>
+<tr data-field-type="optional"><td>需求说明</td><td class="field-type optional"><b>可以填写</b></td><td>补充招聘原因、业务背景或特殊交付要求，保留后续追溯需要的信息。</td><td>帮助协作人员理解本次招聘目标。</td></tr>
+<tr data-field-type="button"><td>创建需求与职位</td><td class="field-type button"><b>操作按钮</b></td><td>仅由职位负责人或HRBP操作；提交前再次核对业务确认内容。</td><td>生成待启动需求和职位草稿，尚未接收正式投递。</td></tr>
+<tr data-field-type="readonly"><td>待启动／草稿</td><td class="field-type readonly"><b>系统展示项</b></td><td>用于确认对象已经建立，但仍需完成职位配置与发布。</td><td>不能把该状态视为正式启动招聘。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>本操作完成标准：</strong>需求信息与业务确认内容一致；招聘需求显示“待启动”，对应职位显示“草稿”，并已进入职位配置环节。</div>
+
+<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="配置并发布职位">操作演示：配置招聘流程并发布职位</div><img loading="lazy" decoding="async" src="position-stages-assets/position-stage-configure-and-publish.gif" data-zoom="position-stages-assets/position-stage-configure-and-publish.gif" alt="HR配置招聘阶段、BOSS职位映射和职位协作人，取得业务确认后发布职位"><div class="gif-note">进入职位草稿 → 配置实际使用的招聘阶段和评估能力 → 按需配置BOSS职位名称映射 → 添加实际参与的一名或多名协作HR → 再次取得业务确认 → 发布职位 → 核对职位和招聘需求均进入“招聘中”。</div></div>
+<div class="panel field-panel"><div class="panel-title">配置与发布必须理解的关键内容</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>HR操作规范</th><th>对后续招聘的影响</th></tr></thead><tbody>
+<tr data-field-type="optional"><td>简历评估官百炼应用ID</td><td class="field-type optional"><b>按需配置</b></td><td>岗位使用自动简历评估时填写已发布的应用ID；不使用时不填。</td><td>决定系统是否为进入该职位的简历生成辅助评估。</td></tr>
+<tr data-field-type="readonly"><td>简历筛选、Offer、待入职</td><td class="field-type readonly"><b>系统展示项</b></td><td>三个固定阶段构成职位基础流程；中间阶段必须与业务确认的真实招聘方式一致。</td><td>所有候选人均在该流程骨架中推进。</td></tr>
+<tr data-field-type="required"><td>AI面试／作品集筛选／人工面试</td><td class="field-type required"><b>按岗位必配</b></td><td>至少新增一个实际使用的中间阶段，不为展示完整而默认添加全部三类；发布前核对阶段名称和顺序。</td><td>决定候选人从简历筛选到Offer之间经历的环节。</td></tr>
+<tr data-field-type="required"><td>AI面试官ID、AI面试评估ID</td><td class="field-type required"><b>条件必填</b></td><td>仅在新增AI面试阶段时填写；两个应用均显示“已就绪”后才算配置成功。</td><td>配置错误会导致AI面试无法正常发起或生成评价。</td></tr>
+<tr data-field-type="optional"><td>BOSS职位名称映射</td><td class="field-type optional"><b>按需配置</b></td><td>需要自动接收BOSS简历时配置；BOSS名称与系统一致可添加当前职位名称，不一致时新增真实名称映射，同时确保招聘邮箱已正确绑定启用。</td><td>决定BOSS邮件简历能否自动识别并进入正确职位。</td></tr>
+<tr data-field-type="optional"><td>职位协作人</td><td class="field-type optional"><b>按实际配置</b></td><td>一人负责可以不额外添加；多人协作时添加所有实际参与HR并保存授权，不添加无关人员。</td><td>只有负责人、创建人及已授权协作人可以查看对应职位数据。</td></tr>
+<tr data-field-type="button"><td>发布职位</td><td class="field-type button"><b>操作按钮</b></td><td>发布前必须取得业务负责人确认，并完成阶段、ID、映射和权限复核。</td><td>职位进入招聘中，对应招聘需求同步进入招聘中，招聘项目正式启动。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>发布前最后检查：</strong>业务已经确认招聘目标和流程；阶段名称、种类和顺序准确；AI能力显示已就绪；需要自动拉取BOSS简历时名称映射和邮箱配置有效；协作权限遵循最小可见范围。</div>
+<div class="rule-box"><strong>招聘启动完成标准：</strong>职位与招聘需求均显示“招聘中”；实际参与人员能够查看并处理对应职位；简历来源与招聘阶段可以按确认后的方案正常运行。</div>
+
+<details class="req-accordion">
+<summary data-nav-item data-nav-label="按需暂停与恢复">按需操作：暂停与恢复招聘</summary>
+<div class="req-accordion-body">
+<p class="module-lead">暂停和恢复不是每个招聘项目的必经步骤。招聘目标、HC或业务条件暂时变化时，由职位负责人或HRBP根据已确认的决定维护需求状态。</p>
+<div class="panel gif-panel"><div class="panel-title">操作演示：暂停并恢复招聘</div><img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-pause-and-resume.gif" data-zoom="recruitment-requirements-assets/recruitment-requirement-pause-and-resume.gif" alt="负责人或HRBP填写原因暂停招聘，并在条件恢复后恢复招聘"><div class="gif-note">打开招聘中的需求 → 填写真实原因并确认暂停 → 核对需求状态 → 条件恢复并重新确认后恢复招聘。HR和HR实习生不操作需求状态。</div></div>
+<div class="panel field-panel"><div class="panel-title">暂停与恢复的关键判断</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>HR操作规范</th></tr></thead><tbody>
+<tr data-field-type="required"><td>暂停原因</td><td class="field-type required"><b>必须填写</b></td><td>记录真实业务原因，便于协作人员理解项目为何停止接收新投递和新Offer。</td></tr>
+<tr data-field-type="button"><td>暂停招聘</td><td class="field-type button"><b>操作按钮</b></td><td>由负责人或HRBP在业务条件暂时不支持继续招聘时使用；已有候选人仍需明确处理和反馈。</td></tr>
+<tr data-field-type="button"><td>恢复招聘</td><td class="field-type button"><b>操作按钮</b></td><td>确认HC、时间和业务条件已经恢复后使用，不能仅为消除暂停状态而恢复。</td></tr>
+<tr data-field-type="readonly"><td>暂停／招聘中</td><td class="field-type readonly"><b>系统展示项</b></td><td>操作后核对需求与职位状态一致，并同步相关协作人员。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>完成标准：</strong>暂停或恢复原因与实际情况一致，需求和职位状态一致，已有候选人的负责人、下一动作和反馈安排均清晰。</div>
+</div>
+</details>
 </section>
 
 <section class="module" id="hr-candidate-intake" data-audience="hr" data-keywords="候选人接收 建档 邮箱 猎头 手动录入 来源 投递">
@@ -455,12 +611,27 @@ flowchart TB
 <div class="rule-box"><strong>完成标准：</strong>候选人已有明确结果，对外沟通、系统状态和后续处理保持一致。</div>
 </section>
 
-<section class="module" id="hr-project-close" data-audience="hr" data-keywords="项目收尾 人才沉淀 招聘经验 候选人状态 清理">
-<div class="module-head"><div class="module-title"><span class="module-num">HR / 07</span><h2>招聘项目收尾与人才沉淀</h2></div><div class="module-meta"><span class="tag purple">招聘闭环</span></div></div>
-<p class="module-lead">招聘目标完成、HC已满、职位停止招聘或业务确认暂不继续时，HR对项目内候选人统一收尾，并沉淀可查询的招聘经验和人才资源。</p>
-<div class="hr-standard-strip"><span class="state">检查｜不得遗留仍处于招聘中的候选人</span><span class="collab">沉淀｜评价、结果与人才信息可查询</span></div>
-<div class="panel"><div class="panel-title">完成招聘项目收尾</div><div class="panel-body"><ol class="steps"><li><div><b>检查全部候选人</b><span>逐一核对当前状态、最终判断和处理时间，确保每位候选人都在规定时间内获得明确结果。</span></div></li><li><div><b>清理招聘中记录</b><span>招聘项目结束后，不允许候选人继续停留在没有负责人、没有下一动作或已经超出处理时限的招聘状态。</span></div></li><li><div><b>形成最终结果</b><span>根据实际判断，将每位候选人归入Offer、终止投递或进入人才库三类最终结果，并保证系统状态与实际情况一致。</span></div></li><li><div><b>核对反馈闭环</b><span>确认需要发送的候选人反馈已经由系统触发；如发现状态或通知异常，及时纠正或跟进处理。</span></div></li></ol></div></div>
-<div class="rule-box"><strong>完成标准：</strong>每位候选人都在规定时间内形成Offer、终止投递或进入人才库中的一个明确结果；项目内没有长期停留在招聘中、无人负责或没有下一动作的候选人。</div>
+<section class="module" id="hr-project-close" data-audience="hr" data-keywords="项目收尾 招聘需求完成 归档 转岗 终止投递 人才库 候选人状态 清理">
+<div class="module-head"><div class="module-title"><span class="module-num">HR / 07</span><h2>招聘项目收尾与人才沉淀</h2></div><div class="module-meta"><span class="tag purple">招聘闭环</span><span class="tag orange">负责人／HRBP归档</span></div></div>
+<p class="module-lead">招聘目标完成、HC已满或业务确认结束项目时，先处理当前需求中的Offer占用和全部进行中候选人，再由职位负责人或HRBP确认完成并归档。归档不是简单关闭页面，而是确认这个招聘项目已经没有遗留责任。</p>
+<div class="hr-standard-strip"><span class="state">检查｜不得遗留仍处于招聘中的候选人</span><span class="collab">权限｜负责人或HRBP确认完成并归档</span><span class="state">结果｜项目归档后只读</span></div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="项目收尾顺序">完成招聘项目收尾</div><div class="panel-body"><ol class="steps">
+<li><div><b>核对HC与Offer占用</b><span>确认实际完成HC、锁定HC和待处理Offer与项目结果一致，不带着未判断的Offer进入归档。</span></div></li>
+<li><div><b>检查全部进行中候选人</b><span>逐一核对当前状态、处理时间、负责人和下一动作，不能遗留无人跟进的招聘中记录。</span></div></li>
+<li><div><b>处理当前需求中的候选人</b><span>候选人继续其他岗位时转岗；本次不再合作时终止投递；优秀但当前无法继续时进入人才库。</span></div></li>
+<li><div><b>核对反馈与记录</b><span>确认候选人评价、结果原因和需要触发的反馈均已记录，系统状态与实际沟通一致。</span></div></li>
+<li><div><b>确认完成并归档</b><span>所有阻断项清理完成后，由职位负责人或HRBP完成归档。</span></div></li>
+</ol></div></div>
+<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="完成与归档">操作演示：确认完成并归档招聘需求</div><img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif" data-zoom="recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif" alt="负责人或HRBP核对HC，处理全部进行中候选人并完成招聘需求归档"><div class="gif-note">打开待完成确认需求 → 核对HC并确认完成 → 查看归档阻断项 → 对每位进行中候选人选择转岗、终止投递或进入人才库 → 清除全部阻断项 → 完成归档。</div></div>
+<div class="panel field-panel"><div class="panel-title">完成与归档必须理解的字段和按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>HR操作规范</th><th>结果</th></tr></thead><tbody>
+<tr data-field-type="readonly"><td>已完成HC、已锁定HC、待处理Offer</td><td class="field-type readonly"><b>系统展示项</b></td><td>确认数量与实际招聘结果一致；有未处理占用时先解决，不直接归档。</td><td>用于判断项目是否具备完成条件。</td></tr>
+<tr data-field-type="button"><td>确认完成</td><td class="field-type button"><b>操作按钮</b></td><td>由职位负责人或HRBP在招聘目标已经结束且数据核对无误后操作；确认后不可恢复招聘。</td><td>需求进入已完成，职位停止继续招聘。</td></tr>
+<tr data-field-type="button"><td>转岗／终止投递／进入人才库</td><td class="field-type button"><b>候选人处理</b></td><td>根据候选人的真实后续选择一个分支处理，不对同一投递依次执行。转岗表示候选人在新岗位继续新的招聘流程。</td><td>清除当前需求中的进行中候选人阻断项。</td></tr>
+<tr data-field-type="button"><td>归档</td><td class="field-type button"><b>操作按钮</b></td><td>仅在Offer占用和进行中候选人全部处理完后，由职位负责人或HRBP确认。</td><td>需求与职位进入已归档并永久只读。</td></tr>
+<tr data-field-type="readonly"><td>已归档</td><td class="field-type readonly"><b>系统展示项</b></td><td>操作后核对项目已进入历史查询状态，不再存在待处理责任。</td><td>作为本次招聘项目正式闭环的标志。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>协作边界：</strong>被授权的HR或HR实习生可以按分工处理其可见职位中的候选人，但不能确认完成或归档招聘需求；需求状态操作由职位负责人或HRBP负责。</div>
+<div class="rule-box"><strong>完成标准：</strong>当前需求中不再存在待处理Offer、锁定HC或进行中候选人；每位候选人均已在规定时间内完成转岗、Offer、终止投递或进入人才库等真实处理；需求显示“已归档”并进入只读状态。</div>
 </section>
 
 <section class="module" id="hr-notification-feedback" data-audience="hr" data-keywords="通知核对 候选人反馈 钉钉 邮件 面试通知 作品评估提醒">
@@ -498,6 +669,7 @@ flowchart TB
 </div>
 <p class="module-lead">AI面试集成用于准备三类百炼应用、维护阿里云ICE登录凭证，并将对应应用ID绑定到职位或AI面试阶段。该板块属于低频配置工作，由获得阿里云及HR系统权限的人员完成；普通招聘使用者无需重复创建。</p>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以判断ICE凭证是否可用，并按照规范完成百炼应用创建、凭证同步和应用ID绑定。</div>
+<div class="function-relations" aria-label="AI面试集成功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>前置：</b>阿里云授权＋统一提示词模板</span><span class="relation-item"><b>产出：</b>三类已发布应用ID＋可用ICE凭证</span><span class="relation-item"><b>配置去向：</b><a href="#function-position-stages" data-function-link>职位与阶段</a></span><span class="relation-item"><b>运行去向：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>频率：</b>低频配置</span></div>
 <div class="panel screenshot">
 <img loading="lazy" decoding="async" src="ai-integration-assets/ai-integration-page-overview.jpg" data-zoom="ai-integration-assets/ai-integration-page-overview.jpg" alt="AI面试集成页面全貌：ICE凭证状态、环境、地域、有效期和凭证操作">
 <div class="shot-caption"><span>页面全貌：先确认ICE凭证当前是否可用，再进入同步、验证或撤销操作。</span><button class="zoom-link" type="button">点击放大</button></div>
@@ -631,9 +803,9 @@ flowchart TB
 </ol>
 </div>
 </div>
-<div class="panel"><div class="panel-title">状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>百炼应用待配置 → 测试通过并发布</b><span>发布后取得对应应用ID，分别用于AI面试官、AI面试评估官和AI简历评估官。</span></div></li><li><div><b>ICE凭证未同步／失效 → 同步并验证有效</b><span>只有凭证可用时，HR系统才能继续调用相关阿里云能力。</span></div></li><li><div><b>应用ID未绑定 → 填写到正确岗位用途</b><span>绑定完成后才进入岗位侧使用；职位与阶段的新流程另行教学。</span></div></li></ol></div></div>
+<div class="panel"><div class="panel-title">状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>百炼应用待配置 → 测试通过并发布</b><span>发布后取得对应应用ID，分别用于AI面试官、AI面试评估官和AI简历评估官。</span></div></li><li><div><b>ICE凭证未同步／失效 → 同步并验证有效</b><span>只有凭证可用时，HR系统才能继续调用相关阿里云能力。</span></div></li><li><div><b>应用ID未绑定 → 填写到正确岗位用途</b><span>绑定完成后才进入岗位侧使用；具体填写位置和发布检查见<a href="#function-position-stages" data-function-link>“职位与阶段”</a>。</span></div></li></ol></div></div>
 <div class="rule-box">
-<strong>完成标准：</strong>三类百炼应用均已测试并发布；三个应用ID与岗位用途一一对应；ICE凭证状态可用；应用ID已经填写到正确位置。职位与阶段的具体新流程待新功能稳定后单独编写，本板块不提前沿用旧流程。</div>
+<strong>完成标准：</strong>三类百炼应用均已测试并发布；三个应用ID与岗位用途一一对应；ICE凭证状态可用；简历评估官ID、AI面试官ID和AI面试评估ID已经填写到“职位与阶段”的正确位置并显示可用。候选人进入对应阶段后，系统才使用这些配置开展评估或AI面试。</div>
 <div class="rule-box">
 <strong>安全边界：</strong>公开手册不提供扩展安装包下载，不展示同步码、Cookie、真实应用ID、智能体ID、工作流ID、账号邮箱或操作人ID。扩展包和权限统一向管理员申请。</div>
 </section>
@@ -652,6 +824,7 @@ flowchart TB
 </div>
 <p class="module-lead">邮件自动拉取用于把招聘邮箱接入HR系统。HR实习生、HR、HRBP及管理员均可绑定本人使用的招聘邮箱；配置启用后，系统每5分钟自动拉取一次邮件。无法自动导入的邮件进入“异常处理”，由对应邮箱的HR继续处理。</p>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以独立绑定并启用本人负责的招聘邮箱，并知道邮件未自动导入时去哪里查看和处理。</div>
+<div class="function-relations" aria-label="邮件自动拉取功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>前置：</b>本人招聘邮箱IMAP授权</span><span class="relation-item"><b>配套配置：</b><a href="#function-position-stages" data-function-link>职位名称映射</a></span><span class="relation-item"><b>成功去向：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>异常去向：</b>本模块“异常处理”</span><span class="relation-item"><b>周期：</b>每5分钟</span></div>
 <div class="panel screenshot">
 <img loading="lazy" decoding="async" src="email-auto-pull-assets/email-page-overview.jpg" data-zoom="email-auto-pull-assets/email-page-overview.jpg" alt="邮件自动拉取页面全貌：邮箱配置、执行记录、邮件导入记录和异常处理">
 <div class="shot-caption"><span>页面全貌：维护招聘邮箱，并查看定时拉取、邮件导入和异常处理结果。</span><button class="zoom-link" type="button">点击放大</button></div>
@@ -776,7 +949,7 @@ flowchart TB
 </table>
 </div>
 </div>
-<div class="panel"><div class="panel-title">状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>未配置 → 保存邮箱配置</b><span>系统记录本人邮箱、IMAP服务和归属人，但尚不能据此判断连接一定可用。</span></div></li><li><div><b>待验证 → 测试连通性成功</b><span>测试会开始拉取历史简历；连接失败时先核对邮箱、Host和授权码。</span></div></li><li><div><b>未启用 → 已启用</b><span>系统开始每5分钟自动拉取；停用后将不再继续自动拉取该邮箱。</span></div></li><li><div><b>邮件无法自动导入 → 进入异常处理</b><span>由对应邮箱HR接续处理，无法判断时联系管理员。</span></div></li></ol></div></div>
+<div class="panel"><div class="panel-title">状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>未配置 → 保存邮箱配置</b><span>系统记录本人邮箱、IMAP服务和归属人，但尚不能据此判断连接一定可用。</span></div></li><li><div><b>待验证 → 测试连通性成功</b><span>测试会开始拉取历史简历；连接失败时先核对邮箱、Host和授权码。</span></div></li><li><div><b>未启用 → 已启用</b><span>系统开始每5分钟自动拉取；停用后将不再继续自动拉取该邮箱。</span></div></li><li><div><b>邮件＋职位名称映射成功 → 建立候选人与投递</b><span>系统根据“职位与阶段”中的真实名称映射把简历导入对应职位；导入后到“候选人与投递”核对人员、岗位和来源。</span></div></li><li><div><b>邮件无法自动导入 → 进入异常处理</b><span>由对应邮箱HR接续处理，无法判断时联系管理员。</span></div></li></ol></div></div>
 <div class="panel screenshot">
 <img loading="lazy" decoding="async" src="email-auto-pull-assets/email-exception-page.jpg" data-zoom="email-auto-pull-assets/email-exception-page.jpg" alt="邮件自动拉取异常处理页面：异常类别、邮件时间和处理入口">
 <div class="shot-caption"><span>异常处理页面：由对应邮箱HR查看异常类别，并按页面交互继续处理。</span><button class="zoom-link" type="button">点击放大</button></div>
@@ -787,15 +960,24 @@ flowchart TB
 <strong>角色与责任：</strong>HR实习生、HR、HRBP和管理员均可绑定邮箱及处理异常。异常记录由对应邮箱的HR负责完成处理；无法判断异常原因或处理方式时，停止操作并联系管理员。</div>
 <div class="rule-box">
 <strong>运行提醒：</strong>系统每5分钟自动拉取一次邮件。刚收到邮件时无需立即重复操作；超过合理等待时间仍未导入时，再查看执行记录、邮件导入记录和异常处理。</div>
+<div class="rule-box"><strong>关联边界：</strong>邮箱已启用不代表所有简历都能自动进入正确职位。BOSS职位名称还需要在“职位与阶段”建立真实映射；成功导入后必须到“候选人与投递”核对，无法匹配时在本模块异常处理页接续。</div>
 </section>
 
 <section class="module" id="function-notification-records" data-audience="function" data-map-entry="通知记录" data-map-status="页面说明已完成" data-map-note="邮件与钉钉通知的发送结果核对方式已整理。" data-keywords="通知记录 邮件 钉钉 AI面试 视频面试 终止投递 人才库 回捞 作品集 状态">
 <div class="module-head"><div class="module-title"><span class="module-num">功能 / 04</span><h2>通知记录</h2></div><div class="module-meta"><span class="tag purple">自动化与通知</span><span class="tag blue">只读查看</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以按通知场景和渠道找到对应记录，并确认系统是否已经发送通知。</div>
 <p class="module-lead">通知记录用于查询系统发送邮件和钉钉通知的结果。该页面以查看和核对为主，不承担安排面试、推进候选人或重新发送通知等业务操作。</p>
+<div class="function-relations" aria-label="通知记录功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>触发来源：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a>／<a href="#function-talent-pool" data-function-link>人才库</a></span><span class="relation-item"><b>邮件内容：</b><a href="#function-email-templates" data-function-link>邮件模板</a></span><span class="relation-item"><b>本模块产出：</b>发送结果核对</span><span class="relation-item"><b>边界：</b>不改变招聘状态</span></div>
 <div class="panel screenshot"><img loading="lazy" decoding="async" src="notification-records-assets/notification-records-overview.jpg" data-zoom="notification-records-assets/notification-records-overview.jpg" alt="通知记录页面：筛选条件、发送状态、发送时间和查看入口"><div class="shot-caption"><span>页面全貌：按渠道、通知场景、状态和计划发送时间筛选，再核对实际发送结果。</span><button class="zoom-link" type="button">点击放大</button></div></div>
 <div class="panel field-panel"><div class="panel-title">核对通知时只看四项</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>截图编号</th><th>关键内容</th><th>分类</th><th>查看要点</th></tr></thead><tbody><tr data-field-type="optional"><td>①</td><td>渠道、通知场景、状态和时间筛选</td><td class="field-type optional"><b>可以填写</b></td><td>条件均为查询条件，不会修改通知记录；优先按通知场景和状态缩小范围。</td></tr><tr data-field-type="readonly"><td>②</td><td>状态</td><td class="field-type readonly"><b>系统展示项</b></td><td>用于确认记录当前显示为已发送、已取消或其他页面状态。</td></tr><tr data-field-type="readonly"><td>③</td><td>计划发送时间、实际发送时间、尝试次数和失败码</td><td class="field-type readonly"><b>系统展示项</b></td><td>实际发送时间存在时可核对发送时点；未发送时结合状态、尝试次数和失败码查看。</td></tr><tr data-field-type="button"><td>④</td><td>查看</td><td class="field-type button"><b>操作按钮</b></td><td>打开当前通知记录的详情，只用于继续核对，不改变招聘流程。</td></tr></tbody></table></div></div>
 <div class="module-grid"><div class="panel"><div class="panel-title">邮件通知场景</div><div class="panel-body"><ul class="checklist"><li>安排AI面试</li><li>安排视频面试</li><li>终止投递</li><li>进入人才库</li><li>人才库回捞邀请</li></ul></div></div><div class="panel"><div class="panel-title">钉钉通知场景</div><div class="panel-body"><ul class="checklist"><li>安排面试相关通知</li><li>邀请业务评估作品集</li><li>系统内已配置的相关提醒</li></ul></div></div></div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="通知状态判断">不同通知状态如何接续</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>核对结果</th><th>判断</th><th>下一动作</th></tr></thead><tbody>
+<tr><td>没有找到记录</td><td>原招聘动作可能尚未保存成功，或通知记录尚未生成。</td><td>先回到原业务页面核对候选人状态和操作结果；状态已改变但仍无记录时联系管理员，不要重复执行高影响动作。</td></tr>
+<tr><td>等待发送／未到计划时间</td><td>通知可能仍在计划队列中；终止投递和进入人才库存在5小时延迟。</td><td>核对计划发送时间，未超过发送时点时等待系统执行。</td></tr>
+<tr><td>已发送</td><td>系统已经完成渠道发送。</td><td>核对收件目标和实际发送时间；重要节点仍由HR继续确认沟通结果。</td></tr>
+<tr><td>已取消</td><td>计划通知已经取消，不会按原计划发送。</td><td>回到原业务记录核对是否发生恢复投递或其他状态修正，确保取消结果符合实际。</td></tr>
+<tr><td>发送失败／存在失败码</td><td>招聘动作与通知发送是两个结果，不能因通知失败重复改变候选人状态。</td><td>记录通知场景、收件目标、失败码和尝试次数后联系管理员确认处理方式。</td></tr>
+</tbody></table></div></div>
 <div class="rule-box"><strong>完成标准：</strong>已经找到对应通知场景，并核对渠道、收件目标、发送状态及实际发送时间；该页面的查看结果只用于确认通知记录，不替代原业务流程的完成状态。</div>
 <div class="rule-box"><strong>使用边界：</strong>本模块以通知记录核对为主。页面中的模板、来源事件等技术字段不属于HR日常核对重点。</div>
 </section>
@@ -804,11 +986,12 @@ flowchart TB
 <div class="module-head"><div class="module-title"><span class="module-num">功能 / 05</span><h2>邮件模板</h2></div><div class="module-meta"><span class="tag purple">系统邮件</span><span class="tag orange">六类场景</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以识别六类系统邮件分别由哪个招聘操作自动触发，以及哪些邮件立即发送、哪些邮件延迟5小时发送。</div>
 <p class="module-lead">邮件模板用于统一候选人沟通口径。HR不需要单独选择模板或执行“发送前复查”；完成对应招聘操作后，系统自动调用相应模板。本节展示的是使用测试变量渲染的完整邮件效果，不包含真实候选人信息。</p>
+<div class="function-relations" aria-label="邮件模板功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>触发来源：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a>／<a href="#function-talent-pool" data-function-link>人才库</a></span><span class="relation-item"><b>执行方式：</b>系统自动选取模板</span><span class="relation-item"><b>发送核对：</b><a href="#function-notification-records" data-function-link>通知记录</a></span><span class="relation-item"><b>边界：</b>日常招聘不手动选模板</span></div>
 <div class="panel field-panel"><div class="panel-title">六类邮件的自动触发规则</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>邮件模板</th><th>触发操作</th><th>发送规则</th><th>分类</th></tr></thead><tbody>
 <tr data-field-type="readonly"><td>AI面试邀约</td><td>安排AI面试</td><td>操作完成后系统自动发送</td><td class="field-type readonly"><b>系统通知</b></td></tr>
 <tr data-field-type="readonly"><td>视频面试邀约</td><td>安排视频面试并保存</td><td>操作完成后系统自动发送</td><td class="field-type readonly"><b>系统通知</b></td></tr>
 <tr data-field-type="readonly"><td>线下面试邀约</td><td>安排线下面试并保存</td><td>操作完成后系统自动发送</td><td class="field-type readonly"><b>系统通知</b></td></tr>
-<tr data-field-type="readonly"><td>流程中止反馈</td><td>点击终止投递并确认</td><td>系统在操作完成5小时后自动发送</td><td class="field-type readonly"><b>结果通知</b></td></tr>
+<tr data-field-type="readonly"><td>流程中止反馈</td><td>点击终止投递并确认</td><td>系统在操作完成5小时后自动发送；5小时内恢复投递会取消尚未发送的终止反馈</td><td class="field-type readonly"><b>结果通知</b></td></tr>
 <tr data-field-type="readonly"><td>进入人才库反馈</td><td>点击进入人才库并确认</td><td>系统在操作完成5小时后自动发送</td><td class="field-type readonly"><b>结果通知</b></td></tr>
 <tr data-field-type="readonly"><td>指定岗位投递邀约</td><td>点击发起邀约并发送邀约</td><td>操作完成后系统自动发送</td><td class="field-type readonly"><b>回捞通知</b></td></tr>
 </tbody></table></div></div>
@@ -827,21 +1010,86 @@ flowchart TB
 <div class="module-head"><div class="module-title"><span class="module-num">功能 / 06</span><h2>猎头账号</h2></div><div class="module-meta"><span class="tag purple">外部入口</span><span class="tag orange">涉及外部账号</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以为指定猎头创建登录账号、授权可提交候选人的职位，并在启用后安全交付账号密码。</div>
 <p class="module-lead">猎头账号用于控制外部猎头可以为哪些职位上传候选人。账号创建后必须完成职位授权并启用，猎头才能使用收到的账号密码进入外部入口开展指定职位的候选人提交。</p>
+<div class="function-relations" aria-label="猎头账号功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>前置：</b>目标职位已建立＋合作范围已确认</span><span class="relation-item"><b>产出：</b>外部账号＋指定职位授权</span><span class="relation-item"><b>提交范围：</b>仅限已授权职位</span><span class="relation-item"><b>后续核对：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>频率：</b>按需使用</span></div>
 <div class="panel screenshot"><img loading="lazy" decoding="async" src="headhunter-account-assets/headhunter-account-overview.jpg" data-zoom="headhunter-account-assets/headhunter-account-overview.jpg" alt="猎头账号页面：新建账号、职位授权和账号状态"><div class="shot-caption"><span>页面全貌：创建账号后，在列表中维护职位授权并确认账号状态。</span><button class="zoom-link" type="button">点击放大</button></div></div>
 <div class="panel field-panel"><div class="panel-title">创建账号必须确认的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>填写与操作规范</th></tr></thead><tbody><tr data-field-type="button"><td>新建猎头账号</td><td class="field-type button"><b>操作按钮</b></td><td>确定需要新增外部猎头协作账号后进入创建。</td></tr><tr data-field-type="required"><td>用户名</td><td class="field-type required"><b>必须填写</b></td><td>作为猎头登录账号；创建前与对应猎头确认，避免与其他账号混淆。</td></tr><tr data-field-type="required"><td>显示名称</td><td class="field-type required"><b>必须填写</b></td><td>填写能够识别该猎头的名称，便于内部人员核对账号归属。</td></tr><tr data-field-type="optional"><td>所属机构</td><td class="field-type optional"><b>可以填写</b></td><td>页面标记为可选；有明确机构时填写，便于识别合作方。</td></tr><tr data-field-type="required"><td>初始密码</td><td class="field-type required"><b>必须填写</b></td><td>页面要求12–128个字符；使用安全密码，不在截图、手册或公开群聊中展示。</td></tr><tr data-field-type="button"><td>职位授权</td><td class="field-type button"><b>操作按钮</b></td><td>只选择该猎头实际负责的职位，授权后猎头才可为对应职位上传候选人。</td></tr><tr data-field-type="readonly"><td>状态</td><td class="field-type readonly"><b>系统展示项</b></td><td>交付账号前确认显示为正常或已启用；未启用时猎头不能按本流程开始使用。</td></tr></tbody></table></div></div>
 <div class="panel"><div class="panel-title">操作前准备</div><div class="panel-body"><ul class="checklist"><li>确认猎头姓名或机构，以及用于登录的用户名。</li><li>确认该猎头实际负责的招聘职位，避免扩大职位可见和候选人提交范围。</li><li>准备符合页面长度要求的初始密码。</li><li>确认账号密码采用一对一安全方式交付，不在公开群聊中发送。</li></ul></div></div>
 <div class="panel gif-panel"><div class="panel-title">关键操作：创建、授权并启用猎头账号</div><img loading="lazy" decoding="async" src="headhunter-account-assets/headhunter-account-create-and-authorize.gif" data-zoom="headhunter-account-assets/headhunter-account-create-and-authorize.gif" alt="猎头账号操作GIF：新建账号、填写测试信息、授权职位并启用"><div class="gif-note">新建猎头账号 → 填写登录信息 → 授权指定职位 → 启用账号 → 安全交付账号密码。GIF只使用测试账号和测试密码。</div></div>
 <div class="panel"><div class="panel-title">状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>无账号 → 创建完成</b><span>系统形成猎头登录账号，但仍需核对职位授权和启用状态。</span></div></li><li><div><b>未授权 → 已授权指定职位</b><span>猎头的候选人提交范围被限制在所选职位。</span></div></li><li><div><b>未启用 → 已启用</b><span>账号可以交付给对应猎头，用于指定职位的候选人上传。</span></div></li></ol></div></div>
 <div class="rule-box"><strong>完成标准：</strong>账号已经创建；用户名和显示名称能够识别对应猎头；职位授权与实际合作范围一致；账号状态显示已启用；账号密码已经通过安全方式交给对应猎头。</div>
+<div class="rule-box"><strong>后续关联：</strong>猎头只能为已授权职位上传候选人；提交后由HR在“候选人与投递”核对候选人、职位和来源。职位停止招聘或猎头合作结束时，应及时复核账号状态和职位授权，避免保留无必要的外部访问范围。</div>
 <div class="rule-box"><strong>安全边界：</strong>密码属于敏感信息，不进入手册截图或公开沟通。重置密码、停用和撤销职位授权会影响猎头后续使用，本节只展示入口，不扩写为日常创建流程。</div>
 </section>
 
-<section class="module" id="function-position-stages" data-audience="function" data-keywords="职位与阶段 职位 招聘阶段"><div class="module-head"><div class="module-title"><span class="module-num">功能 / 07</span><h2>职位与阶段</h2></div></div></section>
+<section class="module" id="function-position-stages" data-audience="function" data-map-entry="职位与阶段" data-map-status="完整配置流程已整理" data-map-note="职位草稿入口、招聘阶段、BOSS名称映射、协作授权、发布及需求联动已整理。" data-keywords="职位与阶段 职位 招聘阶段 草稿 发布职位 简历评估 AI面试 作品集筛选 人工面试 BOSS职位名称映射 职位协作人 招聘中">
+<div class="module-head">
+<div class="module-title"><span class="module-num">功能 / 07</span><h2>职位与阶段</h2></div>
+<div class="module-meta"><span class="tag purple">招聘流程配置</span><span class="tag orange">发布后联动需求</span></div>
+</div>
+<p class="module-lead">职位与阶段用于把招聘需求生成的职位草稿配置成可正式招聘的职位。HR需要确认招聘流程，按需配置简历评估与AI面试，完成BOSS职位名称映射和职位协作授权，最后发布职位。发布成功后，对应招聘需求同步进入“招聘中”。</p>
+<div class="rule-box"><strong>学习目标：</strong>完成本节后，可以从两种入口进入职位草稿，配置三类中间招聘阶段，理解BOSS职位名称映射与协作人权限，并正确发布职位、核对需求联动结果。</div>
+<div class="function-relations" aria-label="职位与阶段功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>来源：</b><a href="#function-recruitment-requirements" data-function-link>招聘需求池</a>生成职位草稿</span><span class="relation-item"><b>AI能力：</b><a href="#function-ai-integration" data-function-link>AI面试集成</a></span><span class="relation-item"><b>简历来源：</b><a href="#function-email-auto-pull" data-function-link>邮件自动拉取</a></span><span class="relation-item"><b>产出：</b>招聘阶段＋权限＋职位映射</span><span class="relation-item"><b>下一步：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a></span></div>
+
+<div class="panel screenshot">
+<div class="panel-title" data-nav-item data-nav-label="页面与职位状态">页面与职位状态</div>
+<img loading="lazy" decoding="async" src="position-stages-assets/position-stages-overview.jpg" data-zoom="position-stages-assets/position-stages-overview.jpg" alt="职位与阶段列表页：查询条件、职位状态和配置入口">
+<div class="shot-caption"><span>列表页用于按职位、部门、地点、负责人和状态定位目标职位；找到草稿职位后点击“配置”进入编辑页面。</span><button class="zoom-link" type="button">点击放大</button></div>
+</div>
+<div class="panel field-panel"><div class="panel-title">列表页只需要掌握的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与判断规范</th></tr></thead><tbody>
+<tr data-field-type="optional"><td>职位名称、部门、工作地点、负责人和状态</td><td class="field-type optional"><b>可以填写</b></td><td>用于缩小职位范围，只影响列表查询，不改变职位数据。</td></tr>
+<tr data-field-type="readonly"><td>草稿／招聘中／已归档／已下架</td><td class="field-type readonly"><b>系统展示项</b></td><td>用于判断职位当前能否编辑招聘阶段，以及是否正在接收新投递。</td></tr>
+<tr data-field-type="button"><td>配置</td><td class="field-type button"><b>操作按钮</b></td><td>进入当前职位的阶段、名称映射和协作授权页面。</td></tr>
+</tbody></table></div></div>
+
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="两个配置入口">两个入口进入同一个职位配置页</div><div class="panel-body"><ol class="steps">
+<li><div><b>从职位与阶段列表进入</b><span>找到状态为“草稿”的目标职位，点击右侧“配置”。</span></div></li>
+<li><div><b>从招聘需求池进入</b><span>打开对应招聘需求详情，点击“查看职位与阶段”。该入口会直接进入本需求生成的职位草稿。</span></div></li>
+</ol></div></div>
+
+<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="完整配置与发布">关键操作：配置招聘流程并发布职位</div><img loading="lazy" decoding="async" src="position-stages-assets/position-stage-configure-and-publish.gif" data-zoom="position-stages-assets/position-stage-configure-and-publish.gif" alt="从职位草稿配置招聘阶段、BOSS名称映射和协作人并发布职位"><div class="gif-note">进入职位草稿 → 配置简历评估与招聘阶段 → 配置BOSS职位名称映射 → 添加并保存协作人 → 发布职位 → 核对职位和招聘需求均进入招聘中。</div></div>
+
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="简历评估与招聘阶段">简历评估与招聘阶段必须理解的字段</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>填写与操作规范</th><th>对后续流程的影响</th></tr></thead><tbody>
+<tr data-field-type="optional"><td>简历评估官百炼应用ID</td><td class="field-type optional"><b>可以填写</b></td><td>使用自动简历评估时，填写已发布的简历评估官百炼应用ID；岗位不使用该能力时可以不填。</td><td>填写并保存后，系统可以对进入该职位的简历生成评估结果。</td></tr>
+<tr data-field-type="readonly"><td>简历筛选、Offer、待入职</td><td class="field-type readonly"><b>系统展示项</b></td><td>三个固定阶段不能删除或修改；中间至少需要配置一个招聘阶段后才能发布职位。</td><td>构成每个职位都必须保留的流程骨架。</td></tr>
+<tr data-field-type="button"><td>新增阶段</td><td class="field-type button"><b>操作按钮</b></td><td>按实际招聘流程新增AI面试、作品／笔试（作品集筛选）或人工面试。</td><td>决定候选人在简历筛选和Offer之间依次经历的招聘环节。</td></tr>
+<tr data-field-type="required"><td>阶段类型／阶段名称</td><td class="field-type required"><b>必须填写</b></td><td>类型只能从三类中选择；名称可按业务场景拟定，但应让HR和业务负责人能够理解该阶段目的。</td><td>成为候选人投递详情中的阶段名称和操作入口。</td></tr>
+<tr data-field-type="required"><td>AI面试官百炼应用ID／AI面试评估百炼应用ID</td><td class="field-type required"><b>必须填写</b></td><td>仅AI面试阶段必须填写两个已发布应用的ID；系统显示“已就绪”后才算配置成功。应用创建方法见“AI面试集成”。</td><td>分别用于开展AI面试和生成面试评估；任一配置错误都会影响候选人完成AI面试。</td></tr>
+<tr data-field-type="button"><td>拖动排序／编辑／删除</td><td class="field-type button"><b>操作按钮</b></td><td>草稿状态下按真实招聘顺序调整中间阶段；发布前再次核对。招聘中的职位必须先下架，才能调整阶段。</td><td>顺序变化会改变候选人后续经历的招聘流程。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>AI配置边界：</strong>本节只说明ID填写位置和“已就绪”完成状态。百炼应用创建、发布与同步方法请查看“AI面试集成”板块。</div>
+
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="BOSS职位名称映射">BOSS职位名称映射</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>填写与操作规范</th><th>完成后的作用</th></tr></thead><tbody>
+<tr data-field-type="button"><td>添加当前职位名称</td><td class="field-type button"><b>操作按钮</b></td><td>当BOSS职位名称与系统职位名称完全一致时，直接添加当前职位名称。</td><td>建立同名职位的自动匹配关系。</td></tr>
+<tr data-field-type="button"><td>新增映射</td><td class="field-type button"><b>操作按钮</b></td><td>当BOSS职位名称与系统名称不一致时，点击后填写BOSS邮件中实际出现的职位名称。</td><td>允许外部名称映射到当前系统职位。</td></tr>
+<tr data-field-type="required"><td>BOSS职位名称</td><td class="field-type required"><b>必须填写</b></td><td>必须与BOSS直聘邮件中的职位名称保持一致；同一个名称只能映射到一个系统职位。</td><td>邮箱拉取简历时，系统据此判断简历应进入哪个职位。</td></tr>
+<tr data-field-type="readonly"><td>BOSS邮件标签与已绑定名称</td><td class="field-type readonly"><b>系统展示项</b></td><td>新增后核对名称已出现在职位名称映射列表中。</td><td>表示当前名称已与系统职位绑定。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>使用前提：</strong>职位名称映射需要招聘邮箱已经按“邮件自动拉取”板块完成绑定和启用。邮件拉取配置不正确时，仅添加名称映射也无法自动导入简历。</div>
+
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="职位协作人授权">职位协作人授权</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>填写与操作规范</th><th>权限影响</th></tr></thead><tbody>
+<tr data-field-type="optional"><td>职位协作人</td><td class="field-type optional"><b>可以填写</b></td><td>选择需要共同查看和处理该职位招聘数据的HR；按实际协作范围添加，避免无关授权。</td><td>未成为职位负责人、创建人或协作人的HR无法查看该职位及其候选人流程。</td></tr>
+<tr data-field-type="readonly"><td>职位负责人／创建人</td><td class="field-type readonly"><b>系统展示项</b></td><td>系统自动保留必要授权，负责人和创建人的授权不可移除。</td><td>保证职位始终有明确责任人和可追溯的创建人。</td></tr>
+<tr data-field-type="button"><td>保存授权</td><td class="field-type button"><b>操作按钮</b></td><td>核对人员范围后点击保存；人员变化时需要再次保存授权。</td><td>保存后协作人才取得或更新该职位的数据访问权限。</td></tr>
+</tbody></table></div></div>
+
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="发布与需求联动">发布职位与招聘需求联动</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>操作与判断规范</th><th>状态影响</th></tr></thead><tbody>
+<tr data-field-type="button"><td>发布职位</td><td class="field-type button"><b>操作按钮</b></td><td>至少配置一个中间阶段；由职位负责人或HRBP在取得业务负责人确认并核对全部配置后发布。</td><td>职位从“草稿”进入“招聘中”，对应招聘需求同步进入“招聘中”并开始接收新投递。</td></tr>
+<tr data-field-type="readonly"><td>职位状态</td><td class="field-type readonly"><b>系统展示项</b></td><td>发布后核对页面顶部和职位列表均显示“招聘中”。</td><td>表示该职位已经正式启动招聘。</td></tr>
+<tr data-field-type="readonly"><td>招聘阶段编辑状态</td><td class="field-type readonly"><b>系统展示项</b></td><td>草稿状态可以新增、编辑、删除和排序；招聘中阶段配置锁定。</td><td>避免正在使用的候选人流程被直接改变。</td></tr>
+<tr data-field-type="button"><td>暂停招聘／下架职位</td><td class="field-type button"><b>操作按钮</b></td><td>需求状态维护由职位负责人或HRBP处理；确需调整已发布阶段时，根据系统当前页面提示先暂停招聘或下架职位。期间不再接收新投递或发起新Offer，已有候选人仍需继续处理。</td><td>职位停止接收新投递；需求与职位的实际状态以页面回显为准，重新核对配置后再恢复。</td></tr>
+<tr data-field-type="readonly"><td>招聘需求状态</td><td class="field-type readonly"><b>系统展示项</b></td><td>职位发布后返回招聘需求池，核对对应项目显示“招聘中”。</td><td>表示职位发布结果已经同步到招聘项目。</td></tr>
+</tbody></table></div></div>
+
+<div class="rule-box" data-nav-item data-nav-label="完成标准与注意事项"><strong>本操作完成标准：</strong>至少配置一个中间招聘阶段；使用AI面试时显示“已就绪”；BOSS职位名称映射与真实邮件名称一致；协作人权限与实际分工一致；职位显示“招聘中”；返回招聘需求池后，对应需求也显示“招聘中”。</div>
+<div class="rule-box"><strong>发布前最后检查：</strong>业务负责人已经确认招聘目标和流程；阶段顺序一旦随职位进入招聘中即被锁定。发布前必须一次性核对简历评估ID、AI面试两个ID、阶段名称和顺序、BOSS映射及协作人，避免启动招聘后再下架调整。</div>
+</section>
 
 <section class="module" id="function-candidate-applications" data-audience="function" data-map-entry="候选人与投递" data-map-status="完整流程已整理" data-map-note="简历筛选、作品评估、AI面试、视频面试、Offer及结果分支已整理。" data-keywords="候选人与投递 简历评估 筛选通过 作品集 AI面试 视频面试 面评 Offer 待入职 终止投递 人才库">
 <div class="module-head"><div class="module-title"><span class="module-num">功能 / 08</span><h2>候选人与投递</h2></div><div class="module-meta"><span class="tag purple">招聘主流程</span><span class="tag orange">包含状态变更</span></div></div>
-<div class="rule-box"><strong>学习目标：</strong>完成本节后，可以手动上传简历并创建候选人与投递，也可以从候选人列表进入投递详情，依次完成简历筛选、作品评估、AI面试、视频面试和Offer接续，并正确选择待入职、人才库或终止投递。</div>
+<div class="rule-box"><strong>学习目标：</strong>完成本节后，可以手动上传简历并创建候选人与投递，也可以按照当前职位已经配置的实际阶段完成简历筛选、作品评估、AI面试或人工面试，并正确接续Offer、人才库、终止投递或转岗。作品评估和AI面试不是所有职位的固定必经环节。</div>
 <p class="module-lead">候选人与投递是招聘主流程的操作中心。列表用于定位候选人，详情页左侧查看简历，右侧按照岗位阶段完成评价、面试和结果处理；每项操作只针对当前投递。</p>
+<div class="function-relations" aria-label="候选人与投递功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>前置：</b><a href="#function-position-stages" data-function-link>职位与阶段</a>已发布</span><span class="relation-item"><b>简历来源：</b>自动拉取／猎头／手动录入</span><span class="relation-item"><b>状态产出：</b>阶段、评价与招聘结果</span><span class="relation-item"><b>自动通知：</b><a href="#function-email-templates" data-function-link>邮件模板</a> → <a href="#function-notification-records" data-function-link>通知记录</a></span><span class="relation-item"><b>结果分支：</b><a href="#function-talent-pool" data-function-link>人才库</a></span></div>
+<div class="rule-box"><strong>阶段来源：</strong>右侧实际显示的阶段名称和顺序来自“职位与阶段”配置。HR只处理当前职位真实存在的环节，不为了复现本手册示例而补做未配置的作品评估或AI面试。</div>
 <div class="panel screenshot"><img loading="lazy" decoding="async" src="candidate-applications-assets/candidate-applications-overview.jpg" data-zoom="candidate-applications-assets/candidate-applications-overview.jpg" alt="候选人与投递列表"><div class="shot-caption"><span>列表全貌：选择职位和阶段，定位候选人后点击查看。</span><button class="zoom-link" type="button">点击放大</button></div></div>
 <div class="panel field-panel"><div class="panel-title">列表中只需要掌握三项</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>截图编号</th><th>关键内容</th><th>分类</th><th>使用规范</th></tr></thead><tbody><tr data-field-type="optional"><td>①</td><td>职位与阶段入口</td><td class="field-type optional"><b>可以填写</b></td><td>按应聘职位和招聘阶段缩小范围。</td></tr><tr data-field-type="optional"><td>②</td><td>状态、负责人、姓名及联系方式筛选</td><td class="field-type optional"><b>可以填写</b></td><td>只影响列表查询，不改变候选人数据。</td></tr><tr data-field-type="button"><td>③</td><td>查看</td><td class="field-type button"><b>操作按钮</b></td><td>进入当前候选人的投递详情。</td></tr></tbody></table></div></div>
 <div class="panel gif-panel"><div class="panel-title">关键操作一：手动录入候选人与投递</div><img loading="lazy" decoding="async" src="candidate-applications-assets/manual-candidate-entry.gif" data-zoom="candidate-applications-assets/manual-candidate-entry.gif" alt="上传并解析简历，选择职位和来源后创建候选人与投递"><div class="gif-note">点击“录入候选人” → 上传简历并等待自动识别 → 核对姓名、手机号和邮箱 → 手动选择应聘职位及简历来源 → 点击“创建候选人与投递”。系统识别结果需要人工核对，职位和来源不应仅凭解析结果推断。</div></div>
@@ -851,6 +1099,7 @@ flowchart TB
 <div class="panel gif-panel"><div class="panel-title">关键操作四：安排并跟进AI面试</div><img loading="lazy" decoding="async" src="candidate-applications-assets/ai-interview-flow.gif" data-zoom="candidate-applications-assets/ai-interview-flow.gif" alt="AI面试操作GIF"><div class="gif-note">进入AI面试 → 点击安排面试 → 系统发送候选人邮件 → 候选人完成面试 → HR查看评估结果并决定是否进入视频面试。安排成功不等于面试完成。</div></div>
 <div class="panel gif-panel" data-field-guide="detailed"><div class="panel-title">关键操作五：安排视频面试并接续面评</div><img loading="lazy" decoding="async" src="candidate-applications-assets/video-interview-flow.gif" data-zoom="candidate-applications-assets/video-interview-flow.gif" alt="视频面试安排操作GIF"><div class="gif-note">选择视频面试和面试官 → 填写标题、时间及会议室 → 保存 → 核对业务钉钉日程和候选人邮件 → 面试结束后跟进规范化面评。</div></div>
 <div class="panel field-panel"><div class="panel-title">视频面试必须确认的内容</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>关键内容</th><th>分类</th><th>填写或核对规范</th></tr></thead><tbody><tr data-field-type="required"><td>面试方式、面试官、日程标题、面试时间</td><td class="field-type required"><b>必须填写</b></td><td>选择实际面试官并核对日期、开始和结束时间。</td></tr><tr data-field-type="optional"><td>面试地点、会议室、日程描述、备注</td><td class="field-type optional"><b>可以填写</b></td><td>按实际安排填写；使用会议室时保存前确认可用。</td></tr><tr data-field-type="readonly"><td>已安排、会议号、会议链接和面试时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>保存后核对系统回显，并确认双方已收到通知。</td></tr><tr data-field-type="button"><td>写面评</td><td class="field-type button"><b>操作按钮</b></td><td>面试结束后由对应面试官提交规范化面评。</td></tr></tbody></table></div></div>
+<div class="rule-box"><strong>人工面试说明：</strong>人工面试可以配置为视频面试或线下面试。本节使用视频面试作为完整教学示例；线下面试的人员、时间、地点、通知和面评接续逻辑基本一致，以页面所选面试方式为准。</div>
 <div class="panel gif-panel"><div class="panel-title">关键操作六：接受Offer并进入待入职</div><img loading="lazy" decoding="async" src="candidate-applications-assets/offer-and-onboarding-flow.gif" data-zoom="candidate-applications-assets/offer-and-onboarding-flow.gif" alt="Offer接受与待入职操作GIF"><div class="gif-note">面评完成 → 进入Offer判断 → 候选人接受Offer时填写预计入职日期 → 确认进入待入职。</div></div>
 <div class="panel gif-panel"><div class="panel-title">关键操作七：终止投递</div><img loading="lazy" decoding="async" src="candidate-applications-assets/candidate-termination.gif" data-zoom="candidate-applications-assets/candidate-termination.gif" alt="选择终止原因、确认终止并核对终止结果"><div class="gif-note">点击“终止投递” → 选择与实际判断一致的标准原因 → 确认终止 → 核对页面显示已终止及终止原因。系统将在5小时后自动发送终止反馈邮件。</div></div>
 <div class="panel field-panel"><div class="panel-title">终止投递需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody><tr data-field-type="required"><td>标准原因</td><td class="field-type required"><b>必须填写</b></td><td>选择与本次实际判断一致的终止原因，作为招聘结果记录和后续查询依据。</td></tr><tr data-field-type="button"><td>确认终止</td><td class="field-type button"><b>操作按钮</b></td><td>确认后当前投递立即终止，系统将在5小时后自动发送终止反馈邮件。</td></tr><tr data-field-type="readonly"><td>已终止／终止原因</td><td class="field-type readonly"><b>系统展示项</b></td><td>操作完成后核对页面状态和原因是否与实际处理一致。</td></tr><tr data-field-type="button"><td>恢复投递</td><td class="field-type button"><b>操作按钮</b></td><td>用于撤销误操作，并取消五小时后的终止反馈邮件发送；只在确认终止有误时使用。</td></tr></tbody></table></div></div>
@@ -861,19 +1110,21 @@ flowchart TB
 <div class="module-grid"><div class="panel"><div class="panel-title">三类招聘结果</div><div class="panel-body"><ol class="steps"><li><div><b>接受Offer</b><span>登记预计入职日期并进入待入职。</span></div></li><li><div><b>终止投递</b><span>用于不再继续当前投递且没有后续保留计划的候选人，系统发送对应邮件。</span></div></li><li><div><b>进入人才库</b><span>用于候选人优秀但当前HC或时机不支持录用、仍值得保留机会的情况，系统发送对应邮件。</span></div></li></ol></div></div><div class="panel"><div class="panel-title">结果选择边界</div><div class="panel-body"><ul class="checklist"><li>候选人毁约或确认不再合作时，按实际情况终止当前投递。</li><li>公司HC已满但候选人仍值得后续联系时，进入人才库。</li><li>人才沉淀不是入职后的最后阶段，也不会在评价后自动发生。</li><li>任何结果操作前都要核对候选人、岗位和当前阶段。</li></ul></div></div></div>
 <div class="panel"><div class="panel-title">状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>简历筛选 → 作品评估（岗位可选）</b><span>作品评价通过后进入下一阶段。</span></div></li><li><div><b>作品评估 → AI面试（岗位可选）</b><span>安排后发送候选人邮件，完成评估后再推进。</span></div></li><li><div><b>AI面试 → 视频面试</b><span>保存安排后同步钉钉日程和候选人邮件，结束后提交面评。</span></div></li><li><div><b>任一招聘阶段 → 人才库</b><span>确认入库后当前投递立即终止，候选人进入人才库，系统5小时后发送对应邮件。</span></div></li><li><div><b>Offer → 待入职／人才库／终止投递</b><span>根据候选人与HC实际情况选择结果。</span></div></li></ol></div></div>
 <div class="rule-box"><strong>完成标准：</strong>简历和各阶段评价已经核对；需要的作品评估、AI面试和视频面试均已完成；面评已经提交；需要转岗或转移负责人时已经完成正确的岗位、权限和责任交接；最终进入待入职、人才库或终止投递，并能在通知记录中核对对应通知。</div>
-<div class="rule-box"><strong>操作边界：</strong>阶段推进、安排面试、终止投递、进入人才库和接受Offer都会改变候选人状态并可能发送通知。操作前必须核对当前候选人和岗位；GIF仅将左侧简历替换为“对应候选人简历”，候选人身份使用测试信息，右侧阶段状态、链接、会议和评价界面保持真实页面呈现。</div>
+<div class="rule-box"><strong>操作边界：</strong>阶段推进、安排面试、终止投递、进入人才库和接受Offer都会改变候选人状态并可能自动发送通知。操作前必须核对当前候选人和岗位；操作后先确认候选人状态，再到“通知记录”核对发送结果，不能为了补发通知重复执行状态操作。GIF仅将左侧简历替换为“对应候选人简历”，候选人身份使用测试信息，右侧阶段状态、链接、会议和评价界面保持真实页面呈现。</div>
 </section>
 
 <section class="module" id="function-talent-pool" data-audience="function" data-map-entry="人才库" data-map-status="回捞邀约已确认" data-map-note="人才筛选、邀约发送和接受后的流转规则已整理。" data-keywords="人才库 人才沉淀 回捞 发起邀约 发送邀约 待接受 候选人与投递">
 <div class="module-head"><div class="module-title"><span class="module-num">功能 / 09</span><h2>人才库</h2></div><div class="module-meta"><span class="tag purple">招聘主流程</span><span class="tag blue">人才回捞</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以从人才库定位合适候选人，向指定岗位发起回捞邀约，并根据邀约状态判断候选人是否已经重新进入招聘流程。</div>
 <p class="module-lead">人才库用于保留本次未入职、但仍有后续岗位匹配价值的候选人。日常操作重点是查询当前人才、选择目标岗位并发送邀约；进入人才库操作简单，本节重点说明人才回捞。</p>
+<div class="function-relations" aria-label="人才库功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>来源：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a>执行进入人才库</span><span class="relation-item"><b>当前状态：</b>原投递已终止</span><span class="relation-item"><b>回捞产出：</b>指定岗位投递邀约</span><span class="relation-item"><b>接受后：</b>重新进入<a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>发送核对：</b><a href="#function-notification-records" data-function-link>通知记录</a></span></div>
 <div class="panel screenshot"><img loading="lazy" decoding="async" src="talent-pool-assets/talent-pool-overview.jpg" data-zoom="talent-pool-assets/talent-pool-overview.jpg" alt="人才库当前人才列表及邀约入口"><div class="shot-caption"><span>页面全貌：筛选候选人，查看入库原因、来源职位、邀约岗位及邀约状态，并在操作列发起邀约。</span><button class="zoom-link" type="button">点击放大</button></div></div>
 <div class="panel field-panel"><div class="panel-title">回捞候选人时只看四项</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>关键内容</th><th>分类</th><th>使用规范</th></tr></thead><tbody><tr data-field-type="optional"><td>候选人、联系方式、入库原因、邀约职位、标签和邀约状态</td><td class="field-type optional"><b>可以填写</b></td><td>用于缩小当前人才范围，只影响列表查询。</td></tr><tr data-field-type="readonly"><td>来源职位、入库方式、入库时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>帮助了解候选人的原始来源和人才沉淀背景。</td></tr><tr data-field-type="button"><td>发起邀约</td><td class="field-type button"><b>操作按钮</b></td><td>针对指定岗位发送新的投递邀约。</td></tr><tr data-field-type="readonly"><td>待发送、待接受及页面实际回显状态</td><td class="field-type readonly"><b>系统展示项</b></td><td>用于判断当前邀约进度；状态应以页面实时显示为准。</td></tr></tbody></table></div></div>
 <div class="panel"><div class="panel-title">操作前准备</div><div class="panel-body"><ul class="checklist"><li>确认候选人仍适合本次邀约岗位，并核对原入库原因和已有标签。</li><li>确认需要邀请的目标岗位准确，避免向错误岗位发送邀约。</li><li>重复发送前先查看当前邀约状态；再次发起后，此前未提交的邀约链接会失效。</li></ul></div></div>
 <div class="panel gif-panel"><div class="panel-title">关键操作：发起人才回捞邀约</div><img loading="lazy" decoding="async" src="talent-pool-assets/talent-pool-invite.gif" data-zoom="talent-pool-assets/talent-pool-invite.gif" alt="从人才库发起并发送岗位邀约"><div class="gif-note">定位候选人 → 点击“发起邀约” → 确认发送 → 状态进入待接受。候选人接受并完成投递后，会离开当前人才列表并进入“候选人与投递”；未接受时继续停留在人才库，需要再次邀请时重新发起邀约。</div></div>
 <div class="panel"><div class="panel-title">状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>人才库 → 待接受</b><span>发送邀约后等待候选人处理，候选人仍保留在人才库。</span></div></li><li><div><b>待接受 → 候选人与投递</b><span>候选人接受并再次投递指定岗位后，进入候选人与投递阶段。</span></div></li><li><div><b>未接受 → 继续留在人才库</b><span>候选人没有接受时不自动离开；需要再次联系时可重新发起邀约。</span></div></li></ol></div></div>
 <div class="rule-box"><strong>完成标准：</strong>已经核对候选人和目标岗位，成功发送邀约，并能通过邀约状态判断候选人是待接受、仍留在人才库，还是已经重新进入候选人与投递。</div>
+<div class="rule-box"><strong>通知关联：</strong>确认进入人才库后，系统在5小时后自动发送进入人才库反馈；发起回捞邀约后自动调用指定岗位投递邀约模板。邮件内容可在“邮件模板”查看，发送结果在“通知记录”核对。</div>
 <div class="rule-box"><strong>权限与边界：</strong>HR实习生、HR、HRBP和管理员均可操作。本手册不展示进入人才库和回捞通知的具体邮件正文；重复发送会使此前未提交的邀约链接失效，操作前应先确认是否确需再次邀请。</div>
 </section>
 
@@ -903,7 +1154,7 @@ flowchart TB
 
 <script type="application/json" id="flowMappingManifest">
 {
-  "function": { "A": "function-position-stages", "B": "function-position-stages", "C": "function-position-stages", "D": "function-candidate-applications", "E": "function-candidate-applications", "F": "function-candidate-applications", "F1": "function-candidate-applications", "F3": "function-candidate-applications", "G": "function-candidate-applications", "G1": "function-candidate-applications", "G2": "function-candidate-applications", "H": "function-candidate-applications", "J": "function-candidate-applications", "K": "function-candidate-applications", "L": "function-candidate-applications", "Z": "function-candidate-applications", "X": "function-candidate-applications", "T": "function-talent-pool", "notify": "function-notification-records", "headhunter": "function-headhunter-accounts" },
+  "function": { "A": "function-recruitment-requirements", "B": "function-position-stages", "C": "function-position-stages", "D": "function-candidate-applications", "E": "function-candidate-applications", "F": "function-candidate-applications", "F1": "function-candidate-applications", "F3": "function-candidate-applications", "G": "function-candidate-applications", "G1": "function-candidate-applications", "G2": "function-candidate-applications", "H": "function-candidate-applications", "J": "function-candidate-applications", "K": "function-candidate-applications", "L": "function-candidate-applications", "Z": "function-candidate-applications", "X": "function-candidate-applications", "T": "function-talent-pool", "ai-setup": "function-ai-integration", "mail-intake": "function-email-auto-pull", "templates": "function-email-templates", "notify": "function-notification-records", "headhunter": "function-headhunter-accounts" },
   "hr": { "A": "hr-recruitment-start", "B": "hr-recruitment-start", "C": "hr-recruitment-start", "D": "hr-candidate-intake", "E": "hr-resume-screening", "F": "hr-preinterview-assessment", "F1": "hr-preinterview-assessment", "F3": "hr-preinterview-assessment", "G": "hr-preinterview-assessment", "G1": "hr-preinterview-assessment", "G2": "hr-preinterview-assessment", "H": "hr-business-interview", "H1": "hr-business-interview", "H2": "hr-business-interview", "H3": "hr-business-interview", "I": "hr-business-interview", "J": "hr-result-processing", "K": "hr-result-processing", "L": "hr-result-processing", "M": "hr-result-processing", "Z": "hr-result-processing", "T": "hr-result-processing", "X": "hr-result-processing", "notify": "hr-notification-feedback" },
   "business": {
     "F2": "view-business",
@@ -1218,7 +1469,7 @@ flowchart TB
     business: new Set(['A','F2','H1','H2','H3','I','notify','exception'])
   };
   const flowOwners = {
-    A:'HR与业务',B:'HR',C:'HR',D:'HR与系统',E:'HR',F:'岗位规则',F1:'HR',F2:'对应评估人',F3:'HR',G:'岗位规则',G1:'HR与系统',G2:'HR',H:'HR',H1:'对应面试官',H2:'对应面试官',H3:'对应面试官',I:'HR与业务',J:'HR',K:'HR',L:'HR',M:'HR',Z:'HR',T:'HR',X:'HR',notify:'系统与HR',conflict:'系统与HR',exception:'HR协同处理',headhunter:'HR或管理员'
+    A:'HR与业务',B:'HR',C:'HR',D:'HR与系统',E:'HR',F:'岗位规则',F1:'HR',F2:'对应评估人',F3:'HR',G:'岗位规则',G1:'HR与系统',G2:'HR',H:'HR',H1:'对应面试官',H2:'对应面试官',H3:'对应面试官',I:'HR与业务',J:'HR',K:'HR',L:'HR',M:'HR',Z:'HR',T:'HR',X:'HR','ai-setup':'有权限的配置人员','mail-intake':'HR与系统',templates:'系统与有权限人员',notify:'系统与HR',conflict:'系统与HR',exception:'HR协同处理',headhunter:'HR或管理员'
   };
 
   function showFlowToast(message) {
@@ -1380,7 +1631,27 @@ flowchart TB
     label.textContent = (viewButtons.find(button => button.dataset.view === activeView)?.textContent.trim() || '') + '目录';
     group.append(label);
     const items = [{ id: 'recruitment-flow', mark: '◆', title: '完整招聘框架' }, ...currentNavModules().map(moduleNavItem)];
+    const functionSections = {
+      'function-recruitment-requirements': '招聘项目入口',
+      'function-ai-integration': '配置、自动化与外部协作',
+      'function-email-auto-pull': '配置、自动化与外部协作',
+      'function-notification-records': '配置、自动化与外部协作',
+      'function-email-templates': '配置、自动化与外部协作',
+      'function-headhunter-accounts': '配置、自动化与外部协作',
+      'function-position-stages': '招聘执行与人才流转',
+      'function-candidate-applications': '招聘执行与人才流转',
+      'function-talent-pool': '招聘执行与人才流转'
+    };
+    let currentSection = '';
     items.forEach((item, index) => {
+      const nextSection = activeView === 'function' ? functionSections[item.id] : '';
+      if (nextSection && nextSection !== currentSection) {
+        const sectionLabel = document.createElement('div');
+        sectionLabel.className = 'nav-section-label';
+        sectionLabel.textContent = nextSection;
+        group.append(sectionLabel);
+        currentSection = nextSection;
+      }
       const link = document.createElement('a');
       link.href = '#' + item.id;
       link.dataset.target = item.id;
@@ -1541,6 +1812,22 @@ flowchart TB
   }
 
   searchInput.addEventListener('input', applyFilters);
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-function-link]');
+    if (!link) return;
+    event.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target || target.dataset.audience !== 'function' || activeView !== 'function') return;
+    if (searchInput.value) {
+      searchInput.value = '';
+      applyFilters();
+    }
+    target.classList.remove('is-collapsed');
+    const toggle = target.querySelector(':scope > .module-head .module-toggle span:last-child');
+    if (toggle) toggle.textContent = '收起';
+    setActiveNav(target.id);
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
   document.getElementById('recruitment-flow')?.addEventListener('click', event => {
     const node = event.target.closest('[data-flow-node]');
     if (node) openFlowTarget(node.dataset.flowNode);
@@ -1578,6 +1865,8 @@ flowchart TB
     const expandableModule = target.id === 'recruitment-flow' ? target : targetModule;
     expandableModule?.classList.remove('is-collapsed');
     target.closest('.feature-point')?.classList.remove('is-collapsed');
+    const containingDetails = target.closest('details');
+    if (containingDetails) containingDetails.open = true;
     const toggle = expandableModule?.querySelector(':scope > .module-head .module-toggle span:last-child');
     if (toggle) toggle.textContent = '收起';
     setActiveNav(target.id);
