@@ -24,6 +24,10 @@
     "hr-assets/offer-onboarding.gif": "8f6cb82f88f8a005",
     "hr-assets/portfolio-assessment.gif": "f62f113ab162a87d",
     "hr-assets/resume-screening.gif": "2634e4e0b4faa343",
+    "position-stages-assets/position-stage-configure-and-publish.gif": "735265e38b1f66ee",
+    "recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif": "a6ff80e2543d76e0",
+    "recruitment-requirements-assets/recruitment-requirement-create-and-handoff.gif": "569577b5e8fc79ba",
+    "recruitment-requirements-assets/recruitment-requirement-pause-and-resume.gif": "2b6240033efef7ff",
     "talent-pool-assets/talent-pool-invite.gif": "44a22a907a2ee4ce"
   },
   "assets": {
@@ -870,6 +874,299 @@
           "title": "启用并安全交付账号",
           "frames": [
             3
+          ]
+        }
+      ]
+    },
+    "735265e38b1f66ee": {
+      "original": "position-stages-assets/position-stage-configure-and-publish.gif",
+      "frames": [
+        "gif-player/735265e38b1f66ee/frame-001.webp",
+        "gif-player/735265e38b1f66ee/frame-002.webp",
+        "gif-player/735265e38b1f66ee/frame-003.webp",
+        "gif-player/735265e38b1f66ee/frame-004.webp",
+        "gif-player/735265e38b1f66ee/frame-005.webp",
+        "gif-player/735265e38b1f66ee/frame-006.webp",
+        "gif-player/735265e38b1f66ee/frame-007.webp",
+        "gif-player/735265e38b1f66ee/frame-008.webp",
+        "gif-player/735265e38b1f66ee/frame-009.webp",
+        "gif-player/735265e38b1f66ee/frame-010.webp",
+        "gif-player/735265e38b1f66ee/frame-011.webp",
+        "gif-player/735265e38b1f66ee/frame-012.webp",
+        "gif-player/735265e38b1f66ee/frame-013.webp",
+        "gif-player/735265e38b1f66ee/frame-014.webp"
+      ],
+      "durations": [
+        3200,
+        3400,
+        3000,
+        3600,
+        3000,
+        3200,
+        3200,
+        3400,
+        3400,
+        3200,
+        3400,
+        3200,
+        4000,
+        4000
+      ],
+      "playableFrames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "steps": [
+        {
+          "title": "从招聘需求进入职位配置",
+          "frames": [
+            0
+          ]
+        },
+        {
+          "title": "核对职位草稿与固定阶段",
+          "frames": [
+            1
+          ]
+        },
+        {
+          "title": "配置AI面试阶段",
+          "frames": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "title": "新增作品集筛选阶段",
+          "frames": [
+            5
+          ]
+        },
+        {
+          "title": "新增人工面试阶段",
+          "frames": [
+            6
+          ]
+        },
+        {
+          "title": "核对并调整阶段顺序",
+          "frames": [
+            7
+          ]
+        },
+        {
+          "title": "配置BOSS职位名称映射",
+          "frames": [
+            8,
+            9
+          ]
+        },
+        {
+          "title": "选择并保存职位协作人",
+          "frames": [
+            10,
+            11
+          ]
+        },
+        {
+          "title": "发布职位并确认阶段锁定",
+          "frames": [
+            12
+          ]
+        },
+        {
+          "title": "确认招聘需求同步启动",
+          "frames": [
+            13
+          ]
+        }
+      ]
+    },
+    "a6ff80e2543d76e0": {
+      "original": "recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif",
+      "frames": [
+        "gif-player/a6ff80e2543d76e0/frame-001.webp",
+        "gif-player/a6ff80e2543d76e0/frame-002.webp",
+        "gif-player/a6ff80e2543d76e0/frame-003.webp",
+        "gif-player/a6ff80e2543d76e0/frame-004.webp",
+        "gif-player/a6ff80e2543d76e0/frame-005.webp",
+        "gif-player/a6ff80e2543d76e0/frame-006.webp",
+        "gif-player/a6ff80e2543d76e0/frame-007.webp"
+      ],
+      "durations": [
+        3000,
+        3600,
+        3600,
+        3400,
+        3200,
+        3400,
+        4200
+      ],
+      "playableFrames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "steps": [
+        {
+          "title": "打开待完成确认的需求",
+          "frames": [
+            0
+          ]
+        },
+        {
+          "title": "核对HC并点击确认完成",
+          "frames": [
+            1
+          ]
+        },
+        {
+          "title": "确认需求进入已完成",
+          "frames": [
+            2
+          ]
+        },
+        {
+          "title": "点击归档并查看收尾顺序",
+          "frames": [
+            3
+          ]
+        },
+        {
+          "title": "对每位候选人三选一处理",
+          "frames": [
+            4,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    "569577b5e8fc79ba": {
+      "original": "recruitment-requirements-assets/recruitment-requirement-create-and-handoff.gif",
+      "frames": [
+        "gif-player/569577b5e8fc79ba/frame-001.webp",
+        "gif-player/569577b5e8fc79ba/frame-002.webp",
+        "gif-player/569577b5e8fc79ba/frame-003.webp",
+        "gif-player/569577b5e8fc79ba/frame-004.webp"
+      ],
+      "durations": [
+        3000,
+        4200,
+        3600,
+        4200
+      ],
+      "playableFrames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "steps": [
+        {
+          "title": "点击新建招聘需求",
+          "frames": [
+            0
+          ]
+        },
+        {
+          "title": "填写职位与需求信息",
+          "frames": [
+            1
+          ]
+        },
+        {
+          "title": "核对待启动需求并查看职位与阶段",
+          "frames": [
+            2
+          ]
+        },
+        {
+          "title": "进入职位与阶段继续配置",
+          "frames": [
+            3
+          ]
+        }
+      ]
+    },
+    "2b6240033efef7ff": {
+      "original": "recruitment-requirements-assets/recruitment-requirement-pause-and-resume.gif",
+      "frames": [
+        "gif-player/2b6240033efef7ff/frame-001.webp",
+        "gif-player/2b6240033efef7ff/frame-002.webp",
+        "gif-player/2b6240033efef7ff/frame-003.webp",
+        "gif-player/2b6240033efef7ff/frame-004.webp",
+        "gif-player/2b6240033efef7ff/frame-005.webp",
+        "gif-player/2b6240033efef7ff/frame-006.webp"
+      ],
+      "durations": [
+        3000,
+        3400,
+        3800,
+        3300,
+        3300,
+        3800
+      ],
+      "playableFrames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "steps": [
+        {
+          "title": "打开招聘中的需求详情",
+          "frames": [
+            0
+          ]
+        },
+        {
+          "title": "点击暂停招聘",
+          "frames": [
+            1
+          ]
+        },
+        {
+          "title": "填写原因并确认暂停",
+          "frames": [
+            2
+          ]
+        },
+        {
+          "title": "核对需求已经暂停",
+          "frames": [
+            3
+          ]
+        },
+        {
+          "title": "确认恢复招聘",
+          "frames": [
+            4
+          ]
+        },
+        {
+          "title": "核对需求恢复为招聘中",
+          "frames": [
+            5
           ]
         }
       ]
