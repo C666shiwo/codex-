@@ -391,7 +391,7 @@
   .business-real-gif-slot strong{font-size:17px;color:var(--brand-blue-ink)}
 </style>
 </head>
-<body data-manual-view="function" data-manual-version="2026.08.18-faq-interactive">
+<body data-manual-view="function" data-manual-version="2026.08.20-faq-qa-expanded">
   <div class="progress" id="progress"></div>
   <div class="shell">
     <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -2395,10 +2395,6 @@ MAIN_RISK: [一句话概括最大风险]
             <summary>流程图里的节点可以点击吗？</summary>
             <div class="req-accordion-body"><p>可以。当前视图有对应教学内容的节点会高亮显示，点击后会自动定位并展开到对应模块，比如<a href="#function-candidate-applications" data-cross-link>候选人与投递</a>或<a href="#hr-resume-screening" data-cross-link>简历筛选</a>。</p></div>
           </details>
-          <details class="req-accordion">
-            <summary>怎么导出 PDF 版本的手册？</summary>
-            <div class="req-accordion-body"><p>点击页面右上角“导出 PDF”按钮，即可下载当前视图对应的 PDF 版本。PDF 内容会与你在<a href="#" onclick="return false;">顶部选择的视角</a>保持一致。</p></div>
-          </details>
           <div class="rule-box" style="margin-top:14px;font-size:12px"><strong>没找到答案？</strong>请联系招聘管理员或负责 HR。</div>
         </section>
 
@@ -2410,36 +2406,56 @@ MAIN_RISK: [一句话概括最大风险]
           <p class="module-lead">关于 HR 招聘操作流程的高频问题。</p>
           <div class="faq-toolbar"><button type="button" class="faq-expand-all">展开全部</button><button type="button" class="faq-collapse-all">收起全部</button></div>
           <details class="req-accordion">
-            <summary>只有创建招聘需求后，才能配置职位的具体环节和人员吗？</summary>
-            <div class="req-accordion-body"><p>是的。职位基于<a href="#function-recruitment-requirements" data-cross-link>招聘需求</a>创建，需求中的岗位信息、评估方式等会作为职位配置的基础。创建职位后，才能在<a href="#function-position-stages" data-cross-link>职位与阶段</a>中设置招聘阶段、协作人、面试官、映射规则等。</p></div>
+            <summary>邮箱绑定了有什么作用？需要使用企业邮箱吗？</summary>
+            <div class="req-accordion-body"><p>绑定并启用后，系统每5分钟自动拉取一次招聘邮件，并结合职位名称映射将简历导入对应职位，减少手动上传。不强制使用企业邮箱；当前手册已确认支持QQ邮箱和网易邮箱的IMAP授权接入。请绑定本人实际负责的招聘邮箱，不要填写邮箱登录密码，具体配置见<a href="#function-email-auto-pull" data-cross-link>邮件自动拉取</a>。</p></div>
           </details>
           <details class="req-accordion">
-            <summary>面试环节后续想调整，比如增加一个面试环节，怎么操作？</summary>
-            <div class="req-accordion-body"><p>进入对应职位的<a href="#function-position-stages" data-cross-link>职位与阶段</a>设置，在招聘阶段中新增、删除或调整面试环节。修改后只会影响后续新进入该阶段的候选人，已开始的投递保持原流程。</p></div>
+            <summary>为什么我的业务同事操作不了候选人流程？</summary>
+            <div class="req-accordion-body"><p>这是角色权限边界，不一定是系统故障。业务负责人、面试官和作品评估人只处理HR分配给自己的评价任务，不能操作“下一阶段”“阶段回退”“终止投递”或“进入人才库”等HR流程动作。如果业务无法查看或填写本应由其完成的评价，请核对安排时是否已将其指定为对应评估人或面试官，并确认账号权限已开通。</p></div>
+          </details>
+          <details class="req-accordion">
+            <summary>简历文件格式正确，为什么还是自动拉取失败？应该怎么处理？</summary>
+            <div class="req-accordion-body"><p>文件格式正确只是导入条件之一。请先到<a href="#function-email-auto-pull" data-cross-link>邮件自动拉取</a>依次核对：邮箱是否已启用、执行记录是否已扫描该邮件、导入记录是否已生成，以及“职位与阶段”中的BOSS职位名称映射是否与邮件中的真实职位名一致。如果邮件已进入异常处理，先根据异常类别补充指定职位或身份信息，再重试；无法判断时不要盲目忽略，联系管理员处理。</p></div>
+          </details>
+          <details class="req-accordion">
+            <summary>我需要业务参加招聘流程，应该怎么操作？</summary>
+            <div class="req-accordion-body"><p>不要把业务人员添加为职位协作人。作品筛选环节由HR在<a href="#hr-preinterview-assessment" data-cross-link>发起作品评估</a>时选择对应评估人并发送钉钉通知；人工面试环节由HR在<a href="#hr-business-interview" data-cross-link>安排面试</a>时选择对应面试官。业务人员通过钉钉工作通知或面试日程中的候选人链接进入任务，完成查看、面试或评价，后续阶段仍由HR接续。</p></div>
+          </details>
+          <details class="req-accordion">
+            <summary>哪些操作会自动触发候选人邮件？</summary>
+            <div class="req-accordion-body"><p>共有六类：安排AI面试、保存视频面试安排、保存线下面试安排、确认终止投递、确认进入人才库，以及从人才库发起并发送指定岗位投递邀约。其中AI面试、视频面试、线下面试和指定岗位投递邀约在操作完成后由系统自动发送；终止投递和进入人才库的反馈邮件延迟5小时发送。日常操作中无发送前复查环节，完成操作后可到<a href="#function-notification-records" data-cross-link>通知记录</a>核对发送结果。</p></div>
+          </details>
+          <details class="req-accordion">
+            <summary>招聘需求创建后，才能配置职位阶段、协作人和面试官吗？</summary>
+            <div class="req-accordion-body"><p>是的。职位基于<a href="#function-recruitment-requirements" data-cross-link>招聘需求</a>创建，需求中的岗位信息、招聘目标等会作为职位配置的基础。创建职位后，才能在<a href="#function-position-stages" data-cross-link>职位与阶段</a>中设置招聘阶段、协作人、面试官、映射规则等。</p></div>
+          </details>
+          <details class="req-accordion">
+            <summary>职位已发布后，想增加或调整面试环节，应该怎么操作？</summary>
+            <div class="req-accordion-body"><p>已发布的职位如需调整阶段，需先根据系统提示暂停招聘或下架职位，再进入对应职位的<a href="#function-position-stages" data-cross-link>职位与阶段</a>设置，在招聘阶段中新增、删除或调整面试环节。修改后只会影响后续新进入该阶段的候选人，已开始的投递保持原流程。</p></div>
           </details>
           <details class="req-accordion">
             <summary>想让某个职位使用 AI 面试官，应该怎么操作？</summary>
             <div class="req-accordion-body"><p>AI 面试官能力依赖阿里百炼应用。需要联系招聘管理员申请百炼账号与操作授权，然后在<a href="#function-ai-integration" data-cross-link>AI 面试集成</a>模块按指引创建并发布应用，最后在<a href="#function-position-stages" data-cross-link>职位与阶段</a>中绑定 AI 面试。</p></div>
           </details>
           <details class="req-accordion">
-            <summary>职位配置阶段的映射是什么意思？有什么用？</summary>
-            <div class="req-accordion-body"><p>映射用于把外部招聘渠道（如官网、招聘网站、内推等）的来源标识与系统内的来源字段对应起来。配置后，系统能自动识别简历来自哪个渠道，方便在<a href="#function-position-stages" data-cross-link>职位与阶段</a>或<a href="#function-notification-records" data-cross-link>通知记录</a>中统计各渠道效果。</p></div>
+            <summary>职位配置里的“BOSS 职位名称映射”是什么意思？有什么用？</summary>
+            <div class="req-accordion-body"><p>“BOSS 职位名称映射”用于把 BOSS 直聘邮件中出现的职位名称与系统内的职位名称对应起来。当两者不一致时，HR 可在<a href="#function-position-stages" data-cross-link>职位与阶段</a>中新增映射，填写 BOSS 邮件中的真实职位名称。配置后，招聘邮箱自动拉取 BOSS 简历时，系统才能根据邮件中的职位名把简历分配到正确的系统职位。</p></div>
           </details>
           <details class="req-accordion">
-            <summary>职位协作人只能添加帮助招聘的 HR 吗？</summary>
-            <div class="req-accordion-body"><p>协作人不限于 HR。除了协助招聘的 HR 同事，也可以添加 HRBP、业务负责人、招聘管理员等需要查看或跟进该职位数据的人。面试官和评估人通常在<a href="#hr-business-interview" data-cross-link>安排面试</a>或<a href="#hr-preinterview-assessment" data-cross-link>作品评估</a>任务时指定，不一定要在<a href="#function-position-stages" data-cross-link>职位协作人</a>中重复添加。</p></div>
+            <summary>职位协作人可以添加业务负责人或面试官吗？</summary>
+            <div class="req-accordion-body"><p>职位协作人主要用于授权共同处理该职位招聘事务的 HR 同事，一般不添加业务负责人或面试官。业务负责人、面试官和作品评估人通过面试/评估任务获得对应操作权限，不需要在<a href="#function-position-stages" data-cross-link>职位协作人</a>中重复添加。</p></div>
           </details>
           <details class="req-accordion">
             <summary>怎么指定面试官或作品评估人？</summary>
-            <div class="req-accordion-body"><p>在<a href="#hr-business-interview" data-cross-link>安排面试</a>或<a href="#hr-preinterview-assessment" data-cross-link>发起作品评估</a>任务时，选择对应的负责人。系统会默认使用<a href="#function-position-stages" data-cross-link>职位阶段</a>中配置的评估人，也可以在单次安排中临时调整。</p></div>
+            <div class="req-accordion-body"><p>在<a href="#hr-business-interview" data-cross-link>安排面试</a>或<a href="#hr-preinterview-assessment" data-cross-link>发起作品评估</a>任务时，选择对应的负责人。安排前请核对面试官/评估人是否已经开通系统权限，避免通知无法送达。</p></div>
           </details>
           <details class="req-accordion">
-            <summary>候选人进入 Offer 阶段后还能回退吗？</summary>
-            <div class="req-accordion-body"><p>可以。在<a href="#function-candidate-applications" data-cross-link>候选人详情页</a>中，HR 可以根据实际情况调整投递阶段。但阶段回退通常需要记录原因，建议与业务负责人确认后再操作。</p></div>
+            <summary>Offer 阶段可以回退到之前的招聘阶段吗？</summary>
+            <div class="req-accordion-body"><p>可以，但「阶段回退」主要用于纠正 HR 误推进。在<a href="#function-candidate-applications" data-cross-link>候选人详情页</a>中选择过往阶段、填写回退原因并确认后，候选人会退至对应阶段。建议与业务负责人确认后再操作，避免反复变更候选人状态。</p></div>
           </details>
           <details class="req-accordion">
             <summary>招聘数据报表在哪里查看？</summary>
-            <div class="req-accordion-body"><p>系统提供招聘漏斗、渠道来源、阶段转化等数据报表，具体入口见<a href="#function-notification-records" data-cross-link>通知记录</a>或对应模块的统计面板（以系统实际菜单为准）。</p></div>
+            <div class="req-accordion-body"><p>招聘需求详情页提供「招聘进展漏斗」，可查看该项目的候选人阶段分布。通知记录仅用于核对系统通知发送结果，不是报表入口。其他统计报表以系统实际菜单为准。</p></div>
           </details>
           <div class="rule-box" style="margin-top:14px;font-size:12px"><strong>没找到答案？</strong>请联系招聘管理员或负责 HR。</div>
         </section>
@@ -2452,12 +2468,28 @@ MAIN_RISK: [一句话概括最大风险]
           <p class="module-lead">关于面试官、评估人协作的高频问题。</p>
           <div class="faq-toolbar"><button type="button" class="faq-expand-all">展开全部</button><button type="button" class="faq-collapse-all">收起全部</button></div>
           <details class="req-accordion">
+            <summary>我为什么无法操作候选人的招聘阶段？</summary>
+            <div class="req-accordion-body"><p>业务负责人、面试官和作品评估人的职责是查看被分配的候选人信息，完成作品评价或面试评价。“下一阶段”“阶段回退”“终止投递”和“进入人才库”会改变候选人流程，由负责HR统一操作。完成评价后，请将判断和异常情况反馈给HR，由HR接续处理。</p></div>
+          </details>
+          <details class="req-accordion">
+            <summary>我为什么没有“功能详解”里展示的那些能力？</summary>
+            <div class="req-accordion-body"><p>“功能详解”是系统全功能的教学视图，不代表每个账号都拥有全部权限。业务角色只获得本人被指定的面试或评估任务所需能力；职位配置、候选人阶段、Offer、人才库和通知等由HR或对应管理角色操作。请在当前<a href="#view-business" data-cross-link>业务规范</a>视图查看与你有关的操作。</p></div>
+          </details>
+          <details class="req-accordion">
+            <summary>我填写面评的入口在哪里？</summary>
+            <div class="req-accordion-body"><p>从钉钉面试日程的“描述”区域点击候选人页面链接，进入对应投递详情，在当前人工面试阶段点击“写面评”。选择“面试通过”或“面试不通过”，填写有事实依据的面试评价后保存。完整操作见<a href="#biz-evaluate" data-cross-link>提交评价</a>。</p></div>
+          </details>
+          <details class="req-accordion">
+            <summary>我如何找到并处理对应阶段的候选人？</summary>
+            <div class="req-accordion-body"><p>业务人员不通过招聘阶段列表批量管理候选人。收到作品评估通知时，在钉钉工作通知中点击“查看任务”；收到面试安排时，在钉钉面试日程的“描述”区域点击候选人链接。进入后先核对候选人、职位和当前阶段，再完成本人被分配的作品评价或面试评价；阶段推进由HR处理。</p></div>
+          </details>
+          <details class="req-accordion">
             <summary>收到面试邀请但看不到候选人怎么办？</summary>
             <div class="req-accordion-body"><p>请确认 HR 在<a href="#hr-business-interview" data-cross-link>安排面试</a>时已将你指定为该阶段的面试官。如果已经被指定但仍看不到，请联系招聘管理员确认你的系统权限已开通。</p></div>
           </details>
           <details class="req-accordion">
             <summary>面试评价需要在什么时候提交？</summary>
-            <div class="req-accordion-body"><p>建议在面试结束后 24 小时内提交评价。及时提交评价有助于 HR 快速推进招聘决策，也能避免候选人状态长期挂起。操作方法见<a href="#biz-evaluate" data-cross-link>提交评价</a>模块。</p></div>
+            <div class="req-accordion-body"><p>请在约定时间内提交评价，避免候选人状态长期挂起。通常建议在面试结束后尽快完成；HR 会争取在面试结束后 7 个工作日内向候选人反馈结果或真实进度。操作方法见<a href="#biz-evaluate" data-cross-link>提交评价</a>模块。</p></div>
           </details>
           <details class="req-accordion">
             <summary>作品评估的标准在哪里查看？</summary>
