@@ -1,7 +1,10 @@
 {
-  "version": "2026.08.20-faq-qa-expanded",
-  "updatedAt": "2026-08-20",
+  "version": "2026.08.26-dashboard-local-review",
+  "updatedAt": "2026-08-26",
   "publicUrl": "https://c666shiwo.github.io/codex-/hr-system-manual/",
-  "status": "faq-qa-expanded",
-  "assetCount": 45
+  "status": "dashboard-local-review",
+  "latestUpdateId": "2026-08-26-dashboard",
+  "lastVerifiedAt": "2026-08-26",
+  "recentUpdateCount": 3,
+  "assetCount": 49
 }

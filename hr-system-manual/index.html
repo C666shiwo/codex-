@@ -20,9 +20,35 @@
         .mermaid-flow-wrap{overflow:visible!important;padding:0!important}
         .mermaid-flow-wrap .mermaid{min-width:0!important}
         .mermaid-flow-wrap svg{width:100%!important;max-width:100%!important;height:auto!important}
+        .gif-panel{display:block!important}
+        .table-scroll{overflow:visible!important}
+        .standard-table{width:100%!important;min-width:0!important;table-layout:fixed!important;font-size:9px!important}
+        .standard-table th,.standard-table td{padding:5px 6px!important;overflow-wrap:anywhere;word-break:break-word}
+        .standard-table th:first-child,.standard-table td:first-child{width:22%}
+        .standard-table th:nth-child(2),.standard-table td:nth-child(2){width:14%}
         details summary:after{display:none!important}
         a{color:inherit;text-decoration:none}
       }
+    </style>
+    <style id="manual-release-styles">
+      .manual-update-trigger{position:relative;display:inline-flex;align-items:center;gap:6px;border:1px solid #c7bfff;background:#f7f5ff;color:var(--purple-dark);border-radius:5px;padding:7px 10px;font-size:12px;font-weight:700}
+      .manual-update-trigger:hover,.manual-update-trigger[aria-expanded="true"]{border-color:var(--purple);background:var(--purple-soft)}
+      .manual-update-unread{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:18px;padding:0 5px;border-radius:999px;background:#e11d48;color:#fff;font-size:10px;font-style:normal;line-height:1}.manual-update-unread[hidden]{display:none}
+      .manual-update-live{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      .manual-release-bar{margin:16px 40px 0;border:1px solid #d9d2ff;border-left:4px solid var(--purple);border-radius:8px;background:linear-gradient(110deg,#f7f5ff 0%,#fff 70%);box-shadow:var(--shadow);overflow:hidden}
+      .manual-release-bar[data-importance="action"]{border-left-color:#d97706;background:linear-gradient(110deg,#fff7ed 0%,#fff 70%)}.manual-release-bar[data-importance="critical"]{border-color:#fecdd3;border-left-color:#be123c;background:linear-gradient(110deg,#fff1f2 0%,#fff 70%)}
+      .manual-release-latest{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px 14px;align-items:start;padding:14px 16px}
+      .manual-release-badges{display:flex;flex-direction:column;align-items:flex-start;gap:5px}.manual-release-type,.manual-release-importance{display:inline-flex;align-items:center;justify-content:center;min-width:64px;min-height:24px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:800;white-space:nowrap}
+      .manual-release-type[data-type="new-feature"]{color:#166534;background:#dcfce7}.manual-release-type[data-type="feature-change"]{color:#39279f;background:#ede9fe}.manual-release-type[data-type="rule-change"]{color:#92400e;background:#ffedd5}.manual-release-type[data-type="bug-fix"]{color:#075985;background:#e0f2fe}
+      .manual-release-importance[data-importance="info"]{color:#52525b;background:#f4f4f5}.manual-release-importance[data-importance="action"]{color:#92400e;background:#ffedd5}.manual-release-importance[data-importance="critical"]{color:#9f1239;background:#ffe4e6}
+      .manual-release-copy{min-width:0}.manual-release-unread-summary{margin:0 0 4px;color:#9f1239;font-size:11px;font-weight:800}.manual-release-heading{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.manual-release-heading strong{color:#241b57;font-size:14px}.manual-release-date{color:var(--muted);font-size:10px}.manual-release-summary,.manual-release-action{margin:4px 0 0;color:#52525b;font-size:11px;line-height:1.6}.manual-release-action b{color:#35303f}.manual-release-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;color:var(--muted);font-size:10px}.manual-release-meta span{padding:2px 6px;border-radius:3px;background:rgba(255,255,255,.7);border:1px solid var(--line)}
+      .manual-release-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}.manual-release-actions a,.manual-release-actions button,.manual-release-targets a{border:1px solid var(--line);border-radius:5px;background:#fff;color:#52525b;padding:6px 9px;font-size:11px;text-decoration:none;white-space:nowrap}.manual-release-targets{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap}.manual-release-targets a{border-color:#c7bfff;color:var(--purple-dark);font-weight:700}.manual-release-actions button:hover,.manual-release-targets a:hover{border-color:var(--purple);background:var(--purple-soft)}
+      .manual-release-notes{border-top:1px solid #e7e3fa;background:#fff}.manual-release-notes>summary{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;color:#4c3b9f;font-size:11px;font-weight:700;cursor:pointer;list-style:none}.manual-release-notes>summary::-webkit-details-marker{display:none}.manual-release-notes>summary:after{content:"展开 ＋"}.manual-release-notes[open]>summary:after{content:"收起 －"}
+      .manual-release-list{padding:0 16px 14px}.manual-release-item{display:grid;grid-template-columns:86px minmax(0,1fr) auto;gap:12px;padding:12px 0;border-top:1px dashed var(--line)}.manual-release-item:first-child{border-top:0}.manual-release-item.is-unread{margin-inline:-8px;padding-inline:8px;background:#faf8ff;border-radius:5px}.manual-release-item time{color:var(--muted);font-size:10px}.manual-release-item strong{display:block;color:var(--ink);font-size:12px}.manual-release-item p{margin:3px 0 0;color:var(--muted);font-size:11px}.manual-release-history-meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}.manual-release-history-meta span,.manual-release-unread-badge{display:inline-flex;padding:1px 5px;border-radius:3px;background:#f4f4f5;color:#52525b;font-size:9px}.manual-release-unread-badge{margin-top:5px;color:#9f1239;background:#ffe4e6;font-weight:800}.manual-release-history-targets{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:5px}.manual-release-history-targets a{color:var(--purple-dark);font-size:11px;text-decoration:none;border-bottom:1px dashed #8b7cff}.manual-release-empty{padding:16px;color:var(--muted);font-size:11px;text-align:center}
+      .manual-update-pdf-summary{display:none;margin:0 0 14px;padding:10px 12px;border:1px solid #d9d2ff;border-left:4px solid var(--purple);background:#f7f5ff;color:#4c3b9f;font-size:10px}.manual-update-pdf-summary strong{color:#241b57}
+      @media(max-width:980px){.manual-release-bar{margin-inline:24px}.manual-release-latest{grid-template-columns:auto minmax(0,1fr)}.manual-release-actions{grid-column:1/-1;justify-content:flex-start}}
+      @media(max-width:700px){.manual-release-bar{margin:10px 16px 0}.manual-release-latest{grid-template-columns:1fr}.manual-release-badges{flex-direction:row}.manual-release-actions{grid-column:auto;justify-content:flex-start}.manual-release-targets{justify-content:flex-start}.manual-release-item{grid-template-columns:1fr;gap:4px}.manual-release-history-targets{align-items:flex-start}.manual-update-trigger{padding-inline:8px}.manual-update-trigger .manual-update-label{display:inline}}
+      @media print{.manual-release-bar,.manual-update-trigger{display:none!important}.manual-update-pdf-summary{display:block!important}}
     </style>
     <style id="operation-teaching-styles">
       .template-accordion{margin:14px 0;border:1px solid var(--line);border-radius:7px;background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
@@ -115,6 +141,14 @@
       .faq-function .rule-box strong{color:var(--purple-dark)}
       .faq-hr .rule-box strong{color:var(--green)}
       .faq-business .rule-box strong{color:var(--orange)}
+      .frequent-tag{display:inline-flex;align-items:center;min-height:18px;padding:1px 6px;border-radius:4px;background:#fff2cc;color:#8a5700;font-size:10px;font-weight:800;vertical-align:middle}
+      .hr-quick-entry{margin:16px 0 18px;padding:14px;border:1px solid #b7e4c8;border-left:4px solid var(--green);border-radius:8px;background:linear-gradient(135deg,#f0fdf4 0%,#fff 72%)}
+      .hr-quick-head{display:flex;align-items:baseline;gap:10px;margin-bottom:11px}.hr-quick-head strong{color:#166534;font-size:14px}.hr-quick-head span{color:var(--muted);font-size:11px}
+      .hr-quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.hr-quick-card{position:relative;min-width:0;padding:13px 13px 12px 46px;border:1px solid #d7eadc;border-radius:7px;background:#fff}
+      .hr-quick-number{position:absolute;left:12px;top:13px;color:var(--green);font-size:11px;font-weight:800}.hr-quick-card h3{margin:0 0 5px;color:#14532d;font-size:13px}.hr-quick-card p{margin:4px 0;color:#575260;font-size:11px;line-height:1.55}.hr-quick-card .hr-quick-path{color:#285d3a;font-weight:700}
+      .hr-quick-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:9px}.hr-quick-actions button,.hr-quick-actions a{border:0;background:none;color:#167445;font-size:11px;font-weight:700;text-decoration:none;padding:0;cursor:pointer}.hr-quick-actions a{color:var(--purple-dark);border-bottom:1px dashed #8b7cff}
+      .navigation-flash{animation:navigationFlash 2.1s ease-out}@keyframes navigationFlash{0%,35%{box-shadow:0 0 0 4px rgba(245,158,11,.32);background-color:#fff8e7}100%{box-shadow:none}}
+      @media(max-width:700px){.hr-quick-grid{grid-template-columns:1fr}.hr-quick-head{align-items:flex-start;flex-direction:column;gap:3px}}
       .view-switch button{position:relative;padding:7px 4px;font-weight:600;transition:all .15s ease}
       .view-switch button.active{background:var(--purple-soft);color:var(--purple-dark);border-color:var(--purple);box-shadow:0 0 0 1px var(--purple)}
       .flow-legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
@@ -391,7 +425,7 @@
   .business-real-gif-slot strong{font-size:17px;color:var(--brand-blue-ink)}
 </style>
 </head>
-<body data-manual-view="function" data-manual-version="2026.08.20-faq-qa-expanded">
+<body data-manual-view="function" data-manual-version="2026.08.26-dashboard-local-review">
   <div class="progress" id="progress"></div>
   <div class="shell">
     <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -405,8 +439,17 @@
       <div class="sidebar-foot">统一流程 · 规范操作 · 协同招聘</div>
     </aside>
     <main class="main">
-      <header class="topbar"><button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="打开导航">&#9776;</button><div class="crumb"><strong>操作手册</strong><span> / HR 系统</span></div><div class="top-actions"><span class="status-dot"><i></i>按招聘流程学习</span><button class="print-btn" id="exportPdfBtn" type="button" aria-label="导出当前视图为 PDF">导出 PDF</button></div></header>
+      <header class="topbar"><button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="打开导航">&#9776;</button><div class="crumb"><strong>操作手册</strong><span> / HR 系统</span></div><div class="top-actions"><span class="status-dot"><i></i>按招聘流程学习</span><button class="manual-update-trigger" id="manualUpdateTrigger" type="button" aria-expanded="false" aria-controls="manualReleaseBar"><span aria-hidden="true">◉</span><span class="manual-update-label">系统更新</span><i class="manual-update-unread" id="manualUpdateUnread" aria-label="未读更新数量" hidden></i></button><span class="manual-update-live" id="manualUpdateLive" aria-live="polite"></span><button class="print-btn" id="exportPdfBtn" type="button" aria-label="导出当前视图为 PDF">导出 PDF</button></div></header>
+      <section class="manual-release-bar" id="manualReleaseBar" aria-label="HR系统最新变化" hidden>
+        <div class="manual-release-latest">
+          <div class="manual-release-badges"><span class="manual-release-type" id="manualReleaseType"></span><span class="manual-release-importance" id="manualReleaseImportance"></span></div>
+          <div class="manual-release-copy"><p class="manual-release-unread-summary" id="manualReleaseUnreadSummary"></p><div class="manual-release-heading"><strong id="manualReleaseTitle"></strong><span class="manual-release-date" id="manualReleaseDate"></span></div><p class="manual-release-summary" id="manualReleaseSummary"></p><p class="manual-release-action" id="manualReleaseAction"></p><div class="manual-release-meta" id="manualReleaseMeta"></div></div>
+          <div class="manual-release-actions"><div class="manual-release-targets" id="manualReleaseTargets"></div><button id="manualReleaseAck" type="button">全部标记已读</button></div>
+        </div>
+        <details class="manual-release-notes" id="manualReleaseNotes"><summary id="manualReleaseNotesSummary">查看最近6个月更新记录</summary><div class="manual-release-list" id="manualReleaseList"></div></details>
+      </section>
       <div class="content">
+        <div class="manual-update-pdf-summary" id="manualUpdatePdfSummary"></div>
         <section class="hero" id="home">
           <div class="hero-copy">
             <div class="eyebrow">INTELLIGENT PRECISE LEARNING · OPERATING MANUAL</div>
@@ -438,46 +481,6 @@
             </div>
           </div>
         </section>
-
-        <details class="req-accordion onboarding-notice" open>
-          <summary data-nav-item data-nav-label="首次使用必读：权限与数据可见范围">
-            <span class="onboarding-badge">必读</span>
-            <span class="onboarding-title">首次使用必读：权限与数据可见范围</span>
-          </summary>
-          <div class="req-accordion-body">
-            <div class="panel">
-              <div class="panel-body">
-                <p class="module-lead">本系统按角色控制数据可见范围。新账号首次登录时通常没有默认操作权限，需要先由招聘管理员开通，才能查看或处理对应业务数据。</p>
-
-                <div class="onboarding-section">
-                  <h3>两层权限：系统权限 vs 业务数据权限</h3>
-                  <div class="info-grid onboarding-roles">
-                    <div class="info-block">
-                      <b>系统权限</b>
-                      <span>由<strong>招聘管理员</strong>（通常为 HRIS 负责人或系统管理员）在后台开通，决定你能进入哪些菜单（如职位、候选人、通知记录等）。<strong>系统权限只需开通一次。</strong></span>
-                    </div>
-                    <div class="info-block">
-                      <b>业务数据权限</b>
-                      <span>由 HR 在具体职位或阶段中配置，决定你能看到哪些职位、哪些候选人、哪些面试任务。<strong>会随岗位协作关系变化。</strong></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="onboarding-section">
-                  <h3>不同角色能看到什么</h3>
-                  <ul class="onboarding-role-list">
-                    <li><strong>HRBP / HR：</strong>功能权限相同；HR 只能看到自己有权限岗位的简历与流程数据。</li>
-                    <li><strong>HR 实习生：</strong>仅能看到自己被添加为协作人的、自己导入的简历。</li>
-                    <li><strong>面试官 / 作品评估人：</strong>只能看到自己负责岗位的简历数据，提交面试或作品评价；没有邮件、Offer、职位管理等模块权限。</li>
-                    <li><strong>业务负责人：</strong>通常作为对应面试官或评估人参与，权限与面试官/评估人一致。</li>
-                    <li><strong>猎头：</strong>通过猎头账号入口登录，只能查看和管理自己上传的候选人。</li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </details>
 
         <section class="module is-collapsed" id="recruitment-flow" data-audience="all" data-keywords="招聘总流程 HR 业务 面试 作品评估 AI面试 Offer 入职 人才沉淀 终止投递"><div class="module-head"><div class="module-title"><span class="module-num">流程 / 00</span><h2>完整招聘流程</h2></div><div class="module-meta"><span class="tag purple">HR + 业务协作</span><span class="tag orange">默认折叠 · 按需查看</span></div></div><p class="module-lead">招聘从 HR 与业务确认需求开始，由 HR、对应评估人和系统共同完成。主流程以完成入职为终点；人才沉淀与终止投递是在未继续当前投递时形成的侧向处理结果。</p><div class="flow-legend" aria-label="流程角色图例"><span class="hr"><i></i>HR负责</span><span class="evaluator"><i></i>对应评估人</span><span class="system"><i></i>系统自动执行</span><span class="collaboration"><i></i>HR + 业务协作</span><span class="decision"><i></i>岗位规则判断</span><span class="result"><i></i>结果节点</span></div><div class="flow-state-note" aria-label="节点交互状态"><span>实线高亮：可点击查看</span><span class="pending">虚线：当前视图无对应教学</span><span class="disabled">灰色弱化：由其他角色负责</span></div><div class="panel recruitment-flow-panel"><div class="panel-title">招聘总流程（点击节点查看当前视图对应内容）</div><div class="mermaid-flow-wrap" id="mermaidFlowWrap"><pre class="mermaid" id="recruitmentMermaid">
 flowchart TB
@@ -534,21 +537,90 @@ flowchart TB
     class M success;
     class T talent;
     class X terminate;
-          </pre></div><div class="flow-fallback" id="flowFallback"><strong>文字版招聘流程</strong><ol><li>HR与业务确认招聘需求、岗位标准和评估方式，HR完成职位创建与发布。</li><li>接收简历并建立投递，由HR完成初筛。</li><li>按照岗位规则完成作品评估和AI面试；HR负责发起、跟进、查看结果和接续处理。</li><li>HR安排面试，对应面试官查看候选人、开展结构化面试并提交规范化面评。</li><li>HR与业务完成反馈交接，HR综合判断是否继续推进。</li><li>继续推进的候选人进入Offer、待入职并最终完成入职；未继续时由HR判断人才沉淀或终止投递。</li></ol></div><div class="flow-support"><div class="flow-support-title">贯穿流程的关联能力（点击查看当前视图对应内容）</div><div class="flow-support-list"><button type="button" data-flow-node="ai-setup">AI面试能力配置</button><button type="button" data-flow-node="mail-intake">招聘邮箱与简历自动导入</button><button type="button" data-flow-node="templates">邮件模板自动调用</button><button type="button" data-flow-node="notify">通知记录与钉钉提醒</button><button type="button" data-flow-node="headhunter">猎头账号及其他外部入口</button></div></div></div><div class="rule-box"><strong>阅读提示：</strong>流程图展示完整协作关系；当前视图没有对应教学的节点不会跨视图跳转。</div></section>
+          </pre></div><div class="flow-fallback" id="flowFallback"><strong>文字版招聘流程</strong><ol><li>HR与业务确认招聘需求、岗位标准和评估方式，HR完成职位创建与发布。</li><li>接收简历并建立投递，由HR完成初筛。</li><li>按照岗位规则完成作品评估和AI面试；HR负责发起、跟进、查看结果和接续处理。</li><li>HR安排面试，对应面试官查看候选人、开展结构化面试并提交规范化面评。</li><li>HR与业务完成反馈交接，HR综合判断是否继续推进。</li><li>继续推进的候选人进入Offer、待入职并最终完成入职；未继续时由HR判断人才沉淀或终止投递。</li></ol></div><div class="flow-support"><div class="flow-support-title">贯穿流程的关联能力（点击查看当前视图对应内容）</div><div class="flow-support-list"><button type="button" data-flow-node="dashboard">数据看板｜待办定位、过程监控与招聘复盘</button><button type="button" data-flow-node="ai-setup">AI面试能力配置</button><button type="button" data-flow-node="mail-intake">招聘邮箱与简历自动导入</button><button type="button" data-flow-node="templates">邮件模板自动调用</button><button type="button" data-flow-node="notify">通知记录与钉钉提醒</button><button type="button" data-flow-node="headhunter">猎头账号及其他外部入口</button></div></div></div><div class="rule-box"><strong>阅读提示：</strong>流程图展示完整协作关系；当前视图没有对应教学的节点不会跨视图跳转。</div></section>
         <div class="view-tools-row"><div class="field-toolbar" id="fieldToolbar" hidden><strong>字段与操作筛选</strong><button class="active" data-field-filter="all">全部内容</button><button data-field-filter="required">必须填写</button><button data-field-filter="optional">可以填写</button><button data-field-filter="button">操作按钮</button><button data-field-filter="readonly">系统展示项</button></div><div class="collapse-toolbar" id="collapseToolbar" hidden><strong id="collapseToolbarLabel">当前视图</strong><button type="button" data-collapse-action="open">全部展开</button><button type="button" data-collapse-action="close">全部收起</button></div></div>
         <div id="modules">
 
+<section class="module" id="function-dashboard" data-audience="function" data-map-entry="数据看板" data-map-status="真实页面教学已完成" data-map-note="工作台待办、我的与全局视角、数据范围、下钻入口及统计口径已整理。" data-keywords="数据看板 工作台 我的视角 全局视角 负责 授权 负责加授权 待安排面试 待跟进简历 待业务评价 超时待处理 当前环节积压 招聘漏斗 招聘趋势 环节效率 HR处理效率 桑基图 岗位效率 来源效果 漏斗修复">
+<div class="module-head">
+<div class="module-title"><span class="module-num">功能 / 01</span><h2>数据看板</h2></div>
+<div class="module-meta"><span class="tag purple">招聘工作台</span><span class="tag blue">过程监控与复盘</span></div>
+</div>
+<p class="module-lead">数据看板同时承担两类任务：顶部待办卡片和积压数字用于快速定位候选人并进入处理；漏斗、趋势、效率和来源图表用于观察招聘过程并开展复盘。看板帮助发现问题，但真实候选人状态仍需进入“候选人与投递”按实际进展维护。</p>
+<div class="rule-box"><strong>学习目标：</strong>完成本节后，可以区分“我的视角”和“全局视角”，正确使用负责／授权范围，从卡片或积压进入候选人待办，并理解不同图表的统计口径与使用边界。</div>
+<div class="function-relations" aria-label="数据看板功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>数据来源：</b><a href="#function-recruitment-requirements" data-function-link>招聘需求池</a>＋<a href="#function-position-stages" data-function-link>职位与阶段</a>＋<a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>工作台产出：</b>待办与超时名单</span><span class="relation-item"><b>分析产出：</b>漏斗、趋势、效率和来源判断</span><span class="relation-item"><b>下一动作：</b>进入候选人或招聘项目处理</span></div>
+
+<div class="panel" data-nav-item data-nav-label="数据看板是什么"><div class="panel-title">先区分工作台与分析看板</div><div class="panel-body"><ol class="steps"><li><div><b>工作台：告诉你现在先处理谁</b><span>点击待安排面试、待跟进简历、待业务评价、超时待处理等卡片，打开对应候选人列表；当前环节积压中的数量也可下钻定位。</span></div></li><li><div><b>过程监控：告诉你招聘卡在哪里</b><span>通过招聘流程漏斗、招聘趋势、环节效率和当前积压，识别阶段转换、处理速度和超时风险。</span></div></li><li><div><b>招聘复盘：告诉你后续如何改进</b><span>HRBP和管理员可在全局视角比较HR处理、岗位效率、完成处理流向和来源效果，用于发现问题和安排改进。</span></div></li></ol></div></div>
+
+<div class="panel screenshot">
+<div class="panel-title" data-nav-item data-nav-label="我的视角与全局视角">我的视角：个人工作台与本人参与招聘的数据</div>
+<img loading="lazy" decoding="async" src="dashboard-assets/dashboard-my-overview.png" data-zoom="dashboard-assets/dashboard-my-overview.png" alt="数据看板我的视角全貌：八个工作台卡片、日期和数据范围、招聘漏斗、趋势、效率、积压及未通过原因">
+<div class="shot-caption"><span>HR和HR实习生查看自己的数据；HRBP和管理员也可使用。顶部卡片用于进入待办，下方图表用于监控和复盘。</span><button class="zoom-link" type="button">点击放大</button></div>
+</div>
+<div class="panel screenshot">
+<div class="panel-title">全局视角：跨HR与跨岗位分析</div>
+<img loading="lazy" decoding="async" src="dashboard-assets/dashboard-global-overview.png" data-zoom="dashboard-assets/dashboard-global-overview.png" alt="数据看板全局视角全貌：全局工作台卡片、HR处理效率、趋势、完成处理桑基图、积压、岗位效率与来源效果">
+<div class="shot-caption"><span>仅HRBP和管理员可见，用于观察全公司招聘过程；不能把单一耗时或数量直接作为个人绩效结论。</span><button class="zoom-link" type="button">点击放大</button></div>
+</div>
+
+<div class="panel" data-nav-item data-nav-label="两个视角能看到的图表不一样"><div class="panel-title">两个视角能看到的图表不一样</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>图表</th><th>我的视角</th><th>全局视角</th><th>什么时候用</th></tr></thead><tbody>
+<tr><td>招聘流程漏斗</td><td>✅</td><td>❌</td><td>看本人各阶段到达人数和转化率；按职位逐个展示。</td></tr>
+<tr><td>招聘趋势（事件口径）</td><td>✅</td><td>✅</td><td>看期间内流入、面试、Offer、入职事件变化；可切日／周／月聚合。</td></tr>
+<tr><td>环节效率分析</td><td>✅</td><td>❌</td><td>看本人公共环节的平均耗时，发现普遍偏慢环节。</td></tr>
+<tr><td>当前环节积压（按超时）</td><td>✅（卡片+数字）</td><td>✅（汇总表）</td><td>我的视角卡片用于快速定位；全局视角汇总表用于看全公司各环节积压分布。</td></tr>
+<tr><td>未通过原因分布</td><td>✅</td><td>❌</td><td>看本人淘汰原因，调整筛选标准。</td></tr>
+<tr><td><strong>HR 处理效率对比</strong></td><td>❌</td><td>✅</td><td>跨 HR 比终态处理量和平均耗时；用于发现工作量差异和拖后腿的人。</td></tr>
+<tr><td><strong>完成处理桑基图</strong></td><td>❌</td><td>✅</td><td>看 HR → 岗位的完成处理流向，发现哪位 HR 主要负责哪些岗位。</td></tr>
+<tr><td><strong>岗位效率对比</strong></td><td>❌</td><td>✅</td><td>跨岗位比终态处理量和平均耗时；发现普遍偏慢的岗位。</td></tr>
+<tr><td><strong>招聘来源效果</strong></td><td>❌</td><td>✅</td><td>按渠道（BOSS 邮件／猎头／小红书等）对比进入→面试→Offer→入职转化；受历史数据缺失影响较大。</td></tr>
+</tbody></table></div><div class="rule-box"><strong class="warn">提醒：</strong>全局视角 <b>没有「数据范围」筛选器</b>（负责／授权／负责＋授权），直接看全公司数据。我的视角才有这个筛选器。</div></div>
+
+<div class="panel field-panel"><div class="panel-title">页面上只需要先掌握这些内容</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与判断规范</th></tr></thead><tbody>
+<tr data-field-type="button"><td>八个顶部卡片</td><td class="field-type button"><b>操作按钮</b></td><td>显示当前待办或阶段人数；点击后<b>弹出候选人名单抽屉</b>（不是跳转页面），再进入候选人详情处理真实招聘动作。</td></tr>
+<tr data-field-type="optional"><td>日期范围</td><td class="field-type optional"><b>可以填写</b></td><td>用于查看选定期间的漏斗、趋势和效率。当前环节积压属于当前快照，不随日期范围变化。</td></tr>
+<tr data-field-type="optional"><td>数据范围（负责／授权／负责＋授权）</td><td class="field-type optional"><b>可以填写</b></td><td><strong class="warn">仅「我的视角」有这个筛选器，全局视角直接看全公司数据。</strong>负责=本人是岗位负责人；授权=本人协作他人负责的岗位；负责＋授权=合并两类数据。</td></tr>
+<tr data-field-type="button"><td>查看详情／积压数字</td><td class="field-type button"><b>操作按钮</b></td><td>图表的「查看详情」链接会进入<b>独立页面</b>（不是弹抽屉）；积压数字点击弹出候选人列表抽屉。下钻后仍需核对真实状态。</td></tr>
+<tr data-field-type="button"><td>我的视角／全局视角</td><td class="field-type button"><b>操作按钮</b></td><td>HR和HR实习生使用我的视角；HRBP和管理员可切换全局视角查看跨人员、跨岗位数据。</td></tr>
+</tbody></table></div></div>
+
+<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="工作台：点击卡片弹出抽屉处理当日待办">关键操作：从工作台卡片弹出抽屉，处理当日待办</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-workbench-and-analysis.gif" data-zoom="dashboard-assets/dashboard-workbench-and-analysis.gif" alt="数据看板操作：悬浮卡片看tooltip含义，点击顶部卡片弹出候选人名单抽屉，在抽屉中点击查看进入候选人详情处理"><div class="gif-note">默认进入「我的视角」 → 看顶部 8 个待办卡片 → 鼠标悬浮任意卡片都有<b>黑气泡 tooltip</b>解释"这张卡要你做什么" → 找数字不为 0 的待办（如「待安排面试」8、「待跟进简历」14）→ 点击卡片 → <b>系统弹出候选人名单抽屉</b>（不是跳转页面，看板不丢失）→ 抽屉里点「查看」进入候选人详情页 → 处理完后返回看板继续点下一张卡片。<br><br><strong class="warn">小提醒：</strong>卡片弹出的抽屉是「候选人名单」，不是候选人详情。名单里只有姓名、职位、阶段和进入时间，具体面试安排、评价、Offer 操作都在候选人详情页里做。</div></div>
+<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="查看不同权限具体数据">查看不同权限具体数据</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-data-analysis.gif" data-zoom="dashboard-assets/dashboard-data-analysis.gif" alt="数据看板数据板块：确认数据范围，点击图表查看详情进入独立页面，切换全局视角看到不同的图表集"><div class="gif-note">默认进入「我的视角」→ 向下看 5 个图表（漏斗、趋势、环节效率、积压、未通过原因）→ 确认「数据范围」是「负责＋授权」（只看"负责"漏斗数字会少很多）→ 点击图表的「查看详情」进入<b>独立页面</b>（不是弹抽屉）→ HRBP／管理员切到「全局视角」→ 看到完全不同的图表集（桑基图、岗位效率、来源效果，没有漏斗和环节效率）→ 在全局视角下同样可以下钻详情页。<br><br><strong class="warn">记住两条规则：</strong>① 图表「查看详情」进独立页面，卡片和积压数字弹抽屉；② 全局视角<b>没有数据范围筛选器</b>，直接看全公司数据。</div></div>
+<div class="panel field-panel"><div class="panel-title">下钻处理需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
+<tr data-field-type="button"><td>待办卡片</td><td class="field-type button"><b>操作按钮</b></td><td>点击弹出候选人名单抽屉（不是跳转页面）；适合每日定位待安排、待跟进、待评价和超时记录。</td></tr>
+<tr data-field-type="readonly"><td>候选人、应聘职位、当前阶段、进入阶段时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>进入处理前先核对投递对象和停留时间，避免在错误岗位或阶段操作。</td></tr>
+<tr data-field-type="button"><td>查看</td><td class="field-type button"><b>操作按钮</b></td><td>从抽屉里的名单进入候选人与投递详情，再根据实际招聘进展推进、安排、评价或形成结果。</td></tr>
+<tr data-field-type="button"><td>当前环节积压数字</td><td class="field-type button"><b>操作按钮</b></td><td>按阶段和超时区间弹出对应积压候选人抽屉，用于追踪责任人和下一动作。</td></tr>
+<tr data-field-type="button"><td>图表「查看详情」链接</td><td class="field-type button"><b>操作按钮</b></td><td>进入<b>独立页面</b>（不是弹抽屉）。漏斗详情页：按职位逐个展示漏斗，有<b>漏斗修复开关</b>（降低历史数据缺失影响）；积压详情页：支持职位筛选 + 数据范围 radiogroup；趋势详情页：可切日／周／月聚合。</td></tr>
+<tr data-field-type="button"><td>日／周／月、职位筛选</td><td class="field-type button"><b>操作按钮</b></td><td>只改变图表聚合与查看范围，不修改候选人或招聘项目数据。</td></tr>
+</tbody></table></div></div>
+
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="数据口径与漏斗修复">不同图表的数据口径不能混用</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>图表／能力</th><th>核心口径</th><th>正确使用方式</th></tr></thead><tbody>
+<tr><td>招聘流程漏斗</td><td>先按投递创建日期圈定投递集合，再统计这些投递截至当前曾到达的阶段；同一候选人的不同岗位投递分别计数。</td><td>观察阶段到达和转换；后续阶段可以发生在筛选结束日期之后。</td></tr>
+<tr><td>漏斗修复</td><td>用于降低老系统历史数据缺失或不完整对漏斗的影响，使漏斗按正常招聘阶段关系展示。</td><td>只在历史数据导致漏斗异常时使用，不作为日常筛选条件，也不替代对真实候选人状态的核对。</td></tr>
+<tr><td>招聘趋势</td><td>按流入、作品／AI面、人工面试、Offer和入职等事件发生时间统计。</td><td>观察期间内事件变化；不能与按投递创建日期统计的漏斗直接等同。</td></tr>
+<tr><td>环节效率</td><td>按页面口径计算已完成环节的平均耗时。</td><td>用于发现普遍偏慢环节；样本量过少时不做强结论。</td></tr>
+<tr><td>当前环节积压</td><td>展示当前仍停留在各环节的投递，是实时快照；超1天、超3天、超7天为互斥区间。</td><td>用于当前待办追踪；不能把三个超时区间重复相加。</td></tr>
+<tr><td>HR处理效率</td><td>按最后一次终态事件的人工操作人归属，排除公开投递、邮件导入、人才库投递和历史导入等系统账号。</td><td>用于发现工作量和流程差异，不直接作为绩效结论。</td></tr>
+<tr><td>历史数据与来源效果</td><td>历史导入可能缺少中间阶段或来源信息。</td><td>出现漏斗不递减、阶段或来源缺失时，先核对历史数据背景，再解释图表。</td></tr><tr><td>完成处理桑基图</td><td>展示所选时间内「最终处理 HR → 岗位」的完成处理量流向；终态事件归属同 HR 处理效率口径。</td><td>发现哪位 HR 在哪些岗位工作量大，或哪些岗位集中在某几位 HR 手上；样本量少时不做强结论。</td></tr>
+<tr><td>岗位效率对比</td><td>按岗位聚合终态处理量和平均耗时。</td><td>发现普遍偏慢的岗位；样本量少的岗位不做强结论，先看有没有正常的招聘活动。</td></tr>
+<tr><td>招聘来源效果</td><td>按投递来源（BOSS 邮件／猎头／小红书等）统计进入、面试、Offer、入职的转化。</td><td>来源效果受历史导入数据缺失影响，出现漏斗不递减时先核对数据背景。</td></tr>
+</tbody></table></div></div>
+
+<div class="module-grid"><div class="panel"><div class="panel-title">角色与可见范围</div><div class="panel-body"><ul class="checklist"><li><b>HR、HR实习生：</b>查看"我的视角"及本人数据范围；顶部卡片弹出抽屉处理待办。</li><li><b>HRBP、管理员：</b>可同时查看"我的视角"和"全局视角"；全局视角用于跨 HR、跨岗位对比。</li><li><b>负责：</b>本人是岗位负责人；<b>授权：</b>本人协作他人负责的岗位；<b>负责＋授权：</b>两类数据合并。</li><li>看不到预期数据时，先核对日期、负责范围和职位授权，不先判断为系统故障。</li></ul></div></div><div class="panel"><div class="panel-title">看板使用边界</div><div class="panel-body"><ul class="checklist"><li>每个图表旁的 <b>info 图标</b>（ⓘ）是系统自带的口径解释，遇到看不懂的数字先点它。</li><li>点击卡片或积压进入名单后，必须核对真实招聘进展再处理。</li><li>不得为了降低积压数字而错误推进、终止或回退候选人。</li><li>效率结果受岗位难度、样本量、流程配置和历史数据影响。</li><li>图表用于发现问题和复盘，不替代候选人评价、业务确认与招聘判断。</li></ul></div></div></div>
+<div class="rule-box" data-nav-item data-nav-label="完成标准与边界"><strong>本功能完成标准：</strong><br><br><b>日常 HR（每天必做）：</b>打开看板 → 确认数据范围为「负责＋授权」 → 看顶部卡片找不为 0 的待办 → 点卡片弹出抽屉 → 在抽屉里点「查看」进候选人详情处理；知道卡片弹抽屉、图表跳独立页面的下钻差异。<br><br><b>HRBP／管理员（定期复盘）：</b>切全局视角 → 看 HR 处理效率对比 → 看岗位效率对比 → 看招聘来源效果 → 点「查看详情」进独立页面下钻；知道漏斗、积压、趋势的口径差异，不混用。</div>
+</section>
+
 <section class="module" id="function-recruitment-requirements" data-audience="function" data-map-entry="招聘需求池" data-map-status="静态教学已完成" data-map-note="需求创建、HC进度、状态联动、暂停恢复及完成归档规则已整理。" data-keywords="招聘需求池 招聘需求 HC 联合创建 职位草稿 待启动 招聘中 暂停 恢复 待完成确认 完成 归档 招聘漏斗">
 <div class="module-head">
-<div class="module-title"><span class="module-num">功能 / 01</span><h2>招聘需求池</h2></div>
+<div class="module-title"><span class="module-num">功能 / 02</span><h2>招聘需求池</h2></div>
 <div class="module-meta"><span class="tag purple">招聘项目入口</span><span class="tag orange">HC与状态联动</span></div>
 </div>
-<p class="module-lead">招聘需求池用于管理“为什么招、招多少、何时完成”这一层招聘目标，并与职位、招聘阶段及候选人进度联动。它不是候选人处理页面，而是HR启动招聘、判断HC余量、控制项目状态和完成收尾的项目入口。</p>
+<p class="module-lead">招聘需求池用于管理为什么招、招多少、由谁负责、何时完成以及项目是否结束，并与职位、招聘阶段及候选人进度联动。它不是候选人处理页面，而是HR启动招聘、判断HC余量、控制项目状态和完成收尾的项目入口。</p>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以判断招聘需求、职位与候选人的分工，创建招聘需求与职位草稿，理解HC和状态变化，并完成暂停、恢复、完成与归档。</div>
 <div class="function-relations" aria-label="招聘需求池功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>前置：</b>业务确认招聘目标</span><span class="relation-item"><b>产出：</b>待启动需求＋职位草稿</span><span class="relation-item"><b>下一步：</b><a href="#function-position-stages" data-function-link>职位与阶段</a></span><span class="relation-item"><b>收尾关联：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>角色：</b>职位负责人／HRBP</span></div>
 
 <div class="module-grid">
-<div class="panel"><div class="panel-title" data-nav-item data-nav-label="认识招聘需求">三层对象分别解决什么问题</div><div class="panel-body"><ol class="steps"><li><div><b>招聘需求：招多少、何时完成</b><span>记录部门、需求HC、目标完成日期和项目状态，观察招聘是否按目标推进。</span></div></li><li><div><b>职位与阶段：用什么流程招聘</b><span>配置职位信息、招聘阶段及各阶段使用的评估方式，并决定职位是否对外接收投递。</span></div></li><li><div><b>候选人与投递：每个人走到哪里</b><span>记录候选人在某个职位中的实际阶段、评价、Offer和最终结果。</span></div></li></ol></div></div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="招聘需求池是什么">招聘需求池是什么 <span class="frequent-tag">高频</span></div><div class="panel-body"><ol class="steps"><li><div><b>招聘需求：为什么招、招多少、由谁负责、何时完成</b><span>记录部门、需求HC、招聘负责人、目标完成日期和项目状态，观察招聘是否按目标推进并完成收尾。</span></div></li><li><div><b>职位与阶段：用什么流程招聘</b><span>配置职位信息、招聘阶段及各阶段使用的评估方式，并决定职位是否对外接收投递。</span></div></li><li><div><b>候选人与投递：每个人走到哪里</b><span>记录候选人在某个职位中的实际阶段、评价、Offer和最终结果。</span></div></li></ol></div></div>
 <div class="panel"><div class="panel-title">使用前先确认</div><div class="panel-body"><ul class="checklist"><li>已与业务确认招聘部门、职位名称、需求HC和目标完成日期。</li><li>已明确职位负责人以及后续阶段配置责任人。</li><li>职位负责人和HRBP可以创建、编辑、暂停、恢复、完成及归档招聘需求。</li><li class="warn">HR和HR实习生不能操作招聘需求；有候选人协作权限也不等于拥有需求管理权限。</li></ul></div></div>
 </div>
 
@@ -592,21 +664,23 @@ flowchart TB
 <div class="rule-box"><strong>本操作完成标准：</strong>招聘需求显示“待启动”，对应职位显示“草稿”；进入“职位与阶段”继续配置并发布后，招聘才正式启动。</div>
 
 <details class="req-accordion">
-<summary data-nav-item data-nav-label="查看与编辑需求">查看与编辑需求</summary>
+<summary data-nav-item data-nav-label="修改招聘负责人和HC">修改招聘负责人和HC <span class="frequent-tag">高频</span></summary>
 <div class="req-accordion-body">
 <div class="panel screenshot">
-<div class="panel-title">需求详情：判断项目进度和下一动作</div>
+<div class="panel-title">需求详情：从顶部“编辑需求”修改负责人和HC</div>
 <img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-detail.png" data-zoom="recruitment-requirements-assets/recruitment-requirement-detail.png" alt="招聘需求详情抽屉：HC进度、基础信息、里程碑、招聘漏斗与变更记录">
 <div class="shot-caption"><span>详情抽屉：先核对HC和基础信息，再查看里程碑、招聘进展漏斗与变更记录。</span><button class="zoom-link" type="button">点击放大</button></div>
 </div>
 <div class="panel field-panel"><div class="panel-title">详情页关键模块与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>模块／按钮</th><th>分类</th><th>用途与判断规范</th></tr></thead><tbody>
 <tr data-field-type="button"><td>查看职位与阶段</td><td class="field-type button"><b>操作按钮</b></td><td>进入对应职位，继续配置阶段、发布职位或检查职位当前状态。</td></tr>
+<tr data-field-type="button"><td>编辑需求</td><td class="field-type button"><b>操作按钮</b></td><td>从需求详情顶部进入编辑页；仅职位负责人或HRBP使用，用于维护真实变化的负责人、HC、目标日期和需求说明。</td></tr>
 <tr data-field-type="readonly"><td>HC进度与基础信息</td><td class="field-type readonly"><b>系统展示项</b></td><td>核对HC、部门、负责人、目标日期和需求说明是否仍与实际招聘目标一致。</td></tr>
 <tr data-field-type="readonly"><td>里程碑与招聘进展漏斗</td><td class="field-type readonly"><b>系统展示项</b></td><td>回看项目节奏并识别候选人主要停留环节；漏斗数量不等同于最终HC。</td></tr>
 <tr data-field-type="readonly"><td>变更记录</td><td class="field-type readonly"><b>系统展示项</b></td><td>查看操作人、动作和字段变化，追溯需求调整原因。</td></tr>
 </tbody></table></div></div>
 <div class="panel field-panel"><div class="panel-title">编辑需求时只修改真实变化</div><div class="panel-body"><p class="module-lead">招聘目标变化时再编辑需求，不使用编辑需求代替候选人阶段处理。</p><div class="table-scroll"><table class="standard-table"><thead><tr><th>字段</th><th>分类</th><th>修改规范</th></tr></thead><tbody>
 <tr data-field-type="required"><td>需求HC</td><td class="field-type required"><b>必须填写</b></td><td>按最新确认的实际到岗目标调整，不得低于“已完成HC＋已锁定HC”。</td></tr>
+<tr data-field-type="required"><td>招聘负责人</td><td class="field-type required"><b>必须填写</b></td><td>选择后续实际承担该招聘需求推进与结果责任的人员；变更后由新负责人接续需求管理，候选人数据可见范围仍以职位协作授权为准。</td></tr>
 <tr data-field-type="required"><td>目标完成日期</td><td class="field-type required"><b>必须填写</b></td><td>只有业务目标或交付时间变化时调整，并同步相关责任人。</td></tr>
 <tr data-field-type="optional"><td>需求说明</td><td class="field-type optional"><b>可以填写</b></td><td>补充新的业务背景或交付要求，不删除仍有追溯价值的信息。</td></tr>
 <tr data-field-type="required"><td>变更原因</td><td class="field-type required"><b>必须填写</b></td><td>说明为什么调整以及由谁确认，供变更记录追溯。</td></tr>
@@ -644,6 +718,13 @@ flowchart TB
 <p class="module-lead">招聘启动不是单纯创建一条职位记录。负责人或HRBP需要先取得业务确认，再建立招聘需求和职位草稿，配置实际招聘流程、简历来源映射及协作权限，最后发布职位并核对需求状态。职位与招聘需求均显示“招聘中”后，项目才算正式启动。</p>
 <div class="hr-standard-strip"><span class="collab">确认｜发布前必须取得业务确认</span><span class="state">权限｜负责人和HRBP管理招聘需求</span><span class="state">完成｜职位与需求均为招聘中</span></div>
 
+<div class="hr-quick-entry" aria-label="高频操作入口"><div class="hr-quick-head"><strong>高频操作入口</strong><span>先定位入口，再进入对应教学核对前提和完成结果。</span></div><div class="hr-quick-grid">
+<article class="hr-quick-card"><span class="hr-quick-number">01</span><h3>BOSS简历自动抓取</h3><p class="hr-quick-path">绑定并启用招聘邮箱 → 职位与阶段 → BOSS职位名称映射 → 每5分钟自动拉取</p><p>先核对邮箱是否启用、邮件是否已拉取、BOSS职位名称是否完全匹配。完成标志：新简历进入正确职位。</p><div class="hr-quick-actions"><button type="button" data-hr-quick-target="hr-boss-auto-pull">查看HR操作</button><a href="#function-position-stages" data-cross-link data-detail-label="BOSS简历自动抓取：邮箱＋职位映射">查看功能详解</a></div></article>
+<article class="hr-quick-card"><span class="hr-quick-number">02</span><h3>给协作HR开权限</h3><p class="hr-quick-path">职位与阶段 → 打开对应职位 → 职位协作人 → 选择HR → 保存授权</p><p>只授权实际参与的HR。完成标志：对方能够看到该职位及候选人。</p><div class="hr-quick-actions"><button type="button" data-hr-quick-target="hr-collaborator-permission">查看HR操作</button><a href="#function-position-stages" data-cross-link data-detail-label="给协作HR开职位权限">查看功能详解</a></div></article>
+<article class="hr-quick-card"><span class="hr-quick-number">03</span><h3>给面试官分配任务</h3><p class="hr-quick-path">候选人与投递 → 安排人工面试 → 选择面试官 → 保存</p><p>面试官不添加为职位协作人。完成标志：收到任务并能进入候选人页面。</p><div class="hr-quick-actions"><button type="button" data-hr-quick-target="hr-interviewer-assignment">查看HR操作</button><a href="#function-candidate-applications" data-cross-link data-detail-label="给面试官分配候选人任务">查看功能详解</a></div></article>
+<article class="hr-quick-card"><span class="hr-quick-number">04</span><h3>修改招聘负责人和HC</h3><p class="hr-quick-path">招聘需求池 → 查看详情 → 编辑需求</p><p>增加或减少HC均从此入口操作。完成标志：详情与变更记录显示新值。</p><div class="hr-quick-actions"><button type="button" data-hr-quick-target="hr-demand-owner-hc">查看HR操作</button><a href="#function-recruitment-requirements" data-cross-link data-detail-label="修改招聘负责人和HC">查看功能详解</a></div></article>
+</div></div>
+
 <div class="panel"><div class="panel-title" data-nav-item data-nav-label="启动前确认">启动前必须形成一致结论</div><div class="panel-body"><ol class="steps">
 <li><div><b>确认招聘目标</b><span>与业务确认招聘部门、职位名称、需求HC、目标完成日期和岗位优先级。</span></div></li>
 <li><div><b>确认岗位与评价标准</b><span>明确核心能力、不能接受的风险，以及简历筛选、作品评估、AI面试和人工面试的使用范围。</span></div></li>
@@ -651,6 +732,9 @@ flowchart TB
 <li><div><b>确认协作范围</b><span>需要其他HR共同处理该职位时，将实际参与人员加入协作权限；不为无关人员扩大职位和候选人可见范围。</span></div></li>
 </ol></div></div>
 <div class="rule-box"><strong>权限边界：</strong>职位负责人和HRBP可以创建、编辑、暂停、恢复、完成及归档招聘需求。HR和HR实习生不能操作招聘需求；被加入职位协作范围后，只处理其有权查看的职位及候选人工作。</div>
+<div class="rule-box"><strong>负责人变更边界：</strong>修改招聘需求负责人，只转交招聘项目目标和结果责任；不会自动替换各候选人的负责人，也不会自动增加职位协作权限。需要继续查看职位候选人时，应另行核对职位协作人授权。原负责人无法操作时由有需求管理权限的HRBP处理，仍无法处理时联系管理员。</div>
+
+<details class="req-accordion" id="hr-demand-owner-hc"><summary data-nav-item data-nav-label="修改招聘负责人和HC">高频：修改招聘负责人和HC</summary><div class="req-accordion-body"><div class="panel field-panel"><div class="panel-title">需求目标变化时再编辑</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>入口／字段</th><th>分类</th><th>HR操作规范</th><th>完成结果</th></tr></thead><tbody><tr data-field-type="button"><td>查看详情 → 编辑需求</td><td class="field-type button"><b>操作按钮</b></td><td>由职位负责人或HRBP进入；先确认业务目标确有变化。</td><td>进入当前招聘需求的编辑页。</td></tr><tr data-field-type="required"><td>招聘负责人</td><td class="field-type required"><b>必须填写</b></td><td>改为后续实际承担需求推进与结果责任的人员。</td><td>需求责任转交给新负责人；职位候选人可见范围仍由职位协作人决定。</td></tr><tr data-field-type="required"><td>需求HC</td><td class="field-type required"><b>必须填写</b></td><td>使用最新确认的到岗目标，不得低于已完成HC＋已锁定HC。</td><td>更新剩余招聘目标和完成判断。</td></tr><tr data-field-type="required"><td>变更原因</td><td class="field-type required"><b>必须填写</b></td><td>写明变更原因及确认依据后保存。</td><td>变更进入记录，供后续追溯。</td></tr></tbody></table></div></div></div></details>
 
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="创建需求与职位草稿">操作演示：创建招聘需求与职位草稿</div><img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-create-and-handoff.gif" data-zoom="recruitment-requirements-assets/recruitment-requirement-create-and-handoff.gif" alt="负责人或HRBP创建招聘需求和职位草稿，并进入职位与阶段继续配置"><div class="gif-note">新建招聘需求 → 填写已确认的招聘目标 → 创建需求与职位 → 核对需求为“待启动”、职位为“草稿” → 进入职位与阶段继续配置。创建完成不代表招聘已经启动。</div></div>
 <div class="panel field-panel"><div class="panel-title">创建需求时必须确认的关键内容</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>HR操作规范</th><th>完成后的影响</th></tr></thead><tbody>
@@ -667,8 +751,8 @@ flowchart TB
 <tr data-field-type="readonly"><td>简历筛选、Offer、待入职</td><td class="field-type readonly"><b>系统展示项</b></td><td>三个固定阶段构成职位基础流程；中间阶段必须与业务确认的真实招聘方式一致。</td><td>所有候选人均在该流程骨架中推进。</td></tr>
 <tr data-field-type="required"><td>AI面试／作品集筛选／人工面试</td><td class="field-type required"><b>按岗位必配</b></td><td>至少新增一个实际使用的中间阶段，不为展示完整而默认添加全部三类；发布前核对阶段名称和顺序。</td><td>决定候选人从简历筛选到Offer之间经历的环节。</td></tr>
 <tr data-field-type="required"><td>AI面试官ID、AI面试评估ID</td><td class="field-type required"><b>条件必填</b></td><td>仅在新增AI面试阶段时填写；两个应用均显示“已就绪”后才算配置成功。</td><td>配置错误会导致AI面试无法正常发起或生成评价。</td></tr>
-<tr data-field-type="optional"><td>BOSS职位名称映射</td><td class="field-type optional"><b>按需配置</b></td><td>需要自动接收BOSS简历时配置；BOSS名称与系统一致可添加当前职位名称，不一致时新增真实名称映射，同时确保招聘邮箱已正确绑定启用。</td><td>决定BOSS邮件简历能否自动识别并进入正确职位。</td></tr>
-<tr data-field-type="optional"><td>职位协作人</td><td class="field-type optional"><b>按实际配置</b></td><td>一人负责可以不额外添加；多人协作时添加所有实际参与HR并保存授权，不添加无关人员。</td><td>只有负责人、创建人及已授权协作人可以查看对应职位数据。</td></tr>
+<tr id="hr-boss-auto-pull" data-field-type="optional"><td>BOSS职位名称映射</td><td class="field-type optional"><b>按需配置</b></td><td>需要自动接收BOSS简历时配置；BOSS名称与系统一致可添加当前职位名称，不一致时新增真实名称映射，同时确保招聘邮箱已正确绑定启用。</td><td>招聘邮箱收到邮件后，系统每5分钟拉取并识别BOSS职位名称；映射成功后进入正确职位并建立候选人与投递，未匹配或识别失败时进入异常处理。</td></tr>
+<tr id="hr-collaborator-permission" data-field-type="optional"><td>职位协作人</td><td class="field-type optional"><b>按实际配置</b></td><td>一人负责可以不额外添加；多人协作时添加所有实际参与HR并保存授权，不添加业务面试官或无关人员。</td><td>只有负责人、创建人及已授权协作HR可以查看对应职位数据。</td></tr>
 <tr data-field-type="button"><td>发布职位</td><td class="field-type button"><b>操作按钮</b></td><td>发布前必须取得业务负责人确认，并完成阶段、ID、映射和权限复核。</td><td>职位进入招聘中，对应招聘需求同步进入招聘中，招聘项目正式启动。</td></tr>
 </tbody></table></div></div>
 <div class="rule-box"><strong>发布前最后检查：</strong>业务已经确认招聘目标和流程；阶段名称、种类和顺序准确；AI能力显示已就绪；需要自动拉取BOSS简历时名称映射和邮箱配置有效；协作权限遵循最小可见范围。</div>
@@ -722,7 +806,7 @@ flowchart TB
 <section class="module" id="hr-business-interview" data-audience="hr" data-keywords="业务面试 安排面试 面试官 日程 面评 七个工作日 候选人反馈">
 <div class="module-head"><div class="module-title"><span class="module-num">HR / 05</span><h2>业务面试</h2></div><div class="module-meta"><span class="tag purple">HR与业务协作</span></div></div><p class="module-lead">HR负责安排面试、核对通知、跟进面评和候选人反馈；业务负责人负责专业面试和规范化评价。</p>
 <div class="hr-standard-strip"><span class="time">反馈｜面试完成后7个工作日内</span><span class="collab">协作｜业务提交面评，HR接续处理</span><span class="state">状态｜反馈后同步更新</span></div>
-<div class="panel"><div class="panel-title" data-nav-item data-nav-label="安排并跟进业务面试">安排并跟进业务面试</div><div class="panel-body"><ol class="steps"><li><div><b>准确安排面试</b><span>核对面试官、日期、时间、标题和会议资料。</span></div></li><li><div><b>确认双方收到通知</b><span>确认业务收到钉钉日程，候选人收到包含关键安排的邮件。</span></div></li><li><div><b>跟进规范化面评</b><span>面试结束后及时提醒业务提交基于事实和岗位标准的评价。</span></div></li><li><div><b>向候选人反馈</b><span>7个工作日内提供明确结果或进度反馈，不因内部沟通长期不回复。</span></div></li><li><div><b>更新招聘状态</b><span>反馈形成后同步维护系统状态和下一动作。</span></div></li></ol></div></div><div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="安排业务面试并跟进面评">操作演示：安排业务面试并跟进面评</div><img loading="lazy" decoding="async" src="hr-assets/business-interview.gif" data-zoom="hr-assets/business-interview.gif" alt="HR安排业务面试并跟进面试评价"><div class="gif-note">选择面试官并填写面试信息 → 保存并核对日程与通知 → 面试结束后跟进规范化面评 → 7个工作日内向候选人反馈。</div></div>
+<div class="panel" id="hr-interviewer-assignment"><div class="panel-title" data-nav-item data-nav-label="给面试官分配候选人任务">给面试官分配候选人任务 <span class="frequent-tag">高频</span></div><div class="panel-body"><ol class="steps"><li><div><b>准确安排面试</b><span>选择本阶段实际面试官，并核对日期、时间、标题和会议资料；保存后，该面试官通过本次具体任务获得候选人查看与面评权限，不添加为职位协作人。</span></div></li><li><div><b>确认双方收到通知</b><span>确认业务收到钉钉日程，候选人收到包含关键安排的邮件。</span></div></li><li><div><b>跟进规范化面评</b><span>面试结束后及时提醒业务提交基于事实和岗位标准的评价。</span></div></li><li><div><b>向候选人反馈</b><span>7个工作日内提供明确结果或进度反馈，不因内部沟通长期不回复。</span></div></li><li><div><b>更新招聘状态</b><span>反馈形成后同步维护系统状态和下一动作。</span></div></li></ol></div></div><div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="安排业务面试并跟进面评">操作演示：安排业务面试并跟进面评</div><img loading="lazy" decoding="async" src="hr-assets/business-interview.gif" data-zoom="hr-assets/business-interview.gif" alt="HR安排业务面试并跟进面试评价"><div class="gif-note">选择面试官并填写面试信息 → 保存并核对日程与通知 → 面试结束后跟进规范化面评 → 7个工作日内向候选人反馈。</div></div>
 <div class="rule-box"><strong>完成标准：</strong>面试安排准确、双方通知到达、业务面评完整、候选人已获反馈，系统进度与实际一致。</div>
 </section>
 
@@ -766,6 +850,24 @@ flowchart TB
 <div class="rule-box"><strong>完成标准：</strong>当前需求中不再存在待处理Offer、锁定HC或进行中候选人；每位候选人均已在规定时间内完成转岗、Offer、终止投递或进入人才库等真实处理；需求显示“已归档”并进入只读状态。</div>
 </section>
 
+<section class="module" id="hr-dashboard-review" data-audience="hr" data-keywords="数据巡检 招聘复盘 数据看板 工作台 待办卡片 超时积压 每日巡检 每周复盘 负责 授权 全局视角">
+<div class="module-head"><div class="module-title"><span class="module-num">HR / 08</span><h2>数据巡检与招聘复盘</h2></div><div class="module-meta"><span class="tag purple">贯穿全流程</span><span class="tag orange">每日待办＋周期复盘</span></div></div>
+<p class="module-lead">数据看板首先是HR的招聘工作台，其次才是分析报表。每日通过卡片和积压定位候选人并更新真实状态；每周通过趋势、效率和原因分布识别协作问题；项目收尾时用数据检查是否仍有候选人无人跟进。</p>
+<div class="hr-standard-strip"><span class="time">每日｜先看待办和超时积压</span><span class="collab">每周｜复盘趋势、效率与原因</span><span class="state">底线｜不为降低数字错误处理候选人</span></div>
+
+<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="每日巡检与待办处理">操作演示：从数据看板进入当天待办</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-workbench-and-analysis.gif" data-zoom="dashboard-assets/dashboard-workbench-and-analysis.gif" alt="HR使用数据看板选择负责范围，从待办卡片进入候选人名单，并查看积压与漏斗"><div class="gif-note">选择正确日期与负责范围 → 点击待办或超时卡片 → 核对候选人、岗位和当前阶段 → 点击查看进入候选人与投递 → 按真实进展完成安排、跟进或结果处理。HRBP和管理员可继续切换全局视角复盘。</div></div>
+<div class="panel field-panel"><div class="panel-title">每日巡检需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>HR操作规范</th><th>完成结果</th></tr></thead><tbody>
+<tr data-field-type="optional"><td>负责／授权／负责＋授权</td><td class="field-type optional"><b>可以填写</b></td><td>负责只看本人负责岗位；授权只看本人协助他人招聘的岗位；负责＋授权用于检查本人参与的全部招聘。</td><td>数据范围与本人实际分工一致。</td></tr>
+<tr data-field-type="button"><td>待安排面试／待跟进简历／待业务评价</td><td class="field-type button"><b>操作按钮</b></td><td>每天依次检查，点击卡片进入对应候选人；初筛仍需在3个工作日内完成，业务评价缺失时及时提醒。</td><td>每条待办都有负责人和下一动作。</td></tr>
+<tr data-field-type="button"><td>超时待处理／当前环节积压</td><td class="field-type button"><b>操作按钮</b></td><td>优先处理超时记录；点击数字进入明细，核对进入阶段时间和实际进展。</td><td>超时原因、责任人和处理计划清楚。</td></tr>
+<tr data-field-type="button"><td>查看</td><td class="field-type button"><b>操作按钮</b></td><td>进入候选人与投递后再执行实际流程动作；面试后7个工作日内给出结果或真实进度反馈。</td><td>系统状态、内部判断和候选人沟通一致。</td></tr>
+<tr data-field-type="readonly"><td>作品／AI面、人工面、Offer中、待入职</td><td class="field-type readonly"><b>系统展示项</b></td><td>用于检查中后段候选人是否长期停留；有异常时进入明细核对，不仅观察总数。</td><td>中后段候选人持续有人跟进。</td></tr>
+</tbody></table></div></div>
+
+<div class="module-grid"><div class="panel"><div class="panel-title" data-nav-item data-nav-label="每周复盘与项目收尾">每周与项目收尾怎么使用</div><div class="panel-body"><ol class="steps"><li><div><b>每周看趋势和环节效率</b><span>识别候选人流入、面试、Offer或入职的异常变化，以及普遍耗时较长的环节。</span></div></li><li><div><b>结合积压和未通过原因</b><span>判断问题来自待办未处理、业务评价延迟、岗位标准不清、来源质量还是流程配置。</span></div></li><li><div><b>HRBP／管理员查看全局视角</b><span>比较HR处理、岗位效率、完成处理流向和来源效果；先核对样本量和岗位差异，再形成改进动作。</span></div></li><li><div><b>项目结束前再次检查</b><span>结合招聘需求池与积压明细，确保每位候选人已有Offer、终止投递、进入人才库或转岗等真实结果，不遗留招聘中记录。</span></div></li></ol></div></div><div class="panel"><div class="panel-title" data-nav-item data-nav-label="数据使用边界">数据使用边界</div><div class="panel-body"><ul class="checklist"><li>当前积压是实时快照，不随日期范围变化；超1天、超3天、超7天为互斥区间。</li><li>招聘漏斗与招聘趋势的时间口径不同，不直接用两组数字互相校验。</li><li>老系统数据影响漏斗时可使用漏斗修复，使漏斗按正常关系展示；使用后仍需结合真实招聘记录判断。</li><li>HR处理效率受岗位难度、处理量、样本量和历史数据影响，不直接作为个人绩效。</li><li class="warn">不得为了降低积压或改善效率数字，错误推进、回退、终止或入库候选人。</li></ul></div></div></div>
+<div class="rule-box"><strong>完成标准：</strong>每日待办、超时和中后段停留记录均有人负责；初筛和候选人反馈符合规定时效；每周能够形成至少一个可执行的流程改进判断；项目结束时不遗留长期处于招聘中的候选人。</div>
+</section>
+
 <section class="module" id="hr-notification-feedback" data-audience="hr" data-keywords="通知核对 候选人反馈 钉钉 邮件 面试通知 作品评估提醒">
 <div class="module-head"><div class="module-title"><span class="module-num">HR / 贯穿流程</span><h2>通知核对与候选人反馈</h2></div><div class="module-meta"><span class="tag purple">贯穿招聘流程</span></div></div>
 <p class="module-lead">系统通知不能替代HR跟进。HR需要在关键动作后核对通知结果，并确保候选人和对应评估人及时获得准确、尊重且一致的信息。</p>
@@ -790,7 +892,7 @@ flowchart TB
         <section class="module" id="function-ai-integration" data-audience="function" data-map-entry="AI 面试集成" data-map-status="样稿已完成" data-map-note="百炼应用、ICE凭证与三个应用ID的关系已整理。" data-keywords="AI面试集成 阿里百炼 ICE 凭证 同步码 应用ID AI面试官 AI面试评估官 简历评估官 提示词模板 enable thinking">
 <div class="module-head">
 <div class="module-title">
-<span class="module-num">功能 / 02</span>
+<span class="module-num">功能 / 03</span>
 <h2>AI 面试集成</h2>
 </div>
 <div class="module-meta">
@@ -2035,7 +2137,7 @@ MAIN_RISK: [一句话概括最大风险]
         <section class="module" id="function-email-auto-pull" data-audience="function" data-map-entry="邮件自动拉取" data-map-status="操作流程已确认" data-map-note="邮箱绑定、测试、启用和异常责任已整理。" data-keywords="邮件自动拉取 邮箱配置 IMAP QQ邮箱 网易邮箱 授权码 测试连通性 启用 异常处理 五分钟">
 <div class="module-head">
 <div class="module-title">
-<span class="module-num">功能 / 03</span>
+<span class="module-num">功能 / 04</span>
 <h2>邮件自动拉取</h2>
 </div>
 <div class="module-meta">
@@ -2185,7 +2287,7 @@ MAIN_RISK: [一句话概括最大风险]
 </section>
 
 <section class="module" id="function-notification-records" data-audience="function" data-map-entry="通知记录" data-map-status="页面说明已完成" data-map-note="邮件与钉钉通知的发送结果核对方式已整理。" data-keywords="通知记录 邮件 钉钉 AI面试 视频面试 终止投递 人才库 回捞 作品集 状态">
-<div class="module-head"><div class="module-title"><span class="module-num">功能 / 04</span><h2>通知记录</h2></div><div class="module-meta"><span class="tag purple">自动化与通知</span><span class="tag blue">只读查看</span></div></div>
+<div class="module-head"><div class="module-title"><span class="module-num">功能 / 05</span><h2>通知记录</h2></div><div class="module-meta"><span class="tag purple">自动化与通知</span><span class="tag blue">只读查看</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以按通知场景和渠道找到对应记录，并确认系统是否已经发送通知。</div>
 <p class="module-lead">通知记录用于查询系统发送邮件和钉钉通知的结果。该页面以查看和核对为主，不承担安排面试、推进候选人或重新发送通知等业务操作。</p>
 <div class="function-relations" aria-label="通知记录功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>触发来源：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a>／<a href="#function-talent-pool" data-function-link>人才库</a></span><span class="relation-item"><b>邮件内容：</b><a href="#function-email-templates" data-function-link>邮件模板</a></span><span class="relation-item"><b>本模块产出：</b>发送结果核对</span><span class="relation-item"><b>边界：</b>不改变招聘状态</span></div>
@@ -2204,7 +2306,7 @@ MAIN_RISK: [一句话概括最大风险]
 </section>
 
 <section class="module" id="function-email-templates" data-audience="function" data-map-entry="邮件模板" data-map-status="六类模板已确认" data-map-note="AI面试、视频面试、线下面试、流程中止、进入人才库及指定岗位投递邀约模板已整理。" data-keywords="邮件模板 AI面试邀约 视频面试邀约 线下面试邀约 流程中止反馈 进入人才库反馈 指定岗位投递邀约">
-<div class="module-head"><div class="module-title"><span class="module-num">功能 / 05</span><h2>邮件模板</h2></div><div class="module-meta"><span class="tag purple">系统邮件</span><span class="tag orange">六类场景</span></div></div>
+<div class="module-head"><div class="module-title"><span class="module-num">功能 / 06</span><h2>邮件模板</h2></div><div class="module-meta"><span class="tag purple">系统邮件</span><span class="tag orange">六类场景</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以识别六类系统邮件分别由哪个招聘操作自动触发，以及哪些邮件立即发送、哪些邮件延迟5小时发送。</div>
 <p class="module-lead">邮件模板用于统一候选人沟通口径。HR不需要单独选择模板或执行“发送前复查”；完成对应招聘操作后，系统自动调用相应模板。本节展示的是使用测试变量渲染的完整邮件效果，不包含真实候选人信息。</p>
 <div class="function-relations" aria-label="邮件模板功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>触发来源：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a>／<a href="#function-talent-pool" data-function-link>人才库</a></span><span class="relation-item"><b>执行方式：</b>系统自动选取模板</span><span class="relation-item"><b>发送核对：</b><a href="#function-notification-records" data-function-link>通知记录</a></span><span class="relation-item"><b>边界：</b>日常招聘不手动选模板</span></div><div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="六类邮件的自动触发规则">六类邮件的自动触发规则</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>邮件模板</th><th>触发操作</th><th>发送规则</th><th>分类</th></tr></thead><tbody>
@@ -2227,7 +2329,7 @@ MAIN_RISK: [一句话概括最大风险]
 </section>
 
 <section class="module" id="function-headhunter-accounts" data-audience="function" data-map-entry="猎头账号" data-map-status="操作流程已确认" data-map-note="账号创建、职位授权、启用和凭证交付流程已整理。" data-keywords="猎头账号 新建 用户名 初始密码 显示名称 所属机构 职位授权 启用 上传候选人">
-<div class="module-head"><div class="module-title"><span class="module-num">功能 / 06</span><h2>猎头账号</h2></div><div class="module-meta"><span class="tag purple">外部入口</span><span class="tag orange">涉及外部账号</span></div></div>
+<div class="module-head"><div class="module-title"><span class="module-num">功能 / 07</span><h2>猎头账号</h2></div><div class="module-meta"><span class="tag purple">外部入口</span><span class="tag orange">涉及外部账号</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以为指定猎头创建登录账号、授权可提交候选人的职位，并在启用后安全交付账号密码。</div>
 <p class="module-lead">猎头账号用于控制外部猎头可以为哪些职位上传候选人。账号创建后必须完成职位授权并启用，猎头才能使用收到的账号密码进入外部入口开展指定职位的候选人提交。</p>
 <div class="function-relations" aria-label="猎头账号功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>前置：</b>目标职位已建立＋合作范围已确认</span><span class="relation-item"><b>产出：</b>外部账号＋指定职位授权</span><span class="relation-item"><b>提交范围：</b>仅限已授权职位</span><span class="relation-item"><b>后续核对：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>频率：</b>按需使用</span></div>
@@ -2243,7 +2345,7 @@ MAIN_RISK: [一句话概括最大风险]
 
 <section class="module" id="function-position-stages" data-audience="function" data-map-entry="职位与阶段" data-map-status="完整配置流程已整理" data-map-note="职位草稿入口、招聘阶段、BOSS名称映射、协作授权、发布及需求联动已整理。" data-keywords="职位与阶段 职位 招聘阶段 草稿 发布职位 简历评估 AI面试 AI配置 提示词模板 简历评估官 作品集筛选 人工面试 BOSS职位名称映射 职位协作人 招聘中">
 <div class="module-head">
-<div class="module-title"><span class="module-num">功能 / 07</span><h2>职位与阶段</h2></div>
+<div class="module-title"><span class="module-num">功能 / 08</span><h2>职位与阶段</h2></div>
 <div class="module-meta"><span class="tag purple">招聘流程配置</span><span class="tag orange">发布后联动需求</span></div>
 </div>
 <p class="module-lead">职位与阶段用于把招聘需求生成的职位草稿配置成可正式招聘的职位。HR需要确认招聘流程，按需配置简历评估与AI面试，完成BOSS职位名称映射和职位协作授权，最后发布职位。发布成功后，对应招聘需求同步进入“招聘中”。</p>
@@ -2283,19 +2385,20 @@ MAIN_RISK: [一句话概括最大风险]
 
 <div class="rule-box"><strong>AI 配置边界：</strong>本节只说明 ID 填写位置和保存动作。百炼应用的通用创建、发布与同步方法请查看<a href="#function-ai-integration" data-function-link>AI 面试集成</a>板块。</div>
 
-<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="BOSS职位名称映射">BOSS职位名称映射</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>填写与操作规范</th><th>完成后的作用</th></tr></thead><tbody>
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="BOSS简历自动抓取：邮箱＋职位映射">BOSS简历自动抓取：邮箱＋职位映射 <span class="frequent-tag">高频</span></div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>填写与操作规范</th><th>完成后的作用</th></tr></thead><tbody>
 <tr data-field-type="button"><td>添加当前职位名称</td><td class="field-type button"><b>操作按钮</b></td><td>当BOSS职位名称与系统职位名称完全一致时，直接添加当前职位名称。</td><td>建立同名职位的自动匹配关系。</td></tr>
 <tr data-field-type="button"><td>新增映射</td><td class="field-type button"><b>操作按钮</b></td><td>当BOSS职位名称与系统名称不一致时，点击后填写BOSS邮件中实际出现的职位名称。</td><td>允许外部名称映射到当前系统职位。</td></tr>
 <tr data-field-type="required"><td>BOSS职位名称</td><td class="field-type required"><b>必须填写</b></td><td>必须与BOSS直聘邮件中的职位名称保持一致；同一个名称只能映射到一个系统职位。</td><td>邮箱拉取简历时，系统据此判断简历应进入哪个职位。</td></tr>
 <tr data-field-type="readonly"><td>BOSS邮件标签与已绑定名称</td><td class="field-type readonly"><b>系统展示项</b></td><td>新增后核对名称已出现在职位名称映射列表中。</td><td>表示当前名称已与系统职位绑定。</td></tr>
 </tbody></table></div></div>
-<div class="rule-box"><strong>使用前提：</strong>职位名称映射需要招聘邮箱已经按“邮件自动拉取”板块完成绑定和启用。邮件拉取配置不正确时，仅添加名称映射也无法自动导入简历。</div>
+<div class="rule-box"><strong>完整链路：</strong>招聘邮箱收到BOSS简历邮件 → 系统每5分钟拉取 → 识别邮件中的BOSS职位名称 → 按映射进入系统职位 → 建立候选人与投递。邮箱未启用、名称未匹配或邮件识别失败时不会正确建档，应到“邮件自动拉取”的异常处理核对；邮箱接入和职位映射缺一不可。</div>
 
-<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="职位协作人授权">职位协作人授权</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>填写与操作规范</th><th>权限影响</th></tr></thead><tbody>
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="给协作HR开职位权限">给协作HR开职位权限 <span class="frequent-tag">高频</span></div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>填写与操作规范</th><th>权限影响</th></tr></thead><tbody>
 <tr data-field-type="optional"><td>职位协作人</td><td class="field-type optional"><b>可以填写</b></td><td>选择需要共同查看和处理该职位招聘数据的HR；按实际协作范围添加，避免无关授权。</td><td>未成为职位负责人、创建人或协作人的HR无法查看该职位及其候选人流程。</td></tr>
 <tr data-field-type="readonly"><td>职位负责人／创建人</td><td class="field-type readonly"><b>系统展示项</b></td><td>系统自动保留必要授权，负责人和创建人的授权不可移除。</td><td>保证职位始终有明确责任人和可追溯的创建人。</td></tr>
 <tr data-field-type="button"><td>保存授权</td><td class="field-type button"><b>操作按钮</b></td><td>核对人员范围后点击保存；人员变化时需要再次保存授权。</td><td>保存后协作人才取得或更新该职位的数据访问权限。</td></tr>
 </tbody></table></div></div>
+<div class="rule-box"><strong>三层权限不要混淆：</strong>系统菜单权限由管理员开通；协作HR通过“职位协作人”获得该职位及候选人的数据权限；业务面试官不加入职位协作人，而是在安排人工面试时被指定，通过具体候选人任务获得查看和面评权限。</div>
 
 <div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="发布与需求联动">发布职位与招聘需求联动</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>操作与判断规范</th><th>状态影响</th></tr></thead><tbody>
 <tr data-field-type="button"><td>发布职位</td><td class="field-type button"><b>操作按钮</b></td><td>至少配置一个中间阶段；由职位负责人或HRBP在取得业务负责人确认并核对全部配置后发布。</td><td>职位从“草稿”进入“招聘中”，对应招聘需求同步进入“招聘中”并开始接收新投递。</td></tr>
@@ -2309,7 +2412,7 @@ MAIN_RISK: [一句话概括最大风险]
 <div class="rule-box"><strong>发布前最后检查：</strong>业务负责人已经确认招聘目标和流程；阶段顺序一旦随职位进入招聘中即被锁定。发布前必须一次性核对简历评估ID、AI面试两个ID、阶段名称和顺序、BOSS映射及协作人，避免启动招聘后再下架调整。</div>
 </section>
 
-<section class="module" id="function-candidate-applications" data-audience="function" data-map-entry="候选人与投递" data-map-status="完整流程已整理" data-map-note="简历筛选、作品评估、AI面试、视频面试、Offer及结果分支已整理。" data-keywords="候选人与投递 简历评估 筛选通过 作品集 AI面试 视频面试 面评 Offer 待入职 终止投递 人才库"><div class="module-head"><div class="module-title"><span class="module-num">功能 / 08</span><h2>候选人与投递</h2></div><div class="module-meta"><span class="tag purple">招聘主流程</span><span class="tag orange">包含状态变更</span></div></div>
+<section class="module" id="function-candidate-applications" data-audience="function" data-map-entry="候选人与投递" data-map-status="完整流程已整理" data-map-note="简历筛选、作品评估、AI面试、视频面试、Offer及结果分支已整理。" data-keywords="候选人与投递 简历评估 筛选通过 作品集 AI面试 视频面试 面评 Offer 待入职 终止投递 人才库"><div class="module-head"><div class="module-title"><span class="module-num">功能 / 09</span><h2>候选人与投递</h2></div><div class="module-meta"><span class="tag purple">招聘主流程</span><span class="tag orange">包含状态变更</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以手动上传简历并创建候选人与投递，也可以按照当前职位已经配置的实际阶段完成简历筛选、作品评估、AI面试或人工面试，并正确接续Offer、人才库、终止投递或转岗。作品评估和AI面试不是所有职位的固定必经环节。</div>
 <p class="module-lead">候选人与投递是招聘主流程的操作中心。列表用于定位候选人，详情页左侧查看简历，右侧按照岗位阶段完成评价、面试和结果处理；每项操作只针对当前投递。</p>
 <div class="function-relations" aria-label="候选人与投递功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>前置：</b><a href="#function-position-stages" data-function-link>职位与阶段</a>已发布</span><span class="relation-item"><b>简历来源：</b>自动拉取／猎头／手动录入</span><span class="relation-item"><b>状态产出：</b>阶段、评价与招聘结果</span><span class="relation-item"><b>自动通知：</b><a href="#function-email-templates" data-function-link>邮件模板</a> → <a href="#function-notification-records" data-function-link>通知记录</a></span><span class="relation-item"><b>结果分支：</b><a href="#function-talent-pool" data-function-link>人才库</a></span></div>
@@ -2321,7 +2424,7 @@ MAIN_RISK: [一句话概括最大风险]
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="初筛：查看简历评估并完成筛选">关键操作二：查看简历评估并完成筛选</div><img loading="lazy" decoding="async" src="candidate-applications-assets/resume-screening.gif" data-zoom="candidate-applications-assets/resume-screening.gif" alt="简历筛选操作GIF"><div class="gif-note">查看简历 → 打开简历评估 → HR结合岗位要求判断 → 确认继续后点击筛选通过。简历评估需要岗位已配置简历评估官，结果只作为判断依据之一。</div></div>
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="面试前评估：作品评估协同">关键操作三：上传作品并跟进作品评价</div><img loading="lazy" decoding="async" src="candidate-applications-assets/portfolio-assessment-flow.gif" data-zoom="candidate-applications-assets/portfolio-assessment-flow.gif" alt="上传作品、通知评估官并在评价通过后进入下一阶段"><div class="gif-note">上传PDF、ZIP、视频等作品文件，或填写作品链接 → 核对作品 → 选择对应评估官并发送钉钉通知 → 等待评估官提交评价 → 确认评价通过后点击“下一阶段”。作品评价不会自动推进招聘阶段。</div></div>
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="面试前评估：安排并跟进AI面试">关键操作四：安排并跟进AI面试</div><img loading="lazy" decoding="async" src="candidate-applications-assets/ai-interview-flow.gif" data-zoom="candidate-applications-assets/ai-interview-flow.gif" alt="AI面试操作GIF"><div class="gif-note">进入AI面试 → 点击安排面试 → 系统发送候选人邮件 → 候选人完成面试 → HR查看评估结果并决定是否进入视频面试。安排成功不等于面试完成。</div></div>
-<div class="panel gif-panel" data-field-guide="detailed"><div class="panel-title" data-nav-item data-nav-label="业务面试：安排视频面试并接续面评">关键操作五：安排视频面试并接续面评</div><img loading="lazy" decoding="async" src="candidate-applications-assets/video-interview-flow.gif" data-zoom="candidate-applications-assets/video-interview-flow.gif" alt="视频面试安排操作GIF"><div class="gif-note">选择视频面试和面试官 → 填写标题、时间及会议室 → 保存 → 核对业务钉钉日程和候选人邮件 → 面试结束后跟进规范化面评。</div></div>
+<div class="panel gif-panel" data-field-guide="detailed"><div class="panel-title" data-nav-item data-nav-label="给面试官分配候选人任务">给面试官分配候选人任务 <span class="frequent-tag">高频</span></div><img loading="lazy" decoding="async" src="candidate-applications-assets/video-interview-flow.gif" data-zoom="candidate-applications-assets/video-interview-flow.gif" alt="视频面试安排操作GIF"><div class="gif-note">选择视频面试和本阶段实际面试官 → 填写标题、时间及会议室 → 保存 → 面试官通过该任务获得当前候选人的查看和面评权限 → 核对业务钉钉日程和候选人邮件 → 面试结束后跟进规范化面评。面试官不需要添加为职位协作人。</div></div>
 <div class="panel field-panel"><div class="panel-title">视频面试必须确认的内容</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>关键内容</th><th>分类</th><th>填写或核对规范</th></tr></thead><tbody><tr data-field-type="required"><td>面试方式、面试官、日程标题、面试时间</td><td class="field-type required"><b>必须填写</b></td><td>选择实际面试官并核对日期、开始和结束时间。</td></tr><tr data-field-type="optional"><td>面试地点、会议室、日程描述、备注</td><td class="field-type optional"><b>可以填写</b></td><td>按实际安排填写；使用会议室时保存前确认可用。</td></tr><tr data-field-type="readonly"><td>已安排、会议号、会议链接和面试时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>保存后核对系统回显，并确认双方已收到通知。</td></tr><tr data-field-type="button"><td>写面评</td><td class="field-type button"><b>操作按钮</b></td><td>面试结束后由对应面试官提交规范化面评。</td></tr></tbody></table></div></div>
 <div class="rule-box"><strong>人工面试说明：</strong>人工面试可以配置为视频面试或线下面试。本节使用视频面试作为完整教学示例；线下面试的人员、时间、地点、通知和面评接续逻辑基本一致，以页面所选面试方式为准。</div>
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="结果处理：接受Offer并进入待入职">关键操作六：接受Offer并进入待入职</div><img loading="lazy" decoding="async" src="candidate-applications-assets/offer-and-onboarding-flow.gif" data-zoom="candidate-applications-assets/offer-and-onboarding-flow.gif" alt="Offer接受与待入职操作GIF"><div class="gif-note">面评完成 → 进入Offer判断 → 候选人接受Offer时填写预计入职日期 → 确认进入待入职。</div></div>
@@ -2338,7 +2441,7 @@ MAIN_RISK: [一句话概括最大风险]
 </section>
 
 <section class="module" id="function-talent-pool" data-audience="function" data-map-entry="人才库" data-map-status="回捞邀约已确认" data-map-note="人才筛选、邀约发送和接受后的流转规则已整理。" data-keywords="人才库 人才沉淀 回捞 发起邀约 发送邀约 待接受 候选人与投递">
-<div class="module-head"><div class="module-title"><span class="module-num">功能 / 09</span><h2>人才库</h2></div><div class="module-meta"><span class="tag purple">招聘主流程</span><span class="tag blue">人才回捞</span></div></div>
+<div class="module-head"><div class="module-title"><span class="module-num">功能 / 10</span><h2>人才库</h2></div><div class="module-meta"><span class="tag purple">招聘主流程</span><span class="tag blue">人才回捞</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以从人才库定位合适候选人，向指定岗位发起回捞邀约，并根据邀约状态判断候选人是否已经重新进入招聘流程。</div>
 <p class="module-lead">人才库用于保留本次未入职、但仍有后续岗位匹配价值的候选人。日常操作重点是查询当前人才、选择目标岗位并发送邀约；进入人才库操作简单，本节重点说明人才回捞。</p>
 <div class="function-relations" aria-label="人才库功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>来源：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a>执行进入人才库</span><span class="relation-item"><b>当前状态：</b>原投递已终止</span><span class="relation-item"><b>回捞产出：</b>指定岗位投递邀约</span><span class="relation-item"><b>接受后：</b>重新进入<a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>发送核对：</b><a href="#function-notification-records" data-function-link>通知记录</a></span></div>
@@ -2372,7 +2475,7 @@ MAIN_RISK: [一句话概括最大风险]
       
       </div>
 
-        <section class="module faq-function" id="faq-function" data-audience="function" data-keywords="FAQ 常见问题 帮助 功能详解">
+        <section class="module faq-function" id="faq-function" data-audience="function" data-keywords="FAQ 常见问题 帮助 功能详解 数据看板 我的视角 全局视角 漏斗 积压">
           <div class="module-head">
             <div class="module-title"><span class="module-num">帮助</span><h2>常见问题</h2></div>
             <div class="module-meta"><span class="tag purple">功能详解</span></div>
@@ -2395,16 +2498,26 @@ MAIN_RISK: [一句话概括最大风险]
             <summary>流程图里的节点可以点击吗？</summary>
             <div class="req-accordion-body"><p>可以。当前视图有对应教学内容的节点会高亮显示，点击后会自动定位并展开到对应模块，比如<a href="#function-candidate-applications" data-cross-link>候选人与投递</a>或<a href="#hr-resume-screening" data-cross-link>简历筛选</a>。</p></div>
           </details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 为什么我的视角和全局视角数字不同？</summary><div class="req-accordion-body"><p>“我的视角”只统计本人负责或被授权协作的岗位；“全局视角”统计全公司范围，且仅HRBP和管理员可见。先核对日期和负责／授权范围，再比较数字。详见<a href="#function-dashboard" data-cross-link data-detail-label="我的视角与全局视角">我的视角与全局视角</a>。</p></div></details>
+          <details class="req-accordion"><summary>为什么选择日期后，当前环节积压没有变化？</summary><div class="req-accordion-body"><p>当前环节积压是当前仍停留在各阶段投递的实时快照，不按日期范围重新圈定；日期范围主要影响漏斗、趋势和效率等期间统计。超1天、超3天、超7天是互斥区间，不能重复相加。详见<a href="#function-dashboard" data-cross-link data-detail-label="数据口径与漏斗修复">数据口径与漏斗修复</a>。</p></div></details>
+          <details class="req-accordion"><summary>为什么漏斗人数不一定逐级下降？什么时候使用漏斗修复？</summary><div class="req-accordion-body"><p>漏斗先按投递创建日期圈定投递，再统计这些投递截至当前曾到达的阶段；同一候选人的不同岗位投递分别计数，历史导入还可能缺少中间阶段，因此数字不一定严格递减。老系统数据导致漏斗异常时，可使用漏斗修复降低历史缺失数据的影响，使漏斗按正常招聘阶段关系展示。详见<a href="#function-dashboard" data-cross-link data-detail-label="数据口径与漏斗修复">数据口径与漏斗修复</a>。</p></div></details>
           <div class="rule-box" style="margin-top:14px;font-size:12px"><strong>没找到答案？</strong>请联系招聘管理员或负责 HR。</div>
         </section>
 
-        <section class="module faq-hr" id="faq-hr" data-audience="hr" data-keywords="FAQ 常见问题 帮助 HR 规范">
+        <section class="module faq-hr" id="faq-hr" data-audience="hr" data-keywords="FAQ 常见问题 帮助 HR 规范 数据看板 工作台 待办 超时 负责 授权 HR效率">
           <div class="module-head">
             <div class="module-title"><span class="module-num">帮助</span><h2>常见问题</h2></div>
             <div class="module-meta"><span class="tag green">HR 规范</span></div>
           </div>
           <p class="module-lead">关于 HR 招聘操作流程的高频问题。</p>
           <div class="faq-toolbar"><button type="button" class="faq-expand-all">展开全部</button><button type="button" class="faq-collapse-all">收起全部</button></div>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 如何用数据看板处理当天待办？</summary><div class="req-accordion-body"><p><b>入口：</b>数据看板 → 我的视角。<b>操作：</b>选择负责／授权／负责＋授权，依次点击待安排面试、待跟进简历、待业务评价和超时待处理卡片；积压数字也可点击下钻。<b>完成结果：</b>从名单点击“查看”进入候选人与投递，按真实进展完成安排、跟进或结果处理。看板只负责定位，不能为了清零数字错误改变候选人状态。详见<a href="#hr-dashboard-review" data-cross-link data-detail-label="每日巡检与待办处理">每日巡检与待办处理</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 数据范围里的负责、授权、负责＋授权是什么意思？</summary><div class="req-accordion-body"><p><b>负责：</b>本人是岗位负责人的岗位数据；<b>授权：</b>本人不是岗位负责人，但被授权协助该岗位招聘的数据；<b>负责＋授权：</b>两类岗位合并后的综合数据。看不到预期岗位时，先核对是否选对范围，再检查职位协作授权。详见<a href="#function-dashboard" data-cross-link data-detail-label="我的视角与全局视角">我的视角与全局视角</a>。</p></div></details>
+          <details class="req-accordion"><summary>HR处理效率可以直接作为绩效吗？</summary><div class="req-accordion-body"><p>不建议。该指标按最后一次终态事件的人工操作人归属，并会受到岗位难度、处理量、样本量、流程配置和历史数据完整性的影响。它适合发现需要进一步核对的流程差异，不能脱离业务背景直接形成个人绩效结论。详见<a href="#hr-dashboard-review" data-cross-link data-detail-label="数据使用边界">数据使用边界</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> BOSS简历为什么没有自动抓取？</summary><div class="req-accordion-body"><p><b>入口：</b>先到“邮件自动拉取”检查招聘邮箱，再到“职位与阶段”检查BOSS职位名称映射。<b>前提：</b>邮箱已绑定并启用，邮件中的BOSS职位名称与映射完全一致。<b>完成结果：</b>系统每5分钟拉取邮件，识别职位后进入正确系统职位并建立候选人与投递。<b>异常处理：</b>依次核对邮箱是否启用、执行记录是否已拉取邮件、BOSS职位名称是否完全匹配；未匹配或识别失败时到异常处理核对，无法判断时联系管理员。详见<a href="#function-position-stages" data-cross-link data-detail-label="BOSS简历自动抓取：邮箱＋职位映射">BOSS简历自动抓取：邮箱＋职位映射</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 如何给协作HR开权限？</summary><div class="req-accordion-body"><p><b>入口：</b>职位与阶段 → 打开对应职位 → 职位协作人。<b>前提：</b>对方是实际参与该职位招聘的HR，且系统菜单权限已由管理员开通。<b>完成结果：</b>选择HR并保存授权后，对方可查看和处理该职位及候选人数据。<b>异常处理：</b>保存后仍看不到时，先核对是否选对职位和人员，再联系管理员检查菜单权限。详见<a href="#function-position-stages" data-cross-link data-detail-label="给协作HR开职位权限">给协作HR开职位权限</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 如何让面试官看到候选人并填写面评？</summary><div class="req-accordion-body"><p><b>入口：</b>候选人与投递 → 安排人工面试 → 选择面试官 → 保存。<b>前提：</b>面试官账号的系统权限已开通，并被指定为本次面试的实际面试官。<b>完成结果：</b>面试官通过具体任务获得该候选人的查看和面评权限，并收到日程通知。<b>异常处理：</b>核对是否选择了正确的钉钉／系统账号，并请面试官从本次面试日程或任务中的候选人链接进入；仍无法查看时联系管理员检查账号权限。不要把面试官添加为职位协作人。详见<a href="#function-candidate-applications" data-cross-link data-detail-label="给面试官分配候选人任务">给面试官分配候选人任务</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 招聘需求池是什么？在哪里修改负责人和HC？</summary><div class="req-accordion-body"><p><b>入口：</b>招聘需求池 → 查看详情 → 顶部“编辑需求”。<b>前提：</b>招聘需求池管理为什么招、招多少、由谁负责、何时完成以及项目是否结束；仅职位负责人或HRBP可编辑。<b>完成结果：</b>增加或减少HC、修改招聘负责人、填写变更原因并保存，详情与变更记录显示新值。修改需求负责人不会自动替换候选人负责人，也不会自动增加职位协作权限。<b>异常处理：</b>HC不得低于已完成HC＋已锁定HC；原负责人无法操作时由有需求管理权限的HRBP处理，仍无法处理时联系管理员。详见<a href="#function-recruitment-requirements" data-cross-link data-detail-label="修改招聘负责人和HC">修改招聘负责人和HC</a>。</p></div></details>
           <details class="req-accordion">
             <summary>邮箱绑定了有什么作用？需要使用企业邮箱吗？</summary>
             <div class="req-accordion-body"><p>绑定并启用后，系统每5分钟自动拉取一次招聘邮件，并结合职位名称映射将简历导入对应职位，减少手动上传。不强制使用企业邮箱；当前手册已确认支持QQ邮箱和网易邮箱的IMAP授权接入。请绑定本人实际负责的招聘邮箱，不要填写邮箱登录密码，具体配置见<a href="#function-email-auto-pull" data-cross-link>邮件自动拉取</a>。</p></div>
@@ -2438,24 +2551,12 @@ MAIN_RISK: [一句话概括最大风险]
             <div class="req-accordion-body"><p>AI 面试官能力依赖阿里百炼应用。需要联系招聘管理员申请百炼账号与操作授权，然后在<a href="#function-ai-integration" data-cross-link>AI 面试集成</a>模块按指引创建并发布应用，最后在<a href="#function-position-stages" data-cross-link>职位与阶段</a>中绑定 AI 面试。</p></div>
           </details>
           <details class="req-accordion">
-            <summary>职位配置里的“BOSS 职位名称映射”是什么意思？有什么用？</summary>
-            <div class="req-accordion-body"><p>“BOSS 职位名称映射”用于把 BOSS 直聘邮件中出现的职位名称与系统内的职位名称对应起来。当两者不一致时，HR 可在<a href="#function-position-stages" data-cross-link>职位与阶段</a>中新增映射，填写 BOSS 邮件中的真实职位名称。配置后，招聘邮箱自动拉取 BOSS 简历时，系统才能根据邮件中的职位名把简历分配到正确的系统职位。</p></div>
-          </details>
-          <details class="req-accordion">
-            <summary>职位协作人可以添加业务负责人或面试官吗？</summary>
-            <div class="req-accordion-body"><p>职位协作人主要用于授权共同处理该职位招聘事务的 HR 同事，一般不添加业务负责人或面试官。业务负责人、面试官和作品评估人通过面试/评估任务获得对应操作权限，不需要在<a href="#function-position-stages" data-cross-link>职位协作人</a>中重复添加。</p></div>
-          </details>
-          <details class="req-accordion">
-            <summary>怎么指定面试官或作品评估人？</summary>
-            <div class="req-accordion-body"><p>在<a href="#hr-business-interview" data-cross-link>安排面试</a>或<a href="#hr-preinterview-assessment" data-cross-link>发起作品评估</a>任务时，选择对应的负责人。安排前请核对面试官/评估人是否已经开通系统权限，避免通知无法送达。</p></div>
-          </details>
-          <details class="req-accordion">
             <summary>Offer 阶段可以回退到之前的招聘阶段吗？</summary>
             <div class="req-accordion-body"><p>可以，但「阶段回退」主要用于纠正 HR 误推进。在<a href="#function-candidate-applications" data-cross-link>候选人详情页</a>中选择过往阶段、填写回退原因并确认后，候选人会退至对应阶段。建议与业务负责人确认后再操作，避免反复变更候选人状态。</p></div>
           </details>
           <details class="req-accordion">
             <summary>招聘数据报表在哪里查看？</summary>
-            <div class="req-accordion-body"><p>招聘需求详情页提供「招聘进展漏斗」，可查看该项目的候选人阶段分布。通知记录仅用于核对系统通知发送结果，不是报表入口。其他统计报表以系统实际菜单为准。</p></div>
+            <div class="req-accordion-body"><p>统一从<a href="#function-dashboard" data-cross-link>数据看板</a>查看：顶部卡片和积压用于定位待办，漏斗、趋势、效率、未通过原因和来源效果用于分析复盘。单个招聘项目仍可在招聘需求详情查看该项目漏斗；通知记录仅用于核对通知发送结果，不是招聘数据报表。</p></div>
           </details>
           <div class="rule-box" style="margin-top:14px;font-size:12px"><strong>没找到答案？</strong>请联系招聘管理员或负责 HR。</div>
         </section>
@@ -2512,8 +2613,8 @@ MAIN_RISK: [一句话概括最大风险]
 
 <script type="application/json" id="flowMappingManifest">
 {
-  "function": { "A": "function-recruitment-requirements", "B": "function-position-stages", "C": "function-position-stages", "D": "function-candidate-applications", "E": "function-candidate-applications", "F": "function-candidate-applications", "F1": "function-candidate-applications", "F3": "function-candidate-applications", "G": "function-candidate-applications", "G1": "function-candidate-applications", "G2": "function-candidate-applications", "H": "function-candidate-applications", "J": "function-candidate-applications", "K": "function-candidate-applications", "L": "function-candidate-applications", "Z": "function-candidate-applications", "X": "function-candidate-applications", "T": "function-talent-pool", "ai-setup": "function-ai-integration", "mail-intake": "function-email-auto-pull", "templates": "function-email-templates", "notify": "function-notification-records", "headhunter": "function-headhunter-accounts" },
-  "hr": { "A": "hr-recruitment-start", "B": "hr-recruitment-start", "C": "hr-recruitment-start", "D": "hr-candidate-intake", "E": "hr-resume-screening", "F": "hr-preinterview-assessment", "F1": "hr-preinterview-assessment", "F3": "hr-preinterview-assessment", "G": "hr-preinterview-assessment", "G1": "hr-preinterview-assessment", "G2": "hr-preinterview-assessment", "H": "hr-business-interview", "H1": "hr-business-interview", "H2": "hr-business-interview", "H3": "hr-business-interview", "I": "hr-business-interview", "J": "hr-result-processing", "K": "hr-result-processing", "L": "hr-result-processing", "M": "hr-result-processing", "Z": "hr-result-processing", "T": "hr-result-processing", "X": "hr-result-processing", "notify": "hr-notification-feedback" },
+  "function": { "A": "function-recruitment-requirements", "B": "function-position-stages", "C": "function-position-stages", "D": "function-candidate-applications", "E": "function-candidate-applications", "F": "function-candidate-applications", "F1": "function-candidate-applications", "F3": "function-candidate-applications", "G": "function-candidate-applications", "G1": "function-candidate-applications", "G2": "function-candidate-applications", "H": "function-candidate-applications", "J": "function-candidate-applications", "K": "function-candidate-applications", "L": "function-candidate-applications", "Z": "function-candidate-applications", "X": "function-candidate-applications", "T": "function-talent-pool", "dashboard": "function-dashboard", "ai-setup": "function-ai-integration", "mail-intake": "function-email-auto-pull", "templates": "function-email-templates", "notify": "function-notification-records", "headhunter": "function-headhunter-accounts" },
+  "hr": { "A": "hr-recruitment-start", "B": "hr-recruitment-start", "C": "hr-recruitment-start", "D": "hr-candidate-intake", "E": "hr-resume-screening", "F": "hr-preinterview-assessment", "F1": "hr-preinterview-assessment", "F3": "hr-preinterview-assessment", "G": "hr-preinterview-assessment", "G1": "hr-preinterview-assessment", "G2": "hr-preinterview-assessment", "H": "hr-business-interview", "H1": "hr-business-interview", "H2": "hr-business-interview", "H3": "hr-business-interview", "I": "hr-business-interview", "J": "hr-result-processing", "K": "hr-result-processing", "L": "hr-result-processing", "M": "hr-result-processing", "Z": "hr-result-processing", "T": "hr-result-processing", "X": "hr-result-processing", "dashboard": "hr-dashboard-review", "notify": "hr-notification-feedback" },
   "business": {
     "F2": "view-business",
     "H1": "biz-view",
@@ -2522,6 +2623,68 @@ MAIN_RISK: [一句话概括最大风险]
     "I": "biz-handoff",
     "notify": "view-business"
   }
+}
+</script>
+<script id="manualUpdatesData" type="application/json">
+{
+  "schemaVersion": 2,
+  "latestUpdateId": "2026-08-26-dashboard",
+  "lastVerifiedAt": "2026-08-26",
+  "updates": [
+    {
+      "id": "2026-08-26-dashboard",
+      "status": "published",
+      "effectiveDate": "2026-08-26",
+      "verifiedAt": "2026-08-26",
+      "type": "new-feature",
+      "importance": "action",
+      "impactScope": "all",
+      "title": "数据看板上线并提供招聘工作台入口",
+      "summary": "新增我的视角和全局视角，可从待办卡片及积压数字定位候选人，并通过漏斗、趋势、效率和来源数据开展招聘复盘。",
+      "audience": "HR实习生、HR、HRBP和管理员",
+      "action": "每日先检查待办和超时积压，再进入候选人详情维护真实进展；HRBP和管理员可使用全局视角观察跨岗位问题。",
+      "targets": [
+        { "view": "function", "moduleId": "function-dashboard", "detailLabel": "工作台：点击卡片弹出抽屉处理当日待办" },
+        { "view": "function", "moduleId": "function-dashboard", "detailLabel": "查看不同权限具体数据" },
+        { "view": "hr", "moduleId": "hr-dashboard-review", "detailLabel": "每日巡检与待办处理" }
+      ]
+    },
+    {
+      "id": "2026-08-25-recruitment-requirements",
+      "status": "published",
+      "effectiveDate": "2026-08-25",
+      "verifiedAt": "2026-08-25",
+      "type": "new-feature",
+      "importance": "action",
+      "impactScope": "all",
+      "title": "招聘需求池上线并联动职位与阶段",
+      "summary": "招聘需求现在统一记录招聘目标、HC、负责人、完成日期和项目状态，创建需求后会生成对应职位草稿。",
+      "audience": "职位负责人、HRBP及参与招聘的HR",
+      "action": "创建需求后继续进入“职位与阶段”完成流程、BOSS职位映射和协作权限配置，发布后项目才正式进入招聘中。",
+      "targets": [
+        { "view": "function", "moduleId": "function-recruitment-requirements", "detailLabel": "招聘需求池是什么" },
+        { "view": "function", "moduleId": "function-position-stages", "detailLabel": "完整配置与发布" }
+      ]
+    },
+    {
+      "id": "2026-08-10-talent-pool",
+      "status": "published",
+      "effectiveDate": "2026-08-10",
+      "verifiedAt": "2026-08-25",
+      "type": "new-feature",
+      "importance": "info",
+      "impactScope": "all",
+      "title": "人才库上线并支持候选人回捞",
+      "summary": "新增人才库，用于沉淀本次不继续但仍有后续匹配价值的候选人，并可向指定岗位重新发起投递邀约。",
+      "audience": "HR实习生、HR、HRBP和管理员",
+      "action": "形成不继续当前投递但值得保留的判断时，记录入库原因和建议回捞岗位；后续有合适岗位时从人才库发起邀约。",
+      "targets": [
+        { "view": "function", "moduleId": "function-candidate-applications", "detailLabel": "结果处理：进入人才库" },
+        { "view": "function", "moduleId": "function-talent-pool", "detailLabel": "关键操作：发起人才回捞邀约" },
+        { "view": "hr", "moduleId": "hr-result-processing", "detailLabel": "进入人才库" }
+      ]
+    }
+  ]
 }
 </script>
 <script src="gif-player/manifest.js"></script>
@@ -2542,6 +2705,13 @@ MAIN_RISK: [一句话概括最大风险]
   const pageParams = new URLSearchParams(window.location.search);
   const requestedPdfView = pageParams.get('pdfView');
   const pdfExportMode = pageParams.get('pdf') === '1';
+  const manualUpdateTrigger = document.getElementById('manualUpdateTrigger');
+  const manualUpdateUnread = document.getElementById('manualUpdateUnread');
+  const manualUpdateLive = document.getElementById('manualUpdateLive');
+  const manualReleaseBar = document.getElementById('manualReleaseBar');
+  const manualReleaseNotes = document.getElementById('manualReleaseNotes');
+  const manualUpdateStorageKey = 'hr-manual-read-update-ids';
+  const legacyManualUpdateStorageKey = 'hr-manual-read-update-id';
   let activeView = ['function', 'hr', 'business'].includes(requestedPdfView) ? requestedPdfView : 'function';
   let navObserver = null;
   let flowToastTimer = null;
@@ -2566,6 +2736,233 @@ MAIN_RISK: [一句话概括最大风险]
     [['发起人才回捞邀约'], [['邀约岗位','required','选择希望候选人重新投递的指定岗位。'],['发起邀约／发送邀约','button','确认后系统自动发送指定岗位投递邀约，无单独发送前复查环节。'],['邀约状态','readonly','候选人接受并投递后进入候选人与投递；未接受则继续停留在人才库。']]]
   ];
   const fieldTypeLabels = { required: '必须填写', optional: '可以填写', readonly: '系统展示项', button: '操作按钮' };
+  const updateTypeLabels = { 'new-feature': '新功能', 'feature-change': '功能调整', 'rule-change': '规则变化', 'bug-fix': '问题修复' };
+  const updateImportanceLabels = { info: '仅需了解', action: '需要调整', critical: '必须执行' };
+  const updateScopeLabels = { 'new-data': '新数据', 'existing-data': '存量数据', all: '全部' };
+
+  function readManualUpdateData() {
+    try {
+      const raw = document.getElementById('manualUpdatesData')?.textContent || '';
+      const data = JSON.parse(raw);
+      if (!data || data.schemaVersion !== 2 || typeof data.latestUpdateId !== 'string' || typeof data.lastVerifiedAt !== 'string' || !Array.isArray(data.updates)) return null;
+      const today = new Date().toISOString().slice(0, 10);
+      const cutoffDate = new Date(`${today}T00:00:00Z`);
+      cutoffDate.setUTCMonth(cutoffDate.getUTCMonth() - 6);
+      const cutoff = cutoffDate.toISOString().slice(0, 10);
+      const allUpdates = data.updates.filter(item => {
+        if (!item || item.status !== 'published' || typeof item.id !== 'string' || typeof item.effectiveDate !== 'string' || typeof item.verifiedAt !== 'string') return false;
+        if (!updateTypeLabels[item.type] || !updateImportanceLabels[item.importance] || !updateScopeLabels[item.impactScope]) return false;
+        if (!item.title || !item.summary || !item.audience || !item.action || !Array.isArray(item.targets)) return false;
+        const effectiveDate = new Date(item.effectiveDate + 'T00:00:00Z');
+        return !Number.isNaN(effectiveDate.getTime()) && item.effectiveDate <= today;
+      }).sort((a, b) => b.effectiveDate.localeCompare(a.effectiveDate) || b.id.localeCompare(a.id));
+      const latest = allUpdates.find(item => item.id === data.latestUpdateId);
+      if (!latest) return null;
+      const updates = allUpdates.filter(item => item.effectiveDate >= cutoff);
+      return { latest, updates, allUpdates, lastVerifiedAt: data.lastVerifiedAt };
+    } catch {
+      return null;
+    }
+  }
+
+  function validManualUpdateTarget(target) {
+    if (!target || !['function', 'hr', 'business'].includes(target.view) || typeof target.moduleId !== 'string') return null;
+    const module = document.getElementById(target.moduleId);
+    if (!module || module.dataset.audience !== target.view) return null;
+    if (target.detailLabel && ![...module.querySelectorAll('[data-nav-label]')].some(item => item.dataset.navLabel === target.detailLabel)) return null;
+    return { module, detailLabel: target.detailLabel || '' };
+  }
+
+  function configureManualUpdateLink(link, targetData) {
+    const target = validManualUpdateTarget(targetData);
+    if (!target) {
+      link.hidden = true;
+      link.removeAttribute('href');
+      link.removeAttribute('data-detail-label');
+      return;
+    }
+    link.hidden = false;
+    link.href = '#' + target.module.id;
+    link.dataset.crossLink = '';
+    if (target.detailLabel) link.dataset.detailLabel = target.detailLabel;
+  }
+
+  function createManualUpdateLinks(item) {
+    const fragment = document.createDocumentFragment();
+    item.targets.forEach(target => {
+      const link = document.createElement('a');
+      link.textContent = `查看：${target.detailLabel}`;
+      configureManualUpdateLink(link, target);
+      if (!link.hidden) fragment.append(link);
+    });
+    return fragment;
+  }
+
+  function createManualUpdateHistoryItem(item, isUnread) {
+    const row = document.createElement('article');
+    row.className = `manual-release-item${isUnread ? ' is-unread' : ''}`;
+    const date = document.createElement('time');
+    date.dateTime = item.effectiveDate;
+    date.textContent = item.effectiveDate;
+    if (isUnread) {
+      const unreadBadge = document.createElement('span');
+      unreadBadge.className = 'manual-release-unread-badge';
+      unreadBadge.textContent = '未读';
+      date.append(document.createElement('br'), unreadBadge);
+    }
+    const copy = document.createElement('div');
+    const title = document.createElement('strong');
+    title.textContent = `${updateTypeLabels[item.type]}｜${item.title}`;
+    const summary = document.createElement('p');
+    summary.textContent = item.summary;
+    const meta = document.createElement('div');
+    meta.className = 'manual-release-history-meta';
+    [updateImportanceLabels[item.importance], `范围：${updateScopeLabels[item.impactScope]}`, `对象：${item.audience}`].forEach(text => {
+      const badge = document.createElement('span');
+      badge.textContent = text;
+      meta.append(badge);
+    });
+    copy.append(title, summary, meta);
+    const targets = document.createElement('div');
+    targets.className = 'manual-release-history-targets';
+    targets.append(createManualUpdateLinks(item));
+    row.append(date, copy, targets);
+    return row;
+  }
+
+  function readManualUpdateIds(allUpdates) {
+    const readIds = new Set();
+    let shouldMigrate = false;
+    try {
+      const stored = JSON.parse(window.localStorage.getItem(manualUpdateStorageKey) || '[]');
+      if (Array.isArray(stored)) stored.filter(id => typeof id === 'string').forEach(id => readIds.add(id));
+      const legacyId = window.localStorage.getItem(legacyManualUpdateStorageKey) || '';
+      const legacyUpdate = allUpdates.find(item => item.id === legacyId);
+      if (legacyUpdate) {
+        allUpdates.filter(item => item.effectiveDate <= legacyUpdate.effectiveDate).forEach(item => readIds.add(item.id));
+        shouldMigrate = true;
+      }
+      if (shouldMigrate) window.localStorage.setItem(manualUpdateStorageKey, JSON.stringify([...readIds]));
+    } catch {}
+    return readIds;
+  }
+
+  function writeManualUpdateIds(readIds) {
+    try { window.localStorage.setItem(manualUpdateStorageKey, JSON.stringify([...readIds])); } catch {}
+  }
+
+  function initializeManualUpdates() {
+    const releaseData = readManualUpdateData();
+    if (!releaseData || !manualReleaseBar || !manualUpdateTrigger) {
+      if (manualReleaseBar) manualReleaseBar.hidden = true;
+      if (manualUpdateTrigger) manualUpdateTrigger.hidden = true;
+      return;
+    }
+    const { latest, updates, allUpdates, lastVerifiedAt } = releaseData;
+    const readIds = readManualUpdateIds(allUpdates);
+    let unreadUpdates = updates.filter(item => !readIds.has(item.id));
+    const releaseType = document.getElementById('manualReleaseType');
+    const releaseImportance = document.getElementById('manualReleaseImportance');
+    const releaseTitle = document.getElementById('manualReleaseTitle');
+    const releaseDate = document.getElementById('manualReleaseDate');
+    const releaseSummary = document.getElementById('manualReleaseSummary');
+    const unreadSummary = document.getElementById('manualReleaseUnreadSummary');
+    const action = document.getElementById('manualReleaseAction');
+    const meta = document.getElementById('manualReleaseMeta');
+    const targets = document.getElementById('manualReleaseTargets');
+    const list = document.getElementById('manualReleaseList');
+    const ack = document.getElementById('manualReleaseAck');
+    const notesSummary = document.getElementById('manualReleaseNotesSummary');
+
+    function renderHistory() {
+      list.replaceChildren();
+      if (!updates.length) {
+        const empty = document.createElement('div');
+        empty.className = 'manual-release-empty';
+        empty.textContent = `暂无近期更新。手册最后核验日期：${lastVerifiedAt}`;
+        list.append(empty);
+        return;
+      }
+      list.append(...updates.map(item => createManualUpdateHistoryItem(item, !readIds.has(item.id))));
+    }
+
+    function renderUnreadState() {
+      unreadUpdates = updates.filter(item => !readIds.has(item.id));
+      manualUpdateUnread.textContent = String(unreadUpdates.length);
+      manualUpdateUnread.hidden = unreadUpdates.length === 0;
+      manualUpdateTrigger.setAttribute('aria-label', unreadUpdates.length ? `系统更新，${unreadUpdates.length}条未读` : '系统更新，无未读变化');
+      manualUpdateLive.textContent = unreadUpdates.length ? `共有${unreadUpdates.length}条未读系统变化` : '系统更新已全部标记为已读';
+      notesSummary.textContent = updates.length ? `查看最近6个月更新记录（${updates.length}条）` : '查看最近6个月更新记录';
+      unreadSummary.textContent = updates.length ? (unreadUpdates.length ? `共有${unreadUpdates.length}条未读变化` : '最近6个月更新已在当前浏览器标记为已读') : '暂无近期更新';
+      ack.hidden = unreadUpdates.length === 0;
+      renderHistory();
+    }
+
+    if (updates.length) {
+      const featured = unreadUpdates.find(item => item.importance === 'critical') || unreadUpdates.find(item => item.importance === 'action') || unreadUpdates[0] || updates[0];
+      releaseType.textContent = updateTypeLabels[featured.type];
+      releaseType.dataset.type = featured.type;
+      releaseImportance.textContent = updateImportanceLabels[featured.importance];
+      releaseImportance.dataset.importance = featured.importance;
+      manualReleaseBar.dataset.importance = featured.importance;
+      unreadSummary.textContent = unreadUpdates.length ? `共有${unreadUpdates.length}条未读变化` : '最近6个月更新已在当前浏览器标记为已读';
+      releaseTitle.textContent = featured.title;
+      releaseDate.textContent = `生效日期 ${featured.effectiveDate}`;
+      releaseSummary.textContent = featured.summary;
+      action.replaceChildren();
+      const audience = document.createElement('b');
+      audience.textContent = `影响对象：${featured.audience}。需要处理：`;
+      action.append(audience, document.createTextNode(featured.action));
+      meta.replaceChildren();
+      [`生效范围：${updateScopeLabels[featured.impactScope]}`, `系统页面核验：${featured.verifiedAt}`, `手册最后核验：${lastVerifiedAt}`].forEach(text => {
+        const badge = document.createElement('span');
+        badge.textContent = text;
+        meta.append(badge);
+      });
+      targets.replaceChildren(createManualUpdateLinks(featured));
+    } else {
+      releaseType.textContent = '已核验';
+      releaseType.removeAttribute('data-type');
+      releaseImportance.textContent = '无近期变化';
+      releaseImportance.dataset.importance = 'info';
+      manualReleaseBar.dataset.importance = 'info';
+      unreadSummary.textContent = '暂无近期更新';
+      releaseTitle.textContent = '最近6个月没有已核验的系统变化';
+      releaseDate.textContent = `最后核验日期 ${lastVerifiedAt}`;
+      releaseSummary.textContent = '你仍可随时通过“系统更新”查看核验状态；新的已发布变化会在下次手册更新后显示。';
+      action.textContent = '';
+      meta.replaceChildren();
+      targets.replaceChildren();
+    }
+
+    const pdfSummary = document.getElementById('manualUpdatePdfSummary');
+    pdfSummary.replaceChildren();
+    const pdfTitle = document.createElement('strong');
+    pdfTitle.textContent = `最新系统变化｜${latest.title}`;
+    pdfSummary.append(pdfTitle, document.createTextNode(`　重要程度：${updateImportanceLabels[latest.importance]}　生效日期：${latest.effectiveDate}　生效范围：${updateScopeLabels[latest.impactScope]}　手册最后核验：${lastVerifiedAt}。${latest.summary}`));
+    renderUnreadState();
+    if (pdfExportMode) {
+      manualReleaseBar.hidden = true;
+      return;
+    }
+    const shouldAutoOpen = unreadUpdates.some(item => item.importance === 'action' || item.importance === 'critical');
+    manualReleaseBar.hidden = !shouldAutoOpen;
+    manualUpdateTrigger.setAttribute('aria-expanded', String(shouldAutoOpen));
+    if (shouldAutoOpen) manualUpdateLive.textContent = `系统更新提醒已展开，共有${unreadUpdates.length}条未读变化`;
+    manualUpdateTrigger.addEventListener('click', () => {
+      const opening = manualReleaseBar.hidden;
+      manualReleaseBar.hidden = !opening;
+      manualUpdateTrigger.setAttribute('aria-expanded', String(opening));
+      if (opening) manualReleaseNotes.open = true;
+    });
+    ack?.addEventListener('click', () => {
+      updates.forEach(item => readIds.add(item.id));
+      writeManualUpdateIds(readIds);
+      renderUnreadState();
+      manualReleaseBar.hidden = true;
+      manualUpdateTrigger.setAttribute('aria-expanded', 'false');
+    });
+  }
 
   function formatGifTime(ms) {
     const seconds = Math.max(0, ms) / 1000;
@@ -2824,11 +3221,11 @@ MAIN_RISK: [一句话概括最大风险]
     });
   }
   const flowEligible = {
-    hr: new Set(['A','B','C','D','E','F','F1','F3','G','G1','G2','H','I','J','K','L','M','Z','T','X','notify','conflict','exception','headhunter']),
+    hr: new Set(['A','B','C','D','E','F','F1','F3','G','G1','G2','H','I','J','K','L','M','Z','T','X','dashboard','notify','conflict','exception','headhunter']),
     business: new Set(['A','F2','H1','H2','H3','I','notify','exception'])
   };
   const flowOwners = {
-    A:'HR与业务',B:'HR',C:'HR',D:'HR与系统',E:'HR',F:'岗位规则',F1:'HR',F2:'对应评估人',F3:'HR',G:'岗位规则',G1:'HR与系统',G2:'HR',H:'HR',H1:'对应面试官',H2:'对应面试官',H3:'对应面试官',I:'HR与业务',J:'HR',K:'HR',L:'HR',M:'HR',Z:'HR',T:'HR',X:'HR','ai-setup':'有权限的配置人员','mail-intake':'HR与系统',templates:'系统与有权限人员',notify:'系统与HR',conflict:'系统与HR',exception:'HR协同处理',headhunter:'HR或管理员'
+    A:'HR与业务',B:'HR',C:'HR',D:'HR与系统',E:'HR',F:'岗位规则',F1:'HR',F2:'对应评估人',F3:'HR',G:'岗位规则',G1:'HR与系统',G2:'HR',H:'HR',H1:'对应面试官',H2:'对应面试官',H3:'对应面试官',I:'HR与业务',J:'HR',K:'HR',L:'HR',M:'HR',Z:'HR',T:'HR',X:'HR',dashboard:'HR与系统','ai-setup':'有权限的配置人员','mail-intake':'HR与系统',templates:'系统与有权限人员',notify:'系统与HR',conflict:'系统与HR',exception:'HR协同处理',headhunter:'HR或管理员'
   };
 
   function showFlowToast(message) {
@@ -2990,7 +3387,8 @@ MAIN_RISK: [一句话概括最大风险]
     label.textContent = (viewButtons.find(button => button.dataset.view === activeView)?.textContent.trim() || '') + '目录';    group.append(label);
     const items = [{ id: 'recruitment-flow', mark: '◆', title: '完整招聘框架' }, ...currentNavModules().map(moduleNavItem)];
     const functionSections = {
-      'function-recruitment-requirements': '招聘项目入口',
+      'function-dashboard': '招聘工作台与项目入口',
+      'function-recruitment-requirements': '招聘工作台与项目入口',
       'function-ai-integration': '配置、自动化与外部协作',
       'function-email-auto-pull': '配置、自动化与外部协作',
       'function-notification-records': '配置、自动化与外部协作',
@@ -3171,6 +3569,28 @@ MAIN_RISK: [一句话概括最大风险]
 
   searchInput.addEventListener('input', applyFilters);
   document.addEventListener('click', event => {
+    const quickButton = event.target.closest('[data-hr-quick-target]');
+    if (quickButton) {
+      event.preventDefault();
+      if (activeView !== 'hr') return;
+      const target = document.getElementById(quickButton.dataset.hrQuickTarget);
+      if (!target || target.closest('[data-audience]')?.dataset.audience !== 'hr') return;
+      if (searchInput.value) {
+        searchInput.value = '';
+        applyFilters();
+      }
+      const module = target.closest('.module');
+      module?.classList.remove('is-collapsed');
+      const moduleToggle = module?.querySelector(':scope > .module-head .module-toggle span:last-child');
+      if (moduleToggle) moduleToggle.textContent = '收起';
+      target.closest('details')?.setAttribute('open', '');
+      target.classList.remove('navigation-flash');
+      void target.offsetWidth;
+      target.classList.add('navigation-flash');
+      window.setTimeout(() => target.classList.remove('navigation-flash'), 2200);
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
     const link = event.target.closest('a[data-function-link], a[data-cross-link]');
     if (!link) return;
     event.preventDefault();
@@ -3178,7 +3598,7 @@ MAIN_RISK: [一句话概括最大风险]
     if (!href || href === '#') return;
     const target = document.querySelector(href);
     if (!target) return;
-    const targetAudience = target.dataset.audience || 'all';
+    const targetAudience = target.dataset.audience || target.closest('.module')?.dataset.audience || 'all';
     if (targetAudience !== 'all' && targetAudience !== activeView) {
       setView(targetAudience, false);
     }
@@ -3189,8 +3609,17 @@ MAIN_RISK: [一句话概括最大风险]
     target.classList.remove('is-collapsed');
     const toggle = target.querySelector(':scope > .module-head .module-toggle span:last-child');
     if (toggle) toggle.textContent = '收起';
+    const detailLabel = link.dataset.detailLabel;
+    const detailTarget = detailLabel ? [...target.querySelectorAll('[data-nav-label]')].find(item => item.dataset.navLabel === detailLabel) : null;
+    const scrollTarget = detailTarget || target;
+    const containingDetails = scrollTarget.closest('details');
+    if (containingDetails) containingDetails.open = true;
+    scrollTarget.classList.remove('navigation-flash');
+    void scrollTarget.offsetWidth;
+    scrollTarget.classList.add('navigation-flash');
+    window.setTimeout(() => scrollTarget.classList.remove('navigation-flash'), 2200);
     setActiveNav(target.id);
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
   document.querySelectorAll('.faq-expand-all').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -3326,6 +3755,7 @@ MAIN_RISK: [一句话概括最大风险]
   addOperationFieldGuides();
   initializeGifPlayers();
   prepareCollapsibles();
+  initializeManualUpdates();
   setView(activeView);
   if (pdfExportMode) {
     document.body.classList.add('pdf-export');

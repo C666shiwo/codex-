@@ -13,6 +13,8 @@
     "candidate-applications-assets/portfolio-assessment-flow.gif": "f62f113ab162a87d",
     "candidate-applications-assets/resume-screening.gif": "2634e4e0b4faa343",
     "candidate-applications-assets/video-interview-flow.gif": "dd87dc40f61a7afb",
+    "dashboard-assets/dashboard-data-analysis.gif": "3d6959d7247ccef1",
+    "dashboard-assets/dashboard-workbench-and-analysis.gif": "28333582ef96b67d",
     "email-auto-pull-assets/email-binding-and-enable.gif": "09781f42c8ebae95",
     "headhunter-account-assets/headhunter-account-create-and-authorize.gif": "2189a2fb8f22ca43",
     "hr-assets/ai-interview.gif": "597b880d58a5312b",
@@ -744,6 +746,109 @@
           "title": "面试完成并提交面评",
           "frames": [
             4
+          ]
+        }
+      ]
+    },
+    "3d6959d7247ccef1": {
+      "original": "dashboard-assets/dashboard-data-analysis.gif",
+      "frames": [
+        "gif-player/3d6959d7247ccef1/frame-001.webp",
+        "gif-player/3d6959d7247ccef1/frame-002.webp",
+        "gif-player/3d6959d7247ccef1/frame-003.webp",
+        "gif-player/3d6959d7247ccef1/frame-004.webp",
+        "gif-player/3d6959d7247ccef1/frame-005.webp"
+      ],
+      "durations": [
+        2800,
+        3200,
+        3800,
+        3500,
+        4000
+      ],
+      "playableFrames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "steps": [
+        {
+          "title": "我的视角下方有五个图表",
+          "frames": [
+            0
+          ]
+        },
+        {
+          "title": "确认数据范围是负责＋授权",
+          "frames": [
+            1
+          ]
+        },
+        {
+          "title": "点漏斗查看详情进入独立页面",
+          "frames": [
+            2
+          ]
+        },
+        {
+          "title": "切全局视角看到不同的图表",
+          "frames": [
+            3
+          ]
+        },
+        {
+          "title": "全局视角下也能下钻分析",
+          "frames": [
+            4
+          ]
+        }
+      ]
+    },
+    "28333582ef96b67d": {
+      "original": "dashboard-assets/dashboard-workbench-and-analysis.gif",
+      "frames": [
+        "gif-player/28333582ef96b67d/frame-001.webp",
+        "gif-player/28333582ef96b67d/frame-002.webp",
+        "gif-player/28333582ef96b67d/frame-003.webp",
+        "gif-player/28333582ef96b67d/frame-004.webp"
+      ],
+      "durations": [
+        2600,
+        2800,
+        3500,
+        4000
+      ],
+      "playableFrames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "steps": [
+        {
+          "title": "打开数据看板默认显示我的视角",
+          "frames": [
+            0
+          ]
+        },
+        {
+          "title": "悬浮卡片看tooltip含义",
+          "frames": [
+            1
+          ]
+        },
+        {
+          "title": "点击待办卡片弹出候选人名单抽屉",
+          "frames": [
+            2
+          ]
+        },
+        {
+          "title": "在抽屉里点查看进入候选人详情",
+          "frames": [
+            3
           ]
         }
       ]
