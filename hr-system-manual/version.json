@@ -1,10 +1,10 @@
 {
-  "version": "2026.08.26-dashboard-local-review",
-  "updatedAt": "2026-08-26",
+  "version": "2026.09.09-candidate-contact-and-termination-email-local-review",
+  "updatedAt": "2026-09-09",
   "publicUrl": "https://c666shiwo.github.io/codex-/hr-system-manual/",
-  "status": "dashboard-local-review",
-  "latestUpdateId": "2026-08-26-dashboard",
-  "lastVerifiedAt": "2026-08-26",
-  "recentUpdateCount": 3,
+  "status": "candidate-contact-and-termination-email-local-review",
+  "latestUpdateId": "2026-09-09-candidate-contact-edit",
+  "lastVerifiedAt": "2026-09-09",
+  "recentUpdateCount": 5,
   "assetCount": 49
 }
