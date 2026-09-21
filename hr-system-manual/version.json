@@ -1,10 +1,12 @@
 {
-  "version": "2026.09.09-candidate-contact-and-termination-email-local-review",
-  "updatedAt": "2026-09-09",
+  "version": "2026.09.21-dashboard-feature-branches",
+  "updatedAt": "2026-09-21",
   "publicUrl": "https://c666shiwo.github.io/codex-/hr-system-manual/",
-  "status": "candidate-contact-and-termination-email-local-review",
-  "latestUpdateId": "2026-09-09-candidate-contact-edit",
-  "lastVerifiedAt": "2026-09-09",
-  "recentUpdateCount": 5,
-  "assetCount": 49
+  "status": "published",
+  "latestUpdateId": "2026-09-21-dashboard-feature-branches",
+  "lastVerifiedAt": "2026-09-21",
+  "recentUpdateCount": 6,
+  "assetCount": 49,
+  "sourceBranches": ["feature/20260915", "feature/20260920"],
+  "sourceHead": "3d9347d2b458"
 }

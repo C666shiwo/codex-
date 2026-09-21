@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="智能精准学 HR 系统操作手册">
 <meta name="robots" content="index,follow">
-  <title>HR 系统操作手册｜空白完整框架</title>
+  <title>HR 系统操作手册｜功能详解与操作规范</title>
   <style>
     :root{--purple:#6146ff;--purple-dark:#39279f;--purple-soft:#f1efff;--ink:#18181b;--muted:#71717a;--line:#e4e4e7;--surface:#fff;--canvas:#f7f7f8;--soft:#fafafa;--green:#18864b;--green-soft:#ecfdf3;--orange:#b45309;--orange-soft:#fff7ed;--red:#be123c;--red-soft:#fff1f2;--shadow:0 10px 30px rgba(24,24,27,.07)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--canvas);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;line-height:1.65}button,input{font:inherit}button{cursor:pointer}.progress{position:fixed;z-index:20;inset:0 0 auto;height:4px;background:var(--purple);transform-origin:left;transform:scaleX(0)}.shell{min-height:100vh;display:flex}.sidebar{position:fixed;inset:0 auto 0 0;z-index:10;width:276px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:12px;padding:22px 22px 18px;border-bottom:1px solid var(--line)}.brand img{width:152px;height:auto;display:block}.brand-note{margin-left:auto;color:var(--muted);font-size:11px;writing-mode:vertical-rl}.sidebar-tools{padding:16px 16px 6px}.search{position:relative}.search input{width:100%;height:38px;padding:0 36px 0 12px;border:1px solid var(--line);border-radius:6px;color:var(--ink);outline:none;background:var(--soft)}.search input:focus{border-color:var(--purple);background:var(--surface);box-shadow:0 0 0 3px var(--purple-soft)}.search span{position:absolute;right:12px;top:5px;color:var(--muted);font-size:19px}.view-switch{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding-top:10px}.view-switch button{border:1px solid transparent;background:transparent;color:var(--muted);padding:6px 3px;border-radius:5px;font-size:12px}.view-switch button.active{background:var(--purple-soft);color:var(--purple-dark);border-color:#d9d2ff;font-weight:700}.nav{padding:10px 12px 22px;overflow:auto}.nav-group{margin-top:14px}.nav-label{padding:4px 10px;color:#a1a1aa;font-size:11px;letter-spacing:.08em}.nav a{display:flex;gap:9px;align-items:center;color:#3f3f46;text-decoration:none;padding:9px 10px;margin:2px 0;border-left:3px solid transparent;border-radius:0 5px 5px 0;font-size:13px}.nav a:hover{background:var(--soft);color:var(--purple-dark)}.nav a.active{color:var(--purple-dark);background:var(--purple-soft);border-left-color:var(--purple);font-weight:700}.nav-mark{width:17px;color:var(--purple);text-align:center;font-size:12px}.sidebar-foot{margin-top:auto;padding:13px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.main{margin-left:276px;width:calc(100% - 276px)}.topbar{position:sticky;top:4px;z-index:8;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:66px;padding:12px 40px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.crumb{color:var(--muted);font-size:12px}.crumb strong{color:var(--ink);font-size:13px}.top-actions{display:flex;align-items:center;gap:10px}.status-dot{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:12px}.status-dot i{width:7px;height:7px;background:var(--green);border-radius:50%}.print-btn{border:1px solid var(--line);background:var(--surface);color:#3f3f46;border-radius:5px;padding:7px 11px;font-size:12px}.print-btn:hover{border-color:var(--purple);color:var(--purple-dark)}.content{max-width:1380px;margin:0 auto;padding:36px 40px 80px}.hero{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(320px,.9fr);gap:24px;align-items:end;padding:4px 0 28px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--purple);font-size:12px;letter-spacing:.14em;font-weight:700}h1{margin:6px 0 8px;font-size:clamp(29px,3.2vw,46px);letter-spacing:-.02em;line-height:1.18}.hero p{max-width:790px;margin:0;color:#52525b;font-size:14px}.hero-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stat{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr;column-gap:10px;align-content:start;min-height:108px;border:1px solid var(--line);background:var(--surface);padding:13px;border-radius:6px}.stat b{grid-row:1 / span 2;color:var(--purple-dark);font-size:18px;line-height:1.25}.stat strong{display:block;color:var(--ink);font-size:12px;line-height:1.4}.stat span{display:block;margin-top:4px;color:var(--muted);font-size:10px;line-height:1.5}.overview{margin:26px 0 28px}.overview-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}.overview-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:18px 20px 12px}.overview-head h2{font-size:22px}.overview-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.overview-image{display:block;width:100%;max-height:720px;object-fit:contain;background:#fff;border-top:1px solid var(--line);cursor:zoom-in}.flow-index{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:14px 20px 20px}.flow-index a{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:5px;color:#3f3f46;text-decoration:none;font-size:12px;background:var(--soft)}.flow-index a:hover{border-color:var(--purple);color:var(--purple-dark);background:var(--purple-soft)}.flow-index b{color:var(--purple)}.logic-line{margin:0;padding:13px 20px 18px;color:var(--purple-dark);font-size:13px;border-top:1px solid var(--line);background:var(--purple-soft)}.principles{margin:26px 0 22px;padding:18px 20px;border-left:4px solid var(--purple);background:var(--purple-soft);display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center}.principles h2{margin:0;font-size:16px;color:var(--purple-dark)}.principles p{margin:0;color:#4c3b9f;font-size:13px}.field-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 14px;margin:0 0 28px;background:var(--surface);border:1px solid var(--line);border-radius:7px}.field-toolbar strong{font-size:12px;margin-right:4px}.field-toolbar button{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:5px 9px;color:var(--muted);font-size:11px}.field-toolbar button.active{color:var(--purple-dark);border-color:#c7bfff;background:var(--purple-soft);font-weight:700}.module{margin:30px 0 44px;scroll-margin-top:96px}.module[hidden]{display:none}.module-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:14px}.module-title{display:flex;align-items:baseline;gap:10px}.module-num{color:var(--purple);font-size:13px;font-weight:800}h2{margin:0;font-size:25px;letter-spacing:-.015em}.module-meta{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.tag{display:inline-flex;align-items:center;min-height:24px;padding:2px 8px;border-radius:4px;background:var(--soft);border:1px solid var(--line);color:var(--muted);font-size:11px}.tag.purple{color:var(--purple-dark);background:var(--purple-soft);border-color:#d9d2ff}.tag.green{color:var(--green);background:var(--green-soft);border-color:#b7e4c8}.tag.orange{color:var(--orange);background:var(--orange-soft);border-color:#fed7aa}.module-lead{margin:0 0 16px;color:#52525b;font-size:14px}.module-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:16px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:7px;box-shadow:var(--shadow)}.panel-title{padding:14px 16px 10px;font-size:13px;font-weight:700;border-bottom:1px solid var(--line)}.panel-body{padding:14px 16px}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.info-block{padding:11px 12px;background:var(--soft);border-left:3px solid var(--line)}.info-block b{display:block;margin-bottom:3px;font-size:12px}.info-block span{color:var(--muted);font-size:12px}.rule-box{margin-top:14px;padding:13px 14px;border:1px solid #fed7aa;background:var(--orange-soft);color:#854d0e;font-size:12px}.rule-box strong{color:var(--orange)}.screenshot{overflow:hidden;position:relative}.screenshot img{display:block;width:100%;max-height:430px;object-fit:contain;object-position:top center;background:#f4f4f5;cursor:zoom-in}.shot-caption{display:flex;justify-content:space-between;gap:8px;padding:8px 12px;color:var(--muted);font-size:11px;border-top:1px solid var(--line)}.zoom-link{border:0;padding:0;color:var(--purple);background:none;font-size:11px}.steps{margin:0;padding:0;list-style:none;counter-reset:step}.steps li{position:relative;display:grid;grid-template-columns:28px 1fr;gap:10px;padding:0 0 13px;margin-bottom:13px;border-bottom:1px dashed var(--line)}.steps li:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0}.steps li:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;color:var(--purple-dark);background:var(--purple-soft);font-size:11px;font-weight:700}.steps b{display:block;font-size:13px}.steps span{color:var(--muted);font-size:12px}.steps em{display:inline-block;margin-top:4px;color:var(--green);font-style:normal;font-size:11px}.gif-panel img{display:block;width:100%;max-height:420px;object-fit:contain;background:#f4f4f5;cursor:zoom-in}.gif-note{padding:8px 12px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.field-panel{margin-top:16px}.table-scroll{overflow-x:auto}.standard-table{width:100%;border-collapse:collapse;font-size:12px;min-width:930px}.standard-table th{text-align:left;color:#52525b;background:var(--soft);font-weight:700}.standard-table th,.standard-table td{padding:9px 10px;border:1px solid var(--line);vertical-align:top}.standard-table td{color:#52525b}.standard-table td:first-child{color:var(--ink);font-weight:700}.field-badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;margin-right:5px;border-radius:50%;background:var(--purple);color:white;font-size:11px;cursor:zoom-in}.field-type{white-space:nowrap}.field-type b{display:inline-block;padding:2px 5px;border-radius:3px;font-size:10px;color:var(--muted);background:#f4f4f5}.field-type.required b{color:var(--red);background:var(--red-soft)}.field-type.button b{color:var(--purple-dark);background:var(--purple-soft)}.field-type.readonly b{color:var(--green);background:var(--green-soft)}.standard-table tr[hidden]{display:none}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;margin:0;padding:0;list-style:none}.checklist li{position:relative;padding-left:19px;color:#52525b;font-size:12px}.checklist li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}.checklist li.warn:before{content:"!";color:var(--orange)}.empty{padding:60px 20px;text-align:center;color:var(--muted)}.empty b{display:block;color:var(--ink);margin-bottom:5px}.lightbox{position:fixed;z-index:30;inset:0;display:none;place-items:center;padding:28px;background:rgba(24,24,27,.78)}.lightbox.open{display:grid}.lightbox img{max-width:min(1200px,96vw);max-height:88vh;background:white;box-shadow:0 20px 80px rgba(0,0,0,.35)}.lightbox>button{position:fixed;z-index:2;top:18px;right:22px;width:38px;height:38px;border:1px solid rgba(255,255,255,.45);background:transparent;color:white;border-radius:50%;font-size:22px}.footnote{margin:40px 0 0;padding:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
@@ -541,73 +541,58 @@ flowchart TB
         <div class="view-tools-row"><div class="field-toolbar" id="fieldToolbar" hidden><strong>字段与操作筛选</strong><button class="active" data-field-filter="all">全部内容</button><button data-field-filter="required">必须填写</button><button data-field-filter="optional">可以填写</button><button data-field-filter="button">操作按钮</button><button data-field-filter="readonly">系统展示项</button></div><div class="collapse-toolbar" id="collapseToolbar" hidden><strong id="collapseToolbarLabel">当前视图</strong><button type="button" data-collapse-action="open">全部展开</button><button type="button" data-collapse-action="close">全部收起</button></div></div>
         <div id="modules">
 
-<section class="module" id="function-dashboard" data-audience="function" data-map-entry="数据看板" data-map-status="真实页面教学已完成" data-map-note="工作台待办、我的与全局视角、数据范围、下钻入口及统计口径已整理。" data-keywords="数据看板 工作台 我的视角 全局视角 负责 授权 负责加授权 待安排面试 待跟进简历 待业务评价 超时待处理 当前环节积压 招聘漏斗 招聘趋势 环节效率 HR处理效率 桑基图 岗位效率 来源效果 漏斗修复">
-<div class="module-head">
-<div class="module-title"><span class="module-num">功能 / 01</span><h2>数据看板</h2></div>
-<div class="module-meta"><span class="tag purple">招聘工作台</span><span class="tag blue">过程监控与复盘</span></div>
-</div>
-<p class="module-lead">数据看板同时承担两类任务：顶部待办卡片和积压数字用于快速定位候选人并进入处理；漏斗、趋势、效率和来源图表用于观察招聘过程并开展复盘。看板帮助发现问题，但真实候选人状态仍需进入“候选人与投递”按实际进展维护。</p>
-<div class="rule-box"><strong>学习目标：</strong>完成本节后，可以区分“我的视角”和“全局视角”，正确使用负责／授权范围，从卡片或积压进入候选人待办，并理解不同图表的统计口径与使用边界。</div>
-<div class="function-relations" aria-label="数据看板功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>数据来源：</b><a href="#function-recruitment-requirements" data-function-link>招聘需求池</a>＋<a href="#function-position-stages" data-function-link>职位与阶段</a>＋<a href="#function-candidate-applications" data-function-link>候选人与投递</a></span><span class="relation-item"><b>工作台产出：</b>待办与超时名单</span><span class="relation-item"><b>分析产出：</b>漏斗、趋势、效率和来源判断</span><span class="relation-item"><b>下一动作：</b>进入候选人或招聘项目处理</span></div>
-
-<div class="panel" data-nav-item data-nav-label="数据看板是什么"><div class="panel-title">先区分工作台与分析看板</div><div class="panel-body"><ol class="steps"><li><div><b>工作台：告诉你现在先处理谁</b><span>点击待安排面试、待跟进简历、待业务评价、超时待处理等卡片，打开对应候选人列表；当前环节积压中的数量也可下钻定位。</span></div></li><li><div><b>过程监控：告诉你招聘卡在哪里</b><span>通过招聘流程漏斗、招聘趋势、环节效率和当前积压，识别阶段转换、处理速度和超时风险。</span></div></li><li><div><b>招聘复盘：告诉你后续如何改进</b><span>HRBP和管理员可在全局视角比较HR处理、岗位效率、完成处理流向和来源效果，用于发现问题和安排改进。</span></div></li></ol></div></div>
-
-<div class="panel screenshot">
-<div class="panel-title" data-nav-item data-nav-label="我的视角与全局视角">我的视角：个人工作台与本人参与招聘的数据</div>
-<img loading="lazy" decoding="async" src="dashboard-assets/dashboard-my-overview.png" data-zoom="dashboard-assets/dashboard-my-overview.png" alt="数据看板我的视角全貌：八个工作台卡片、日期和数据范围、招聘漏斗、趋势、效率、积压及未通过原因">
-<div class="shot-caption"><span>HR和HR实习生查看自己的数据；HRBP和管理员也可使用。顶部卡片用于进入待办，下方图表用于监控和复盘。</span><button class="zoom-link" type="button">点击放大</button></div>
-</div>
-<div class="panel screenshot">
-<div class="panel-title">全局视角：跨HR与跨岗位分析</div>
-<img loading="lazy" decoding="async" src="dashboard-assets/dashboard-global-overview.png" data-zoom="dashboard-assets/dashboard-global-overview.png" alt="数据看板全局视角全貌：全局工作台卡片、HR处理效率、趋势、完成处理桑基图、积压、岗位效率与来源效果">
-<div class="shot-caption"><span>仅HRBP和管理员可见，用于观察全公司招聘过程；不能把单一耗时或数量直接作为个人绩效结论。</span><button class="zoom-link" type="button">点击放大</button></div>
-</div>
-
-<div class="panel" data-nav-item data-nav-label="两个视角能看到的图表不一样"><div class="panel-title">两个视角能看到的图表不一样</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>图表</th><th>我的视角</th><th>全局视角</th><th>什么时候用</th></tr></thead><tbody>
-<tr><td>招聘流程漏斗</td><td>✅</td><td>❌</td><td>看本人各阶段到达人数和转化率；按职位逐个展示。</td></tr>
-<tr><td>招聘趋势（事件口径）</td><td>✅</td><td>✅</td><td>看期间内流入、面试、Offer、入职事件变化；可切日／周／月聚合。</td></tr>
-<tr><td>环节效率分析</td><td>✅</td><td>❌</td><td>看本人公共环节的平均耗时，发现耗时偏高环节。</td></tr>
-<tr><td>当前环节积压（按超时）</td><td>✅（卡片+数字）</td><td>✅（汇总表）</td><td>我的视角卡片用于快速定位；全局视角汇总表用于看全公司各环节积压分布。</td></tr>
-<tr><td>未通过原因分布</td><td>✅</td><td>❌</td><td>看本人淘汰原因，调整筛选标准。</td></tr>
-<tr><td><strong>HR 处理效率对比</strong></td><td>❌</td><td>✅</td><td>跨 HR 比终态处理量和平均耗时；用于发现工作量差异和异常情况。</td></tr>
-<tr><td><strong>完成处理桑基图</strong></td><td>❌</td><td>✅</td><td>看 HR → 岗位的完成处理流向，发现哪位 HR 主要负责哪些岗位。</td></tr>
-<tr><td><strong>岗位效率对比</strong></td><td>❌</td><td>✅</td><td>跨岗位比终态处理量和平均耗时；发现耗时偏高的岗位。</td></tr>
-<tr><td><strong>招聘来源效果</strong></td><td>❌</td><td>✅</td><td>按渠道（BOSS 邮件／猎头／小红书等）对比进入→面试→Offer→入职转化；受历史数据缺失影响较大。</td></tr>
-</tbody></table></div><div class="rule-box"><strong class="warn">提醒：</strong>全局视角 <b>没有「数据范围」筛选器</b>（负责／授权／负责＋授权），直接看全公司数据。我的视角才有这个筛选器。</div></div>
-
-<div class="panel field-panel"><div class="panel-title">页面上只需要先掌握这些内容</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与判断规范</th></tr></thead><tbody>
-<tr data-field-type="button"><td>八个顶部卡片</td><td class="field-type button"><b>操作按钮</b></td><td>显示当前待办或阶段人数；点击后<b>弹出候选人名单抽屉</b>（不是跳转页面），再进入候选人详情处理真实招聘动作。</td></tr>
-<tr data-field-type="optional"><td>日期范围</td><td class="field-type optional"><b>可以填写</b></td><td>用于查看选定期间的漏斗、趋势和效率。当前环节积压属于当前快照，不随日期范围变化。</td></tr>
-<tr data-field-type="optional"><td>数据范围（负责／授权／负责＋授权）</td><td class="field-type optional"><b>可以填写</b></td><td><strong class="warn">仅「我的视角」有这个筛选器，全局视角直接看全公司数据。</strong>负责=本人是岗位负责人；授权=本人协作他人负责的岗位；负责＋授权=合并两类数据。</td></tr>
-<tr data-field-type="button"><td>查看详情／积压数字</td><td class="field-type button"><b>操作按钮</b></td><td>图表的「查看详情」链接会进入<b>独立页面</b>（不是弹抽屉）；积压数字点击弹出候选人列表抽屉。下钻后仍需核对真实状态。</td></tr>
-<tr data-field-type="button"><td>我的视角／全局视角</td><td class="field-type button"><b>操作按钮</b></td><td>HR和HR实习生使用我的视角；HRBP和管理员可切换全局视角查看跨人员、跨岗位数据。</td></tr>
-</tbody></table></div></div>
-
-<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="工作台：点击卡片弹出抽屉处理当日待办">关键操作：从工作台卡片弹出抽屉，处理当日待办</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-workbench-and-analysis.gif" data-zoom="dashboard-assets/dashboard-workbench-and-analysis.gif" alt="数据看板操作：悬浮卡片看tooltip含义，点击顶部卡片弹出候选人名单抽屉，在抽屉中点击查看进入候选人详情处理"><div class="gif-note">默认进入「我的视角」 → 看顶部 8 个待办卡片 → 鼠标悬浮任意卡片都有<b>黑气泡 tooltip</b>解释"这张卡要你做什么" → 找数字不为 0 的待办（如「待安排面试」8、「待跟进简历」14）→ 点击卡片 → <b>系统弹出候选人名单抽屉</b>（不是跳转页面，看板不丢失）→ 抽屉里点「查看」进入候选人详情页 → 处理完后返回看板继续点下一张卡片。<br><br><strong class="warn">小提醒：</strong>卡片弹出的抽屉是「候选人名单」，不是候选人详情。名单里只有姓名、职位、阶段和进入时间，具体面试安排、评价、Offer 操作都在候选人详情页里做。</div></div>
-<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="查看不同权限具体数据">查看不同权限具体数据</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-data-analysis.gif" data-zoom="dashboard-assets/dashboard-data-analysis.gif" alt="数据看板数据板块：确认数据范围，点击图表查看详情进入独立页面，切换全局视角看到不同的图表集"><div class="gif-note">默认进入「我的视角」→ 向下看 5 个图表（漏斗、趋势、环节效率、积压、未通过原因）→ 确认「数据范围」是「负责＋授权」（只看"负责"漏斗数字会少很多）→ 点击图表的「查看详情」进入<b>独立页面</b>（不是弹抽屉）→ HRBP／管理员切到「全局视角」→ 看到完全不同的图表集（桑基图、岗位效率、来源效果，没有漏斗和环节效率）→ 在全局视角下同样可以下钻详情页。<br><br><strong class="warn">记住两条规则：</strong>① 图表「查看详情」进独立页面，卡片和积压数字弹抽屉；② 全局视角<b>没有数据范围筛选器</b>，直接看全公司数据。</div></div>
-<div class="panel field-panel"><div class="panel-title">下钻处理需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
-<tr data-field-type="button"><td>待办卡片</td><td class="field-type button"><b>操作按钮</b></td><td>点击弹出候选人名单抽屉（不是跳转页面）；适合每日定位待安排、待跟进、待评价和超时记录。</td></tr>
-<tr data-field-type="readonly"><td>候选人、应聘职位、当前阶段、进入阶段时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>进入处理前先核对投递对象和停留时间，避免在错误岗位或阶段操作。</td></tr>
-<tr data-field-type="button"><td>查看</td><td class="field-type button"><b>操作按钮</b></td><td>从抽屉里的名单进入候选人与投递详情，再根据实际招聘进展推进、安排、评价或形成结果。</td></tr>
-<tr data-field-type="button"><td>当前环节积压数字</td><td class="field-type button"><b>操作按钮</b></td><td>按阶段和超时区间弹出对应积压候选人抽屉，用于追踪责任人和下一动作。</td></tr>
-<tr data-field-type="button"><td>图表「查看详情」链接</td><td class="field-type button"><b>操作按钮</b></td><td>进入<b>独立页面</b>（不是弹抽屉）。漏斗详情页：按职位逐个展示漏斗，有<b>漏斗修复开关</b>（降低历史数据缺失影响）；积压详情页：支持职位筛选 + 数据范围 radiogroup；趋势详情页：可切日／周／月聚合。</td></tr>
-<tr data-field-type="button"><td>日／周／月、职位筛选</td><td class="field-type button"><b>操作按钮</b></td><td>只改变图表聚合与查看范围，不修改候选人或招聘项目数据。</td></tr>
-</tbody></table></div></div>
-
-<div class="panel"><div class="panel-title" data-nav-item data-nav-label="数据口径与漏斗修复">不同图表的数据口径不能混用</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>图表／能力</th><th>核心口径</th><th>正确使用方式</th></tr></thead><tbody>
-<tr><td>招聘流程漏斗</td><td>先按投递创建日期圈定投递集合，再统计这些投递截至当前曾到达的阶段；同一候选人的不同岗位投递分别计数。</td><td>观察阶段到达和转换；后续阶段可以发生在筛选结束日期之后。</td></tr>
-<tr><td>漏斗修复</td><td>用于降低老系统历史数据缺失或不完整对漏斗的影响，使漏斗按正常招聘阶段关系展示。</td><td>只在历史数据导致漏斗异常时使用，不作为日常筛选条件，也不替代对真实候选人状态的核对。</td></tr>
-<tr><td>招聘趋势</td><td>按流入、作品／AI面、人工面试、Offer和入职等事件发生时间统计。</td><td>观察期间内事件变化；不能与按投递创建日期统计的漏斗直接等同。</td></tr>
-<tr><td>环节效率</td><td>按页面口径计算已完成环节的平均耗时。</td><td>用于发现耗时偏高环节；样本量过少时不做强结论。</td></tr>
-<tr><td>当前环节积压</td><td>展示当前仍停留在各环节的投递，是实时快照；超1天、超3天、超7天为互斥区间。</td><td>用于当前待办追踪；不能把三个超时区间重复相加。</td></tr>
-<tr><td>HR处理效率</td><td>按最后一次终态事件的人工操作人归属，排除公开投递、邮件导入、人才库投递和历史导入等系统账号。</td><td>用于发现工作量和流程差异，不直接作为绩效结论。</td></tr>
-<tr><td>历史数据与来源效果</td><td>历史导入可能缺少中间阶段或来源信息。</td><td>出现漏斗不递减、阶段或来源缺失时，先核对历史数据背景，再解释图表。</td></tr><tr><td>完成处理桑基图</td><td>展示所选时间内「最终处理 HR → 岗位」的完成处理量流向；终态事件归属同 HR 处理效率口径。</td><td>发现哪位 HR 在哪些岗位工作量大，或哪些岗位集中在某几位 HR 手上；样本量少时不做强结论。</td></tr>
-<tr><td>岗位效率对比</td><td>按岗位聚合终态处理量和平均耗时。</td><td>发现耗时偏高的岗位；样本量少的岗位不做强结论，先看有没有正常的招聘活动。</td></tr>
-<tr><td>招聘来源效果</td><td>按投递来源（BOSS 邮件／猎头／小红书等）统计进入、面试、Offer、入职的转化。</td><td>来源效果受历史导入数据缺失影响，出现漏斗不递减时先核对数据背景。</td></tr>
-</tbody></table></div></div>
-
-<div class="module-grid"><div class="panel"><div class="panel-title">角色与可见范围</div><div class="panel-body"><ul class="checklist"><li><b>HR、HR实习生：</b>查看"我的视角"及本人数据范围；顶部卡片弹出抽屉处理待办。</li><li><b>HRBP、管理员：</b>可同时查看"我的视角"和"全局视角"；全局视角用于跨 HR、跨岗位对比。</li><li><b>负责：</b>本人是岗位负责人；<b>授权：</b>本人协作他人负责的岗位；<b>负责＋授权：</b>两类数据合并。</li><li>看不到预期数据时，先核对日期、负责范围和职位授权，不先判断为系统故障。</li></ul></div></div><div class="panel"><div class="panel-title">看板使用边界</div><div class="panel-body"><ul class="checklist"><li>每个图表旁的 <b>info 图标</b>（ⓘ）是系统自带的口径解释，遇到看不懂的数字先点它。</li><li>点击卡片或积压进入名单后，必须核对真实招聘进展再处理。</li><li>不得为了降低积压数字而错误推进、终止或回退候选人。</li><li>效率结果受岗位难度、样本量、流程配置和历史数据影响。</li><li>图表用于发现问题和复盘，不替代候选人评价、业务确认与招聘判断。</li></ul></div></div></div>
-<div class="rule-box" data-nav-item data-nav-label="完成标准与边界"><strong>本功能完成标准：</strong><br><br><b>日常 HR（每天必做）：</b>打开看板 → 确认数据范围为「负责＋授权」 → 看顶部卡片找不为 0 的待办 → 点卡片弹出抽屉 → 在抽屉里点「查看」进候选人详情处理；知道卡片弹抽屉、图表跳独立页面的下钻差异。<br><br><b>HRBP／管理员（定期复盘）：</b>切全局视角 → 看 HR 处理效率对比 → 看岗位效率对比 → 看招聘来源效果 → 点「查看详情」进独立页面下钻；知道漏斗、积压、趋势的口径差异，不混用。</div>
+<section class="module" id="function-dashboard" data-audience="function" data-map-entry="数据看板" data-map-status="新版看板已同步" data-map-note="真实页面图片与字段表：实时工作台、岗位快照、累计推进、部门需求、趋势与渠道。" data-keywords="数据看板 我的视角 全局视角 招聘阶段 风险与工具 状态变更快照 累计推进 当前环节积压 未通过原因 部门需求 招聘效率趋势 招聘渠道 查询 导出">
+<div class="module-head"><div class="module-title"><span class="module-num">功能 / 01</span><h2>数据看板</h2></div><div class="module-meta"><span class="tag purple">实时工作台</span><span class="tag blue">岗位与部门分析</span></div></div>
+<p class="module-lead">数据看板用于查看招聘现状与分析招聘数据。我的视角展示本人负责＋获授权岗位的实时招聘阶段，以及按日期、岗位查询的分析结果；全局视角按部门展示需求完成情况、累计招聘阶段、效率趋势和渠道效果。下方以真实页面图片配字段表说明当前能力。</p>
+<div class="rule-box"><strong>学习目标：</strong>完成本节后，可以判断当天哪些招聘环节需要关注，区分“期间发生的状态变化”和“本期新增简历的累计进展”，并结合部门完成情况、趋势与渠道效果开展招聘复盘。</div>
+<div class="rule-box"><strong>阅读说明：</strong>截图保留真实统计值，部分图片裁切为对应模块。不同截图的日期范围不同，不能直接比较人数；截图中的零值、数量和百分比仅代表该次查询结果。招聘安排、评价和结果处理在对应业务页面完成。</div>
+<div class="panel screenshot"><div class="panel-title" data-nav-item data-nav-label="实时招聘阶段与风险">我的视角：招聘阶段与风险工具</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-workbench.png" data-zoom="dashboard-assets/dashboard-workbench.png" alt="真实数据看板的六组招聘阶段与风险工具"><div class="shot-caption"><span>实时范围固定为本人负责＋获授权岗位，不受下方分析日期和岗位筛选影响。</span><button class="zoom-link" type="button">点击放大</button></div></div>
+<div class="panel"><div class="panel-title">招聘阶段与风险字段说明</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／数据</th><th>含义与统计口径</th></tr></thead><tbody><tr><td>简历筛选</td><td>当前处于简历筛选阶段的人数；细分展示“待跟进”。</td></tr>
+<tr><td>作品／笔试</td><td>当前处于作品或笔试阶段的人数；细分展示“待业务评价”和“业务已评价”。</td></tr>
+<tr><td>AI面试</td><td>当前处于AI面试阶段的人数；细分展示“待安排”“进行中”和“待处理结果”。</td></tr>
+<tr><td>人工面试</td><td>当前处于人工面试阶段的人数；细分展示“待安排”“待面试”“待评价”和“已评价”。</td></tr>
+<tr><td>Offer</td><td>当前处于Offer阶段的人数；细分展示“待审批”。</td></tr>
+<tr><td>待入职</td><td>当前等待确认入职的人数；细分展示“待确认”。</td></tr>
+<tr><td>超时待处理</td><td>实时招聘风险提示，与下方按分析范围统计的“当前环节积压”不是同一口径。</td></tr>
+<tr><td>邮件待处理</td><td>待处理邮件异常数量；仅对具备邮件异常处理权限的账号显示。</td></tr></tbody></table></div></div>
+<div class="panel screenshot"><div class="panel-title" data-nav-item data-nav-label="我的视角与全局视角">我的视角：岗位分析与当前积压</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-my-overview.png" data-zoom="dashboard-assets/dashboard-my-overview.png" alt="岗位状态变更快照、历史累计推进、当前环节积压和未通过原因的真实系统页面"><div class="shot-caption"><span>先看上方岗位变化与累计进展，再结合下方积压和未通过原因判断需要关注的环节。示例分析范围为2026-08-01至2026-09-13；左右两栏口径不同，数字不要求相等。</span><button class="zoom-link" type="button">点击放大</button></div></div>
+<div class="panel"><div class="panel-title">我的分析字段与数据说明</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／数据</th><th>含义与统计口径</th></tr></thead><tbody><tr><td>日期／岗位</td><td>选择后点击“查询”才生效；岗位留空表示本人可见的全部岗位。“重置”恢复最近7天与全部可见岗位。</td></tr>
+<tr><td>时间内最新状态变更快照（非漏斗）</td><td>回答“这段时间投递最后变化到了哪里”。统计所选期间发生过状态变化的投递，按期间最后一次变化后的状态归类；不限制投递创建日期，期间没有变化的不计入。</td></tr>
+<tr><td>环节／投递数</td><td>快照表展示归类后的环节及对应投递数量，不是累计达到该环节的人数。</td></tr>
+<tr><td>本期新增简历历史累计推进</td><td>回答“这批新增简历已经推进到哪里”。按投递创建日期圈定本期新增投递，统计截至当前统计时间的历史最远有效进度；后续推进可以发生在筛选结束日期之后。不能拿左侧快照人数计算右侧累计转化率。</td></tr>
+<tr><td>当前环节积压（按超时）</td><td>按已应用日期圈定投递创建时间，再限定招聘中岗位和当前待处理状态；超1天至3天、超3天至7天、超7天为互斥区间。</td></tr>
+<tr><td>待处理人数／超1天／超3天／超7天</td><td>待处理人数包含该环节当前全部待处理投递；后三列分别对应上述三个超时区间，同一投递不会重复计入多个超时列。尚未超时的投递可能只计入待处理总数。HR重点关注超7天及积压较集中的环节。</td></tr>
+<tr><td>未通过原因</td><td>按已应用日期、岗位和阶段统计未通过事件次数及占比，不是去重候选人数。柱状图比较原因次数，环形图看构成；图示34为未通过事件总次数，不应解释为34位不同候选人。用于复盘岗位要求与筛选标准，不单凭占比判断招聘质量。</td></tr>
+<tr><td>统计截止（北京时间）</td><td>表示本次分析统计到的时间；不等于所选日期的结束时间。核对数据前先确认日期范围、已应用岗位与统计截止时间一致。</td></tr>
+<tr><td>展开其余岗位／收起其余岗位</td><td>结果超过2个岗位时默认只展示前2个；展开与收起只改变展示，不改变统计或导出范围。</td></tr>
+<tr><td>导出 Excel</td><td>首次分析成功后可使用，在下载中心生成任务；使用最近一次成功查询的条件，未查询的新条件不会应用到导出。</td></tr></tbody></table></div></div>
+<div class="panel screenshot"><div class="panel-title" data-nav-item data-nav-label="查看不同权限具体数据">全局视角：部门需求与累计招聘阶段</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-global-overview.png" data-zoom="dashboard-assets/dashboard-global-overview.png" alt="真实页面的部门完成情况、招聘需求卡及累计招聘阶段"><div class="shot-caption"><span>仅具备全局看板权限的账号可见。示例为部门展开后的局部页面。</span><button class="zoom-link" type="button">点击放大</button></div></div>
+<div class="panel"><div class="panel-title">全局分析字段与数据说明</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／数据</th><th>含义与统计口径</th></tr></thead><tbody><tr><td>日期／部门／HR拆分显示</td><td>日期和一级部门决定分析范围；HR只控制岗位漏斗中个人数据的展示，不改变部门汇总。修改后点击“查询”生效；全局没有岗位筛选。</td></tr>
+<tr><td>恢复默认</td><td>恢复管理员为当前人员配置的一级部门；未配置时恢复全部有权限部门。默认部门配置不授予额外权限。</td></tr>
+<tr><td>需求总数／已完成／完成率</td><td>统计部门未归档有效需求，不含待启动；只有“已完成”计入完成数，“待完成确认”不计完成。需求完成情况不受日期筛选影响。</td></tr>
+<tr><td>已完成／总HC</td><td>当前需求的已完成招聘人数与计划招聘人数，不是该日期范围内的新增人数。</td></tr>
+<tr><td>招聘开始日期／目标完成日期／招聘周期</td><td>用于对照需求的招聘安排与进度；日期按页面显示的北京时间理解。</td></tr>
+<tr><td>招聘阶段·累计到达人数</td><td>按所选期间新增投递圈定样本，展示累计推进结果；阶段名称和顺序以该岗位配置为准，不固定为顶部工作台的六组阶段。</td></tr>
+<tr><td>阶段转化率／初筛→Offer／流入→入职／Offer→入职</td><td>用于理解对应阶段间的累计转化；无可计算样本时以页面显示为准，不把“—”当成0%。</td></tr>
+<tr><td>部门收起／展开</td><td>初始展开第一张部门卡；折叠仅改变展示，不重新查询。</td></tr></tbody></table></div></div>
+<div class="panel screenshot"><div class="panel-title" data-nav-item data-nav-label="招聘效率趋势">招聘效率趋势</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-global-trend.png" data-zoom="dashboard-assets/dashboard-global-trend.png" alt="真实系统初筛到Offer周趋势、图例和统计说明"><div class="shot-caption"><span>已采集的真实开发环境局部截图，示例选择“初筛→Offer”和“周”。</span><button class="zoom-link" type="button">点击放大</button></div></div>
+<div class="panel"><div class="panel-title">趋势字段与数据说明</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／数据</th><th>含义与统计口径</th></tr></thead><tbody><tr><td>初筛→进面</td><td>统计实际进入人工面试的去重投递，不包含作品／笔试和AI面试。</td></tr>
+<tr><td>初筛→Offer</td><td>按有效历史最远进度达到Offer及后续阶段、或已入职计算；缺少前置记录时仅作统计推定，不补造阶段或日期。</td></tr>
+<tr><td>Offer→入职</td><td>展示累计Offer样本到入职的转化情况。</td></tr>
+<tr><td>周／月</td><td>日期范围达到14天后展示趋势；按周或按月划分后，至少有2个统计周期时，对应选项才可切换。HR应比较同一指标、同一范围的变化，避免把单个周期波动当成最终结论。</td></tr>
+<tr><td>曲线／图例／周期节点</td><td>图例区分岗位，各节点对应一个周期；无可计算样本的周期不计为0%，空周期不连线。</td></tr>
+<tr><td>样本与统计边界</td><td>样本仍可能继续推进，当前趋势不代表最终转化率；主漏斗、趋势和渠道口径不同，不能直接相互校验。</td></tr></tbody></table></div></div>
+<div class="panel screenshot"><div class="panel-title" data-nav-item data-nav-label="招聘渠道分析">招聘渠道分析：流入占比与招聘效果</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-global-channel.png" data-zoom="dashboard-assets/dashboard-global-channel.png" alt="用户提供的真实渠道环形图和六列渠道招聘效果表"><div class="shot-caption"><span>用户提供的真实截图，统计范围为2026-07-01至2026-09-13；保留渠道环形图及完整效果表。</span><button class="zoom-link" type="button">点击放大</button></div></div>
+<div class="panel"><div class="panel-title">渠道字段与数据说明</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／数据</th><th>含义与统计口径</th></tr></thead><tbody><tr><td>渠道流入占比／总流入简历</td><td>按投递来源展示数量和占比。图中总流入79份仅代表该次查询，不是固定指标。</td></tr>
+<tr><td>招聘来源</td><td>按投递来源分组，不是HR或部门分组。</td></tr>
+<tr><td>流入简历数量</td><td>所选范围内该来源的流入份数，与上方渠道占比对应。</td></tr>
+<tr><td>进入人工面试人数</td><td>实际进入人工面试的去重投递数；同一投递多轮只计一次，不含AI面试和作品／笔试。</td></tr>
+<tr><td>Offer人数</td><td>渠道口径要求真实Offer阶段访问记录，不直接套用主漏斗的推定数。</td></tr>
+<tr><td>入职人数</td><td>该来源样本中已入职的人数。</td></tr>
+<tr><td>整体转化率</td><td>入职人数 ÷ 流入简历数量；图示BOSS邮件为1 ÷ 75 ≈ 1.33%，不是Offer转化率。</td></tr>
+<tr><td>历史导入数据</td><td>可能缺少部分阶段信息；不会因后续Offer或入职记录反推出不存在的人工面试记录。</td></tr></tbody></table></div></div>
+<div class="rule-box" data-nav-item data-nav-label="新版看板数据口径"><strong>口径边界：</strong>顶部实时状态与下方期间分析不能混用；查询后才应用新的筛选条件；状态快照、累计推进、趋势和渠道各自回答不同问题。图表用于了解现状与复盘，不替代真实业务判断。</div>
+<div class="rule-box"><strong>完成标准：</strong>每日能指出需要关注的招聘阶段与超时风险；周期复盘能说清查询范围、数据口径及主要积压或未通过原因；具备全局权限时，能结合部门完成情况、趋势和渠道表现形成下一步核实或改进事项。不要为了改善看板数字而错误推进或终止候选人。</div>
 </section>
 
 <section class="module" id="function-recruitment-requirements" data-audience="function" data-map-entry="招聘需求池" data-map-status="静态教学已完成" data-map-note="需求创建、HC进度、状态联动、暂停恢复及完成归档规则已整理。" data-keywords="招聘需求池 招聘需求 HC 联合创建 职位草稿 待启动 招聘中 暂停 恢复 待完成确认 完成 归档 招聘漏斗">
@@ -853,21 +838,20 @@ flowchart TB
 <div class="rule-box"><strong>完成标准：</strong>当前需求中不再存在待处理Offer、锁定HC或进行中候选人；每位候选人均已在规定时间内完成转岗、Offer、终止投递或进入人才库等真实处理；需求显示“已归档”并进入只读状态。</div>
 </section>
 
-<section class="module" id="hr-dashboard-review" data-audience="hr" data-keywords="数据巡检 招聘复盘 数据看板 工作台 待办卡片 超时积压 每日巡检 每周复盘 负责 授权 全局视角">
+<section class="module" id="hr-dashboard-review" data-audience="hr" data-keywords="数据巡检 招聘复盘 数据看板 实时工作台 招聘阶段 风险与工具 超时积压 每日巡检 每周复盘 状态变更快照 累计漏斗 部门 全局视角">
 <div class="module-head"><div class="module-title"><span class="module-num">HR / 08</span><h2>数据巡检与招聘复盘</h2></div><div class="module-meta"><span class="tag purple">贯穿全流程</span><span class="tag orange">每日待办＋周期复盘</span></div></div>
-<p class="module-lead">数据看板首先是HR的招聘工作台，其次才是分析报表。每日通过卡片和积压定位候选人并更新真实状态；每周通过趋势、效率和原因分布识别协作问题；项目收尾时用数据检查是否仍有候选人无人跟进。</p>
+<p class="module-lead">数据看板首先是HR的实时招聘工作台，其次才是查询分析。每日从招聘阶段和“风险与工具”了解招聘现状；周期复盘时再按日期和岗位／部门查询，区分状态变化、累计推进、积压、原因、趋势和渠道口径。</p>
 <div class="hr-standard-strip"><span class="time">每日｜先看待办和超时积压</span><span class="collab">每周｜复盘趋势、效率与原因</span><span class="state">底线｜不为降低数字错误处理候选人</span></div>
 
-<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="每日巡检与待办处理">操作演示：从数据看板进入当天待办</div><img loading="lazy" decoding="async" src="dashboard-assets/dashboard-workbench-and-analysis.gif" data-zoom="dashboard-assets/dashboard-workbench-and-analysis.gif" alt="HR使用数据看板选择负责范围，从待办卡片进入候选人名单，并查看积压与漏斗"><div class="gif-note">选择正确日期与负责范围 → 点击待办或超时卡片 → 核对候选人、岗位和当前阶段 → 点击查看进入候选人与投递 → 按真实进展完成安排、跟进或结果处理。HRBP和管理员可继续切换全局视角复盘。</div></div>
+<div class="panel" data-nav-item data-nav-label="每日巡检与待办处理"><div class="panel-title">查看当天招聘现状</div><div class="panel-body"><ol class="steps"><li><div><b>先看招聘阶段</b><span>依次检查简历筛选、作品／笔试、AI面试、人工面试、Offer和待入职的总数与细分状态。</span></div></li><li><div><b>再看风险与工具</b><span>优先处理“超时待处理”；具备邮件异常处理权限时再核对“邮件待处理”。顶部范围固定为本人负责＋授权，不需要再选择负责范围。</span></div></li></ol></div></div>
 <div class="panel field-panel"><div class="panel-title">每日巡检需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>HR操作规范</th><th>完成结果</th></tr></thead><tbody>
-<tr data-field-type="optional"><td>负责／授权／负责＋授权</td><td class="field-type optional"><b>可以填写</b></td><td>负责只看本人负责岗位；授权只看本人协助他人招聘的岗位；负责＋授权用于检查本人参与的全部招聘。</td><td>数据范围与本人实际分工一致。</td></tr>
-<tr data-field-type="button"><td>待安排面试／待跟进简历／待业务评价</td><td class="field-type button"><b>操作按钮</b></td><td>每天依次检查，点击卡片进入对应候选人；初筛仍需在3个工作日内完成，业务评价缺失时及时提醒。</td><td>每条待办都有负责人和下一动作。</td></tr>
-<tr data-field-type="button"><td>超时待处理／当前环节积压</td><td class="field-type button"><b>操作按钮</b></td><td>优先处理超时记录；点击数字进入明细，核对进入阶段时间和实际进展。</td><td>超时原因、责任人和处理计划清楚。</td></tr>
-<tr data-field-type="button"><td>查看</td><td class="field-type button"><b>操作按钮</b></td><td>进入候选人与投递后再执行实际流程动作；面试后7个工作日内给出结果或真实进度反馈。</td><td>系统状态、内部判断和候选人沟通一致。</td></tr>
-<tr data-field-type="readonly"><td>作品／AI面、人工面、Offer中、待入职</td><td class="field-type readonly"><b>系统展示项</b></td><td>用于检查中后段候选人是否长期停留；有异常时进入明细核对，不仅观察总数。</td><td>中后段候选人持续有人跟进。</td></tr>
+<tr data-field-type="readonly"><td>实时范围：本人负责＋授权</td><td class="field-type readonly"><b>系统展示项</b></td><td>顶部工作台固定合并本人负责和获授权协作的岗位，不受下方日期、岗位条件影响。</td><td>每日待办范围覆盖本人实际参与的全部岗位。</td></tr>
+<tr data-field-type="readonly"><td>阶段总数／待跟进／待安排／待评价</td><td class="field-type readonly"><b>系统展示项</b></td><td>每天检查各阶段数量与细分状态，识别待跟进、待安排、待评价等任务分布。</td><td>每条待办都有负责人和下一动作。</td></tr>
+<tr data-field-type="readonly"><td>超时待处理／邮件待处理</td><td class="field-type readonly"><b>系统展示项</b></td><td>核对超时风险与邮件异常数量；邮件待处理仅对具备邮件异常处理权限的账号显示。</td><td>超时与账号可见的邮件异常均有人处理。</td></tr>
+<tr data-field-type="optional"><td>日期＋岗位分析条件</td><td class="field-type optional"><b>可以填写</b></td><td>需要分析时选择条件并点击“查询”；未查询的草稿条件不会改变岗位卡、积压、未通过原因或导出范围。</td><td>分析结果与页面标示的已应用范围一致。</td></tr>
 </tbody></table></div></div>
 
-<div class="module-grid"><div class="panel"><div class="panel-title" data-nav-item data-nav-label="每周复盘与项目收尾">每周与项目收尾怎么使用</div><div class="panel-body"><ol class="steps"><li><div><b>每周看趋势和环节效率</b><span>识别候选人流入、面试、Offer或入职的异常变化，以及普遍耗时较长的环节。</span></div></li><li><div><b>结合积压和未通过原因</b><span>判断问题来自待办未处理、业务评价延迟、岗位标准不清、来源质量还是流程配置。</span></div></li><li><div><b>HRBP／管理员查看全局视角</b><span>比较HR处理、岗位效率、完成处理流向和来源效果；先核对样本量和岗位差异，再形成改进动作。</span></div></li><li><div><b>项目结束前再次检查</b><span>结合招聘需求池与积压明细，确保每位候选人已有Offer、终止投递、进入人才库或转岗等真实结果，不遗留招聘中记录。</span></div></li></ol></div></div><div class="panel"><div class="panel-title" data-nav-item data-nav-label="数据使用边界">数据使用边界</div><div class="panel-body"><ul class="checklist"><li>当前积压是实时快照，不随日期范围变化；超1天、超3天、超7天为互斥区间。</li><li>招聘漏斗与招聘趋势的时间口径不同，不直接用两组数字互相校验。</li><li>老系统数据影响漏斗时可使用漏斗修复，使漏斗按正常关系展示；使用后仍需结合真实招聘记录判断。</li><li>HR处理效率受岗位难度、处理量、样本量和历史数据影响，不直接作为个人绩效。</li><li class="warn">不得为了降低积压或改善效率数字，错误推进、回退、终止或入库候选人。</li></ul></div></div></div>
+<div class="module-grid"><div class="panel"><div class="panel-title" data-nav-item data-nav-label="每周复盘与项目收尾">每周与项目收尾怎么使用</div><div class="panel-body"><ol class="steps"><li><div><b>我的视角先看两种岗位口径</b><span>左侧状态变更快照回答期间发生了什么变化，右侧累计漏斗回答本期新增简历推进到哪里；两组数字不要求相等。</span></div></li><li><div><b>结合积压和未通过原因</b><span>积压按所选期间创建的投递和招聘中岗位统计；未通过原因按事件次数展示。用它们判断待办、岗位标准或协作问题。</span></div></li><li><div><b>全局视角按部门复盘</b><span>核对部门需求完成情况，再看岗位累计漏斗、达到14天后的转化趋势，以及渠道流入简历与实际人工面试效果。</span></div></li><li><div><b>项目结束前再次检查</b><span>结合招聘需求池与候选人明细，确保每位候选人已有Offer、终止投递、进入人才库或转岗等真实结果，不遗留招聘中记录。</span></div></li></ol></div></div><div class="panel"><div class="panel-title" data-nav-item data-nav-label="数据使用边界">数据使用边界</div><div class="panel-body"><ul class="checklist"><li>顶部招聘阶段是实时范围；下方积压使用已应用日期和岗位。修改筛选后必须点击查询。</li><li>状态变更快照、累计漏斗、趋势和渠道统计口径不同，不直接用数字互相校验。</li><li>人工面试统计只认真实进入人工面试的记录，不包含作品／笔试和AI面试，多轮只计一次。</li><li>累计Offer可依据有效最远进度或已入职计入，但渠道Offer仍要求真实Offer访问记录。</li><li class="warn">不得为了降低积压或改善转化数字，错误推进、回退、终止或入库候选人。</li></ul></div></div></div>
 <div class="rule-box"><strong>完成标准：</strong>每日待办、超时和中后段停留记录均有人负责；初筛和候选人反馈符合规定时效；每周能够形成至少一个可执行的流程改进判断；项目结束时不遗留长期处于招聘中的候选人。</div>
 </section>
 
@@ -2504,9 +2488,10 @@ MAIN_RISK: [一句话概括最大风险]
             <summary>流程图里的节点可以点击吗？</summary>
             <div class="req-accordion-body"><p>可以。当前视图有对应教学内容的节点会高亮显示，点击后会自动定位并展开到对应模块，比如<a href="#function-candidate-applications" data-cross-link>候选人与投递</a>或<a href="#hr-resume-screening" data-cross-link>简历筛选</a>。</p></div>
           </details>
-          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 为什么我的视角和全局视角数字不同？</summary><div class="req-accordion-body"><p>“我的视角”只统计本人负责或被授权协作的岗位；“全局视角”统计全公司范围，且仅HRBP和管理员可见。先核对日期和负责／授权范围，再比较数字。详见<a href="#function-dashboard" data-cross-link data-detail-label="我的视角与全局视角">我的视角与全局视角</a>。</p></div></details>
-          <details class="req-accordion"><summary>为什么选择日期后，当前环节积压没有变化？</summary><div class="req-accordion-body"><p>当前环节积压是当前仍停留在各阶段投递的实时快照，不按日期范围重新圈定；日期范围主要影响漏斗、趋势和效率等期间统计。超1天、超3天、超7天是互斥区间，不能重复相加。详见<a href="#function-dashboard" data-cross-link data-detail-label="数据口径与漏斗修复">数据口径与漏斗修复</a>。</p></div></details>
-          <details class="req-accordion"><summary>为什么漏斗人数不一定逐级下降？什么时候使用漏斗修复？</summary><div class="req-accordion-body"><p>漏斗先按投递创建日期圈定投递，再统计这些投递截至当前曾到达的阶段；同一候选人的不同岗位投递分别计数，历史导入还可能缺少中间阶段，因此数字不一定严格递减。老系统数据导致漏斗异常时，可使用漏斗修复降低历史缺失数据的影响，使漏斗按正常招聘阶段关系展示。详见<a href="#function-dashboard" data-cross-link data-detail-label="数据口径与漏斗修复">数据口径与漏斗修复</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 为什么我的视角和全局视角数字不同？</summary><div class="req-accordion-body"><p>我的视角顶部是本人负责＋授权岗位的实时快照，下方是已应用日期和岗位范围；全局视角按所选部门全部有效岗位统计，HR选择只控制个人漏斗拆分。先确认页面上的日期、岗位／部门和“统计截止（北京时间）”，再比较数字。详见<a href="#function-dashboard" data-cross-link data-detail-label="我的视角与全局视角">我的视角与全局视角</a>。</p></div></details>
+          <details class="req-accordion"><summary>为什么修改日期后，当前环节积压没有变化？</summary><div class="req-accordion-body"><p>下方筛选采用“草稿—查询应用”方式，修改日期或岗位后必须点击“查询”；查询成功后，积压会按所选期间创建的投递、已应用的招聘中岗位和当前待处理状态重新统计。顶部实时招聘阶段不受这些条件影响。超1天至3天、超3天至7天、超7天仍是互斥区间。详见<a href="#function-dashboard" data-cross-link data-detail-label="新版看板数据口径">新版看板的数据口径</a>。</p></div></details>
+          <details class="req-accordion"><summary>为什么岗位卡左边和右边人数不同？</summary><div class="req-accordion-body"><p>左侧“时间内最新状态变更快照”统计这段期间发生过状态变化的投递，包含更早流入的简历，每份投递只按期间最后一次变化归类；右侧“本期新增简历累计推进”先按投递创建日期圈定本期新增简历，再统计截至当前的历史最远有效进度。两边回答的问题不同，人数无需相等，也不能交叉计算转化率。详见<a href="#function-dashboard" data-cross-link data-detail-label="新版看板数据口径">新版看板的数据口径</a>。</p></div></details>
+          <details class="req-accordion"><summary>“恢复默认”为什么不是恢复全公司？</summary><div class="req-accordion-body"><p>管理员可以按人员配置一个或多个全局看板默认一级部门，“恢复默认”和首次进入会使用这份配置；配置只影响默认查询，不授予额外权限。手动清空部门后查询才表示查看权限内全部部门；默认部门全部失效时系统会提示并自动恢复全部可见部门。</p></div></details>
           <div class="rule-box" style="margin-top:14px;font-size:12px"><strong>没找到答案？</strong>请联系招聘管理员或负责 HR。</div>
         </section>
 
@@ -2517,9 +2502,9 @@ MAIN_RISK: [一句话概括最大风险]
           </div>
           <p class="module-lead">关于 HR 招聘操作流程的高频问题。</p>
           <div class="faq-toolbar"><button type="button" class="faq-expand-all">展开全部</button><button type="button" class="faq-collapse-all">收起全部</button></div>
-          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 如何用数据看板处理当天待办？</summary><div class="req-accordion-body"><p><b>入口：</b>数据看板 → 我的视角。<b>操作：</b>选择负责／授权／负责＋授权，依次点击待安排面试、待跟进简历、待业务评价和超时待处理卡片；积压数字也可点击下钻。<b>完成结果：</b>从名单点击“查看”进入候选人与投递，按真实进展完成安排、跟进或结果处理。看板只负责定位，不能为了清零数字错误改变候选人状态。详见<a href="#hr-dashboard-review" data-cross-link data-detail-label="每日巡检与待办处理">每日巡检与待办处理</a>。</p></div></details>
-          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 数据范围里的负责、授权、负责＋授权是什么意思？</summary><div class="req-accordion-body"><p><b>负责：</b>本人是岗位负责人的岗位数据；<b>授权：</b>本人不是岗位负责人，但被授权协助该岗位招聘的数据；<b>负责＋授权：</b>两类岗位合并后的综合数据。看不到预期岗位时，先核对是否选对范围，再检查职位协作授权。详见<a href="#function-dashboard" data-cross-link data-detail-label="我的视角与全局视角">我的视角与全局视角</a>。</p></div></details>
-          <details class="req-accordion"><summary>HR处理效率可以直接作为绩效吗？</summary><div class="req-accordion-body"><p>不建议。该指标按最后一次终态事件的人工操作人归属，并会受到岗位难度、处理量、样本量、流程配置和历史数据完整性的影响。它适合发现需要进一步核对的流程差异，不能脱离业务背景直接形成个人绩效结论。详见<a href="#hr-dashboard-review" data-cross-link data-detail-label="数据使用边界">数据使用边界</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 如何查看当天招聘现状？</summary><div class="req-accordion-body"><p><b>入口：</b>数据看板 → 我的视角。<b>操作：</b>先看顶部招聘阶段的待跟进、待安排、待评价和待确认，再看“风险与工具”中的超时待处理和邮件待处理。<b>完成结果：</b>了解各阶段任务分布与风险；实际招聘处理在对应业务页面完成。顶部范围固定为本人负责＋授权，不需要操作范围筛选。详见<a href="#hr-dashboard-review" data-cross-link data-detail-label="每日巡检与待办处理">每日巡检与待办处理</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 为什么顶部卡片和下方分析数字不同？</summary><div class="req-accordion-body"><p>顶部是当前时点本人负责＋授权岗位的实时工作台，不受下方筛选影响；下方岗位卡、积压和未通过原因使用最近一次成功查询的日期与岗位范围。修改筛选后还要点击“查询”，否则分析和导出继续使用上一次范围。详见<a href="#function-dashboard" data-cross-link data-detail-label="我的视角与全局视角">我的视角与全局视角</a>。</p></div></details>
+          <details class="req-accordion"><summary>如何正确解释渠道中的“进入人工面试人数”？</summary><div class="req-accordion-body"><p>只统计本期流入简历中实际进入人工面试阶段的去重投递；作品／笔试和AI面试不算，同一投递参加多轮人工面试也只计一次。历史导入如果没有人工面试访问记录，系统不会因为后来进入Offer或入职而反推为已进面，因此渠道漏斗不一定严格递减。详见<a href="#hr-dashboard-review" data-cross-link data-detail-label="数据使用边界">数据使用边界</a>。</p></div></details>
           <details class="req-accordion"><summary><span class="frequent-tag">高频</span> BOSS简历为什么没有自动抓取？</summary><div class="req-accordion-body"><p><b>入口：</b>先到“邮件自动拉取”检查招聘邮箱，再到“职位与阶段”检查BOSS职位名称映射。<b>前提：</b>邮箱已绑定并启用，邮件中的BOSS职位名称与映射完全一致。<b>完成结果：</b>系统每5分钟拉取邮件，识别职位后进入正确系统职位并建立候选人与投递。<b>异常处理：</b>依次核对邮箱是否启用、执行记录是否已拉取邮件、BOSS职位名称是否完全匹配；未匹配或识别失败时到异常处理核对，无法判断时联系管理员。详见<a href="#function-position-stages" data-cross-link data-detail-label="BOSS简历自动抓取：邮箱＋职位映射">BOSS简历自动抓取：邮箱＋职位映射</a>。</p></div></details>
           <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 如何给协作HR开权限？</summary><div class="req-accordion-body"><p><b>入口：</b>职位与阶段 → 打开对应职位 → 职位协作人。<b>前提：</b>对方是实际参与该职位招聘的HR，且系统菜单权限已由管理员开通。<b>完成结果：</b>选择HR并保存授权后，对方可查看和处理该职位及候选人数据。<b>异常处理：</b>保存后仍看不到时，先核对是否选对职位和人员，再联系管理员检查菜单权限。详见<a href="#function-position-stages" data-cross-link data-detail-label="给协作HR开职位权限">给协作HR开职位权限</a>。</p></div></details>
           <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 如何让面试官看到候选人并填写面评？</summary><div class="req-accordion-body"><p><b>入口：</b>候选人与投递 → 安排人工面试 → 选择面试官 → 保存。<b>前提：</b>面试官账号的系统权限已开通，并被指定为本次面试的实际面试官。<b>完成结果：</b>面试官通过具体任务获得该候选人的查看和面评权限，并收到日程通知。<b>异常处理：</b>核对是否选择了正确的钉钉／系统账号，并请面试官从本次面试日程或任务中的候选人链接进入；仍无法查看时联系管理员检查账号权限。不要把面试官添加为职位协作人。详见<a href="#function-candidate-applications" data-cross-link data-detail-label="给面试官分配候选人任务">给面试官分配候选人任务</a>。</p></div></details>
@@ -2562,7 +2547,7 @@ MAIN_RISK: [一句话概括最大风险]
           </details>
           <details class="req-accordion">
             <summary>招聘数据报表在哪里查看？</summary>
-            <div class="req-accordion-body"><p>统一从<a href="#function-dashboard" data-cross-link>数据看板</a>查看：顶部卡片和积压用于定位待办，漏斗、趋势、效率、未通过原因和来源效果用于分析复盘。单个招聘项目仍可在招聘需求详情查看该项目漏斗；通知记录仅用于核对通知发送结果，不是招聘数据报表。</p></div>
+            <div class="req-accordion-body"><p>统一从<a href="#function-dashboard" data-cross-link>数据看板</a>查看：顶部实时卡片用于定位当前阶段和超时待办；我的视角使用状态变更快照、累计漏斗、当前积压和未通过原因，全局视角使用部门需求、岗位累计漏斗、转化趋势和渠道效果进行复盘。单个招聘项目仍可在招聘需求详情查看该项目漏斗；通知记录仅用于核对通知发送结果，不是招聘数据报表。</p></div>
           </details>
           <div class="rule-box" style="margin-top:14px;font-size:12px"><strong>没找到答案？</strong>请联系招聘管理员或负责 HR。</div>
         </section>
@@ -2634,9 +2619,27 @@ MAIN_RISK: [一句话概括最大风险]
 <script id="manualUpdatesData" type="application/json">
 {
   "schemaVersion": 2,
-  "latestUpdateId": "2026-09-09-candidate-contact-edit",
-  "lastVerifiedAt": "2026-09-09",
+  "latestUpdateId": "2026-09-21-dashboard-feature-branches",
+  "lastVerifiedAt": "2026-09-21",
   "updates": [
+    {
+      "id": "2026-09-21-dashboard-feature-branches",
+      "status": "published",
+      "effectiveDate": "2026-09-20",
+      "verifiedAt": "2026-09-21",
+      "type": "feature-change",
+      "importance": "action",
+      "impactScope": "all",
+      "title": "数据看板调整为实时工作台与岗位／部门分析",
+      "summary": "我的视角区分实时招聘阶段、期间状态变更与新增简历累计推进，并展示当前积压和未通过原因；全局视角按部门查看需求完成情况、招聘趋势与渠道效果。手册已同步新版页面及字段解释。",
+      "audience": "HR实习生、HR、HRBP和管理员",
+      "action": "每日待办使用顶部实时工作台；分析时先选择日期与岗位或部门并点击查询，区分状态快照、累计漏斗、积压、趋势和渠道口径。",
+      "targets": [
+        { "view": "function", "moduleId": "function-dashboard", "detailLabel": "我的视角与全局视角" },
+        { "view": "function", "moduleId": "function-dashboard", "detailLabel": "新版看板数据口径" },
+        { "view": "hr", "moduleId": "hr-dashboard-review", "detailLabel": "每日巡检与待办处理" }
+      ]
+    },
     {
       "id": "2026-09-09-candidate-contact-edit",
       "status": "published",
@@ -2681,11 +2684,11 @@ MAIN_RISK: [一句话概括最大风险]
       "importance": "action",
       "impactScope": "all",
       "title": "数据看板上线并提供招聘工作台入口",
-      "summary": "新增我的视角和全局视角，可从待办卡片及积压数字定位候选人，并通过漏斗、趋势、效率和来源数据开展招聘复盘。",
+      "summary": "新增我的视角和全局视角，展示待办与积压，并通过招聘阶段、趋势和渠道数据开展招聘复盘；当前图表与口径以新版数据看板章节为准。",
       "audience": "HR实习生、HR、HRBP和管理员",
-      "action": "每日先检查待办和超时积压，再进入候选人详情维护真实进展；HRBP和管理员可使用全局视角观察跨岗位问题。",
+      "action": "每日检查招聘阶段和风险提示；具备全局权限的账号使用部门、趋势和渠道分析开展复盘。",
       "targets": [
-        { "view": "function", "moduleId": "function-dashboard", "detailLabel": "工作台：点击卡片弹出抽屉处理当日待办" },
+        { "view": "function", "moduleId": "function-dashboard", "detailLabel": "实时招聘阶段与风险" },
         { "view": "function", "moduleId": "function-dashboard", "detailLabel": "查看不同权限具体数据" },
         { "view": "hr", "moduleId": "hr-dashboard-review", "detailLabel": "每日巡检与待办处理" }
       ]
@@ -2790,14 +2793,15 @@ MAIN_RISK: [一句话概括最大风险]
       const cutoffDate = new Date(`${today}T00:00:00Z`);
       cutoffDate.setUTCMonth(cutoffDate.getUTCMonth() - 6);
       const cutoff = cutoffDate.toISOString().slice(0, 10);
+      const localPreview = window.location.protocol === 'file:';
       const allUpdates = data.updates.filter(item => {
-        if (!item || item.status !== 'published' || typeof item.id !== 'string' || typeof item.effectiveDate !== 'string' || typeof item.verifiedAt !== 'string') return false;
+        if (!item || !(item.status === 'published' || (localPreview && item.status === 'draft' && item.id === data.previewUpdateId)) || typeof item.id !== 'string' || typeof item.effectiveDate !== 'string' || typeof item.verifiedAt !== 'string') return false;
         if (!updateTypeLabels[item.type] || !updateImportanceLabels[item.importance] || !updateScopeLabels[item.impactScope]) return false;
         if (!item.title || !item.summary || !item.audience || !item.action || !Array.isArray(item.targets)) return false;
         const effectiveDate = new Date(item.effectiveDate + 'T00:00:00Z');
         return !Number.isNaN(effectiveDate.getTime()) && item.effectiveDate <= today;
-      }).sort((a, b) => b.effectiveDate.localeCompare(a.effectiveDate) || b.id.localeCompare(a.id));
-      const latest = allUpdates.find(item => item.id === data.latestUpdateId);
+      }).map(item => item.status === 'draft' ? { ...item, title: `${item.title}（本地预览，未发布）` } : item).sort((a, b) => b.effectiveDate.localeCompare(a.effectiveDate) || b.id.localeCompare(a.id));
+      const latest = allUpdates.find(item => item.id === (localPreview && data.previewUpdateId ? data.previewUpdateId : data.latestUpdateId));
       if (!latest) return null;
       const updates = allUpdates.filter(item => item.effectiveDate >= cutoff);
       return { latest, updates, allUpdates, lastVerifiedAt: data.lastVerifiedAt };
