@@ -28,7 +28,8 @@
     "recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif": "a6ff80e2543d76e0",
     "recruitment-requirements-assets/recruitment-requirement-create-and-handoff.gif": "569577b5e8fc79ba",
     "recruitment-requirements-assets/recruitment-requirement-pause-and-resume.gif": "2b6240033efef7ff",
-    "talent-pool-assets/talent-pool-invite.gif": "44a22a907a2ee4ce"
+    "talent-pool-assets/talent-pool-invite.gif": "44a22a907a2ee4ce",
+    "dashboard-assets/dashboard-workbench-and-analysis.gif": "28333582ef96b67d"
   },
   "assets": {
     "995fed754f998ac1": {
@@ -1205,6 +1206,53 @@
           "title": "核对邀约状态",
           "frames": [
             2
+          ]
+        }
+      ]
+    },
+    "28333582ef96b67d": {
+      "original": "dashboard-assets/dashboard-workbench-and-analysis.gif",
+      "frames": [
+        "gif-player/28333582ef96b67d/frame-001.webp",
+        "gif-player/28333582ef96b67d/frame-002.webp",
+        "gif-player/28333582ef96b67d/frame-003.webp",
+        "gif-player/28333582ef96b67d/frame-004.webp"
+      ],
+      "durations": [
+        2600,
+        2800,
+        3500,
+        4000
+      ],
+      "playableFrames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "steps": [
+        {
+          "title": "打开数据看板默认显示我的视角",
+          "frames": [
+            0
+          ]
+        },
+        {
+          "title": "悬浮卡片看tooltip含义",
+          "frames": [
+            1
+          ]
+        },
+        {
+          "title": "点击待办卡片弹出候选人名单抽屉",
+          "frames": [
+            2
+          ]
+        },
+        {
+          "title": "在抽屉里点查看进入候选人详情",
+          "frames": [
+            3
           ]
         }
       ]
