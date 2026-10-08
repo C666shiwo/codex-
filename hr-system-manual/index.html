@@ -770,6 +770,7 @@ flowchart TB
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="手动录入候选人与投递">操作演示：手动录入候选人与投递</div><img loading="lazy" decoding="async" src="hr-assets/candidate-entry.gif" data-zoom="hr-assets/candidate-entry.gif" alt="HR上传简历、核对识别结果并建立候选人与投递"><div class="gif-note">用于需要HR手动建档的候选人：上传简历 → 核对自动识别结果 → 选择应聘职位和来源 → 创建候选人与投递。</div></div>
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="绑定并启用招聘邮箱">使用前准备（非每次招聘必做）：绑定并启用招聘邮箱</div><img loading="lazy" decoding="async" src="hr-assets/email-binding.gif" data-zoom="hr-assets/email-binding.gif" alt="HR首次使用招聘邮箱前绑定并启用邮箱"><div class="gif-note">仅在本人负责的招聘邮箱尚未接入系统时配置一次，不属于每个招聘项目的必做步骤。绑定完成后系统每5分钟拉取一次邮件；自动导入结果仍需HR核对。</div></div>
 <div class="rule-box"><strong>完成标准：</strong>候选人信息、接收邮箱、应聘岗位、来源渠道、当前阶段和下一动作准确清晰；信息变更后已核对详情页回显。</div>
+<div class="rule-box" data-nav-item data-nav-label="应聘备注与补充原因"><strong>应聘记录规范：</strong>在详情右侧职位信息处添加或编辑备注，最多2,000字；保存后核对内容，取消则放弃修改，清空并保存可移除。同一次应聘各阶段共用，不随简历版本切换，应聘结束后只读。简历筛选不通过、终止投递、拒绝 Offer 选择“其他原因”后，可另填最多500字的具体情况，不要与跨阶段共用的备注混淆。详见<a href="#function-candidate-applications" data-cross-link data-detail-label="添加与编辑应聘备注">备注操作说明</a>。</div>
 </section>
 
 <section class="module" id="hr-resume-screening" data-audience="hr" data-keywords="简历筛选 初筛 三个工作日 简历评估 状态更新">
@@ -2271,6 +2272,12 @@ MAIN_RISK: [一句话概括最大风险]
 <strong>角色与责任：</strong>HR实习生、HR、HRBP和管理员均可绑定邮箱及处理异常。异常记录由对应邮箱的HR负责完成处理；无法判断异常原因或处理方式时，停止操作并联系管理员。</div>
 <div class="rule-box">
 <strong>运行提醒：</strong>系统每5分钟自动拉取一次邮件。刚收到邮件时无需立即重复操作；超过合理等待时间仍未导入时，再查看执行记录、邮件导入记录和异常处理。</div>
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="邮件异常展示与当次异常">邮件异常展示与当次异常</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>页面／字段</th><th>当前展示规则</th><th>HR如何理解</th></tr></thead><tbody>
+<tr><td>异常处理／邮件导入记录</td><td>不再显示“不是受支持的 BOSS 邮件”。职位未匹配、附件异常等仍正常展示。</td><td>不需要再从这两个页面查找该类提示；这不代表所有邮件都已成功导入，其他异常仍需按实际情况处理。</td></tr>
+<tr><td>执行记录：当次异常</td><td>原“待处理”更名为“当次异常”，保留历史数字。</td><td>这是对应执行记录的历史异常数量，不代表当前待办数量；不能因数字仍在就判断异常尚未处理。</td></tr>
+<tr><td>当前需要处理的事项</td><td>结合异常处理页面中的实际记录与状态核对。</td><td>先确认异常类别和当前状态，再按现有操作处理，不把历史数字当作今天的待办总数。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>图片阅读提醒：</strong>历史截图若仍显示旧字段“待处理”或“不是受支持的 BOSS 邮件”，仅用于识别原页面位置；最新展示规则以本节说明及当前系统页面为准。</div>
 <div class="rule-box"><strong>关联边界：</strong>邮箱已启用不代表所有简历都能自动进入正确职位。BOSS职位名称还需要在“职位与阶段”建立真实映射；成功导入后必须到“候选人与投递”核对，无法匹配时在本模块异常处理页接续。</div>
 </section>
 
@@ -2402,7 +2409,20 @@ MAIN_RISK: [一句话概括最大风险]
 
 <section class="module" id="function-candidate-applications" data-audience="function" data-map-entry="候选人与投递" data-map-status="完整流程已整理" data-map-note="候选人信息纠错、简历筛选、作品评估、AI面试、视频面试、Offer及结果分支已整理。" data-keywords="候选人与投递 简历评估 筛选通过 作品集 AI面试 视频面试 面评 Offer 待入职 终止投递 人才库 修改邮箱 接收邮箱 邮箱错误 修改候选人 基本信息 联系方式错误 不发送邮件 终止不通知 是否发送邮件"><div class="module-head"><div class="module-title"><span class="module-num">功能 / 09</span><h2>候选人与投递</h2></div><div class="module-meta"><span class="tag purple">招聘主流程</span><span class="tag orange">包含状态变更</span></div></div>
 <div class="rule-box"><strong>学习目标：</strong>完成本节后，可以手动上传简历并创建候选人与投递，也可以按照当前职位已经配置的实际阶段完成简历筛选、作品评估、AI面试或人工面试，并正确接续Offer、人才库、终止投递或转岗。作品评估和AI面试不是所有职位的固定必经环节。</div>
-<p class="module-lead">候选人与投递是招聘主流程的操作中心。列表用于定位候选人，详情页左侧查看简历，右侧按照岗位阶段完成评价、面试和结果处理；每项操作只针对当前投递。</p>
+<p class="module-lead">候选人与投递是招聘主流程的操作中心。列表用于定位候选人，详情页左右各占一半：左侧查看简历，右侧查看职位信息、维护备注，并按照岗位阶段完成评价、面试和结果处理。布局调整不改变原有功能；每项招聘操作只针对当前投递。</p>
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="添加与编辑应聘备注">添加与编辑应聘备注</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
+<tr data-field-type="button"><td>备注</td><td class="field-type button"><b>操作按钮</b></td><td>在候选人详情右侧的职位信息处点击“备注”，添加本次应聘需要记录的信息。</td></tr>
+<tr data-field-type="readonly"><td>已有备注</td><td class="field-type readonly"><b>系统展示项</b></td><td>已保存的备注直接展示，无需进入编辑状态即可阅读。</td></tr>
+<tr data-field-type="button"><td>编辑／保存／取消</td><td class="field-type button"><b>操作按钮</b></td><td>点击“编辑”修改已有备注；“保存”提交修改，“取消”放弃本次修改。清空备注并保存可移除。</td></tr>
+<tr data-field-type="optional"><td>备注内容</td><td class="field-type optional"><b>可以填写</b></td><td>最多2,000字。记录与本次应聘相关的真实情况，保存后核对展示内容。</td></tr>
+<tr data-field-type="readonly"><td>共用范围／只读状态</td><td class="field-type readonly"><b>系统展示项</b></td><td>同一次应聘各阶段共用，不随简历版本切换；不要理解为候选人所有应聘共用。应聘结束后只读，不能再修改或清空。</td></tr>
+</tbody></table></div></div>
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="其他原因与具体情况">其他原因与具体情况</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>适用操作</th><th>填写方式</th><th>填写边界</th></tr></thead><tbody>
+<tr><td>简历筛选不通过</td><td>选择“其他原因”后，可填写具体情况。</td><td>最多500字；结合真实筛选情况说明，不是必须填写。</td></tr>
+<tr><td>终止投递</td><td>选择“其他原因”后，可填写具体情况。</td><td>最多500字；“是否发送邮件”仍按原有规则另行选择，不由备注或具体情况替代。</td></tr>
+<tr><td>拒绝 Offer</td><td>选择“其他原因”后，可填写具体情况。</td><td>最多500字；记录已确认的具体情况，不将此规则扩展到其他未说明的操作。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>使用提醒：</strong>应聘备注用于同一次应聘跨阶段查阅；具体情况用于说明本次结果操作的其他原因，两者不能混用。以下历史截图与GIF保留操作参考，可能尚未展示五五分布局、新备注入口或具体情况输入框；这些更新以本节文字说明和当前系统页面为准。</div>
 <div class="function-relations" aria-label="候选人与投递功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>前置：</b><a href="#function-position-stages" data-function-link>职位与阶段</a>已发布</span><span class="relation-item"><b>简历来源：</b>自动拉取／猎头／手动录入</span><span class="relation-item"><b>状态产出：</b>阶段、评价与招聘结果</span><span class="relation-item"><b>自动通知：</b><a href="#function-email-templates" data-function-link>邮件模板</a> → <a href="#function-notification-records" data-function-link>通知记录</a></span><span class="relation-item"><b>结果分支：</b><a href="#function-talent-pool" data-function-link>人才库</a></span></div>
 <div class="rule-box"><strong>阶段来源：</strong>右侧实际显示的阶段名称和顺序来自“职位与阶段”配置。HR只处理当前职位真实存在的环节，不为了复现本手册示例而补做未配置的作品评估或AI面试。</div>
 <div class="panel screenshot"><img loading="lazy" decoding="async" src="candidate-applications-assets/candidate-applications-overview.jpg" data-zoom="candidate-applications-assets/candidate-applications-overview.jpg" alt="候选人与投递列表"><div class="shot-caption"><span>列表全貌：选择职位和阶段，定位候选人后点击查看。</span><button class="zoom-link" type="button">点击放大</button></div></div>
@@ -2473,6 +2493,12 @@ MAIN_RISK: [一句话概括最大风险]
           </div>
           <p class="module-lead">关于手册使用和系统功能的高频问题。</p>
           <div class="faq-toolbar"><button type="button" class="faq-expand-all">展开全部</button><button type="button" class="faq-collapse-all">收起全部</button></div>
+          <details class="req-accordion">
+            <summary>备注为什么不随简历版本切换？结束后还能修改吗？</summary>
+            <div class="req-accordion-body"><p>备注属于同一次应聘，各阶段共用，不属于某一版简历。右侧职位信息处添加或编辑，最多2,000字；清空并保存可移除。应聘结束后只读。详见<a href="#function-candidate-applications" data-cross-link data-detail-label="添加与编辑应聘备注">添加与编辑应聘备注</a>。</p></div>
+          </details>
+          <details class="req-accordion"><summary>哪些操作可以补充“其他原因”的具体情况？</summary><div class="req-accordion-body"><p>简历筛选不通过、终止投递、拒绝 Offer：选择“其他原因”后可补充最多500字的具体情况，不是应聘备注，也不是必须填写。详见<a href="#function-candidate-applications" data-cross-link data-detail-label="其他原因与具体情况">其他原因与具体情况</a>。</p></div></details>
+          <details class="req-accordion"><summary>异常处理过了，执行记录为什么还有“当次异常”？</summary><div class="req-accordion-body"><p>“当次异常”由原“待处理”更名，保留该次执行的历史数字，不代表当前待办。请到异常处理页面核对实际状态；异常处理和邮件导入记录不再显示“不是受支持的 BOSS 邮件”，但职位未匹配、附件异常等仍正常展示。详见<a href="#function-email-auto-pull" data-cross-link data-detail-label="邮件异常展示与当次异常">邮件异常展示与当次异常</a>。</p></div></details>
           <details class="req-accordion">
             <summary>我适合看哪个视角？</summary>
             <div class="req-accordion-body"><p>如果你是 HR/HRBP，重点看<a href="#hr-recruitment-start" data-cross-link>HR 规范</a>视角；如果你是面试官、作品评估人或业务负责人，重点看<a href="#view-business" data-cross-link>业务规范</a>视角；如果你想查字段含义或系统功能入口，看<a href="#function-recruitment-requirements" data-cross-link>功能详解</a>视角。</p></div>
@@ -2620,9 +2646,27 @@ MAIN_RISK: [一句话概括最大风险]
 <script id="manualUpdatesData" type="application/json">
 {
   "schemaVersion": 2,
-  "latestUpdateId": "2026-09-21-dashboard-feature-branches",
-  "lastVerifiedAt": "2026-09-21",
+  "latestUpdateId": "2026-10-08-candidate-notes-mail-errors",
+  "lastVerifiedAt": "2026-10-08",
   "updates": [
+    {
+      "id": "2026-10-08-candidate-notes-mail-errors",
+      "status": "published",
+      "effectiveDate": "2026-10-08",
+      "verifiedAt": "2026-10-08",
+      "type": "feature-change",
+      "importance": "action",
+      "impactScope": "all",
+      "title": "候选人详情与邮件处理操作更新",
+      "summary": "候选人详情左右五五分，右侧职位信息可维护同次应聘共用备注；三类结果操作选择其他原因后可补充具体情况。邮件异常列表隐藏不受支持的BOSS邮件提示，执行记录改称当次异常并保留历史数字。",
+      "audience": "查看候选人详情和处理招聘邮件的HR用户",
+      "action": "备注最多2,000字，应聘结束后只读；简历筛选不通过、终止投递、拒绝Offer的其他原因可补充最多500字。处理邮件前核对实际异常状态，不把当次异常历史数字视为当前待办。",
+      "targets": [
+        { "view": "function", "moduleId": "function-candidate-applications", "detailLabel": "添加与编辑应聘备注" },
+        { "view": "function", "moduleId": "function-candidate-applications", "detailLabel": "其他原因与具体情况" },
+        { "view": "function", "moduleId": "function-email-auto-pull", "detailLabel": "邮件异常展示与当次异常" }
+      ]
+    },
     {
       "id": "2026-09-21-dashboard-feature-branches",
       "status": "published",
