@@ -1,13 +1,13 @@
 {
-  "version": "2026.10.08-candidate-notes-mail-errors",
-  "updatedAt": "2026-10-08",
+  "version": "2026.10.15-archive-batch-talent-pool",
+  "updatedAt": "2026-10-15",
   "publicUrl": "https://c666shiwo.github.io/codex-/hr-system-manual/",
   "status": "published",
-  "changeSource": "用户确认的候选人详情与邮件处理操作更新，未独立核验部署版本",
-  "latestUpdateId": "2026-10-08-candidate-notes-mail-errors",
-  "lastVerifiedAt": "2026-10-08",
-  "recentUpdateCount": 7,
+  "changeSource": "feature/20261014 代码核对，用户确认仅发布批量归档及归档关联人才库说明；未独立核验HR系统部署版本",
+  "latestUpdateId": "2026-10-15-archive-batch-talent-pool",
+  "lastVerifiedAt": "2026-10-15",
+  "recentUpdateCount": 8,
   "assetCount": 49,
-  "sourceBranches": ["feature/20260915", "feature/20260920"],
-  "sourceHead": "3d9347d2b458"
+  "sourceBranches": ["feature/20261014"],
+  "sourceHead": "fc3193a82ab2e9017dc86509ff79ec578849c6f3"
 }

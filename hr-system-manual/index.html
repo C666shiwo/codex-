@@ -680,18 +680,27 @@ flowchart TB
 <div class="rule-box"><strong>本操作完成标准：</strong>暂停后需求显示“暂停”；恢复后重新显示“招聘中”。暂停期间已有候选人和已发Offer仍需持续跟进。</div>
 <div class="rule-box"><strong>状态边界：</strong>列表页使用“暂停招聘”；如果页面提示“请先下架”，应先按系统当前提示处理职位状态。</div>
 
-<div class="panel"><div class="panel-title" data-nav-item data-nav-label="完成与归档">完成与归档</div><div class="panel-body"><ol class="steps"><li><div><b>确认招聘任务已经完成</b><span>已完成HC达到需求HC后进入待完成确认；核对实际到岗数据无误再点击确认完成，完成后需求不可恢复。</span></div></li><li><div><b>按系统顺序清理归档阻断项</b><span>先释放或处理待接受Offer与锁定HC，再处理全部进行中候选人，最后才能确认归档。</span></div></li><li><div><b>每位候选人只选择一种收尾方式</b><span>无继续计划则终止投递；优秀且值得保留则进入人才库；适合其他岗位则转移需求（即转岗）。</span></div></li><li><div><b>确认归档</b><span>全部阻断项清理完成后继续归档；归档后的需求与职位永久只读。</span></div></li></ol></div></div>
-<div class="panel gif-panel"><div class="panel-title">关键操作：确认完成并进入归档收尾</div><img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif" data-zoom="recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif" alt="确认招聘需求完成并在归档前处理所有进行中候选人"><div class="gif-note">待完成确认 → 核对HC并确认完成 → 点击归档并查看收尾顺序 → 对每位进行中候选人三选一处理。三个候选人按钮是不同处理分支，不是连续操作。</div></div>
-<div class="panel field-panel"><div class="panel-title">完成与归档需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
-<tr data-field-type="readonly"><td>已完成HC／仍需招聘HC</td><td class="field-type readonly"><b>系统展示项</b></td><td>确认完成前核对实际到岗达到需求HC，且仍需招聘为0。</td></tr>
-<tr data-field-type="button"><td>确认完成</td><td class="field-type button"><b>操作按钮</b></td><td>只在招聘任务确已结束时使用；页面明确提示完成后需求不可恢复。</td></tr>
-<tr data-field-type="button"><td>归档</td><td class="field-type button"><b>操作按钮</b></td><td>进入三步收尾流程：释放Offer与锁定HC、处理进行中候选人、确认归档。</td></tr>
-<tr data-field-type="readonly"><td>待接受Offer／已锁定HC</td><td class="field-type readonly"><b>系统展示项</b></td><td>归档前必须按页面提示处理完毕，不得只处理候选人列表。</td></tr>
-<tr data-field-type="button"><td>终止投递／进入人才库／转移需求</td><td class="field-type button"><b>操作按钮</b></td><td>对每位候选人三选一：无继续计划则终止，优秀且值得保留则入库，适合其他岗位则转移需求（即转岗）。转移后候选人在新需求继续推进。</td></tr>
-<tr data-field-type="readonly"><td>已归档</td><td class="field-type readonly"><b>系统展示项</b></td><td>全部阻断项处理完成并确认归档后，需求与职位永久只读。</td></tr>
-</tbody></table></div></div>
-<div class="rule-box"><strong>分支边界：</strong>终止投递、进入人才库和转移需求是每位候选人的三种可选结果，不需要也不能依次执行。</div>
-<div class="rule-box"><strong>本操作完成标准：</strong>页面不再存在待处理Offer、锁定HC或进行中候选人；完成最终归档后，需求显示“已归档”并进入只读状态。</div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="完成与归档">完成与归档</div><div class="panel-body"><ol class="steps">
+<li><div><b>确认完成并检查占用</b><span>核对实际到岗与HC后确认完成；进入归档，先处理Offer、锁定HC及其他阻断项。完成后不可恢复招聘。</span></div></li>
+<li><div><b>区分人工处理与自动结束</b><span>按页面分类处理投递：待人工处理的可批量安排；页面列出的初筛投递在最终归档时统一结束且不发送邮件。</span></div></li>
+<li><div><b>批量安排并确认处理</b><span>筛选、勾选投递，选择页面允许的终止投递、进入人才库、保留已有资格或调剂到指定岗位。统一设置后核对个人差异；保存安排不会执行，确认提交后查看结果。</span></div></li>
+<li><div><b>确认永久归档</b><span>消除阻断后填写归档原因，核对自动结束的初筛数量并确认。归档后需求与职位永久只读、不可恢复；已安排的反馈仍会继续发送。</span></div></li>
+</ol></div></div>
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="批量归档字段与操作">批量归档字段与操作</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／操作</th><th>使用规范与结果</th></tr></thead><tbody><tr><td>选择全部筛选结果</td><td>选择当前筛选的全部投递，不只是当前页；完整集合未加载时不能全选或最终归档。批量操作须是所选投递共同允许的操作。</td></tr>
+<tr><td>统一设置／逐人调整</td><td>统一填写后逐人核对。统一修改默认保留逐人覆盖字段，明确选择覆盖才覆盖个别设置；切换处理方式会清除不适用字段，邮件恢复默认不发送，需重新核对。</td></tr>
+<tr><td>标准原因／补充原因</td><td>除“保留已有资格”外，需选择标准原因。归档中选择“其他原因”必须填写补充原因，最多500字；与普通候选人详情结果操作的可选具体情况不同。</td></tr>
+<tr><td>目标职位／入库岗位</td><td>调剂需选择其他目标职位；入库需确认入库岗位，默认原岗位。入库仅记录资格，不创建回捞邀约。</td></tr>
+<tr><td>是否发送邮件／不发送备注</td><td>归档处理默认“不发送”；选择发送后，处理成功后5小时发送。不发送备注可选、最多500字，仅内部记录、不进入邮件正文。此默认值不替换普通终止投递的邮件规则。</td></tr>
+<tr><td>保存安排</td><td>仅保存当前页面未提交安排，不改变投递状态、不发邮件；离开或刷新可能丢失未提交安排。</td></tr>
+<tr><td>确认当前 N 条</td><td>只提交当前编辑窗口列出的投递，核对人数、处理方式和邮件选择后确认。</td></tr>
+<tr><td>确认全部已保存安排</td><td>包含当前筛选未显示的已保存安排；核对全部清单及发送／不发送数量，不可仅按当前可见记录判断范围。</td></tr>
+<tr><td>已确认处理记录</td><td>分别看业务结果与反馈状态；操作处理中或结果尚未核对时不要重复提交。反馈准备失败时业务结果可能已成功，应仅重试反馈准备。</td></tr>
+<tr><td>归档检查／确认永久归档</td><td>Offer与HC占用、受限投递、状态异常、集合不完整、业务处理或反馈准备未完成等会阻止归档。处理后刷新检查，填写归档原因再确认。成功安排为待发送的邮件无需等实际发出才归档。</td></tr></tbody></table></div></div>
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="归档关联人才库">归档关联人才库</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／操作</th><th>使用规范与结果</th></tr></thead><tbody><tr><td>进入人才库</td><td>当前投递不继续但值得后续联系，且页面允许入库时使用。填写标准原因与入库岗位，结束本次投递并记录人才资格；默认原岗位，不自动创建回捞邀约。邮件按归档时选择执行。</td></tr>
+<tr><td>保留已有资格</td><td>已有可保留资格且页面提供此操作时使用。保留原资格与历史，仅结束本次投递，不重复建立或覆盖已有资格；无需重新填写标准原因。</td></tr>
+<tr><td>调剂到指定岗位</td><td>用于在其他目标岗位继续招聘，不等于人才入库或回捞邀约。核对目标职位和权限；保存安排不等于调剂成功，应以处理结果为准。</td></tr>
+<tr><td>终止投递</td><td>本次不继续且不选择入库或调剂时使用。每份投递只按真实情况选一个处理分支，不依次执行多个分支，也不为清空归档阻断而错误处理。</td></tr></tbody></table></div></div>
+<div class="rule-box"><strong>本操作完成标准：</strong>人工处理投递已有明确结果，阻断全部消除；最终归档统一结束剩余初筛投递且不发邮件，需求与职位显示已归档并永久只读，人才资格与处理记录可核对。</div>
 <details class="req-accordion">
 <summary data-nav-item data-nav-label="异常与完成标准">异常处理与完成标准</summary>
 <div class="req-accordion-body"><div class="panel"><div class="panel-title">遇到以下情况先停止提交</div><div class="panel-body"><ul class="checklist"><li class="warn">同一部门、同一职位已经存在有效需求：先核对是否重复创建。</li><li class="warn">HC调低被阻止：检查新HC是否低于已完成HC与已锁定HC之和。</li><li class="warn">归档被阻止：按“Offer与锁定HC—进行中候选人—确认归档”的顺序检查。</li><li class="warn">只能查看不能编辑：说明当前账号没有需求管理权限，联系管理员确认权限，不要绕过系统处理。</li></ul></div></div></div>
@@ -824,16 +833,16 @@ flowchart TB
 <div class="panel"><div class="panel-title" data-nav-item data-nav-label="项目收尾顺序">完成招聘项目收尾</div><div class="panel-body"><ol class="steps">
 <li><div><b>核对HC与Offer占用</b><span>确认实际完成HC、锁定HC和待处理Offer与项目结果一致，不带着未判断的Offer进入归档。</span></div></li>
 <li><div><b>检查全部进行中候选人</b><span>逐一核对当前状态、处理时间、负责人和下一动作，不能遗留无人跟进的招聘中记录。</span></div></li>
-<li><div><b>处理当前需求中的候选人</b><span>候选人继续其他岗位时转岗；本次不再合作时终止投递；优秀但当前无法继续时进入人才库。</span></div></li>
+<li><div><b>分类安排当前需求中的投递</b><span>待人工处理的投递按页面允许的操作批量终止、入库、保留已有资格或调剂。页面列出的初筛投递在最终归档时自动结束且不发邮件，不必逐个执行人工收尾。</span></div></li>
 <li><div><b>核对反馈与记录</b><span>确认候选人评价、结果原因和需要触发的反馈均已记录，系统状态与实际沟通一致。</span></div></li>
 <li><div><b>确认完成并归档</b><span>所有阻断项清理完成后，由职位负责人或HRBP完成归档。</span></div></li>
 </ol></div></div>
-<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="完成与归档">操作演示：确认完成并归档招聘需求</div><img loading="lazy" decoding="async" src="recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif" data-zoom="recruitment-requirements-assets/recruitment-requirement-complete-and-archive.gif" alt="负责人或HRBP核对HC，处理全部进行中候选人并完成招聘需求归档"><div class="gif-note">打开待完成确认需求 → 核对HC并确认完成 → 查看归档阻断项 → 对每位进行中候选人选择转岗、终止投递或进入人才库 → 清除全部阻断项 → 完成归档。</div></div>
+<div class="rule-box" data-nav-item data-nav-label="完成与归档"><strong>批量归档操作：</strong>检查占用 → 筛选并勾选需人工处理的投递 → 统一设置并逐人核对 → 确认处理并查看结果 → 填写原因并永久归档。保存安排不会执行，刷新可能丢失未提交安排；“确认全部已保存安排”包含当前筛选外记录。详细字段见<a href="#function-recruitment-requirements" data-cross-link data-detail-label="批量归档字段与操作">批量归档字段与操作</a>。</div>
 <div class="panel field-panel"><div class="panel-title">完成与归档必须理解的字段和按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>HR操作规范</th><th>结果</th></tr></thead><tbody>
 <tr data-field-type="readonly"><td>已完成HC、已锁定HC、待处理Offer</td><td class="field-type readonly"><b>系统展示项</b></td><td>确认数量与实际招聘结果一致；有未处理占用时先解决，不直接归档。</td><td>用于判断项目是否具备完成条件。</td></tr>
 <tr data-field-type="button"><td>确认完成</td><td class="field-type button"><b>操作按钮</b></td><td>由职位负责人或HRBP在招聘目标已经结束且数据核对无误后操作；确认后不可恢复招聘。</td><td>需求进入已完成，职位停止继续招聘。</td></tr>
-<tr data-field-type="button"><td>转岗／终止投递／进入人才库</td><td class="field-type button"><b>候选人处理</b></td><td>根据候选人的真实后续选择一个分支处理，不对同一投递依次执行。转岗表示候选人在新岗位继续新的招聘流程。</td><td>清除当前需求中的进行中候选人阻断项。</td></tr>
-<tr data-field-type="button"><td>归档</td><td class="field-type button"><b>操作按钮</b></td><td>仅在Offer占用和进行中候选人全部处理完后，由职位负责人或HRBP确认。</td><td>需求与职位进入已归档并永久只读。</td></tr>
+<tr data-field-type="button"><td>批量终止／进入人才库／保留已有资格／调剂</td><td class="field-type button"><b>投递处理</b></td><td>只使用所选投递允许的操作；每份投递按真实情况选一个结果。入库默认原岗位，不创建邀约；保留已有资格不覆盖原资格与历史。</td><td>完成待人工处理投递的收尾，实际结果以处理记录为准。</td></tr>
+<tr data-field-type="button"><td>归档</td><td class="field-type button"><b>操作按钮</b></td><td>Offer占用及人工处理等阻断项消除后，由有权限的负责人确认；页面列出的剩余初筛由最终归档统一结束且不发邮件。</td><td>需求与职位已归档并永久只读，不可恢复。</td></tr>
 <tr data-field-type="readonly"><td>已归档</td><td class="field-type readonly"><b>系统展示项</b></td><td>操作后核对项目已进入历史查询状态，不再存在待处理责任。</td><td>作为本次招聘项目正式闭环的标志。</td></tr>
 </tbody></table></div></div>
 <div class="rule-box"><strong>协作边界：</strong>被授权的HR或HR实习生可以按分工处理其可见职位中的候选人，但不能确认完成或归档招聘需求；需求状态操作由职位负责人或HRBP负责。</div>
@@ -2462,7 +2471,8 @@ MAIN_RISK: [一句话概括最大风险]
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="关键操作：发起人才回捞邀约">关键操作：发起人才回捞邀约</div><img loading="lazy" decoding="async" src="talent-pool-assets/talent-pool-invite.gif" data-zoom="talent-pool-assets/talent-pool-invite.gif" alt="从人才库发起并发送岗位邀约"><div class="gif-note">定位候选人 → 点击“发起邀约” → 确认发送 → 状态进入待接受。候选人接受并完成投递后，会离开当前人才列表并进入“候选人与投递”；未接受时继续停留在人才库，需要再次邀请时重新发起邀约。</div></div>
 <div class="panel"><div class="panel-title" data-nav-item data-nav-label="状态变化与后续影响">状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>人才库 → 待接受</b><span>发送邀约后等待候选人处理，候选人仍保留在人才库。</span></div></li><li><div><b>待接受 → 候选人与投递</b><span>候选人接受并再次投递指定岗位后，进入候选人与投递阶段。</span></div></li><li><div><b>未接受 → 继续留在人才库</b><span>候选人没有接受时不自动离开；需要再次联系时可重新发起邀约。</span></div></li></ol></div></div>
 <div class="rule-box"><strong>完成标准：</strong>已经核对候选人和目标岗位，成功发送邀约，并能通过邀约状态判断候选人是待接受、仍留在人才库，还是已经重新进入候选人与投递。</div>
-<div class="rule-box"><strong>通知关联：</strong>确认进入人才库后，系统在5小时后自动发送进入人才库反馈；发起回捞邀约后自动调用指定岗位投递邀约模板。邮件内容可在“邮件模板”查看，发送结果在“通知记录”核对。</div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="归档入库与保留资格">归档入库与保留资格</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>归档操作</th><th>人才库结果与HR核对要求</th></tr></thead><tbody><tr><td>进入人才库</td><td>填写原因并确认入库岗位，默认原岗位；结束当前投递并记录人才资格，不自动创建回捞邀约。归档中选择其他原因时，补充原因必填且最多500字。</td></tr><tr><td>保留已有资格</td><td>仅在页面允许时选择，保留已有资格与历史，仅结束本次投递；不重复入库，不重新填写标准原因。</td></tr><tr><td>后续回捞</td><td>归档入库、保留资格与发起邀约是不同操作。有适合岗位后，再按实际需要发起回捞邀约，不把入库当作已邀约或已创建新投递。</td></tr><tr><td>归档反馈</td><td>默认不发送；选择发送才在业务处理成功后5小时发送。不发送备注仅内部记录。业务成功与反馈状态分别核对，不因反馈准备失败重复入库。</td></tr></tbody></table></div></div>
+<div class="rule-box"><strong>通知关联：</strong>普通候选人操作中，确认进入人才库按原有规则在5小时后发送反馈；归档处理则以本次邮件选择为准，默认不发送。发起回捞邀约后调用指定岗位投递邀约模板；通知结果在“通知记录”核对。</div>
 <div class="rule-box"><strong>权限与边界：</strong>HR实习生、HR、HRBP和管理员均可操作。本手册不展示进入人才库和回捞通知的具体邮件正文；重复发送会使此前未提交的邀约链接失效，操作前应先确认是否确需再次邀请。</div>
 </section>
 
@@ -2646,9 +2656,26 @@ MAIN_RISK: [一句话概括最大风险]
 <script id="manualUpdatesData" type="application/json">
 {
   "schemaVersion": 2,
-  "latestUpdateId": "2026-10-08-candidate-notes-mail-errors",
-  "lastVerifiedAt": "2026-10-08",
+  "latestUpdateId": "2026-10-15-archive-batch-talent-pool",
+  "lastVerifiedAt": "2026-10-15",
   "updates": [
+    {
+      "id": "2026-10-15-archive-batch-talent-pool",
+      "status": "published",
+      "effectiveDate": "2026-10-15",
+      "verifiedAt": "2026-10-15",
+      "type": "feature-change",
+      "importance": "action",
+      "impactScope": "all",
+      "title": "批量归档与归档关联人才库",
+      "summary": "归档支持批量安排投递并分别确认处理；进入人才库与保留已有资格分开说明，剩余初筛在最终归档时自动结束且不发送邮件。",
+      "audience": "处理招聘项目收尾的HR、职位负责人及HRBP",
+      "action": "保存安排不会执行；确认全部已保存安排包含筛选外记录。归档处理默认不发邮件，入库不创建回捞邀约，保留已有资格不重复入库；核对业务结果和反馈状态后再永久归档。",
+      "targets": [
+        { "view": "function", "moduleId": "function-recruitment-requirements", "detailLabel": "批量归档字段与操作" },
+        { "view": "function", "moduleId": "function-talent-pool", "detailLabel": "归档入库与保留资格" }
+      ]
+    },
     {
       "id": "2026-10-08-candidate-notes-mail-errors",
       "status": "published",
