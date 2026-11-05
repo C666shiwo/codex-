@@ -425,7 +425,7 @@
   .business-real-gif-slot strong{font-size:17px;color:var(--brand-blue-ink)}
 </style>
 </head>
-<body data-manual-view="function" data-manual-version="2026.09.09-candidate-contact-and-termination-email-local-review">
+<body data-manual-view="function" data-manual-version="2026.11.05-offer-approval-and-email-local-review">
   <div class="progress" id="progress"></div>
   <div class="shell">
     <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -502,7 +502,7 @@ flowchart TB
     H3["对应面试官｜提交规范化面评"]
     I["HR + 业务｜完成评价反馈与招聘交接"]
     J["HR｜结合评价完成综合判断"]
-    K["HR｜发起 Offer 流程"]
+    K["HR｜录用审批、Offer邮件与结果登记"]
     L["HR｜维护待入职信息"]
     M["HR｜确认完成入职"]
     Z{"HR｜本次是否继续当前投递"}
@@ -812,16 +812,30 @@ flowchart TB
 <div class="rule-box"><strong>完成标准：</strong>面试安排准确、双方通知到达、业务面评完整、候选人已获反馈，系统进度与实际一致。</div>
 </section>
 
-<section class="module" id="hr-result-processing" data-audience="hr" data-keywords="招聘结果 Offer 进入人才库 终止投递 最终结果">
+<section class="module" id="hr-result-processing" data-audience="hr" data-keywords="招聘结果 Offer 录用审批 钉钉审批 录用材料 薪资说明 发送Offer 候选人反馈 接受Offer 拒绝Offer 进入人才库 终止投递 最终结果">
 <div class="module-head"><div class="module-title"><span class="module-num">HR / 06</span><h2>招聘结果处理</h2></div><div class="module-meta"><span class="tag purple">三类结果</span></div></div>
 <p class="module-lead">本次招聘判断形成后，HR将候选人归入Offer、进入人才库或终止投递，避免候选人长期停留在招聘中。</p>
 <div class="hr-standard-strip"><span class="state">结果｜Offer · 人才库 · 终止投递</span><span class="collab">沟通｜系统状态与候选人口径一致</span></div>
 <div class="module-grid"><div class="panel"><div class="panel-title" data-nav-item data-nav-label="三类招聘结果">三类招聘结果</div><div class="panel-body"><ol class="steps"><li><div><b>Offer</b><span>决定录用并继续进入Offer及入职跟进。</span></div></li><li><div><b>终止投递</b><span>本次不再继续，且没有明确的人才保留计划。</span></div></li><li><div><b>进入人才库</b><span>本次无法继续，但候选人优秀且具有明确的后续匹配价值。</span></div></li></ol></div></div><div class="panel"><div class="panel-title" data-nav-item data-nav-label="结果处理要求">结果处理要求</div><div class="panel-body"><ul class="checklist"><li>依据评价事实和岗位标准作出判断。</li><li>向候选人提供准确、尊重且一致的反馈。</li><li>同步更新系统结果和后续责任人。</li><li>人才沉淀需要记录优势、适合方向和跟进建议。</li></ul></div></div></div>
-<div class="panel"><div class="panel-title" data-nav-item data-nav-label="Offer">Offer与入职跟进</div><div class="panel-body"><ol class="steps"><li><div><b>确认Offer结果</b><span>候选人接受后登记预计入职日期并进入待入职跟进。</span></div></li><li><div><b>维护待入职信息</b><span>跟进入职准备和候选人变化，确保系统信息准确。</span></div></li><li><div><b>处理未入职情况</b><span>拒绝、毁约或HC变化时，重新判断终止投递或人才沉淀。</span></div></li><li><div><b>确认完成入职</b><span>候选人实际入职后完成最终状态维护。</span></div></li></ol></div></div>
-<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="接受Offer操作演示">操作演示：接受Offer并进入待入职</div><img loading="lazy" decoding="async" src="hr-assets/offer-onboarding.gif" data-zoom="hr-assets/offer-onboarding.gif" alt="HR登记Offer结果和预计入职日期"><div class="gif-note">候选人接受Offer → 填写预计入职日期 → 确认进入待入职。后续继续维护实际入职进展。</div></div>
-<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="Offer字段与按钮">Offer与待入职需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody><tr data-field-type="required"><td>预计入职日期</td><td class="field-type required"><b>必须填写</b></td><td>填写与候选人确认后的预计入职时间，用于进入待入职并持续跟进。</td></tr><tr data-field-type="button"><td>接受Offer</td><td class="field-type button"><b>操作按钮</b></td><td>确认候选人已经接受Offer后使用，使候选人进入待入职状态。</td></tr><tr data-field-type="readonly"><td>待入职状态／预计入职日期／实际结果</td><td class="field-type readonly"><b>系统展示项</b></td><td>持续核对系统状态与实际进展；出现拒绝、毁约或HC变化时及时形成新的结果处理。</td></tr></tbody></table></div></div>
-<div class="panel"><div class="panel-title" data-nav-item data-nav-label="Offer状态变化与后续影响">Offer状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>Offer待确认 → 待入职</b><span>候选人接受Offer并填写预计入职日期后，进入待入职跟进。</span></div></li><li><div><b>待入职 → 完成入职</b><span>候选人实际入职后完成最终状态维护。</span></div></li><li><div><b>待入职 → 其他结果处理</b><span>候选人拒绝、毁约或HC变化时，根据实际判断终止投递或进入人才库，不遗留无人跟进的待入职记录。</span></div></li></ol></div></div>
-<div class="rule-box"><strong>Offer完成标准：</strong>候选人的Offer接受情况、预计入职日期、待入职进展及实际入职结果已经维护；系统状态与实际结果一致，不遗留无人跟进的待入职记录。</div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="Offer">Offer与入职跟进</div><div class="panel-body"><p>本流程自2026年11月6日起启用。HR、HRBP和管理员可以发起录用审批、发送Offer邮件并登记接受或拒绝；操作前仍需具备当前候选人的处理权限。</p><ol class="steps"><li><div><b>确认录用条件</b><span>核对岗位、HC、面试结论、用工类型、薪资条件和预计入职日期，再进入候选人详情的Offer阶段。</span></div></li><li><div><b>填写并提交录用审批</b><span>选择适用审批流，核对自动带入的信息，补齐薪资与所需材料；资料未齐时保存草稿，确认完整后提交审批。</span></div></li><li><div><b>核对审批结果并发送Offer邮件</b><span>在录用审批区域查看当前方案的结果；使用Offer邮件区域的发送入口，操作后核对发送状态并跟进候选人反馈。发送成功只表示邮件服务已接受发送。</span></div></li><li><div><b>确认候选人答复并登记结果</b><span>候选人反馈需由HR确认后更新投递状态。接受时使用“接受 Offer”并核对预计入职日期；拒绝时使用“拒绝 Offer”按页面要求登记。值得保留后续机会的候选人按实际情况进入人才库。</span></div></li><li><div><b>持续跟进待入职</b><span>接受后核对已进入待入职，持续维护实际进展。发生毁约或HC变化时及时形成处理结果；实际到岗后完成入职状态维护。</span></div></li></ol></div></div>
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="Offer审批字段与按钮">录用审批需要核对的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
+<tr data-field-type="required"><td>审批流／员工类型</td><td class="field-type required"><b>必须填写</b></td><td>选择与本次用工类型一致的审批流和员工类型。录用与实习／兼职表单的薪资字段不同，以所选表单为准。</td></tr>
+<tr data-field-type="required"><td>发起人所属部门／用人部门</td><td class="field-type required"><b>必须填写</b></td><td>前者用于钉钉发起审批；后者是候选人拟加入的部门，分别核对。</td></tr>
+<tr data-field-type="required"><td>姓名、手机号、职位、预计入职日期、面试反馈</td><td class="field-type required"><b>必须填写</b></td><td>逐项核对自动带入的信息；日期与候选人确认一致，面试反馈保留能够支持录用判断的事实。</td></tr>
+<tr data-field-type="required"><td>薪资字段</td><td class="field-type required"><b>必须填写</b></td><td>录用表单填写基本薪资、绩效薪资、综合津贴和公积金缴纳基数；实习／兼职表单填写按元／天计的薪资说明。</td></tr>
+<tr data-field-type="optional"><td>录用材料／备注</td><td class="field-type optional"><b>可以填写</b></td><td>按审批要求上传所需材料并补充说明；页面将材料列为必填时必须补齐。附件最多10份、单份20MB、总计100MB，模板限制更严格时按模板执行。</td></tr>
+<tr data-field-type="button"><td>保存草稿／提交审批</td><td class="field-type button"><b>操作按钮</b></td><td>保存草稿用于继续补充；提交审批后跟进当前方案的审批状态。</td></tr>
+<tr data-field-type="readonly"><td>审批状态／审批流程／最后同步时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>判断当前录用方案的审批进展；查看历史记录时同时核对方案，避免引用其他方案的通过结果。</td></tr>
+</tbody></table></div></div>
+<div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="Offer字段与按钮">Offer邮件与结果登记需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
+<tr data-field-type="button"><td>Offer邮件发送入口／重新发送 Offer 邮件</td><td class="field-type button"><b>操作按钮</b></td><td>在当前候选人的Offer邮件区域完成发送。重新发送前先核对上一条记录及候选人沟通结果，避免重复通知。</td></tr>
+<tr data-field-type="readonly"><td>发送状态／发送时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>发送成功表示邮件服务已接受发送，候选人是否看到、是否愿意接受仍需继续跟进。</td></tr>
+<tr data-field-type="readonly"><td>反馈截止时间／反馈链接／候选人反馈</td><td class="field-type readonly"><b>系统展示项</b></td><td>在邮件记录中查看北京时间截止时点、链接有效性和候选人答复；收到反馈后由HR核实并登记。</td></tr>
+<tr data-field-type="button"><td>接受 Offer／拒绝 Offer</td><td class="field-type button"><b>操作按钮</b></td><td>根据已确认的候选人意愿操作，按页面提示补齐信息；完成后核对投递状态。候选人在邮件中点击接受后仍需HR完成结果登记。</td></tr>
+<tr data-field-type="required"><td>预计入职日期</td><td class="field-type required"><b>必须填写</b></td><td>核对审批方案与候选人最终确认的日期，进入待入职后继续跟进实际到岗。</td></tr>
+</tbody></table></div></div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="Offer状态变化与后续影响">Offer状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>审批结果、邮件结果、投递结果分别核对</b><span>审批通过后继续处理邮件与候选人沟通；发送成功后继续跟进反馈；收到候选人答复后由HR登记投递结果。</span></div></li><li><div><b>HR登记接受 → 待入职</b><span>确认接受意愿和预计入职日期，完成接受操作后核对待入职状态，继续跟进直至实际入职。</span></div></li><li><div><b>未继续录用 → 完成结果处理</b><span>拒绝、毁约或HC变化时，按当前页面可用操作登记真实结果；有后续匹配价值时进入人才库。每位候选人均需明确后续责任与状态。</span></div></li></ol></div></div>
+<div class="rule-box"><strong>Offer完成标准：</strong>当前录用方案和审批结果已核对；邮件发送结果及候选人答复已跟进；HR已根据真实意愿登记结果。接受的候选人已进入待入职且预计入职日期准确，其余候选人已完成对应结果处理。</div>
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="结果处理：终止投递">操作演示：终止投递</div><img loading="lazy" decoding="async" src="hr-assets/candidate-termination.gif" data-zoom="hr-assets/candidate-termination.gif" alt="HR选择终止原因、确认终止并核对结果"><div class="gif-note">点击“终止投递” → 选择与实际判断一致的标准原因 → 选择是否发送邮件（默认发送） → 确认终止 → 核对投递状态和邮件处理结果。</div></div>
 <div class="panel field-panel"><div class="panel-title">终止投递需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody><tr data-field-type="required"><td>标准原因</td><td class="field-type required"><b>必须填写</b></td><td>选择与本次实际判断一致的终止原因，作为招聘结果记录和后续查询依据。</td></tr><tr data-field-type="required"><td>是否发送邮件</td><td class="field-type required"><b>必须选择</b></td><td>默认选择“发送”：确认终止后5小时发送反馈邮件。只在已经单独完成明确沟通、重复投递等不宜再次通知的异常场景选择“不发送”。</td></tr><tr data-field-type="button"><td>确认终止</td><td class="field-type button"><b>操作按钮</b></td><td>无论是否发送邮件，确认后当前投递都会立即终止；选择“不发送”时不创建待发送的终止反馈邮件。</td></tr><tr data-field-type="readonly"><td>已终止／终止原因／通知记录</td><td class="field-type readonly"><b>系统展示项</b></td><td>核对投递状态和原因；选择“发送”时到通知记录核对待发送或已发送状态，选择“不发送”时不应出现对应待发送记录。</td></tr><tr data-field-type="button"><td>恢复投递</td><td class="field-type button"><b>操作按钮</b></td><td>用于撤销误终止；如原来选择“发送”且仍在5小时等待期内，同时取消尚未发送的终止反馈邮件。</td></tr></tbody></table></div></div>
 <div class="rule-box"><strong>沟通边界：</strong>“不发送”只表示系统不再发送终止反馈邮件，不等于HR可以跳过必要的候选人沟通。正常淘汰场景保持默认“发送”。</div>
@@ -877,6 +891,7 @@ flowchart TB
 <div class="hr-standard-strip"><span class="state">核对｜系统动作与通知记录一致</span><span class="time">反馈｜面试后7个工作日内给到结果或进度</span></div>
 <div class="module-grid"><div class="panel"><div class="panel-title" data-nav-item data-nav-label="需要核对的关键通知">需要核对的关键通知</div><div class="panel-body"><ul class="checklist"><li>作品评估任务是否发送给正确的评估人。</li><li>AI面试和视频面试通知是否发送给候选人及相关面试官。</li><li>终止投递、进入人才库和人才回捞通知是否与实际处理结果一致。</li><li>通知记录异常时，先确认招聘动作是否成功，再决定后续补救方式。</li></ul></div></div><div class="panel"><div class="panel-title" data-nav-item data-nav-label="候选人反馈规范">候选人反馈规范</div><div class="panel-body"><ul class="checklist"><li>系统显示已发送不等于候选人已经理解，重要节点仍需HR确认沟通结果。</li><li>暂无最终结论时，应提供真实的进度反馈，不让候选人长期等待且无人跟进。</li><li>对外口径必须与系统状态一致；状态或结果变化后及时更新记录。</li><li>业务面评未提交时，由HR及时提醒并持续跟进，不将内部协作延迟转嫁给候选人。</li></ul></div></div></div>
 <div class="rule-box"><strong>完成标准：</strong>关键通知的渠道、对象和发送结果已核对；候选人在面试后7个工作日内收到明确结果或真实进度；系统状态、内部判断和对外沟通保持一致。</div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="Offer审批、邮件与反馈核对">Offer审批、邮件与反馈核对</div><div class="panel-body"><p>在候选人详情的Offer阶段分别查看录用审批与Offer邮件。审批通过后继续处理邮件；邮件发送成功后继续跟进候选人反馈；HR确认答复后登记接受或拒绝。反馈截止时间按北京时间核对，重要沟通与投递状态及时同步。</p><p>操作要求见当前视图的<a href="#hr-result-processing" data-cross-link data-detail-label="Offer">Offer与入职跟进</a>。</p></div></div>
 </section>
 
 
@@ -2306,12 +2321,13 @@ MAIN_RISK: [一句话概括最大风险]
 </tbody></table></div></div>
 <div class="rule-box"><strong>完成标准：</strong>已经找到对应通知场景，并核对渠道、收件目标、发送状态及实际发送时间；该页面的查看结果只用于确认通知记录，不替代原业务流程的完成状态。</div>
 <div class="rule-box"><strong>使用边界：</strong>本模块以通知记录核对为主。页面中的模板、来源事件等技术字段不属于HR日常核对重点。</div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="Offer邮件在哪里核对">Offer邮件在哪里核对</div><div class="panel-body"><p>Offer邮件优先到“候选人与投递 → 候选人详情 → Offer → Offer 邮件”核对。展开对应发送记录可查看发送时间、尝试次数、反馈截止时间、链接有效性和候选人答复；状态未更新时使用“刷新邮件状态”。</p><p>发送成功表示邮件服务已接受发送。候选人反馈由HR确认后登记，详见<a href="#function-candidate-applications" data-cross-link data-detail-label="OFFER：发送邮件并跟进反馈">Offer邮件与反馈教学</a>。</p></div></div>
 </section>
 
 <section class="module" id="function-email-templates" data-audience="function" data-map-entry="邮件模板" data-map-status="六类模板已确认" data-map-note="AI面试、视频面试、线下面试、流程中止、进入人才库及指定岗位投递邀约模板已整理。" data-keywords="邮件模板 AI面试邀约 视频面试邀约 线下面试邀约 流程中止反馈 进入人才库反馈 指定岗位投递邀约">
-<div class="module-head"><div class="module-title"><span class="module-num">功能 / 06</span><h2>邮件模板</h2></div><div class="module-meta"><span class="tag purple">系统邮件</span><span class="tag orange">六类场景</span></div></div>
-<div class="rule-box"><strong>学习目标：</strong>完成本节后，可以识别六类系统邮件分别由哪个招聘操作自动触发，以及哪些邮件立即发送、哪些邮件延迟5小时发送。</div>
-<p class="module-lead">邮件模板用于统一候选人沟通口径。HR不需要单独选择模板或执行“发送前复查”；完成对应招聘操作后，系统自动调用相应模板。本节展示的是使用测试变量渲染的完整邮件效果，不包含真实候选人信息。</p>
+<div class="module-head"><div class="module-title"><span class="module-num">功能 / 06</span><h2>邮件模板</h2></div><div class="module-meta"><span class="tag purple">系统邮件</span><span class="tag orange">自动邮件与Offer邮件</span></div></div>
+<div class="rule-box"><strong>学习目标：</strong>识别六类自动邮件的触发操作与发送时点，并找到Offer邮件的发送和反馈入口。</div>
+<p class="module-lead">本节的六类自动邮件随对应招聘操作触发，使用系统配置的模板。Offer邮件从候选人详情的Offer邮件区域单独处理发送，并继续跟进候选人答复。下方六类模板长图展示使用测试变量渲染的邮件效果。</p>
 <div class="function-relations" aria-label="邮件模板功能关联"><span class="relation-title">功能关联</span><span class="relation-item"><b>触发来源：</b><a href="#function-candidate-applications" data-function-link>候选人与投递</a>／<a href="#function-talent-pool" data-function-link>人才库</a></span><span class="relation-item"><b>执行方式：</b>系统自动选取模板</span><span class="relation-item"><b>发送核对：</b><a href="#function-notification-records" data-function-link>通知记录</a></span><span class="relation-item"><b>边界：</b>日常招聘不手动选模板</span></div><div class="panel field-panel"><div class="panel-title" data-nav-item data-nav-label="六类邮件的自动触发规则">六类邮件的自动触发规则</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>邮件模板</th><th>触发操作</th><th>发送规则</th><th>分类</th></tr></thead><tbody>
 <tr data-field-type="readonly"><td>AI面试邀约</td><td>安排AI面试</td><td>操作完成后系统自动发送</td><td class="field-type readonly"><b>系统通知</b></td></tr>
 <tr data-field-type="readonly"><td>视频面试邀约</td><td>安排视频面试并保存</td><td>操作完成后系统自动发送</td><td class="field-type readonly"><b>系统通知</b></td></tr>
@@ -2327,7 +2343,8 @@ MAIN_RISK: [一句话概括最大风险]
 <details class="template-accordion"><summary data-nav-item data-nav-label="邮件模板：进入人才库反馈"><span>05｜进入人才库反馈</span><span class="tag orange">结果通知</span></summary><div class="panel screenshot"><img loading="lazy" decoding="async" src="email-template-assets/05-talent-pool-entry-feedback.png" data-zoom="email-template-assets/05-talent-pool-entry-feedback.png" alt="进入人才库反馈完整邮件长图"><div class="shot-caption"><span>用于优秀但本次暂不继续、仍希望保留后续机会的候选人。</span><button class="zoom-link" type="button">点击放大</button></div></div></details>
 <details class="template-accordion"><summary data-nav-item data-nav-label="邮件模板：指定岗位投递邀约"><span>06｜指定岗位投递邀约</span><span class="tag green">人才回捞</span></summary><div class="panel screenshot"><img loading="lazy" decoding="async" src="email-template-assets/06-position-application-invitation.png" data-zoom="email-template-assets/06-position-application-invitation.png" alt="指定岗位投递邀约完整邮件长图"><div class="shot-caption"><span>从人才库邀请候选人重新投递指定岗位。</span><button class="zoom-link" type="button">点击放大</button></div></div></details>
 <div class="panel"><div class="panel-title" data-nav-item data-nav-label="状态变化与后续影响">状态变化与后续影响</div><div class="panel-body"><ol class="steps"><li><div><b>安排面试 → 发送邀约</b><span>AI、视频或线下面试安排完成后，系统按对应模板向候选人发送关键信息。</span></div></li><li><div><b>形成招聘结果 → 发送结果反馈</b><span>终止投递与进入人才库代表不同判断，必须选择与实际结果一致的模板场景。</span></div></li><li><div><b>人才回捞 → 发送指定岗位邀约</b><span>候选人接受并重新投递后，离开人才库并进入候选人与投递流程；未接受时继续停留在人才库。</span></div></li></ol></div></div>
-<div class="rule-box"><strong>完成标准：</strong>HR完成正确的招聘操作后，系统自动生成对应邮件；如需确认是否成功发送，可在通知记录中查看状态，无需在邮件模板页面再次发送。</div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="Offer邮件的发送与反馈入口">Offer邮件的发送与反馈入口</div><div class="panel-body"><p>自2026年11月6日起，HR、HRBP和管理员可在候选人详情的Offer阶段办理录用审批、邮件发送和结果登记。完成当前录用方案的审批结果核对后，通过“Offer 邮件”区域的发送入口处理邮件，再查看发送状态、反馈截止时间、链接有效性与候选人答复。</p><p>候选人反馈需由HR确认后更新投递状态。具体教学见<a href="#function-candidate-applications" data-cross-link data-detail-label="OFFER：发送邮件并跟进反馈">发送Offer邮件并跟进候选人反馈</a>。</p></div></div>
+<div class="rule-box"><strong>完成标准：</strong>六类自动邮件在对应招聘动作后核对通知记录；Offer邮件在候选人详情核对发送记录与反馈，HR再登记实际招聘结果。</div>
 <div class="rule-box"><strong>操作边界：</strong>本节用于识别和核对邮件模板，不建议在日常招聘中临时修改模板正文。模板修改会影响尚未发送及后续创建的邮件，应在统一确认后由有权限人员维护。</div>
 </section>
 
@@ -2432,7 +2449,47 @@ MAIN_RISK: [一句话概括最大风险]
 <div class="panel gif-panel" data-field-guide="detailed"><div class="panel-title" data-nav-item data-nav-label="给面试官分配候选人任务">给面试官分配候选人任务 <span class="frequent-tag">高频</span></div><img loading="lazy" decoding="async" src="candidate-applications-assets/video-interview-flow.gif" data-zoom="candidate-applications-assets/video-interview-flow.gif" alt="视频面试安排操作GIF"><div class="gif-note">选择视频面试和本阶段实际面试官 → 填写标题、时间及会议室 → 保存 → 面试官通过该任务获得当前候选人的查看和面评权限 → 核对业务钉钉日程和候选人邮件 → 面试结束后跟进规范化面评。面试官不需要添加为职位协作人。</div></div>
 <div class="panel field-panel"><div class="panel-title">视频面试必须确认的内容</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>关键内容</th><th>分类</th><th>填写或核对规范</th></tr></thead><tbody><tr data-field-type="required"><td>面试方式、面试官、日程标题、面试时间</td><td class="field-type required"><b>必须填写</b></td><td>选择实际面试官并核对日期、开始和结束时间。</td></tr><tr data-field-type="optional"><td>面试地点、会议室、日程描述、备注</td><td class="field-type optional"><b>可以填写</b></td><td>按实际安排填写；使用会议室时保存前确认可用。</td></tr><tr data-field-type="readonly"><td>已安排、会议号、会议链接和面试时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>保存后核对系统回显，并确认双方已收到通知。</td></tr><tr data-field-type="button"><td>写面评</td><td class="field-type button"><b>操作按钮</b></td><td>面试结束后由对应面试官提交规范化面评。</td></tr></tbody></table></div></div>
 <div class="rule-box"><strong>人工面试说明：</strong>人工面试可以配置为视频面试或线下面试。本节使用视频面试作为完整教学示例；线下面试的人员、时间、地点、通知和面评接续逻辑基本一致，以页面所选面试方式为准。</div>
-<div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="结果处理：接受Offer并进入待入职">关键操作六：接受Offer并进入待入职</div><img loading="lazy" decoding="async" src="candidate-applications-assets/offer-and-onboarding-flow.gif" data-zoom="candidate-applications-assets/offer-and-onboarding-flow.gif" alt="Offer接受与待入职操作GIF"><div class="gif-note">面评完成 → 进入Offer判断 → 候选人接受Offer时填写预计入职日期 → 确认进入待入职。</div></div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="结果处理：录用审批、Offer邮件与结果登记">关键操作六：录用审批、Offer邮件与结果登记</div><div class="panel-body"><p>进入候选人详情的Offer阶段，依次处理录用审批、Offer邮件和候选人结果登记。本流程自2026年11月6日起启用；HR、HRBP和管理员可在拥有当前候选人处理权限的前提下发起审批、发送邮件并登记结果。</p><p>操作前核对候选人、岗位、HC、面试结论和录用条件，并确认接收邮箱准确。需要纠正联系方式时使用候选人详情顶部的“编辑”。</p></div></div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="OFFER：填写并提交录用审批">填写并提交录用审批</div><div class="panel-body"><ol class="steps"><li><div><b>进入录用审批表单</b><span>从Offer阶段的录用审批区域进入表单；需要调整已形成的方案时使用“创建新的录用方案”。</span></div></li><li><div><b>选择审批流并核对自动填入信息</b><span>根据用工类型选择录用或实习／兼职对应流程。核对发起人所属部门、用人部门、候选人姓名、手机号、职位、预计入职日期和面试反馈。</span></div></li><li><div><b>补充薪资与录用材料</b><span>按当前表单填写薪资；实习／兼职的薪资说明按元／天填写。上传本次审批需要的身份证、学生证或工资流水等材料，按页面要求补充备注。</span></div></li><li><div><b>保存草稿或提交审批</b><span>尚需补充时使用“保存草稿”；信息完整并核对无误后使用“提交审批”，返回Offer阶段查看审批进展。</span></div></li></ol></div></div>
+<div class="panel field-panel"><div class="panel-title">录用审批需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
+<tr data-field-type="required"><td>审批流／员工类型</td><td class="field-type required"><b>必须填写</b></td><td>按本次实际用工类型选择。表单字段和材料要求随所选审批流变化，审批流名称以当前可用配置为准。</td></tr>
+<tr data-field-type="required"><td>发起人所属部门</td><td class="field-type required"><b>必须填写</b></td><td>用于以当前发起人的部门身份向钉钉提交审批；与下方用人部门分别核对。</td></tr>
+<tr data-field-type="required"><td>入职员工姓名、用人部门、职位、手机号</td><td class="field-type required"><b>必须填写</b></td><td>核对系统自动带入的信息，确保与本次候选人及录用岗位一致。</td></tr>
+<tr data-field-type="required"><td>预计入职日期／面试反馈</td><td class="field-type required"><b>必须填写</b></td><td>日期与实际约定一致；面试反馈核对已带入的轮次与评价，补充审批所需的真实依据。</td></tr>
+<tr data-field-type="required"><td>基本薪资／绩效薪资／综合津贴／公积金缴纳基数</td><td class="field-type required"><b>必须填写</b></td><td>录用表单按商定的薪资结构分别填写，公积金缴纳基数单独核对。</td></tr>
+<tr data-field-type="readonly"><td>薪资总额</td><td class="field-type readonly"><b>系统展示项</b></td><td>录用表单按“基本薪资＋绩效薪资＋综合津贴”展示总额，用于复核薪资拆分。</td></tr>
+<tr data-field-type="required"><td>薪资说明（元／天）</td><td class="field-type required"><b>必须填写</b></td><td>实习／兼职表单按日薪填写，注意页面标注的计薪单位。</td></tr>
+<tr data-field-type="optional"><td>职级／备注</td><td class="field-type optional"><b>可以填写</b></td><td>当前表单提供对应字段时按实际情况补充；页面要求必填的内容需完成后再提交。</td></tr>
+<tr data-field-type="optional"><td>录用材料</td><td class="field-type optional"><b>可以填写</b></td><td>按本次审批要求上传必要材料。附件最多10份、单份20MB、总计100MB；模板限制更严格时以模板为准，模板要求必填的材料必须上传。</td></tr>
+<tr data-field-type="button"><td>保存草稿／提交审批</td><td class="field-type button"><b>操作按钮</b></td><td>草稿用于后续补充；提交后核对当前方案是否成功进入审批处理，并持续跟进。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>本操作完成标准：</strong>审批流与用工类型匹配，录用信息及材料准确；保存草稿后可继续补充，提交审批后能在当前候选人的录用审批区域核对结果。</div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="OFFER：查看审批结果与方案变化">查看审批结果与方案变化</div><div class="panel-body"><p>在“录用审批”区域查看当前方案的状态、审批流程和操作记录。需要核对详细内容时点击“查看表单及材料”；需要在钉钉中查看时，使用已登录的电脑端钉钉打开“在钉钉查看”。</p></div></div>
+<div class="panel field-panel"><div class="panel-title">审批结果需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
+<tr data-field-type="readonly"><td>当前审批状态／审批流程／操作记录</td><td class="field-type readonly"><b>系统展示项</b></td><td>核对当前方案的实际处理结果；审批通过后仍需继续处理Offer邮件和候选人沟通。</td></tr>
+<tr data-field-type="button"><td>刷新审批／在钉钉查看</td><td class="field-type button"><b>操作按钮</b></td><td>审批进展未更新时刷新并核对最后同步时间；必要时到钉钉查看同一笔审批，持续异常时联系管理员。</td></tr>
+<tr data-field-type="button"><td>查看表单及材料</td><td class="field-type button"><b>操作按钮</b></td><td>查看该方案的录用信息、薪资、反馈与附件，确认当前使用的录用条件。</td></tr>
+<tr data-field-type="button"><td>创建新的录用方案</td><td class="field-type button"><b>操作按钮</b></td><td>录用条件需要调整时重新填写方案并提交；操作前核对已有审批与邮件，后续按新方案的实际审批结果处理。</td></tr>
+<tr data-field-type="readonly"><td>历史审批／最后同步时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>历史审批用于查询以往方案；最后同步时间帮助判断页面结果的新旧。当前录用以当前方案及其审批结果为依据。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>异常处理：</strong>出现“提交失败”、处理暂未完成或同步异常时，先核对当前审批记录和钉钉结果，再按页面提示处理；持续无法恢复时联系管理员。已撤销或尚未形成通过结论的方案，需要完成对应审批处理后再继续。</div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="OFFER：发送邮件并跟进反馈">发送Offer邮件并跟进候选人反馈</div><div class="panel-body"><ol class="steps"><li><div><b>核对当前录用方案与候选人邮箱</b><span>完成当前方案的审批结果核对，并确认对外沟通的录用条件与方案一致。</span></div></li><li><div><b>使用Offer邮件区域的发送入口</b><span>按页面要求完成发送；已存在发送记录时可见“重新发送 Offer 邮件”。重新发送前核对前一次结果与候选人沟通情况。</span></div></li><li><div><b>核对邮件记录并持续跟进</b><span>查看发送状态，展开对应记录核对发送时间、尝试次数、反馈截止时间、链接有效性和候选人反馈。反馈截止时间使用北京时间。</span></div></li><li><div><b>收到反馈后登记招聘结果</b><span>候选人的接受或拒绝反馈由HR核实，再通过Offer阶段的结果按钮更新投递状态。</span></div></li></ol></div></div>
+<div class="panel field-panel"><div class="panel-title">Offer邮件需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
+<tr data-field-type="button"><td>重新发送 Offer 邮件</td><td class="field-type button"><b>操作按钮</b></td><td>在Offer邮件区域处理确需重发的情况；先核对已有发送记录，避免重复发送。</td></tr>
+<tr data-field-type="button"><td>刷新邮件状态／展开发送记录</td><td class="field-type button"><b>操作按钮</b></td><td>获取或查看邮件处理结果，分别核对发送状态和候选人答复。</td></tr>
+<tr data-field-type="readonly"><td>发送状态／发送时间／尝试次数</td><td class="field-type readonly"><b>系统展示项</b></td><td>发送成功表示邮件服务已接受发送；发送尝试记录用于核对处理过程，候选人阅读和接受情况需单独跟进。</td></tr>
+<tr data-field-type="readonly"><td>反馈截止时间（北京时间）／反馈链接</td><td class="field-type readonly"><b>系统展示项</b></td><td>核对候选人可反馈的时限及链接有效性。反馈受阻时先查看当前记录，仍无法判断时联系管理员。</td></tr>
+<tr data-field-type="readonly"><td>候选人反馈／反馈时间</td><td class="field-type readonly"><b>系统展示项</b></td><td>记录候选人的答复；页面出现“已接受”后，仍需HR确认后更新投递状态。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>本操作完成标准：</strong>已核对Offer邮件发送结果，并明确候选人的反馈状态和下一次跟进安排。邮件发送成功与候选人接受是两个需要分别核对的结果。</div>
+<div class="panel"><div class="panel-title" data-nav-item data-nav-label="OFFER：登记接受或拒绝">登记接受或拒绝并接续处理</div><div class="panel-body"><p>核实候选人意愿后，在Offer阶段使用“接受 Offer”或“拒绝 Offer”，按当前页面要求补齐信息并确认；接受后核对预计入职日期和待入职状态。暂无法录用但值得保留后续机会时，使用“进入人才库”并填写原因。误推进时按“阶段回退”教学处理，先核对已有审批和邮件记录。</p></div></div>
+<div class="panel field-panel"><div class="panel-title">结果登记需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody>
+<tr data-field-type="button"><td>接受 Offer／拒绝 Offer</td><td class="field-type button"><b>操作按钮</b></td><td>由HR根据已确认的候选人答复登记；完成后核对投递状态与实际结果一致。</td></tr>
+<tr data-field-type="required"><td>预计入职日期</td><td class="field-type required"><b>必须填写</b></td><td>与候选人确认实际预计到岗日期，并核对审批方案与待入职记录。</td></tr>
+<tr data-field-type="button"><td>进入人才库／阶段回退</td><td class="field-type button"><b>操作按钮</b></td><td>分别用于保留后续机会与纠正误推进；结合当前投递和已产生的审批、邮件记录判断后再操作。</td></tr>
+<tr data-field-type="readonly"><td>当前投递状态／待入职进展</td><td class="field-type readonly"><b>系统展示项</b></td><td>确认接受后已经进入待入职，并持续跟进实际到岗；未继续的候选人需完成相应结果登记。</td></tr>
+</tbody></table></div></div>
+<div class="rule-box"><strong>Offer完成标准：</strong>当前审批、邮件发送、候选人反馈和HR登记结果均已核对；接受的候选人进入待入职，其余候选人的状态及后续处理明确。</div>
 <div class="panel gif-panel"><div class="panel-title" data-nav-item data-nav-label="结果处理：终止投递">关键操作七：终止投递</div><img loading="lazy" decoding="async" src="candidate-applications-assets/candidate-termination.gif" data-zoom="candidate-applications-assets/candidate-termination.gif" alt="选择终止原因、确认终止并核对终止结果"><div class="gif-note">点击“终止投递” → 选择与实际判断一致的标准原因 → 选择是否发送邮件（默认发送） → 确认终止 → 核对投递状态和邮件处理结果。</div></div>
 <div class="panel field-panel"><div class="panel-title">终止投递需要理解的字段与按钮</div><div class="panel-body table-scroll"><table class="standard-table"><thead><tr><th>字段／按钮</th><th>分类</th><th>用途与操作规范</th></tr></thead><tbody><tr data-field-type="required"><td>标准原因</td><td class="field-type required"><b>必须填写</b></td><td>选择与本次实际判断一致的终止原因，作为招聘结果记录和后续查询依据。</td></tr><tr data-field-type="required"><td>是否发送邮件</td><td class="field-type required"><b>必须选择</b></td><td>默认选择“发送”，终止5小时后发送反馈邮件。只在已经单独完成明确沟通、重复投递等不宜再次通知的异常场景选择“不发送”。</td></tr><tr data-field-type="button"><td>确认终止</td><td class="field-type button"><b>操作按钮</b></td><td>无论是否发送邮件，当前投递都立即终止；选择“不发送”时不创建待发送的终止反馈邮件。</td></tr><tr data-field-type="readonly"><td>已终止／终止原因／通知记录</td><td class="field-type readonly"><b>系统展示项</b></td><td>操作后核对状态和原因；选择“发送”时核对通知记录，选择“不发送”时不应出现对应待发送记录。</td></tr><tr data-field-type="button"><td>恢复投递</td><td class="field-type button"><b>操作按钮</b></td><td>用于撤销误终止；如原来选择“发送”且仍在5小时等待期内，同时取消尚未发送的终止反馈邮件。</td></tr></tbody></table></div></div>
 <div class="rule-box"><strong>沟通边界：</strong>正常淘汰场景保持默认“发送”。“不发送”只表示系统不发终止反馈邮件，不等于HR可以跳过必要的候选人沟通。</div>
@@ -2488,6 +2545,8 @@ MAIN_RISK: [一句话概括最大风险]
           </div>
           <p class="module-lead">关于手册使用和系统功能的高频问题。</p>
           <div class="faq-toolbar"><button type="button" class="faq-expand-all">展开全部</button><button type="button" class="faq-collapse-all">收起全部</button></div>
+          <details class="req-accordion"><summary>录用审批里的发起人所属部门和用人部门有什么区别？</summary><div class="req-accordion-body"><p>发起人所属部门用于钉钉发起审批；用人部门是候选人拟加入的部门。两项分别核对，自动填入的信息也需确认。录用与实习／兼职流程的薪资字段不同，详见<a href="#function-candidate-applications" data-cross-link data-detail-label="OFFER：填写并提交录用审批">录用审批填写说明</a>。</p></div></details>
+          <details class="req-accordion"><summary>录用审批结果没有更新，应该在哪里检查？</summary><div class="req-accordion-body"><p>进入候选人详情的录用审批区域，使用“刷新审批”并查看最后同步时间；通过“查看表单及材料”核对方案，通过“在钉钉查看”核对同一笔审批。持续出现提交失败或同步异常时联系管理员。详见<a href="#function-candidate-applications" data-cross-link data-detail-label="OFFER：查看审批结果与方案变化">审批结果与方案变化</a>。</p></div></details>
           <details class="req-accordion">
             <summary>我适合看哪个视角？</summary>
             <div class="req-accordion-body"><p>如果你是 HR/HRBP，重点看<a href="#hr-recruitment-start" data-cross-link>HR 规范</a>视角；如果你是面试官、作品评估人或业务负责人，重点看<a href="#view-business" data-cross-link>业务规范</a>视角；如果你想查字段含义或系统功能入口，看<a href="#function-recruitment-requirements" data-cross-link>功能详解</a>视角。</p></div>
@@ -2517,6 +2576,9 @@ MAIN_RISK: [一句话概括最大风险]
           </div>
           <p class="module-lead">关于 HR 招聘操作流程的高频问题。</p>
           <div class="faq-toolbar"><button type="button" class="faq-expand-all">展开全部</button><button type="button" class="faq-collapse-all">收起全部</button></div>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> OFFER新流程从哪里开始，谁可以操作？</summary><div class="req-accordion-body"><p>自2026年11月6日起，在“候选人与投递 → 候选人详情 → Offer”办理录用审批、邮件发送与结果登记。HR、HRBP和管理员可以操作，并需具备当前候选人的处理权限。先核对录用条件，再填写审批，跟进邮件与候选人答复，最后登记招聘结果。详见<a href="#hr-result-processing" data-cross-link data-detail-label="Offer">Offer与入职跟进</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> Offer邮件显示发送成功，是否还要跟进？</summary><div class="req-accordion-body"><p>需要。发送成功表示邮件服务已接受发送，仍需跟进候选人答复。展开邮件记录，核对北京时间反馈截止时间、反馈链接有效性和答复状态；确需重发时先核对上一条发送记录。详见<a href="#hr-result-processing" data-cross-link data-detail-label="Offer字段与按钮">Offer邮件字段与按钮</a>。</p></div></details>
+          <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 候选人反馈已接受，为什么仍然停留在Offer阶段？</summary><div class="req-accordion-body"><p>邮件中的反馈记录与HR维护的投递状态分别记录。HR确认接受意愿和预计入职日期后，使用“接受 Offer”完成登记，再核对待入职状态。拒绝反馈同样需由HR确认后登记。详见<a href="#hr-result-processing" data-cross-link data-detail-label="Offer状态变化与后续影响">Offer状态变化与后续影响</a>。</p></div></details>
           <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 如何用数据看板处理当天待办？</summary><div class="req-accordion-body"><p><b>入口：</b>数据看板 → 我的视角。<b>操作：</b>选择负责／授权／负责＋授权，依次点击待安排面试、待跟进简历、待业务评价和超时待处理卡片；积压数字也可点击下钻。<b>完成结果：</b>从名单点击“查看”进入候选人与投递，按真实进展完成安排、跟进或结果处理。看板只负责定位，不能为了清零数字错误改变候选人状态。详见<a href="#hr-dashboard-review" data-cross-link data-detail-label="每日巡检与待办处理">每日巡检与待办处理</a>。</p></div></details>
           <details class="req-accordion"><summary><span class="frequent-tag">高频</span> 数据范围里的负责、授权、负责＋授权是什么意思？</summary><div class="req-accordion-body"><p><b>负责：</b>本人是岗位负责人的岗位数据；<b>授权：</b>本人不是岗位负责人，但被授权协助该岗位招聘的数据；<b>负责＋授权：</b>两类岗位合并后的综合数据。看不到预期岗位时，先核对是否选对范围，再检查职位协作授权。详见<a href="#function-dashboard" data-cross-link data-detail-label="我的视角与全局视角">我的视角与全局视角</a>。</p></div></details>
           <details class="req-accordion"><summary>HR处理效率可以直接作为绩效吗？</summary><div class="req-accordion-body"><p>不建议。该指标按最后一次终态事件的人工操作人归属，并会受到岗位难度、处理量、样本量、流程配置和历史数据完整性的影响。它适合发现需要进一步核对的流程差异，不能脱离业务背景直接形成个人绩效结论。详见<a href="#hr-dashboard-review" data-cross-link data-detail-label="数据使用边界">数据使用边界</a>。</p></div></details>
@@ -2542,7 +2604,7 @@ MAIN_RISK: [一句话概括最大风险]
           </details>
           <details class="req-accordion">
             <summary>哪些操作会自动触发候选人邮件？</summary>
-            <div class="req-accordion-body"><p>共有六类场景可触发：安排AI面试、保存视频面试安排、保存线下面试安排、终止投递时选择“发送”并确认、确认进入人才库，以及从人才库发起并发送指定岗位投递邀约。AI面试、视频面试、线下面试和指定岗位投递邀约在操作完成后由系统自动发送；终止投递只有选择“发送”才在5小时后发送，进入人才库的反馈邮件仍延迟5小时。完成操作后可到<a href="#function-notification-records" data-cross-link>通知记录</a>核对应发送的邮件；选择“不发送”时不会生成对应待发送记录。</p></div>
+            <div class="req-accordion-body"><p>六类自动触发场景为：安排AI面试、保存视频面试安排、保存线下面试安排、终止投递时选择“发送”并确认、确认进入人才库，以及从人才库发起并发送指定岗位投递邀约。其中终止反馈和进入人才库反馈延迟5小时，其他四类在操作完成后发送；终止时选择“不发送”则不生成对应待发送记录。完成操作后可到<a href="#function-notification-records" data-cross-link>通知记录</a>核对。Offer邮件从候选人详情的Offer邮件区域单独处理发送，发送及反馈规则见<a href="#hr-result-processing" data-cross-link data-detail-label="Offer字段与按钮">Offer邮件与结果登记</a>。</p></div>
           </details>
           <details class="req-accordion">
             <summary>招聘需求创建后，才能配置职位阶段、协作人和面试官吗？</summary>
@@ -2558,7 +2620,7 @@ MAIN_RISK: [一句话概括最大风险]
           </details>
           <details class="req-accordion">
             <summary>Offer 阶段可以回退到之前的招聘阶段吗？</summary>
-            <div class="req-accordion-body"><p>可以，但「阶段回退」主要用于纠正 HR 误推进。在<a href="#function-candidate-applications" data-cross-link>候选人详情页</a>中选择过往阶段、填写回退原因并确认后，候选人会退至对应阶段。建议与业务负责人确认后再操作，避免反复变更候选人状态。</p></div>
+            <div class="req-accordion-body"><p>「阶段回退」主要用于纠正HR误推进。在<a href="#function-candidate-applications" data-cross-link>候选人详情页</a>中选择过往阶段、填写回退原因并确认。Offer已有审批或邮件时，先核对这些记录和候选人沟通结果，再按当前页面允许的操作处理；审批及已发邮件的后续状态需单独核对。</p></div>
           </details>
           <details class="req-accordion">
             <summary>招聘数据报表在哪里查看？</summary>
@@ -2634,9 +2696,28 @@ MAIN_RISK: [一句话概括最大风险]
 <script id="manualUpdatesData" type="application/json">
 {
   "schemaVersion": 2,
-  "latestUpdateId": "2026-09-09-candidate-contact-edit",
-  "lastVerifiedAt": "2026-09-09",
+  "latestUpdateId": "2026-11-06-offer-approval-and-email",
+  "lastVerifiedAt": "2026-11-05",
   "updates": [
+    {
+      "id": "2026-11-06-offer-approval-and-email",
+      "status": "scheduled",
+      "effectiveDate": "2026-11-06",
+      "verifiedAt": "2026-11-05",
+      "confirmedAt": "2026-11-05",
+      "type": "feature-change",
+      "importance": "action",
+      "impactScope": "new-data",
+      "title": "OFFER环节加入录用审批、邮件与反馈跟进",
+      "summary": "办理Offer时，按当前录用方案完成审批、邮件发送和候选人反馈跟进，再由HR登记接受或拒绝。",
+      "audience": "具有当前候选人处理权限的HR、HRBP和管理员",
+      "action": "核对自动填入的录用信息及薪资材料；分别查看审批、邮件和候选人反馈，确认真实意愿后登记投递结果。",
+      "targets": [
+        { "view": "function", "moduleId": "function-candidate-applications", "detailLabel": "结果处理：录用审批、Offer邮件与结果登记" },
+        { "view": "hr", "moduleId": "hr-result-processing", "detailLabel": "Offer" },
+        { "view": "function", "moduleId": "function-email-templates", "detailLabel": "Offer邮件的发送与反馈入口" }
+      ]
+    },
     {
       "id": "2026-09-09-candidate-contact-edit",
       "status": "published",
@@ -2769,7 +2850,6 @@ MAIN_RISK: [一句话概括最大风险]
     [['安排并跟进AI面试'], [['完成期限','required','与候选人实际可完成时间一致，避免链接过早失效。'],['安排面试','button','确认后系统自动发送AI面试邀约，无单独发送前复查环节。'],['完成状态／评估结果','readonly','候选人完成后核对AI评估，再决定是否推进下一阶段。']]],
     [['安排业务面试并跟进面评','安排视频面试'], [['面试方式／面试官／面试时间','required','按实际安排选择方式和面试官，填写双方确认的时间。'],['面试地点／会议室／标题／备注','optional','按实际需要填写；视频面试需确保会议信息可用。'],['保存安排','button','保存后系统自动发送对应面试邀约，无单独发送前复查环节。'],['会议号／会议链接／已安排时间','readonly','保存后核对系统回显，并确认业务和候选人收到通知。'],['写面评','button','面试结束后由对应面试官提交规范化评价。']]],
     [['进入人才库'], [['入库原因','required','说明本次不继续但仍值得保留的真实原因。'],['下次回捞岗位','required','选择未来更适合邀请候选人投递的岗位。'],['确认入库','button','提交后当前投递立即终止，系统5小时后自动发送进入人才库反馈。'],['人才库记录','readonly','操作后核对候选人、来源岗位、入库原因和时间。']]],
-    [['接受Offer并进入待入职'], [['预计入职日期','required','填写与候选人确认后的时间，用于后续待入职跟进。'],['接受Offer','button','确认候选人接受后操作，候选人进入待入职状态。'],['待入职状态／实际结果','readonly','持续维护实际进展；拒绝、毁约或HC变化时及时形成其他最终结果。']]],
     [['转岗、转移负责人与阶段回退'], [['目标岗位／转岗原因','required','核对新岗位；确认后原岗位投递中止，新岗位建立新流程。'],['新负责人','required','选择实际承接该候选人后续跟进的HR。'],['目标阶段','required','只选择候选人已经经历过且确需退回的阶段；阶段回退仅用于纠正HR误推进。'],['回退原因','required','如实填写本次回退原因，说明需要纠正的误操作，便于后续查询。'],['岗位协作权限／历史阶段记录','readonly','转岗后按新岗位权限生效；阶段回退后历史阶段记录继续保留。'],['确认转岗／确认转交／确认回退','button','提交前核对候选人、岗位、负责人或目标阶段；提交后核对页面状态已经正确更新。']]],
     [['创建、授权并启用猎头账号'], [['用户名／显示名称／初始密码','required','用于猎头登录和内部识别；密码需符合页面长度要求并安全交付。'],['所属机构','optional','有明确合作机构时填写。'],['职位授权','required','只授权猎头实际负责上传候选人的岗位。'],['启用','button','账号创建并完成授权后启用，启用后才可交付使用。']]],
     [['作品集评估完整操作','作品评价'], [['作品文件／链接','readonly','查看候选人本次提交的真实作品材料。'],['评估结论／评价原因','required','选择通过或不通过，并填写能支持结论的事实原因。'],['提交评价','button','提交前核对候选人和岗位；完成评价后由HR接续招聘阶段。']]],
@@ -2786,18 +2866,19 @@ MAIN_RISK: [一句话概括最大风险]
       const raw = document.getElementById('manualUpdatesData')?.textContent || '';
       const data = JSON.parse(raw);
       if (!data || data.schemaVersion !== 2 || typeof data.latestUpdateId !== 'string' || typeof data.lastVerifiedAt !== 'string' || !Array.isArray(data.updates)) return null;
-      const today = new Date().toISOString().slice(0, 10);
+      const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
       const cutoffDate = new Date(`${today}T00:00:00Z`);
       cutoffDate.setUTCMonth(cutoffDate.getUTCMonth() - 6);
       const cutoff = cutoffDate.toISOString().slice(0, 10);
       const allUpdates = data.updates.filter(item => {
-        if (!item || item.status !== 'published' || typeof item.id !== 'string' || typeof item.effectiveDate !== 'string' || typeof item.verifiedAt !== 'string') return false;
+        if (!item || !['published', 'scheduled'].includes(item.status) || typeof item.id !== 'string' || typeof item.effectiveDate !== 'string' || typeof item.verifiedAt !== 'string') return false;
+        if (item.status === 'scheduled' && (typeof item.confirmedAt !== 'string' || item.confirmedAt > today)) return false;
         if (!updateTypeLabels[item.type] || !updateImportanceLabels[item.importance] || !updateScopeLabels[item.impactScope]) return false;
         if (!item.title || !item.summary || !item.audience || !item.action || !Array.isArray(item.targets)) return false;
         const effectiveDate = new Date(item.effectiveDate + 'T00:00:00Z');
         return !Number.isNaN(effectiveDate.getTime()) && item.effectiveDate <= today;
-      }).sort((a, b) => b.effectiveDate.localeCompare(a.effectiveDate) || b.id.localeCompare(a.id));
-      const latest = allUpdates.find(item => item.id === data.latestUpdateId);
+      }).sort((a, b) => b.effectiveDate.localeCompare(a.effectiveDate));
+      const latest = allUpdates[0];
       if (!latest) return null;
       const updates = allUpdates.filter(item => item.effectiveDate >= cutoff);
       return { latest, updates, allUpdates, lastVerifiedAt: data.lastVerifiedAt };
