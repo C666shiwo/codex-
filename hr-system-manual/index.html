@@ -425,7 +425,7 @@
   .business-real-gif-slot strong{font-size:17px;color:var(--brand-blue-ink)}
 </style>
 </head>
-<body data-manual-view="function" data-manual-version="2026.11.05-offer-approval-and-email-local-review">
+<body data-manual-view="function" data-manual-version="2026.11.05-offer-approval-and-email-immediate-notice">
   <div class="progress" id="progress"></div>
   <div class="shell">
     <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -2705,6 +2705,7 @@ MAIN_RISK: [一句话概括最大风险]
       "effectiveDate": "2026-11-06",
       "verifiedAt": "2026-11-05",
       "confirmedAt": "2026-11-05",
+      "announcedAt": "2026-11-05",
       "type": "feature-change",
       "importance": "action",
       "impactScope": "new-data",
@@ -2876,11 +2877,12 @@ MAIN_RISK: [一句话概括最大风险]
         if (!updateTypeLabels[item.type] || !updateImportanceLabels[item.importance] || !updateScopeLabels[item.impactScope]) return false;
         if (!item.title || !item.summary || !item.audience || !item.action || !Array.isArray(item.targets)) return false;
         const effectiveDate = new Date(item.effectiveDate + 'T00:00:00Z');
-        return !Number.isNaN(effectiveDate.getTime()) && item.effectiveDate <= today;
-      }).sort((a, b) => b.effectiveDate.localeCompare(a.effectiveDate));
+        const noticeDate = item.announcedAt || item.effectiveDate;
+        return !Number.isNaN(effectiveDate.getTime()) && typeof noticeDate === 'string' && !Number.isNaN(new Date(noticeDate + 'T00:00:00Z').getTime()) && noticeDate <= today;
+      }).sort((a, b) => (b.announcedAt || b.effectiveDate).localeCompare(a.announcedAt || a.effectiveDate));
       const latest = allUpdates[0];
       if (!latest) return null;
-      const updates = allUpdates.filter(item => item.effectiveDate >= cutoff);
+      const updates = allUpdates.filter(item => (item.announcedAt || item.effectiveDate) >= cutoff);
       return { latest, updates, allUpdates, lastVerifiedAt: data.lastVerifiedAt };
     } catch {
       return null;

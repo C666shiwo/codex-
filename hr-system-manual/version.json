@@ -1,12 +1,12 @@
 {
-  "version": "2026.11.05-offer-approval-and-email-local-review",
+  "version": "2026.11.05-offer-approval-and-email-immediate-notice",
   "updatedAt": "2026-11-05",
   "publicUrl": "https://c666shiwo.github.io/codex-/hr-system-manual/",
   "status": "offer-approval-and-email-local-review",
   "latestUpdateId": "2026-11-06-offer-approval-and-email",
-  "activeUpdateIdAtBuild": "2026-09-09-candidate-contact-edit",
-  "scheduledUpdateCountAtBuild": 1,
+  "activeUpdateIdAtBuild": "2026-11-06-offer-approval-and-email",
+  "scheduledUpdateCountAtBuild": 0,
   "lastVerifiedAt": "2026-11-05",
-  "recentUpdateCount": 5,
+  "recentUpdateCount": 6,
   "assetCount": 49
 }
