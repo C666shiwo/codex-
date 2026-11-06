@@ -1,12 +1,12 @@
 {
-  "version": "2026.11.05-offer-screenshots-local-review",
+  "version": "2026.11.05-offer-screenshots",
   "updatedAt": "2026-11-05",
   "publicUrl": "https://c666shiwo.github.io/codex-/hr-system-manual/",
-  "status": "offer-approval-and-email-local-review",
+  "status": "published",
   "latestUpdateId": "2026-11-06-offer-approval-and-email",
   "activeUpdateIdAtBuild": "2026-11-06-offer-approval-and-email",
   "scheduledUpdateCountAtBuild": 0,
   "lastVerifiedAt": "2026-11-05",
-  "recentUpdateCount": 6,
-  "assetCount": 59
+  "recentUpdateCount": 9,
+  "assetCount": 61
 }

@@ -1,0 +1,172 @@
+{
+  "currentAssetOverrides": [{"asset":"dashboard-my-overview.png","source":"codex-clipboard-c20082a9-4000-4710-b53b-fa63d869577f.png","providedBy":"user","replacedOn":"2026-09-21","method":"用户提供的真实系统截图原文件直接替换，未裁切、未改写数字；替代此前my-analysis裁切素材"}],
+  "source": "https://dev-hr.91jzx.cn/mono-hr/",
+  "assembledOn": "2026-09-21",
+  "method": "真实开发环境截图及用户提供的真实截图；裁切局部并添加原风格编号和教学标题；未注入模拟响应、未修改页面业务数值",
+  "usedFrames": [
+    "workbench",
+    "my-analysis",
+    "global",
+    "departments",
+    "trend",
+    "channel"
+  ],
+  "records": [
+    {
+      "name": "dashboard-my-overview",
+      "title": "我的视角：真实页面总览",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard",
+      "capturedAt": "2026-09-21T09:48:54.566Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "work-01",
+      "title": "六组招聘阶段与风险工具",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard",
+      "capturedAt": "2026-09-21T09:48:55.374Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "work-02",
+      "title": "待跟进：打开候选人名单，个人信息已遮盖",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard",
+      "capturedAt": "2026-09-21T09:48:57.112Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "work-03",
+      "title": "查看累计漏斗统计口径",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard",
+      "capturedAt": "2026-09-21T09:48:58.535Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "analysis-01",
+      "title": "岗位卡：状态变更快照与累计推进",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard",
+      "capturedAt": "2026-09-21T09:48:59.952Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "analysis-02",
+      "title": "当前积压：查看日期、岗位与超时区间口径",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard",
+      "capturedAt": "2026-09-21T09:49:00.811Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "dashboard-global-overview",
+      "title": "全局视角：真实页面概览",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=global",
+      "capturedAt": "2026-09-21T09:49:05.349Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "analysis-03",
+      "title": "全局视角：部门需求与折叠卡",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=global",
+      "capturedAt": "2026-09-21T09:49:06.148Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "analysis-04",
+      "title": "收起部门：核对需求总数与完成率",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=global",
+      "capturedAt": "2026-09-21T09:49:06.977Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "analysis-05",
+      "title": "Offer候选人明细：个人信息已遮盖",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=global",
+      "capturedAt": "2026-09-21T09:49:08.858Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "analysis-06",
+      "title": "真实日期范围下的招聘效率趋势",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=global",
+      "capturedAt": "2026-09-21T09:49:10.305Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "analysis-07",
+      "title": "渠道流入占比与渠道招聘效果",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=global",
+      "capturedAt": "2026-09-21T09:49:11.153Z",
+      "personalDataMasked": true
+    },
+    {
+      "name": "workbench",
+      "derivedFrom": "work-01",
+      "crop": {
+        "left": 232,
+        "top": 174,
+        "width": 1332,
+        "height": 362
+      },
+      "url": "https://dev-hr.91jzx.cn/mono-hr/",
+      "method": "真实页面截图局部裁切"
+    },
+    {
+      "name": "my-analysis",
+      "derivedFrom": "dashboard-my-overview",
+      "crop": {
+        "left": 232,
+        "top": 550,
+        "width": 1330,
+        "height": 1240
+      },
+      "url": "https://dev-hr.91jzx.cn/mono-hr/",
+      "method": "真实页面截图局部裁切"
+    },
+    {
+      "name": "global",
+      "derivedFrom": "analysis-03",
+      "crop": {
+        "left": 232,
+        "top": 174,
+        "width": 1332,
+        "height": 826
+      },
+      "url": "https://dev-hr.91jzx.cn/mono-hr/",
+      "method": "真实页面截图局部裁切"
+    },
+    {
+      "name": "departments",
+      "derivedFrom": "analysis-04",
+      "crop": {
+        "left": 232,
+        "top": 174,
+        "width": 1332,
+        "height": 826
+      },
+      "url": "https://dev-hr.91jzx.cn/mono-hr/",
+      "method": "真实页面截图局部裁切"
+    },
+    {
+      "name": "trend",
+      "derivedFrom": "analysis-06",
+      "crop": {
+        "left": 254,
+        "top": 474,
+        "width": 1290,
+        "height": 526
+      },
+      "url": "https://dev-hr.91jzx.cn/mono-hr/",
+      "method": "真实页面截图局部裁切"
+    },
+    {
+      "name": "channel",
+      "derivedFrom": "codex-clipboard-672a51b2-5dbf-470f-8974-34956b154f7f.png",
+      "crop": {
+        "left": 242,
+        "top": 76,
+        "width": 1616,
+        "height": 723
+      },
+      "url": "https://dev-hr.91jzx.cn/mono-hr/",
+      "method": "用户提供的真实页面截图局部裁切；未独立复核采集时间"
+    }
+  ]
+}
