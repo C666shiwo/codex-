@@ -1,0 +1,245 @@
+{
+  "note": "真实页面截图，仅裁切及遮盖个人信息；没有改写统计数据。",
+  "captures": [
+    {
+      "file": "email-records.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/email-resumes",
+      "capturedAt": "2026-11-12T08:22:08.314Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "582463e4022f659a1a5b858a95aadcad015ae77b7dd879da7126404c1b3b3bff",
+      "crop": {
+        "left": 0,
+        "top": 120,
+        "width": 1536,
+        "height": 690
+      },
+      "redactions": [
+        [
+          244,
+          256,
+          78,
+          22
+        ],
+        [
+          192,
+          384,
+          237,
+          420
+        ]
+      ]
+    },
+    {
+      "file": "recruitment-issues.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/recruitment-issues",
+      "capturedAt": "2026-11-12T08:22:51.414Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "c9ebc86fc1915baf38d6945602af16fc95dbdb77832f7ce0b5f718e1806d1cf5",
+      "crop": {
+        "left": 0,
+        "top": 120,
+        "width": 1536,
+        "height": 690
+      },
+      "redactions": [
+        [
+          243,
+          267,
+          78,
+          21
+        ],
+        [
+          192,
+          395,
+          244,
+          410
+        ]
+      ]
+    },
+    {
+      "file": "notifications.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/notifications",
+      "capturedAt": "2026-11-12T08:23:48.869Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "5097389618f311df260499b89a8900d4546438c67d7a4c6904b757c6519c5afe",
+      "crop": {
+        "left": 0,
+        "top": 120,
+        "width": 1536,
+        "height": 690
+      },
+      "redactions": [
+        [
+          766,
+          380,
+          145,
+          436
+        ]
+      ]
+    },
+    {
+      "file": "applications.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/applications",
+      "capturedAt": "2026-11-12T08:24:11.622Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "49b9c6c2dc1a88336e0791c72e46bd3cfb6569ecac72fdf3cdae2919365c08e4",
+      "crop": {
+        "left": 0,
+        "top": 120,
+        "width": 1536,
+        "height": 690
+      },
+      "redactions": [
+        [
+          435,
+          476,
+          50,
+          334
+        ],
+        [
+          884,
+          476,
+          282,
+          334
+        ],
+        [
+          1258,
+          476,
+          184,
+          334
+        ]
+      ]
+    },
+    {
+      "file": "requirements.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/recruitment-requirements",
+      "capturedAt": "2026-11-12T08:24:37.264Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "23dc8d4bad97eb15fda0e4c19b8f23db98a1bca5fa146e76c33f63641b2f9fd6",
+      "crop": {
+        "left": 0,
+        "top": 120,
+        "width": 1536,
+        "height": 690
+      },
+      "redactions": [
+        [
+          686,
+          505,
+          247,
+          146
+        ]
+      ]
+    },
+    {
+      "file": "positions.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/positions",
+      "capturedAt": "2026-11-12T08:25:04.978Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "a670eccb14310667f7c9a8f2fb6fac68f5b164f61c138644e222ebb7dd8ebdc3",
+      "crop": {
+        "left": 0,
+        "top": 120,
+        "width": 1536,
+        "height": 690
+      },
+      "redactions": [
+        [
+          985,
+          392,
+          176,
+          186
+        ]
+      ]
+    },
+    {
+      "file": "talent-pool.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/talent-pool",
+      "capturedAt": "2026-11-12T08:25:52.252Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "061b82602d90593fdec61c671faf199f0cd2917f6c464e37eb7eb609a4b946bf",
+      "crop": {
+        "left": 0,
+        "top": 120,
+        "width": 1536,
+        "height": 420
+      },
+      "redactions": [
+        [
+          216,
+          347,
+          145,
+          76
+        ]
+      ]
+    },
+    {
+      "file": "dashboard-workbench.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=mine",
+      "capturedAt": "2026-11-12T08:26:20.108Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "67857261b45c3b62e056da97063d2e1008e9ed2c746fee66a1cf8959976665a3",
+      "crop": {
+        "left": 0,
+        "top": 120,
+        "width": 1536,
+        "height": 455
+      },
+      "redactions": []
+    },
+    {
+      "file": "dashboard-time.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=mine&timeRange=range&startDate=2026-11-06&endDate=2026-11-12",
+      "capturedAt": "2026-11-12T08:30:03.261Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "01b5ac239d6c5635b8d4694cc2a00d92a25613dae84c41855f4ca27302e00c79",
+      "crop": {
+        "left": 176,
+        "top": 240,
+        "width": 1340,
+        "height": 288
+      },
+      "redactions": []
+    },
+    {
+      "file": "dashboard-progress.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=mine&timeRange=range&startDate=2026-11-06&endDate=2026-11-12",
+      "capturedAt": "2026-11-12T08:30:29.747Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "b4ad3204e6da8d480a315a2ba248d7b6ab690c9150bc601fec175857cf3eb2b4",
+      "crop": {
+        "left": 180,
+        "top": 200,
+        "width": 1330,
+        "height": 565
+      },
+      "redactions": [
+        [
+          397,
+          258,
+          40,
+          23
+        ],
+        [
+          1096,
+          258,
+          76,
+          23
+        ]
+      ]
+    },
+    {
+      "file": "dashboard-backlog.png",
+      "url": "https://dev-hr.91jzx.cn/mono-hr/#/dashboard?tab=mine&timeRange=range&startDate=2026-11-06&endDate=2026-11-12",
+      "capturedAt": "2026-11-12T08:30:51.248Z",
+      "source": "Quark authenticated real system, sky screenshot",
+      "sourceSha256": "7f84cc8b7c1d18aec7b08ce18a49f19763a91979e346d37b8d04ecbe8ce4b838",
+      "crop": {
+        "left": 180,
+        "top": 352,
+        "width": 1330,
+        "height": 432
+      },
+      "redactions": []
+    }
+  ]
+}

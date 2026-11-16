@@ -1,12 +1,24 @@
 {
-  "version": "2026.11.05-offer-screenshots",
-  "updatedAt": "2026-11-05",
+  "version": "2026.11.16-simplified-workspace",
+  "updatedAt": "2026-11-16",
   "publicUrl": "https://c666shiwo.github.io/codex-/hr-system-manual/",
   "status": "published",
-  "latestUpdateId": "2026-11-06-offer-approval-and-email",
-  "activeUpdateIdAtBuild": "2026-11-06-offer-approval-and-email",
+  "latestUpdateId": "2026-11-12-simplified-recruitment-workspace",
+  "activeUpdateIdAtBuild": "2026-11-12-simplified-recruitment-workspace",
   "scheduledUpdateCountAtBuild": 0,
-  "lastVerifiedAt": "2026-11-05",
-  "recentUpdateCount": 9,
-  "assetCount": 61
+  "lastVerifiedAt": "2026-11-12",
+  "recentUpdateCount": 10,
+  "assetCount": 62,
+  "publishedBaseVersion": "2026.11.05-offer-screenshots",
+  "sourceBranches": [
+    "feature/20261026",
+    "Future/20261029非数据库"
+  ],
+  "sourceHeads": {
+    "feature/20261026": "1755d61e8aa1a1691b15ae0a4927334614c09a7b",
+    "Future/20261029非数据库": "2ba2690cd6393a143863a4ce03476881a3dd46ff"
+  },
+  "changeSource": "指定分支代码与开发环境HR账号实际页面核对；全局视角仅核对代码，旧图标注布局参考；2026-11-16经用户授权发布",
+  "publishedAt": "2026-11-16",
+  "screenshotCount": 11
 }
